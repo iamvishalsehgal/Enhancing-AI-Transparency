@@ -1,0 +1,60 @@
+# Define Namespace - It organize ontology like folders
+@prefix : <http://example.org/modelcard-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Define classes 
+:Model a owl:Class .
+:Dataset a owl:Class .
+:Metric a owl:Class .
+:EthicalConsideration a owl:Class .
+:EnvironmentalImpact a owl:Class .
+:IntendedUse a owl:Class .
+
+# Define Relationships between classes
+:trained_on a owl:ObjectProperty ;
+    rdfs:domain :Model ;       # Subject is a Model
+    rdfs:range :Dataset .      # Object is a Dataset
+
+:evaluated_with a owl:ObjectProperty ;
+    rdfs:domain :Model ;
+    rdfs:range :Metric .
+
+:has_ethical_issue a owl:ObjectProperty ;
+    rdfs:domain :Model ;
+    rdfs:range :EthicalConsideration .
+
+:has_environmental_impact a owl:ObjectProperty ;
+    rdfs:domain :Model ;
+    rdfs:range :EnvironmentalImpact .
+
+# Define Attributes aka DatatypeProperty
+
+# Attributes for Model
+:hasName a owl:DatatypeProperty ;
+    rdfs:domain :Model ;
+    rdfs:range xsd:string .
+
+:hasVersion a owl:DatatypeProperty ;
+    rdfs:domain :Model ;
+    rdfs:range xsd:string .
+
+# Attributes for Dataset
+:hasSource a owl:DatatypeProperty ;
+    rdfs:domain :Dataset ;
+    rdfs:range xsd:string .
+
+:hasSize a owl:DatatypeProperty ;
+    rdfs:domain :Dataset ;
+    rdfs:range xsd:integer .
+
+# Add constraints 
+
+# Model must have atleast 1 license
+:Model rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty :hasLicense ;
+    owl:minCardinality 1 ;
+] .
