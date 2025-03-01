@@ -41,6 +41,22 @@
     rdfs:domain :Model ;
     rdfs:range xsd:string .
 
+:hasLicense a owl:DatatypeProperty ;
+    rdfs:domain :Model ;
+    rdfs:range xsd:string .
+
+:developedBy a owl:DatatypeProperty ;
+    rdfs:domain :Model ;
+    rdfs:range xsd:string .
+
+:architecture a owl:DatatypeProperty ;
+    rdfs:domain :Model ;
+    rdfs:range xsd:string .
+
+:hasFramework a owl:DatatypeProperty ;
+    rdfs:domain :Model ;
+    rdfs:range xsd:string .
+
 # Attributes for Dataset
 :hasSource a owl:DatatypeProperty ;
     rdfs:domain :Dataset ;
@@ -48,7 +64,46 @@
 
 :hasSize a owl:DatatypeProperty ;
     rdfs:domain :Dataset ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:string .     #String bcoz some contains words like books etc.
+
+# For Metric
+:metricName a owl:DatatypeProperty ;
+    rdfs:domain :Metric ;
+    rdfs:range xsd:string .
+
+:metricValue a owl:DatatypeProperty ;
+    rdfs:domain :Metric ;
+    rdfs:range xsd:string .
+
+:benchmarked_on a owl:DatatypeProperty ;
+    rdfs:domain :Metric ;
+    rdfs:range xsd:string .
+
+# For EthicalConsideration
+:bias_type a owl:DatatypeProperty ;
+    rdfs:domain :EthicalConsideration ;
+    rdfs:range xsd:string .
+
+:description a owl:DatatypeProperty ;
+    rdfs:domain :EthicalConsideration ;
+    rdfs:range xsd:string .
+
+:mitigation_strategy a owl:DatatypeProperty ;
+    rdfs:domain :EthicalConsideration ;
+    rdfs:range xsd:string .
+
+# For EnvironmentalImpact
+:carbon_emissions a owl:DatatypeProperty ;
+    rdfs:domain :EnvironmentalImpact ;
+    rdfs:range xsd:string .
+
+:energy_usage a owl:DatatypeProperty ;
+    rdfs:domain :EnvironmentalImpact ;
+    rdfs:range xsd:string .
+
+:hardware_used a owl:DatatypeProperty ;
+    rdfs:domain :EnvironmentalImpact ;
+    rdfs:range xsd:string .
 
 # Add constraints 
 
@@ -58,51 +113,3 @@
     owl:onProperty :hasLicense ;
     owl:minCardinality 1 ;
 ] .
-
-# Model Instance
-# Bert-base-uncased : https://huggingface.co/google-bert/bert-base-uncased#bert-base-model-uncased
-
-:bert-base-uncased a :Model ;
-    :hasName "BERT-base-uncased" ;
-    :hasVersion "1.0" ;
-    :hasLicense "Apache-2.0" ;
-    :developedBy "Google" ;
-    :architecture "Transformer" ;
-    :trained_on :BookCorpus, :EnglishWikipedia ;  # Links to Datasets
-    :evaluated_with :GLUE_Accuracy, :SQuAD_F1 ;   # Links to Metrics
-    :has_ethical_issue :GenderBias ;              # Links to EthicalConsideration
-    :has_environmental_impact :Estimated_CO2 .    # Links to EnvironmentalImpact
-
-# Dataset Instances
-:BookCorpus a :Dataset ;
-    :hasName "BookCorpus" ;
-    :hasSource "Books (fiction/non-fiction)" ;
-    :hasSize "11,038 books"^^xsd:string .
-
-:EnglishWikipedia a :Dataset ;
-    :hasName "English Wikipedia" ;
-    :hasSource "Wikipedia dump (2018)" ;
-    :hasSize "2.5B words"^^xsd:string .
-
-# Metric Instances
-:GLUE_Accuracy a :Metric ;
-    :metricName "Accuracy" ;
-    :metricValue "80.5%"^^xsd:string ;
-    :benchmarked_on "GLUE"^^xsd:string .
-
-:SQuAD_F1 a :Metric ;
-    :metricName "F1-score" ;
-    :metricValue "88.5%"^^xsd:string ;
-    :benchmarked_on "SQuAD v1.1"^^xsd:string .
-
-# EthicalConsideration Instance
-:GenderBias a :EthicalConsideration ;
-    :bias_type "Gender" ;
-    :description "May associate certain professions with gendered pronouns (e.g., 'nurse' → 'she')" ;
-    :mitigation_strategy "Debiasing during fine-tuning" .
-
-# EnvironmentalImpact Instance (Estimated)
-:Estimated_CO2 a :EnvironmentalImpact ;
-    :carbon_emissions "1400 kg"^^xsd:string ;  # (not official)
-    :energy_usage "800 kWh"^^xsd:string ;
-    :hardware_used "TPU v3" .
