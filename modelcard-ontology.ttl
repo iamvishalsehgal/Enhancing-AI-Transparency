@@ -1,5 +1,5 @@
 # Define Namespace - It organize ontology like folders
-@prefix : <http://example.org/modelcard-ontology#> .
+@prefix : <https://raw.githubusercontent.com/iamvishalsehgal/automation-model-cards/master/modelcard-ontology.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -58,3 +58,51 @@
     owl:onProperty :hasLicense ;
     owl:minCardinality 1 ;
 ] .
+
+# Model Instance
+# Bert-base-uncased : https://huggingface.co/google-bert/bert-base-uncased#bert-base-model-uncased
+
+:bert-base-uncased a :Model ;
+    :hasName "BERT-base-uncased" ;
+    :hasVersion "1.0" ;
+    :hasLicense "Apache-2.0" ;
+    :developedBy "Google" ;
+    :architecture "Transformer" ;
+    :trained_on :BookCorpus, :EnglishWikipedia ;  # Links to Datasets
+    :evaluated_with :GLUE_Accuracy, :SQuAD_F1 ;   # Links to Metrics
+    :has_ethical_issue :GenderBias ;              # Links to EthicalConsideration
+    :has_environmental_impact :Estimated_CO2 .    # Links to EnvironmentalImpact
+
+# Dataset Instances
+:BookCorpus a :Dataset ;
+    :hasName "BookCorpus" ;
+    :hasSource "Books (fiction/non-fiction)" ;
+    :hasSize "11,038 books"^^xsd:string .
+
+:EnglishWikipedia a :Dataset ;
+    :hasName "English Wikipedia" ;
+    :hasSource "Wikipedia dump (2018)" ;
+    :hasSize "2.5B words"^^xsd:string .
+
+# Metric Instances
+:GLUE_Accuracy a :Metric ;
+    :metricName "Accuracy" ;
+    :metricValue "80.5%"^^xsd:string ;
+    :benchmarked_on "GLUE"^^xsd:string .
+
+:SQuAD_F1 a :Metric ;
+    :metricName "F1-score" ;
+    :metricValue "88.5%"^^xsd:string ;
+    :benchmarked_on "SQuAD v1.1"^^xsd:string .
+
+# EthicalConsideration Instance
+:GenderBias a :EthicalConsideration ;
+    :bias_type "Gender" ;
+    :description "May associate certain professions with gendered pronouns (e.g., 'nurse' → 'she')" ;
+    :mitigation_strategy "Debiasing during fine-tuning" .
+
+# EnvironmentalImpact Instance (Estimated)
+:Estimated_CO2 a :EnvironmentalImpact ;
+    :carbon_emissions "1400 kg"^^xsd:string ;  # (not official)
+    :energy_usage "800 kWh"^^xsd:string ;
+    :hardware_used "TPU v3" .
