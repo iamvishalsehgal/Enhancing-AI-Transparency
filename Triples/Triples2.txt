@@ -1,4 +1,4 @@
-Prompt2: 
+Prompt2:
 
 Gemini:  f"""Extract model metadata as JSON with VALID SPDX LICENSE IDS:
 {{

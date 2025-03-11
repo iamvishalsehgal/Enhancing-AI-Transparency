@@ -1,3 +1,7 @@
+- Read papers Indika said use Nature paper to start with coding 
+- So i started reading paper indika said i have to make same thing as they made but based on llm
+- So i started created an model ontology but indika didnt want that he suggested to make triples first
+- So i started writing a code for triples (triple_creation.ipynb) which use llm to extract details from hugging face and store it in json triples below is for that file.
 - added an output json file for triples 
 - extracted 1k model cards from hugging face sorted them as downloads aseanding 
 - Captured output of the 1st prompt
@@ -70,4 +74,12 @@ Text: {text[:3000]}"""
 - made a one universal prompt to make it easy 
 - Gemini get 10k characters llama get 3k char for memory constraint
 - llama select it own character using tokenizer fuck memory contraint
+- Here im done with coding i'll keep this code for triple_creation.ipynb file and now im starting to test different prompts 
+- Indika provide few papers which i can use to create propmt by using there techniques:
+  - https://www.sciencedirect.com/science/article/pii/S0169023X24001162
+  - https://aclanthology.org/2024.textgraphs-1.4.pdf
+  - https://proceedings.neurips.cc/paper_files/paper/2024/file/9e89f068a62f6858c661a8abecf5bb0a-Paper-Conference.pdf
+  - https://ieeexplore.ieee.org/abstract/document/10822222/
+  - https://arxiv.org/pdf/2502.09956
+  - https://journals.sagepub.com/doi/pdf/10.1177/15705838241296446
 - 
