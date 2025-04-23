@@ -1,0 +1,142 @@
+- Read papers Indika said use Nature paper to start with coding 
+- So i started reading paper indika said i have to make same thing as they made but based on llm
+- So i started created an model ontology but indika didnt want that he suggested to make triples first
+- So i started writing a code for triples (triple_creation.ipynb) which use llm to extract details from hugging face and store it in json triples below is for that file.
+- added an output json file for triples 
+- extracted 1k model cards from hugging face sorted them as downloads aseanding 
+- Captured output of the 1st prompt
+
+
+def extract_hf_entities(text):
+    """LLM-based entity extraction using LLaMA"""
+    try:
+        # Create LLaMA-specific prompt
+        prompt = f"""<s>[INST] <<SYS>>
+You are an AI ontology expert. Extract these entities from the model card:
+- Model name (string)
+- License type (string)
+- CO2 emitted (number)
+- Training data sources (comma-separated list)
+- Architecture (string)
+
+Return ONLY valid JSON. No explanations.
+<</SYS>>
+{text[:1500]} [/INST]"""  # Truncate for context limits
+
+
+
+
+- Saved above output as triples1.json
+- then i fix padding error which i was getting on output but adding: tokenizer.pad_token = tokenizer.eos_token and tokenizer.padding_side = "left" as [no change in triples]
+- added regex extraction + more ontology mapping
+- change pipeline for regex - now its giving proper output not just 1 json key
+- use the same approch for llms 
+- added gemini removed llama
+- added llama, gemini ,regex for extraction as gemini was giving api error
+- still using regex for extraction even though i said use_gemini = True and giving not good output (non structured)
+- changed pipeline for llm’s a bit -  using regex structure for llms 
+- removed regex indika said we wont use it 
+- Now i think it works properly Captured output from 2nd Prompt using SPDX license IDs both model had different prompt but mostly gemini got used file extracted 20 model cards and saved in Triples2.json
+
+
+
+Gemini Prompt: """Extract model metadata as JSON with VALID SPDX LICENSE IDS:
+{{
+  "Model name": "string",
+  "License type": "string (SPDX ID)",
+  "Architecture": "string",
+  "CO2 emitted": "float|null",
+  "Training data sources": "string",
+  "Datasets": ["string"],
+  "Languages": ["string"],
+  "Metrics": ["string"],
+  "Base model": "string",
+  "Pipeline tag": "string",
+  "Library name": "string"
+}}
+
+Model card text:
+{text[:10000]}"""
+ LLama Prompt: f"""Extract metadata as JSON with SPDX licenses:
+{{
+  "License type": "string (SPDX ID)",
+  "Architecture": "string",
+  "Model name": "string",
+  "Base model": "string",
+  "Pipeline tag": "string",
+  "Library name": "string"
+}}
+Text: {text[:3000]}"""
+
+
+
+
+- made a one universal prompt to make it easy 
+- Gemini get 10k characters llama get 3k char for memory constraint
+- llama select it own character using tokenizer fuck memory contraint
+- Here im done with coding i'll keep this code for triple_creation.ipynb file and now im starting to test different prompts 
+- Indika provide few papers which i can use to create propmt by using there techniques:
+  - https://www.sciencedirect.com/science/article/pii/S0169023X24001162
+  - https://aclanthology.org/2024.textgraphs-1.4.pdf
+  - https://proceedings.neurips.cc/paper_files/paper/2024/file/9e89f068a62f6858c661a8abecf5bb0a-Paper-Conference.pdf
+  - https://ieeexplore.ieee.org/abstract/document/10822222/
+  - https://arxiv.org/pdf/2502.09956
+  - https://journals.sagepub.com/doi/pdf/10.1177/15705838241296446
+- Now i started with 1st paper promt i tried all 4 prompt from that paper only one worked other also worked but with lots of non-scrapped data
+- After that i choose triple 3 for now just to inject sparql to make it in ttl format
+- To perform that i choose rdflib and SPARQL queries bcoz it can execture comples queries for hugging face model triples locally and its more flexible than others and it Verify RDF syntax/ontology consistency in your generated triples
+- I changed the triple extraction because i didnt like it im extraction specific things only so i include everything from HF modelcard template: https://github.com/huggingface/huggingface_hub/blob/main/src/huggingface_hub/templates/modelcard_template.md
+    - Now it extract 25+ fields from model card instead of limited one like licensice, co2 ,training data etc.
+    - Xpanded ontology mapping (HF_Mapping) , Made a structred relation for Developers , Training/evaluation pipeline , Env impact metrics, Usage
+    - Fixed some error and made code more clean.
+- In triple_creation.ipynb : Removed fixed hf_mapping and made it dynamic so it can capture everything. generate_hf_triples(). Now it will be made on actual mapping present in model card.
+- In triple_creation.ipynb: model_id mapping is always included so that it will be easy to identify
+- There was some error with the extraction it was only extracting the dataset instead of whats written in the model card so i enhanced the json extraction, changed the prompt.
+- As llama is not working idk why when its working it is giving " Error processing FacebookAI/xlm-roberta-large: '"Architecture"' " while extracting triples so i make llama and Gemini separately now.
+- in triple creation file: removed hf which was use to show uniqueness but we dont have any uri collision, so it is not needed
+- As i made llama triple creation , gemini triples creation seprately so now i have 3 different triple creation where both are seprately and together
+- Created new extracted triple json file to .ttl (named model_card_knowlege_protege.ipynb) created a cleasn base uris for all resources , auto detect when to use literals vs resources, this generate standard turtle format , maintains ontology hierarchy and relationships, and skips invalid triples with and error message 
+- the ontology will enable me to Browse model metadata as linked data, query relationship between components, extends with additional properties/class, perform reasoning about model characterstics.
+- in "model_card_knowlege_protege.ipynb" added uri_encode() function to properly encode uri's, made sure all subject and predicates get uri encoded, improved literal detection for complex values, maintain class references in modelcard namespace now it will oass rdflib's uri validation , maintain human-readable uris where possible , properly serialize all triples to turtle format , work seemlessly with protege. 
+- After creating model_card_knowlege_protege.ipynb file i got the model_card_knowledge.ttl file which i further put in protege to explore, refine and utize the ontology efficiently.
+- Then i started with graph db and we are done with the creation of ontology kknowlegde from the  the help of llm usi and identified triples from the hugging face model car so the next steop is th to create a server data base which indika suggested to use ontotex graph db or jena and texst it with protge if it is correct or not as protege is making it automatically but we need to created it using llm where on photege we cat connect llm with it after meeting with indika he suggect create a server database then create a python script and apply sparql usingkllm and where you giving the script with natural language and it is goving back and forth (*see thesis notebook for diagram )
+-asoafter the meeeting i created the ontotex repo af and upload the ontology (.ttl file ) 
+- removed "@prefix modelcard: <http://example.org/modelcard#> ." in model_card_knowledge.ipynb file because i am not making my own ontology from scrath i am using standard ontology which is already there and change the mapping to auto created from the extracted triples file from triple_creation.ipynb file.
+- in triple_creation.ipynb i added mapping so subClassOf goes to rdfs, hasParameterDataValue goes to dul, type goes to rdf
+- idk how my ontology creation ttl file code got changed somehow but i created it again and indluded all the things now model_card_knowledge.ttl uses standard namespaces like "dul", "rdfs", "rdf" and relate uri to local terms like "facebookopt-125m" and proper "rdfs:subClassOf" relations like "EvaluationDatasets rdfs:subClassOf Component"
+- model_card_knowledge.ttl- made an literal enforcement for "dul:hasParameterDataValue" to convert any uri's to string literals, make sure all values are literal type, fixed single quoted json using .replace("'", '"'), uses rdf.json datatype for valid json objects, only uses class references for rdf:type and rdfs:subClassOf
+- model_card_knowledge.ttl - made a strict namespace enformcement whoch means only uses dul,rdf,rdfs
+- model_card_knowledge.ttl - dynamic class detection now it will auto detect class like rdf:type and rdfs:subClassOf
+- output model_card_knowledge.ttl has syntax errors due to invalid uri's and bad formatting that was due to dul:hasParameterDataValue predicates so i fixed it 
+- model_card_knowledge.ttl - now auto remove mc: prefix from terms and make sure all non http become relative uri's, uses process_predicate() during first pass to detect classes even if predicates uses full uri's , now recognise full uri's for standard predicates "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" -> rdf:type
+- started working in graphdb now made a repo with rdfs-plus(optimised) ruleset bcoz i dont support owl in new code. 
+- in graphdb i performed sparql query to verify invalid uri's "PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+SELECT ?s ?p ?o WHERE {
+  ?s ?p ?o .
+  FILTER(
+    isURI(?o) && 
+    !STRSTARTS(STR(?o), "http://www.ontologydesignpatterns.org") && 
+    !STRSTARTS(STR(?o), "http://www.w3.org/") && 
+    !STRSTARTS(STR(?o), "urn:")
+  )
+}" it gave more lots of results which lead to 2 core issues 1. malformed URIs - there were terms like "file:/uploaded/generated/..." and "%22o%22:_%22..." 2. relative uri's like "hasModelVariants" need a uri to work so now i map it to standard namespace "dct:hasVersion"
+- model_card_knowledge.ttl - all predicates now use terms that exist in their namespaces,dul:hasComponentPart for component relationships, void:dataset for dataset references, dct:extent for size/magnitude 
+- performed sparql query to check invalid uris -PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX void: <http://rdfs.org/ns/void#>
+
+SELECT DISTINCT ?term WHERE {
+  { ?term rdf:type/rdfs:subClassOf* dul:System }
+  UNION
+  { [] ?term [] }
+  FILTER(
+    STRSTARTS(STR(?term), "mc:") || 
+    STRSTARTS(STR(?term), "ns") || 
+    STRSTARTS(STR(?term), "file:/") || 
+    REGEX(STR(?term), "[\\(\\)\\s]")  # URIs with spaces/parentheses
+  )
+} and got 240 results where it contains "file:/uploaded/generated/..."
+
+- I forgot to add Model Card Report Ontology in triple_creation.ipynb file so i did these changes to The modified code introduces ontology integration by adding owlready2 and rdflib libraries to load and work with a predefined ontology (mcro.owl), which provides standardized classes and predicates for knowledge graph construction. A constant ONTOLOGY_BASE is defined to reference ontology terms consistently.The get_dynamic_mapping function was renamed to get_ontology_mapping and now checks for existing classes in the loaded ontology instead of dynamically generating URIs. It uses mcro:-prefixed terms (e.g., mcro:Transformer) when ontology classes exist and falls back to custom class names (e.g., mcro:CustomArchitecture) when no match is found.The entity extraction prompt was significantly expanded to enforce stricter JSON formatting rules, require ontology URIs in responses (e.g., "mcro:ImageNet-1k"), and mandate new fields like modelType, languages, and pretrainedModel. It also specifies handling of URLs, escaped quotes, and nested JSON structures for metrics.The base type for models was changed from a generic "Model" to mcro:Model, and all class references now use mcro:Component as a superclass. Redundant dul:hasParameterDataValue triples were removed in cases where they added unnecessary complexity.Unused imports (datetime, string, traceback) were removed. Error handling for ontology-specific issues was added, and JSON response cleaning was improved with better regex patterns to remove markdown artifacts.The extraction prompt now explicitly references the ontology URI, provides stricter formatting rules (e.g., array syntax, escaped quotes), and includes a nested JSON example for metrics to guide the LLM's output structure.URIs are now constructed with greater consistency, using ontology namespaces (e.g., mcro:Transformer) and better handling of term capitalization to align with semantic web standards.
