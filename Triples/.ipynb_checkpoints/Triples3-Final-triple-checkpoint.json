@@ -1,0 +1,940 @@
+unified_prompt3 = f"""Extract model metadata as JSON with VALID SPDX LICENSE IDS. Include all available fields:
+{{
+  "Model name": "string",
+  "License type": "string (SPDX ID)",
+  "Architecture": "string",
+  "CO2 emitted": "float|null",
+  "Training data sources": "string",
+  "Datasets": ["string"],
+  "Languages": ["string"],
+  "Metrics": ["string"],
+  "Base model": "string",
+  "Pipeline tag": "string",
+  "Library name": "string"
+}}
+
+Model card text:
+{text[:10000]}"""
+
+[
+  {
+    "s": "hf:FacebookAIxlm-roberta-large",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:FacebookAIxlm-roberta-large",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-MIT"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:FacebookAIxlm-roberta-large",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-RoBERTa"
+  },
+  {
+    "s": "hf:Architecture-RoBERTa",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-RoBERTa",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:FacebookAIxlm-roberta-large",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-CommonCrawl"
+  },
+  {
+    "s": "hf:TrainingData-CommonCrawl",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-CommonCrawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "CommonCrawl"
+  },
+  {
+    "s": "hf:sentence-transformersall-MiniLM-L6-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:sentence-transformersall-MiniLM-L6-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-Apache-20"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:sentence-transformersall-MiniLM-L6-v2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Transformer"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "hf:sentence-transformersall-MiniLM-L6-v2",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Multiple-datasets-including-Re"
+  },
+  {
+    "s": "hf:TrainingData-Multiple-datasets-including-Re",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Multiple-datasets-including-Re",
+    "p": "dul:hasParameterDataValue",
+    "o": "Multiple datasets including Reddit comments, S2ORC citation pairs, WikiAnswers duplicate question pairs, PAQ question-answer pairs, Stack Exchange data, MS MARCO triplets, GOOAQ, Yahoo Answers, Code Search, COCO image captions, SPECTER citation triplets, Sentence Compression, Wikihow, Altlex, Quora Question Triplets, Simple Wikipedia, Natural Questions, SQuAD2.0, TriviaQA, AllNLI (SNLI and MultiNLI), and Flickr30k."
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-Apache-20"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Transformer"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-BookCorpus-English-Wikipedia-e"
+  },
+  {
+    "s": "hf:TrainingData-BookCorpus-English-Wikipedia-e",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-BookCorpus-English-Wikipedia-e",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus, English Wikipedia (excluding lists, tables and headers)"
+  },
+  {
+    "s": "hf:Falconsainsfwimagedetection",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:Falconsainsfwimagedetection",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-other"
+  },
+  {
+    "s": "hf:license-other",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-other",
+    "p": "dul:hasParameterDataValue",
+    "o": "other"
+  },
+  {
+    "s": "hf:Falconsainsfwimagedetection",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Vision-Transformer-ViT"
+  },
+  {
+    "s": "hf:Architecture-Vision-Transformer-ViT",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Vision-Transformer-ViT",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vision Transformer (ViT)"
+  },
+  {
+    "s": "hf:Falconsainsfwimagedetection",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Proprietary-dataset-of-80000-i"
+  },
+  {
+    "s": "hf:TrainingData-Proprietary-dataset-of-80000-i",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Proprietary-dataset-of-80000-i",
+    "p": "dul:hasParameterDataValue",
+    "o": "Proprietary dataset of 80,000 images"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-Apache-20"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-MobileNet-v3"
+  },
+  {
+    "s": "hf:Architecture-MobileNet-v3",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-MobileNet-v3",
+    "p": "dul:hasParameterDataValue",
+    "o": "MobileNet-v3"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-ImageNet-1k"
+  },
+  {
+    "s": "hf:TrainingData-ImageNet-1k",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-ImageNet-1k",
+    "p": "dul:hasParameterDataValue",
+    "o": "ImageNet-1k"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-CC-BY-40"
+  },
+  {
+    "s": "hf:license-CC-BY-40",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-CC-BY-40",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC-BY-4.0"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Vision-Transformer-ViT"
+  },
+  {
+    "s": "hf:Architecture-Vision-Transformer-ViT",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Vision-Transformer-ViT",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vision Transformer (ViT)"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Unknown"
+  },
+  {
+    "s": "hf:TrainingData-Unknown",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Unknown",
+    "p": "dul:hasParameterDataValue",
+    "o": "Unknown"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-MIT"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-ViT-L14-Transformer-image-encoder-Masked-Self-Attention-Transformer-text-encoder"
+  },
+  {
+    "s": "hf:Architecture-ViT-L14-Transformer-image-encoder-Masked-Self-Attention-Transformer-text-encoder",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-ViT-L14-Transformer-image-encoder-Masked-Self-Attention-Transformer-text-encoder",
+    "p": "dul:hasParameterDataValue",
+    "o": "ViT-L/14 Transformer (image encoder), Masked Self-Attention Transformer (text encoder)"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Publicly-available-image-capti"
+  },
+  {
+    "s": "hf:TrainingData-Publicly-available-image-capti",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Publicly-available-image-capti",
+    "p": "dul:hasParameterDataValue",
+    "o": "Publicly available image-caption data from websites and datasets like YFCC100M."
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-Apache-20"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Transformer"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Multiple-datasets-including-Re"
+  },
+  {
+    "s": "hf:TrainingData-Multiple-datasets-including-Re",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Multiple-datasets-including-Re",
+    "p": "dul:hasParameterDataValue",
+    "o": "Multiple datasets including Reddit comments, S2ORC citation pairs, WikiAnswers duplicate question pairs, PAQ question-answer pairs, Stack Exchange data, MS MARCO triplets, GOOAQ, Yahoo Answers, Code Search, COCO image captions, SPECTER citation triplets, Sentence Compression, Wikihow, Altlex, Quora Question Triplets, Simple Wikipedia, Natural Questions, SQuAD2.0, and TriviaQA."
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-Apache-20"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Transformer"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-other"
+  },
+  {
+    "s": "hf:license-other",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-other",
+    "p": "dul:hasParameterDataValue",
+    "o": "other"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Wav2Vec2ForCTC"
+  },
+  {
+    "s": "hf:Architecture-Wav2Vec2ForCTC",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Wav2Vec2ForCTC",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wav2Vec2ForCTC"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Common-Voice-61"
+  },
+  {
+    "s": "hf:TrainingData-Common-Voice-61",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Common-Voice-61",
+    "p": "dul:hasParameterDataValue",
+    "o": "Common Voice 6.1"
+  },
+  {
+    "s": "hf:Bingsuadetailer",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:Bingsuadetailer",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-MIT"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:Bingsuadetailer",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-YOLOv8"
+  },
+  {
+    "s": "hf:Architecture-YOLOv8",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-YOLOv8",
+    "p": "dul:hasParameterDataValue",
+    "o": "YOLOv8"
+  },
+  {
+    "s": "hf:Bingsuadetailer",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Various-datasets-including-Ani"
+  },
+  {
+    "s": "hf:TrainingData-Various-datasets-including-Ani",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Various-datasets-including-Ani",
+    "p": "dul:hasParameterDataValue",
+    "o": "Various datasets including Anime Face CreateML, wider face, AnHDet, hand-detection-fuao9, coco2017, AniSeg, skytnt/anime-segmentation, and deepfashion2."
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-Apache-20"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-ResNet-B"
+  },
+  {
+    "s": "hf:Architecture-ResNet-B",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-ResNet-B",
+    "p": "dul:hasParameterDataValue",
+    "o": "ResNet-B"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-ImageNet-1k"
+  },
+  {
+    "s": "hf:TrainingData-ImageNet-1k",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-ImageNet-1k",
+    "p": "dul:hasParameterDataValue",
+    "o": "ImageNet-1k"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-Apache-20"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-T5"
+  },
+  {
+    "s": "hf:Architecture-T5",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-T5",
+    "p": "dul:hasParameterDataValue",
+    "o": "T5"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Publicly-available-time-series"
+  },
+  {
+    "s": "hf:TrainingData-Publicly-available-time-series",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Publicly-available-time-series",
+    "p": "dul:hasParameterDataValue",
+    "o": "Publicly available time series data and synthetic data generated using Gaussian processes."
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-MiniLM-L6-cos-v1",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-MiniLM-L6-cos-v1",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-Apache-20"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-MiniLM-L6-cos-v1",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Transformer"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-MiniLM-L6-cos-v1",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Multiple-datasets-including-Wi"
+  },
+  {
+    "s": "hf:TrainingData-Multiple-datasets-including-Wi",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Multiple-datasets-including-Wi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Multiple datasets including WikiAnswers, PAQ, Stack Exchange, MS MARCO, GOOAQ, Amazon-QA, and Yahoo Answers."
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-MIT"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Causal-Language-Modeling"
+  },
+  {
+    "s": "hf:Architecture-Causal-Language-Modeling",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Causal-Language-Modeling",
+    "p": "dul:hasParameterDataValue",
+    "o": "Causal Language Modeling"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-WebText-scraped-web-pages-from"
+  },
+  {
+    "s": "hf:TrainingData-WebText-scraped-web-pages-from",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-WebText-scraped-web-pages-from",
+    "p": "dul:hasParameterDataValue",
+    "o": "WebText (scraped web pages from outbound Reddit links)"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-MIT"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-ViT-B32-Transformer-image-encoder-and-masked-self-attention-Transformer-text-encoder"
+  },
+  {
+    "s": "hf:Architecture-ViT-B32-Transformer-image-encoder-and-masked-self-attention-Transformer-text-encoder",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-ViT-B32-Transformer-image-encoder-and-masked-self-attention-Transformer-text-encoder",
+    "p": "dul:hasParameterDataValue",
+    "o": "ViT-B/32 Transformer (image encoder) and masked self-attention Transformer (text encoder)"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-Publicly-available-image-capti"
+  },
+  {
+    "s": "hf:TrainingData-Publicly-available-image-capti",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-Publicly-available-image-capti",
+    "p": "dul:hasParameterDataValue",
+    "o": "Publicly available image-caption data crawled from various websites and pre-existing datasets like YFCC100M."
+  },
+  {
+    "s": "hf:FacebookAIroberta-large",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:FacebookAIroberta-large",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-MIT"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:FacebookAIroberta-large",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Transformer"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "hf:FacebookAIroberta-large",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-BookCorpus-English-Wikipedia-C"
+  },
+  {
+    "s": "hf:TrainingData-BookCorpus-English-Wikipedia-C",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-BookCorpus-English-Wikipedia-C",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus, English Wikipedia, CC-News, OpenWebText, Stories"
+  },
+  {
+    "s": "hf:FacebookAIroberta-base",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:FacebookAIroberta-base",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-MIT"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-MIT",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:FacebookAIroberta-base",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Transformer"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "hf:FacebookAIroberta-base",
+    "p": "modelcard:usesTrainingData",
+    "o": "hf:TrainingData-BookCorpus-English-Wikipedia-C"
+  },
+  {
+    "s": "hf:TrainingData-BookCorpus-English-Wikipedia-C",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:TrainingData"
+  },
+  {
+    "s": "hf:TrainingData-BookCorpus-English-Wikipedia-C",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus, English Wikipedia, CC-News, OpenWebText, Stories"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-MiniLM-L12-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-MiniLM-L12-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-Apache-20"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-Apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-MiniLM-L12-v2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:Architecture-Transformer"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:Architecture"
+  },
+  {
+    "s": "hf:Architecture-Transformer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  }
+]

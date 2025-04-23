@@ -1,0 +1,123 @@
+Anti-Hallucination Prompt
+
+unified_prompt5 = f'''[STRICT MODE] Extract ONLY these verified fields from the text. Skip unverified information.
+
+REQUIRED FIELDS:
+1. License (SPDX format)
+2. Model Architecture 
+3. Training Data Sources
+4. CO2 Emissions (kg)
+
+VALIDATION RULES:
+- Must appear in "## Metadata" section
+- Must match Hugging Face conventions
+- Numerical values require units
+- Reject unverifiable claims
+
+Text:
+{text[:10000]}
+
+Output JSON:'''
+
+[
+  {
+    "s": "hf:Falconsainsfwimagedetection",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:Falconsainsfwimagedetection",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-unknown-license"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "dul:hasParameterDataValue",
+    "o": "unknown-license"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-unknown-license"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "dul:hasParameterDataValue",
+    "o": "unknown-license"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-unknown-license"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "dul:hasParameterDataValue",
+    "o": "unknown-license"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-unknown-license"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "dul:hasParameterDataValue",
+    "o": "unknown-license"
+  },
+  {
+    "s": "hf:Bingsuadetailer",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:Bingsuadetailer",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-unknown-license"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "rdfs:subClassOf",
+    "o": "ModelCard:License"
+  },
+  {
+    "s": "hf:license-unknown-license",
+    "p": "dul:hasParameterDataValue",
+    "o": "unknown-license"
+  }
+]

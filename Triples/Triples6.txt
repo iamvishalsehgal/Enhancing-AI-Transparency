@@ -1,0 +1,1732 @@
+# Extraction prompt template
+EXTRACTION_PROMPT = """
+Extract **only valid JSON** from the text below. Ensure the output is a single JSON object with no extra text. Use double quotes for all keys and values. Omit fields with no data.
+
+Example format:
+{{
+  "Architecture": "RoBERTa",
+  "License": "Apache-2.0",
+  "Training Data": "CommonCrawl",
+  "Languages": ["en", "fr"]
+}}
+
+Schema:
+{{schema}}
+
+Text:
+{{text}}
+""".strip()
+
+# JSON schema for extraction
+EXTRACTION_SCHEMA = {
+    "Model name": "string",
+    "Architecture": "string",  # e.g., "RoBERTa", "BERT"
+    "Training Data": "string",  # e.g., "CommonCrawl", "BookCorpus"
+    "Languages": ["string"],  # e.g., ["en", "fr"]
+    "License": "string",  # SPDX ID (e.g., "Apache-2.0")
+    "Parameters": "number",  # e.g., 1.4e12 (1.4T tokens)
+}
+
+
+[
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-bookcorpus-wikipedia-cc-stories"
+  },
+  {
+    "s": "hf:training_data-bookcorpus-wikipedia-cc-stories",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus, Wikipedia, CC-Stories"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasModelDescription",
+    "o": "hf:model_description-roberta-base-model-pre-trained-by-facebook-ai-research-and-furth"
+  },
+  {
+    "s": "hf:model_description-roberta-base-model-pre-trained-by-facebook-ai-research-and-furth",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa-base model pre-trained by Facebook AI Research and further trained on specific datasets."
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasUseCases",
+    "o": "hf:use_cases-text-classification"
+  },
+  {
+    "s": "hf:use_cases-text-classification",
+    "p": "dul:hasParameterDataValue",
+    "o": "text-classification"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasUseCases",
+    "o": "hf:use_cases-named-entity-recognition"
+  },
+  {
+    "s": "hf:use_cases-named-entity-recognition",
+    "p": "dul:hasParameterDataValue",
+    "o": "named-entity-recognition"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasUseCases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "question-answering"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasDatasetConstructionDescription",
+    "o": "hf:dataset_construction_description-combination-of-publicly-available-datasets"
+  },
+  {
+    "s": "hf:dataset_construction_description-combination-of-publicly-available-datasets",
+    "p": "dul:hasParameterDataValue",
+    "o": "Combination of publicly available datasets"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasInputFormat",
+    "o": "hf:input_format-text"
+  },
+  {
+    "s": "hf:input_format-text",
+    "p": "dul:hasParameterDataValue",
+    "o": "Text"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasOutputFormat",
+    "o": "hf:output_format-text"
+  },
+  {
+    "s": "hf:output_format-text",
+    "p": "dul:hasParameterDataValue",
+    "o": "Text"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-may-produce-factually-incorrect-or-biased-output-not-suitable-fo"
+  },
+  {
+    "s": "hf:limitations-may-produce-factually-incorrect-or-biased-output-not-suitable-fo",
+    "p": "dul:hasParameterDataValue",
+    "o": "May produce factually incorrect or biased output. Not suitable for safety-critical applications."
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasCitationInformation",
+    "o": "hf:citation_information-articleliu2019roberta-titleroberta-a-robustly-optimized-bert-pre"
+  },
+  {
+    "s": "hf:citation_information-articleliu2019roberta-titleroberta-a-robustly-optimized-bert-pre",
+    "p": "dul:hasParameterDataValue",
+    "o": "@article{liu2019roberta,\n  title={RoBERTa: A Robustly Optimized BERT Pretraining Approach},\n  author={Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi, Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and Zettlemoyer, Luke and Stoyanov, Veselin},\n  journal={arXiv preprint arXiv:1907.11692},\n  year={2019}\n}"
+  },
+  {
+    "s": "hf:xlm-roberta-large",
+    "p": "modelcard:hasHardwareandSoftwareRequirements",
+    "o": "hf:hardware_and_software_requirements-cpu-gpu-with-sufficient-memory-python-environment-with-pytorch-l"
+  },
+  {
+    "s": "hf:hardware_and_software_requirements-cpu-gpu-with-sufficient-memory-python-environment-with-pytorch-l",
+    "p": "dul:hasParameterDataValue",
+    "o": "CPU/GPU with sufficient memory. Python environment with PyTorch library."
+  },
+  {
+    "s": "hf:bert-base-uncased",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:bert-base-uncased",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:bert-base-uncased",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:bert-base-uncased",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-wikipedia-bookcorpus"
+  },
+  {
+    "s": "hf:training_data-wikipedia-bookcorpus",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia, BookCorpus"
+  },
+  {
+    "s": "hf:bert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:bert-base-uncased",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-wikipedia-bookcorpus"
+  },
+  {
+    "s": "hf:dataset-wikipedia-bookcorpus",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia + BookCorpus"
+  },
+  {
+    "s": "hf:all-minilm-l6-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:all-minilm-l6-v2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:all-minilm-l6-v2",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-common-crawl"
+  },
+  {
+    "s": "hf:dataset-common-crawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "Common Crawl"
+  },
+  {
+    "s": "hf:all-minilm-l6-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:all-minilm-l6-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:all-minilm-l6-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:all-minilm-l6-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:all-minilm-l6-v2",
+    "p": "modelcard:hasModelDescription",
+    "o": "hf:model_description-roberta-base-model-for-multiple-languages"
+  },
+  {
+    "s": "hf:model_description-roberta-base-model-for-multiple-languages",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa base model for multiple languages"
+  },
+  {
+    "s": "hf:nsfwimagedetection",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:nsfwimagedetection",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:nsfwimagedetection",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-wikipedia-books-commoncrawl"
+  },
+  {
+    "s": "hf:dataset-wikipedia-books-commoncrawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia, Books, CommonCrawl"
+  },
+  {
+    "s": "hf:nsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:nsfwimagedetection",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:nsfwimagedetection",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-wikipedia-en-bookscorpus-en-cc-news-en"
+  },
+  {
+    "s": "hf:training_data-wikipedia-en-bookscorpus-en-cc-news-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia (en), BooksCorpus (en), CC-News (en)"
+  },
+  {
+    "s": "hf:fairfaceageimagedetection",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:fairfaceageimagedetection",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:fairfaceageimagedetection",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:fairfaceageimagedetection",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-the-pile-wikipedia"
+  },
+  {
+    "s": "hf:training_data-the-pile-wikipedia",
+    "p": "dul:hasParameterDataValue",
+    "o": "The Pile, Wikipedia"
+  },
+  {
+    "s": "hf:fairfaceageimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:fairfaceageimagedetection",
+    "p": "modelcard:hasTrainingTechniques",
+    "o": "hf:training_techniques-causal-language-modeling"
+  },
+  {
+    "s": "hf:training_techniques-causal-language-modeling",
+    "p": "dul:hasParameterDataValue",
+    "o": "Causal Language Modeling"
+  },
+  {
+    "s": "hf:mobilenetv3small100lambin1k",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:mobilenetv3small100lambin1k",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:mobilenetv3small100lambin1k",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-common-crawl"
+  },
+  {
+    "s": "hf:dataset-common-crawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "Common Crawl"
+  },
+  {
+    "s": "hf:mobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:mobilenetv3small100lambin1k",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:mobilenetv3small100lambin1k",
+    "p": "modelcard:hasModelDescription",
+    "o": "hf:model_description-roberta-base-model"
+  },
+  {
+    "s": "hf:model_description-roberta-base-model",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa base model"
+  },
+  {
+    "s": "hf:mobilenetv3small100lambin1k",
+    "p": "modelcard:hasTasks",
+    "o": "hf:tasks-text-classification"
+  },
+  {
+    "s": "hf:tasks-text-classification",
+    "p": "dul:hasParameterDataValue",
+    "o": "Text Classification"
+  },
+  {
+    "s": "hf:mobilenetv3small100lambin1k",
+    "p": "modelcard:hasTasks",
+    "o": "hf:tasks-sentiment-analysis"
+  },
+  {
+    "s": "hf:tasks-sentiment-analysis",
+    "p": "dul:hasParameterDataValue",
+    "o": "Sentiment Analysis"
+  },
+  {
+    "s": "hf:chronos-t5-small",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:chronos-t5-small",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:chronos-t5-small",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-common-crawl"
+  },
+  {
+    "s": "hf:dataset-common-crawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "Common Crawl"
+  },
+  {
+    "s": "hf:chronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:chronos-t5-small",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:chronos-t5-small",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-common-crawl-840b-tokens"
+  },
+  {
+    "s": "hf:training_data-common-crawl-840b-tokens",
+    "p": "dul:hasParameterDataValue",
+    "o": "Common Crawl (840B tokens)"
+  },
+  {
+    "s": "hf:clip-vit-large-patch14",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:clip-vit-large-patch14",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:clip-vit-large-patch14",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:clip-vit-large-patch14",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:clip-vit-large-patch14",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-wikipedia-books-news-web-code-etc"
+  },
+  {
+    "s": "hf:training_data-wikipedia-books-news-web-code-etc",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia, Books, News, Web, Code, etc."
+  },
+  {
+    "s": "hf:clip-vit-large-patch14",
+    "p": "modelcard:hasTrainingTechniques",
+    "o": "hf:training_techniques-masked-language-modeling"
+  },
+  {
+    "s": "hf:training_techniques-masked-language-modeling",
+    "p": "dul:hasParameterDataValue",
+    "o": "Masked Language Modeling"
+  },
+  {
+    "s": "hf:all-mpnet-base-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:all-mpnet-base-v2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:all-mpnet-base-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:all-mpnet-base-v2",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-bookcorpus-english-wikipedia-cc-stories-realnews-openwebtext"
+  },
+  {
+    "s": "hf:training_data-bookcorpus-english-wikipedia-cc-stories-realnews-openwebtext",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus, English Wikipedia, CC-Stories, RealNews, OpenWebText"
+  },
+  {
+    "s": "hf:all-mpnet-base-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:all-mpnet-base-v2",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-bookcorpus-english-wikipedia-cc-stories-realnews-openwebtext"
+  },
+  {
+    "s": "hf:dataset-bookcorpus-english-wikipedia-cc-stories-realnews-openwebtext",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus, English Wikipedia, CC-Stories, RealNews, OpenWebText"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-wikipedia-books-journals"
+  },
+  {
+    "s": "hf:training_data-wikipedia-books-journals",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia, Books, Journals"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasTrainingTechniques",
+    "o": "hf:training_techniques-masked-language-modeling"
+  },
+  {
+    "s": "hf:training_techniques-masked-language-modeling",
+    "p": "dul:hasParameterDataValue",
+    "o": "Masked Language Modeling"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasDatasetCreationMethod",
+    "o": "hf:dataset_creation_method-converted-to-text-and-tokenized"
+  },
+  {
+    "s": "hf:dataset_creation_method-converted-to-text-and-tokenized",
+    "p": "dul:hasParameterDataValue",
+    "o": "Converted to text and tokenized"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasModelSize",
+    "o": "hf:model_size-117b-parameters"
+  },
+  {
+    "s": "hf:model_size-117b-parameters",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.17B parameters"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasTokenizer",
+    "o": "hf:tokenizer-byte-level-bpe"
+  },
+  {
+    "s": "hf:tokenizer-byte-level-bpe",
+    "p": "dul:hasParameterDataValue",
+    "o": "Byte-level BPE"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasVocabularySize",
+    "o": "hf:vocabulary_size-256k-tokens"
+  },
+  {
+    "s": "hf:vocabulary_size-256k-tokens",
+    "p": "dul:hasParameterDataValue",
+    "o": "256K tokens"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasDownstreamTaskPerformance",
+    "o": "hf:downstream_task_performance-exceeds-gpt-2-on-some-tasks"
+  },
+  {
+    "s": "hf:downstream_task_performance-exceeds-gpt-2-on-some-tasks",
+    "p": "dul:hasParameterDataValue",
+    "o": "Exceeds GPT-2 on some tasks"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-can-generate-biased-or-harmful-text"
+  },
+  {
+    "s": "hf:limitations-can-generate-biased-or-harmful-text",
+    "p": "dul:hasParameterDataValue",
+    "o": "Can generate biased or harmful text"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasBiasMitigation",
+    "o": "hf:bias_mitigation-debiasing-techniques"
+  },
+  {
+    "s": "hf:bias_mitigation-debiasing-techniques",
+    "p": "dul:hasParameterDataValue",
+    "o": "Debiasing techniques"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasBiasMitigation",
+    "o": "hf:bias_mitigation-safety-guidelines"
+  },
+  {
+    "s": "hf:bias_mitigation-safety-guidelines",
+    "p": "dul:hasParameterDataValue",
+    "o": "Safety guidelines"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasHardwareUsedforTraining",
+    "o": "hf:hardware_used_for_training-tpus"
+  },
+  {
+    "s": "hf:hardware_used_for_training-tpus",
+    "p": "dul:hasParameterDataValue",
+    "o": "TPUs"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasTrainingTime",
+    "o": "hf:training_time-several-weeks"
+  },
+  {
+    "s": "hf:training_time-several-weeks",
+    "p": "dul:hasParameterDataValue",
+    "o": "Several weeks"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasDatasetSize",
+    "o": "hf:dataset_size-300gb"
+  },
+  {
+    "s": "hf:dataset_size-300gb",
+    "p": "dul:hasParameterDataValue",
+    "o": "300GB"
+  },
+  {
+    "s": "hf:electra-base-discriminator",
+    "p": "modelcard:hasHyperparameters",
+    "o": "hf:hyperparameters-batch-size-256-learning-rate-1e-4-optimizer-adam"
+  },
+  {
+    "s": "hf:hyperparameters-batch-size-256-learning-rate-1e-4-optimizer-adam",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'Batch Size': '256', 'Learning Rate': '1e-4', 'Optimizer': 'Adam'}"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasTasks",
+    "o": "hf:tasks-fill-mask"
+  },
+  {
+    "s": "hf:tasks-fill-mask",
+    "p": "dul:hasParameterDataValue",
+    "o": "fill-mask"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasTasks",
+    "o": "hf:tasks-question-answering"
+  },
+  {
+    "s": "hf:tasks-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "question-answering"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasTasks",
+    "o": "hf:tasks-summarization"
+  },
+  {
+    "s": "hf:tasks-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "summarization"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasTasks",
+    "o": "hf:tasks-text-classification"
+  },
+  {
+    "s": "hf:tasks-text-classification",
+    "p": "dul:hasParameterDataValue",
+    "o": "text-classification"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasTasks",
+    "o": "hf:tasks-text-generation"
+  },
+  {
+    "s": "hf:tasks-text-generation",
+    "p": "dul:hasParameterDataValue",
+    "o": "text-generation"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasTasks",
+    "o": "hf:tasks-translation"
+  },
+  {
+    "s": "hf:tasks-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "translation"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasTasks",
+    "o": "hf:tasks-zero-shot-classification"
+  },
+  {
+    "s": "hf:tasks-zero-shot-classification",
+    "p": "dul:hasParameterDataValue",
+    "o": "zero-shot-classification"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-commoncrawl"
+  },
+  {
+    "s": "hf:training_data-commoncrawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "CommonCrawl"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:adetailer",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:resnet50a1in1k",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:resnet50a1in1k",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:resnet50a1in1k",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-cc-stories"
+  },
+  {
+    "s": "hf:dataset-cc-stories",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC-Stories"
+  },
+  {
+    "s": "hf:resnet50a1in1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:resnet50a1in1k",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:resnet50a1in1k",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-commoncrawl"
+  },
+  {
+    "s": "hf:training_data-commoncrawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "CommonCrawl"
+  },
+  {
+    "s": "hf:resnet50a1in1k",
+    "p": "modelcard:hasModelDescription",
+    "o": "hf:model_description-roberta-model-pre-trained-on-a-large-corpus-of-english-text-it-i"
+  },
+  {
+    "s": "hf:model_description-roberta-model-pre-trained-on-a-large-corpus-of-english-text-it-i",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa model pre-trained on a large corpus of English text.  It is a good general-purpose model."
+  },
+  {
+    "s": "hf:multi-qa-minilm-l6-cos-v1",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:multi-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:multi-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:multi-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:multi-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-wikipedia-books-news-web"
+  },
+  {
+    "s": "hf:training_data-wikipedia-books-news-web",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia, Books, News, Web"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-wikipedia-books-news-web"
+  },
+  {
+    "s": "hf:dataset-wikipedia-books-news-web",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia, Books, News, Web"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasModelDescription",
+    "o": "hf:model_description-roberta-large-model-pre-trained-on-a-large-corpus-of-english-dat"
+  },
+  {
+    "s": "hf:model_description-roberta-large-model-pre-trained-on-a-large-corpus-of-english-dat",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa-large model pre-trained on a large corpus of English data by Meta AI."
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasPre-trainedon",
+    "o": "hf:pre-trained_on-wikipedia"
+  },
+  {
+    "s": "hf:pre-trained_on-wikipedia",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasPre-trainedon",
+    "o": "hf:pre-trained_on-bookscorpus"
+  },
+  {
+    "s": "hf:pre-trained_on-bookscorpus",
+    "p": "dul:hasParameterDataValue",
+    "o": "BooksCorpus"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasPre-trainedon",
+    "o": "hf:pre-trained_on-cc-news"
+  },
+  {
+    "s": "hf:pre-trained_on-cc-news",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC-News"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasPre-trainedon",
+    "o": "hf:pre-trained_on-openwebtext"
+  },
+  {
+    "s": "hf:pre-trained_on-openwebtext",
+    "p": "dul:hasParameterDataValue",
+    "o": "OpenWebText"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasPre-trainedon",
+    "o": "hf:pre-trained_on-stories"
+  },
+  {
+    "s": "hf:pre-trained_on-stories",
+    "p": "dul:hasParameterDataValue",
+    "o": "Stories"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-wikipedia-books-news-web"
+  },
+  {
+    "s": "hf:training_data-wikipedia-books-news-web",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia, Books, News, Web"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasUseCases",
+    "o": "hf:use_cases-text-classification"
+  },
+  {
+    "s": "hf:use_cases-text-classification",
+    "p": "dul:hasParameterDataValue",
+    "o": "Text Classification"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasUseCases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "Question Answering"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasUseCases",
+    "o": "hf:use_cases-named-entity-recognition"
+  },
+  {
+    "s": "hf:use_cases-named-entity-recognition",
+    "p": "dul:hasParameterDataValue",
+    "o": "Named Entity Recognition"
+  },
+  {
+    "s": "hf:gpt2",
+    "p": "modelcard:hasUseCases",
+    "o": "hf:use_cases-summarization"
+  },
+  {
+    "s": "hf:use_cases-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "Summarization"
+  },
+  {
+    "s": "hf:clip-vit-base-patch32",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:clip-vit-base-patch32",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:clip-vit-base-patch32",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-cc-stories"
+  },
+  {
+    "s": "hf:dataset-cc-stories",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC-Stories"
+  },
+  {
+    "s": "hf:clip-vit-base-patch32",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:clip-vit-base-patch32",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:clip-vit-base-patch32",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-commoncrawl"
+  },
+  {
+    "s": "hf:training_data-commoncrawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "CommonCrawl"
+  },
+  {
+    "s": "hf:clip-vit-base-patch32",
+    "p": "modelcard:hasSize",
+    "o": "hf:size-160gb"
+  },
+  {
+    "s": "hf:size-160gb",
+    "p": "dul:hasParameterDataValue",
+    "o": "160GB"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-english",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-bookcorpus"
+  },
+  {
+    "s": "hf:dataset-bookcorpus",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-bookcorpus-english-wikipedia"
+  },
+  {
+    "s": "hf:training_data-bookcorpus-english-wikipedia",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus + English Wikipedia"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-commoncrawl"
+  },
+  {
+    "s": "hf:dataset-commoncrawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "CommonCrawl"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-wikipedia"
+  },
+  {
+    "s": "hf:training_data-wikipedia",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia"
+  },
+  {
+    "s": "hf:wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasUseCase",
+    "o": "hf:usecase-text-classification-question-answering"
+  },
+  {
+    "s": "hf:usecase-text-classification-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "Text classification, question answering"
+  },
+  {
+    "s": "hf:vit-base-patch16-224-in21k",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:vit-base-patch16-224-in21k",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:vit-base-patch16-224-in21k",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:vit-base-patch16-224-in21k",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-commoncrawl"
+  },
+  {
+    "s": "hf:training_data-commoncrawl",
+    "p": "dul:hasParameterDataValue",
+    "o": "CommonCrawl"
+  },
+  {
+    "s": "hf:vit-base-patch16-224-in21k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:vit-base-patch16-224-in21k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-fr"
+  },
+  {
+    "s": "hf:languages-fr",
+    "p": "dul:hasParameterDataValue",
+    "o": "fr"
+  },
+  {
+    "s": "hf:vit-base-patch16-224-in21k",
+    "p": "modelcard:hasTrainingProcedure",
+    "o": "hf:training_procedure-masked-language-modeling"
+  },
+  {
+    "s": "hf:training_procedure-masked-language-modeling",
+    "p": "dul:hasParameterDataValue",
+    "o": "Masked Language Modeling"
+  },
+  {
+    "s": "hf:vit-base-patch16-224-in21k",
+    "p": "modelcard:hasSize",
+    "o": "hf:size-125m-parameters"
+  },
+  {
+    "s": "hf:size-125m-parameters",
+    "p": "dul:hasParameterDataValue",
+    "o": "125M parameters"
+  },
+  {
+    "s": "hf:vit-base-patch16-224-in21k",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-cc-news"
+  },
+  {
+    "s": "hf:dataset-cc-news",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC-News"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-bookcorpus-wikipedia-cc-news-openwebtext-stories"
+  },
+  {
+    "s": "hf:training_data-bookcorpus-wikipedia-cc-news-openwebtext-stories",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus, Wikipedia, CC-News, OpenWebText, Stories"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasModelSize",
+    "o": "hf:model_size-15b-parameters"
+  },
+  {
+    "s": "hf:model_size-15b-parameters",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.5B parameters"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasDataset",
+    "o": "hf:dataset-deduplicated-bookcorpus-english-wikipedia-cc-news-openwebtext-an"
+  },
+  {
+    "s": "hf:dataset-deduplicated-bookcorpus-english-wikipedia-cc-news-openwebtext-an",
+    "p": "dul:hasParameterDataValue",
+    "o": "deduplicated BookCorpus, English Wikipedia, CC-News, OpenWebText, and Stories datasets"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasTrainingSteps",
+    "o": "hf:training_steps-300000-steps"
+  },
+  {
+    "s": "hf:training_steps-300000-steps",
+    "p": "dul:hasParameterDataValue",
+    "o": "300,000 steps"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasBatchSize",
+    "o": "hf:batch_size-2048-sequences"
+  },
+  {
+    "s": "hf:batch_size-2048-sequences",
+    "p": "dul:hasParameterDataValue",
+    "o": "2,048 sequences"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLearningRate",
+    "o": "hf:learning_rate-000006"
+  },
+  {
+    "s": "hf:learning_rate-000006",
+    "p": "dul:hasParameterDataValue",
+    "o": "0.00006"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasOptimizer",
+    "o": "hf:optimizer-adam-with-betas-of-09-and-098-epsilon1e-06"
+  },
+  {
+    "s": "hf:optimizer-adam-with-betas-of-09-and-098-epsilon1e-06",
+    "p": "dul:hasParameterDataValue",
+    "o": "Adam with betas of 0.9 and 0.98, epsilon=1e-06"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasWeightDecay",
+    "o": "hf:weight_decay-001"
+  },
+  {
+    "s": "hf:weight_decay-001",
+    "p": "dul:hasParameterDataValue",
+    "o": "0.01"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasMaxSequenceLength",
+    "o": "hf:max_sequence_length-512"
+  },
+  {
+    "s": "hf:max_sequence_length-512",
+    "p": "dul:hasParameterDataValue",
+    "o": "512"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasValidationMetrics",
+    "o": "hf:validation_metrics-perplexity-1656"
+  },
+  {
+    "s": "hf:validation_metrics-perplexity-1656",
+    "p": "dul:hasParameterDataValue",
+    "o": "perplexity 16.56"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasDescription",
+    "o": "hf:description-it-is-a-large-language-model-trained-by-google"
+  },
+  {
+    "s": "hf:description-it-is-a-large-language-model-trained-by-google",
+    "p": "dul:hasParameterDataValue",
+    "o": "It is a large language model trained by Google."
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasInputFormat",
+    "o": "hf:input_format-text"
+  },
+  {
+    "s": "hf:input_format-text",
+    "p": "dul:hasParameterDataValue",
+    "o": "Text"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasOutputFormat",
+    "o": "hf:output_format-text"
+  },
+  {
+    "s": "hf:output_format-text",
+    "p": "dul:hasParameterDataValue",
+    "o": "Text"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasPaper/Project",
+    "o": "hf:paper/project-https-arxivorg-abs-200514165"
+  },
+  {
+    "s": "hf:paper/project-https-arxivorg-abs-200514165",
+    "p": "dul:hasParameterDataValue",
+    "o": "https://arxiv.org/abs/2005.14165"
+  },
+  {
+    "s": "hf:paraphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasCode",
+    "o": "hf:code-https-githubcom-google-research-text-to-text-transfer-transforme"
+  },
+  {
+    "s": "hf:code-https-githubcom-google-research-text-to-text-transfer-transforme",
+    "p": "dul:hasParameterDataValue",
+    "o": "https://github.com/google-research/text-to-text-transfer-transformer"
+  },
+  {
+    "s": "hf:esmfoldv1",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:esmfoldv1",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:esmfoldv1",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:esmfoldv1",
+    "p": "modelcard:hasTrainingData",
+    "o": "hf:training_data-the-pile"
+  },
+  {
+    "s": "hf:training_data-the-pile",
+    "p": "dul:hasParameterDataValue",
+    "o": "The Pile"
+  },
+  {
+    "s": "hf:esmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  }
+]

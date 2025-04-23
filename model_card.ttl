@@ -1,0 +1,2678 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix mcro: <http://purl.obolibrary.org/obo/mcro.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+mcro:Bingsuadetailer a mcro:Model ;
+    mcro:hasLibraries "Bingsuadetailer-libraries-YOLOv8",
+        "Bingsuadetailer-libraries-ultralytics" ;
+    mcro:hasMetrics "Bingsuadetailer-metrics-mAP-50",
+        "Bingsuadetailer-metrics-mAP-50-95" ;
+    mcro:hasModeltype "Bingsuadetailer-modelType-Object-Detection" ;
+    mcro:hasPretrainedmodel "Bingsuadetailer-pretrainedModel-True" ;
+    mcro:hasTrainingdata "Bingsuadetailer-trainingData-httpscocodatasetorghome",
+        "Bingsuadetailer-trainingData-httpsgithubcomjerryli27AniSeg",
+        "Bingsuadetailer-trainingData-httpsgithubcomswitchablenormsDeepFashion2",
+        "Bingsuadetailer-trainingData-httpshuggingfacecodatasetsskytntanime-segmentation",
+        "Bingsuadetailer-trainingData-httpshuoyang1213meWIDERFACEindexhtml",
+        "Bingsuadetailer-trainingData-httpsuniverseroboflowcom0oooooo0xml2txt-njqx1",
+        "Bingsuadetailer-trainingData-httpsuniverseroboflowcom1-yshhianhdet",
+        "Bingsuadetailer-trainingData-httpsuniverseroboflowcomcatwithawandhand-detection",
+        "Bingsuadetailer-trainingData-httpsuniverseroboflowcommy-workspace-mph8oanime-fa",
+        "Bingsuadetailer-trainingData-httpsuniverseroboflowcomsed-b8vkfan-lfg5i" .
+
+mcro:Bingsuadetailer-libraries-YOLOv8 a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "YOLOv8" .
+
+mcro:Bingsuadetailer-libraries-ultralytics a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "ultralytics" .
+
+mcro:Bingsuadetailer-metrics-mAP-50 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "mAP 50" .
+
+mcro:Bingsuadetailer-metrics-mAP-50-95 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "mAP 50-95" .
+
+mcro:Bingsuadetailer-modelType-Object-Detection a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "Object Detection" .
+
+mcro:Bingsuadetailer-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:Bingsuadetailer-trainingData-httpscocodatasetorghome a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://cocodataset.org/#home" .
+
+mcro:Bingsuadetailer-trainingData-httpsgithubcomjerryli27AniSeg a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/jerryli27/AniSeg" .
+
+mcro:Bingsuadetailer-trainingData-httpsgithubcomswitchablenormsDeepFashion2 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/switchablenorms/DeepFashion2" .
+
+mcro:Bingsuadetailer-trainingData-httpshuggingfacecodatasetsskytntanime-segmentation a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/skytnt/anime-segmentation" .
+
+mcro:Bingsuadetailer-trainingData-httpshuoyang1213meWIDERFACEindexhtml a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "http://shuoyang1213.me/WIDERFACE/index.html" .
+
+mcro:Bingsuadetailer-trainingData-httpsuniverseroboflowcom0oooooo0xml2txt-njqx1 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://universe.roboflow.com/0oooooo0/xml2txt-njqx1" .
+
+mcro:Bingsuadetailer-trainingData-httpsuniverseroboflowcom1-yshhianhdet a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://universe.roboflow.com/1-yshhi/anhdet" .
+
+mcro:Bingsuadetailer-trainingData-httpsuniverseroboflowcomcatwithawandhand-detection a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://universe.roboflow.com/catwithawand/hand-detection-fuao9" .
+
+mcro:Bingsuadetailer-trainingData-httpsuniverseroboflowcommy-workspace-mph8oanime-fa a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://universe.roboflow.com/my-workspace-mph8o/anime-face-createml" .
+
+mcro:Bingsuadetailer-trainingData-httpsuniverseroboflowcomsed-b8vkfan-lfg5i a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://universe.roboflow.com/sed-b8vkf/an-lfg5i" .
+
+mcro:CIDASclipseg-rd64-refined a mcro:Model ;
+    mcro:hasArchitecture "CIDASclipseg-rd64-refined-architecture-httppurlobolibraryorgobomcroowlConvolutionalNetwor" ;
+    mcro:hasCitation "CIDASclipseg-rd64-refined-citation-url-httpsarxivorgabs211210003-name-Image-Segmentat" ;
+    mcro:hasModeltype "CIDASclipseg-rd64-refined-modelType-httppurlobolibraryorgobomcroowlImageSegmentationMo" ;
+    mcro:hasPretrainedmodel "CIDASclipseg-rd64-refined-pretrainedModel-httpsgithubcomtimojlclipseg" .
+
+mcro:CIDASclipseg-rd64-refined-architecture-httppurlobolibraryorgobomcroowlConvolutionalNetwor a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ConvolutionalNetwork" .
+
+mcro:CIDASclipseg-rd64-refined-citation-url-httpsarxivorgabs211210003-name-Image-Segmentat a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2112.10003\", \"name\": \"Image Segmentation Using Text and Image Prompts\"}"^^rdf:JSON .
+
+mcro:CIDASclipseg-rd64-refined-modelType-httppurlobolibraryorgobomcroowlImageSegmentationMo a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ImageSegmentationModel" .
+
+mcro:CIDASclipseg-rd64-refined-pretrainedModel-httpsgithubcomtimojlclipseg a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://github.com/timojl/clipseg" .
+
+mcro:FacebookAIroberta-base a mcro:Model ;
+    mcro:hasArchitecture "FacebookAIroberta-base-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "FacebookAIroberta-base-citation-url-httpsarxivorgabs190711692-name-RoBERTa-A-Robus" ;
+    mcro:hasHardware "FacebookAIroberta-base-hardware-NVIDIA-V100" ;
+    mcro:hasLanguages "FacebookAIroberta-base-languages-en" ;
+    mcro:hasLibraries "FacebookAIroberta-base-libraries-PyTorch",
+        "FacebookAIroberta-base-libraries-TensorFlow" ;
+    mcro:hasMetrics "FacebookAIroberta-base-metrics-task-CoLA-value-636",
+        "FacebookAIroberta-base-metrics-task-MNLI-value-876",
+        "FacebookAIroberta-base-metrics-task-MRPC-value-902",
+        "FacebookAIroberta-base-metrics-task-QNLI-value-928",
+        "FacebookAIroberta-base-metrics-task-QQP-value-919",
+        "FacebookAIroberta-base-metrics-task-RTE-value-787",
+        "FacebookAIroberta-base-metrics-task-SST-2-value-948",
+        "FacebookAIroberta-base-metrics-task-STS-B-value-912" ;
+    mcro:hasModeltype "FacebookAIroberta-base-modelType-httppurlobolibraryorgobomcroowlMaskedLanguageModel" ;
+    mcro:hasPretrainedmodel "FacebookAIroberta-base-pretrainedModel-True" ;
+    mcro:hasTrainingdata "FacebookAIroberta-base-trainingData-BookCorpus",
+        "FacebookAIroberta-base-trainingData-CC-News",
+        "FacebookAIroberta-base-trainingData-English-Wikipedia",
+        "FacebookAIroberta-base-trainingData-OpenWebText",
+        "FacebookAIroberta-base-trainingData-Stories" .
+
+mcro:FacebookAIroberta-base-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:FacebookAIroberta-base-citation-url-httpsarxivorgabs190711692-name-RoBERTa-A-Robus a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/1907.11692\", \"name\": \"RoBERTa: A Robustly Optimized BERT Pretraining Approach\"}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-base-hardware-NVIDIA-V100 a mcro:CustomHardware ;
+    dul:hasParameterDataValue "NVIDIA V100" .
+
+mcro:FacebookAIroberta-base-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:FacebookAIroberta-base-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:FacebookAIroberta-base-libraries-TensorFlow a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "TensorFlow" .
+
+mcro:FacebookAIroberta-base-metrics-task-CoLA-value-636 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"CoLA\", \"value\": 63.6}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-base-metrics-task-MNLI-value-876 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"MNLI\", \"value\": 87.6}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-base-metrics-task-MRPC-value-902 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"MRPC\", \"value\": 90.2}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-base-metrics-task-QNLI-value-928 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"QNLI\", \"value\": 92.8}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-base-metrics-task-QQP-value-919 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"QQP\", \"value\": 91.9}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-base-metrics-task-RTE-value-787 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"RTE\", \"value\": 78.7}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-base-metrics-task-SST-2-value-948 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"SST-2\", \"value\": 94.8}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-base-metrics-task-STS-B-value-912 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"STS-B\", \"value\": 91.2}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-base-modelType-httppurlobolibraryorgobomcroowlMaskedLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#MaskedLanguageModel" .
+
+mcro:FacebookAIroberta-base-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:FacebookAIroberta-base-trainingData-BookCorpus a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "BookCorpus" .
+
+mcro:FacebookAIroberta-base-trainingData-CC-News a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "CC-News" .
+
+mcro:FacebookAIroberta-base-trainingData-English-Wikipedia a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "English Wikipedia" .
+
+mcro:FacebookAIroberta-base-trainingData-OpenWebText a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "OpenWebText" .
+
+mcro:FacebookAIroberta-base-trainingData-Stories a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Stories" .
+
+mcro:FacebookAIroberta-large a mcro:Model ;
+    mcro:hasArchitecture "FacebookAIroberta-large-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "FacebookAIroberta-large-citation-url-httparxivorgabs190711692-name-RoBERTa-A-Robust" ;
+    mcro:hasLanguages "FacebookAIroberta-large-languages-en" ;
+    mcro:hasLibraries "FacebookAIroberta-large-libraries-PyTorch",
+        "FacebookAIroberta-large-libraries-TensorFlow" ;
+    mcro:hasModeltype "FacebookAIroberta-large-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "FacebookAIroberta-large-pretrainedModel-roberta-large" ;
+    mcro:hasTrainingdata "FacebookAIroberta-large-trainingData-BookCorpus",
+        "FacebookAIroberta-large-trainingData-CC-News",
+        "FacebookAIroberta-large-trainingData-English-Wikipedia",
+        "FacebookAIroberta-large-trainingData-OpenWebText",
+        "FacebookAIroberta-large-trainingData-Stories" .
+
+mcro:FacebookAIroberta-large-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:FacebookAIroberta-large-citation-url-httparxivorgabs190711692-name-RoBERTa-A-Robust a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"http://arxiv.org/abs/1907.11692\", \"name\": \"RoBERTa: A Robustly Optimized BERT Pretraining Approach\"}"^^rdf:JSON .
+
+mcro:FacebookAIroberta-large-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:FacebookAIroberta-large-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:FacebookAIroberta-large-libraries-TensorFlow a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "TensorFlow" .
+
+mcro:FacebookAIroberta-large-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:FacebookAIroberta-large-pretrainedModel-roberta-large a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "roberta-large" .
+
+mcro:FacebookAIroberta-large-trainingData-BookCorpus a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "BookCorpus" .
+
+mcro:FacebookAIroberta-large-trainingData-CC-News a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "CC-News" .
+
+mcro:FacebookAIroberta-large-trainingData-English-Wikipedia a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "English Wikipedia" .
+
+mcro:FacebookAIroberta-large-trainingData-OpenWebText a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "OpenWebText" .
+
+mcro:FacebookAIroberta-large-trainingData-Stories a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Stories" .
+
+mcro:FacebookAIxlm-roberta-base a mcro:Model ;
+    mcro:hasArchitecture "FacebookAIxlm-roberta-base-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "FacebookAIxlm-roberta-base-citation-url-httparxivorgabs191102116-name-Unsupervised-Cro" ;
+    mcro:hasLanguages "FacebookAIxlm-roberta-base-languages-multilingual" ;
+    mcro:hasLibraries "FacebookAIxlm-roberta-base-libraries-Hugging-Face-Transformers",
+        "FacebookAIxlm-roberta-base-libraries-PyTorch" ;
+    mcro:hasModeltype "FacebookAIxlm-roberta-base-modelType-httppurlobolibraryorgobomcroowlMaskedLanguageModel" ;
+    mcro:hasPretrainedmodel "FacebookAIxlm-roberta-base-pretrainedModel-xlm-roberta-base" ;
+    mcro:hasTrainingdata "FacebookAIxlm-roberta-base-trainingData-CommonCrawl" .
+
+mcro:FacebookAIxlm-roberta-base-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:FacebookAIxlm-roberta-base-citation-url-httparxivorgabs191102116-name-Unsupervised-Cro a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"http://arxiv.org/abs/1911.02116\", \"name\": \"Unsupervised Cross-lingual Representation Learning at Scale\"}"^^rdf:JSON .
+
+mcro:FacebookAIxlm-roberta-base-languages-multilingual a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "multilingual" .
+
+mcro:FacebookAIxlm-roberta-base-libraries-Hugging-Face-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "Hugging Face Transformers" .
+
+mcro:FacebookAIxlm-roberta-base-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:FacebookAIxlm-roberta-base-modelType-httppurlobolibraryorgobomcroowlMaskedLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#MaskedLanguageModel" .
+
+mcro:FacebookAIxlm-roberta-base-pretrainedModel-xlm-roberta-base a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "xlm-roberta-base" .
+
+mcro:FacebookAIxlm-roberta-base-trainingData-CommonCrawl a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "CommonCrawl" .
+
+mcro:FacebookAIxlm-roberta-large a mcro:Model ;
+    mcro:hasArchitecture "FacebookAIxlm-roberta-large-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "FacebookAIxlm-roberta-large-citation-url-httparxivorgabs191102116-name-Unsupervised-Cro" ;
+    mcro:hasLanguages "FacebookAIxlm-roberta-large-languages-abq",
+        "FacebookAIxlm-roberta-large-languages-ady",
+        "FacebookAIxlm-roberta-large-languages-ar",
+        "FacebookAIxlm-roberta-large-languages-as",
+        "FacebookAIxlm-roberta-large-languages-az",
+        "FacebookAIxlm-roberta-large-languages-ba",
+        "FacebookAIxlm-roberta-large-languages-bh",
+        "FacebookAIxlm-roberta-large-languages-bn",
+        "FacebookAIxlm-roberta-large-languages-bo",
+        "FacebookAIxlm-roberta-large-languages-cv",
+        "FacebookAIxlm-roberta-large-languages-de",
+        "FacebookAIxlm-roberta-large-languages-dz",
+        "FacebookAIxlm-roberta-large-languages-en",
+        "FacebookAIxlm-roberta-large-languages-es",
+        "FacebookAIxlm-roberta-large-languages-fa",
+        "FacebookAIxlm-roberta-large-languages-fr",
+        "FacebookAIxlm-roberta-large-languages-gu",
+        "FacebookAIxlm-roberta-large-languages-he",
+        "FacebookAIxlm-roberta-large-languages-hi",
+        "FacebookAIxlm-roberta-large-languages-hy",
+        "FacebookAIxlm-roberta-large-languages-id",
+        "FacebookAIxlm-roberta-large-languages-it",
+        "FacebookAIxlm-roberta-large-languages-ja",
+        "FacebookAIxlm-roberta-large-languages-ka",
+        "FacebookAIxlm-roberta-large-languages-kk",
+        "FacebookAIxlm-roberta-large-languages-km",
+        "FacebookAIxlm-roberta-large-languages-kn",
+        "FacebookAIxlm-roberta-large-languages-ko",
+        "FacebookAIxlm-roberta-large-languages-krc",
+        "FacebookAIxlm-roberta-large-languages-kv",
+        "FacebookAIxlm-roberta-large-languages-ky",
+        "FacebookAIxlm-roberta-large-languages-lbe",
+        "FacebookAIxlm-roberta-large-languages-lez",
+        "FacebookAIxlm-roberta-large-languages-lo",
+        "FacebookAIxlm-roberta-large-languages-mai",
+        "FacebookAIxlm-roberta-large-languages-mdf",
+        "FacebookAIxlm-roberta-large-languages-ml",
+        "FacebookAIxlm-roberta-large-languages-mn",
+        "FacebookAIxlm-roberta-large-languages-mr",
+        "FacebookAIxlm-roberta-large-languages-mrj",
+        "FacebookAIxlm-roberta-large-languages-ms",
+        "FacebookAIxlm-roberta-large-languages-my",
+        "FacebookAIxlm-roberta-large-languages-myv",
+        "FacebookAIxlm-roberta-large-languages-ne",
+        "FacebookAIxlm-roberta-large-languages-nl",
+        "FacebookAIxlm-roberta-large-languages-or",
+        "FacebookAIxlm-roberta-large-languages-pa",
+        "FacebookAIxlm-roberta-large-languages-pl",
+        "FacebookAIxlm-roberta-large-languages-ps",
+        "FacebookAIxlm-roberta-large-languages-pt",
+        "FacebookAIxlm-roberta-large-languages-ru",
+        "FacebookAIxlm-roberta-large-languages-sa",
+        "FacebookAIxlm-roberta-large-languages-sah",
+        "FacebookAIxlm-roberta-large-languages-sd",
+        "FacebookAIxlm-roberta-large-languages-si",
+        "FacebookAIxlm-roberta-large-languages-ta",
+        "FacebookAIxlm-roberta-large-languages-tab",
+        "FacebookAIxlm-roberta-large-languages-te",
+        "FacebookAIxlm-roberta-large-languages-tg",
+        "FacebookAIxlm-roberta-large-languages-th",
+        "FacebookAIxlm-roberta-large-languages-tk",
+        "FacebookAIxlm-roberta-large-languages-tl",
+        "FacebookAIxlm-roberta-large-languages-tr",
+        "FacebookAIxlm-roberta-large-languages-tt",
+        "FacebookAIxlm-roberta-large-languages-tyv",
+        "FacebookAIxlm-roberta-large-languages-udm",
+        "FacebookAIxlm-roberta-large-languages-ug",
+        "FacebookAIxlm-roberta-large-languages-ur",
+        "FacebookAIxlm-roberta-large-languages-uz",
+        "FacebookAIxlm-roberta-large-languages-vi",
+        "FacebookAIxlm-roberta-large-languages-xmf",
+        "FacebookAIxlm-roberta-large-languages-zh" ;
+    mcro:hasLibraries "FacebookAIxlm-roberta-large-libraries-HuggingFace-Transformers",
+        "FacebookAIxlm-roberta-large-libraries-PyTorch" ;
+    mcro:hasModeltype "FacebookAIxlm-roberta-large-modelType-httppurlobolibraryorgobomcroowlMaskedLanguageModel" ;
+    mcro:hasPretrainedmodel "FacebookAIxlm-roberta-large-pretrainedModel-True" ;
+    mcro:hasTrainingdata "FacebookAIxlm-roberta-large-trainingData-CommonCrawl" .
+
+mcro:FacebookAIxlm-roberta-large-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:FacebookAIxlm-roberta-large-citation-url-httparxivorgabs191102116-name-Unsupervised-Cro a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"http://arxiv.org/abs/1911.02116\", \"name\": \"Unsupervised Cross-lingual Representation Learning at Scale\"}"^^rdf:JSON .
+
+mcro:FacebookAIxlm-roberta-large-languages-abq a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "abq" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ady a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ady" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ar a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ar" .
+
+mcro:FacebookAIxlm-roberta-large-languages-as a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "as" .
+
+mcro:FacebookAIxlm-roberta-large-languages-az a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "az" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ba a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ba" .
+
+mcro:FacebookAIxlm-roberta-large-languages-bh a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "bh" .
+
+mcro:FacebookAIxlm-roberta-large-languages-bn a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "bn" .
+
+mcro:FacebookAIxlm-roberta-large-languages-bo a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "bo" .
+
+mcro:FacebookAIxlm-roberta-large-languages-cv a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "cv" .
+
+mcro:FacebookAIxlm-roberta-large-languages-de a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "de" .
+
+mcro:FacebookAIxlm-roberta-large-languages-dz a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "dz" .
+
+mcro:FacebookAIxlm-roberta-large-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:FacebookAIxlm-roberta-large-languages-es a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "es" .
+
+mcro:FacebookAIxlm-roberta-large-languages-fa a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "fa" .
+
+mcro:FacebookAIxlm-roberta-large-languages-fr a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "fr" .
+
+mcro:FacebookAIxlm-roberta-large-languages-gu a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "gu" .
+
+mcro:FacebookAIxlm-roberta-large-languages-he a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "he" .
+
+mcro:FacebookAIxlm-roberta-large-languages-hi a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "hi" .
+
+mcro:FacebookAIxlm-roberta-large-languages-hy a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "hy" .
+
+mcro:FacebookAIxlm-roberta-large-languages-id a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "id" .
+
+mcro:FacebookAIxlm-roberta-large-languages-it a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "it" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ja a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ja" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ka a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ka" .
+
+mcro:FacebookAIxlm-roberta-large-languages-kk a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "kk" .
+
+mcro:FacebookAIxlm-roberta-large-languages-km a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "km" .
+
+mcro:FacebookAIxlm-roberta-large-languages-kn a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "kn" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ko a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ko" .
+
+mcro:FacebookAIxlm-roberta-large-languages-krc a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "krc" .
+
+mcro:FacebookAIxlm-roberta-large-languages-kv a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "kv" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ky a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ky" .
+
+mcro:FacebookAIxlm-roberta-large-languages-lbe a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "lbe" .
+
+mcro:FacebookAIxlm-roberta-large-languages-lez a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "lez" .
+
+mcro:FacebookAIxlm-roberta-large-languages-lo a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "lo" .
+
+mcro:FacebookAIxlm-roberta-large-languages-mai a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "mai" .
+
+mcro:FacebookAIxlm-roberta-large-languages-mdf a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "mdf" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ml a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ml" .
+
+mcro:FacebookAIxlm-roberta-large-languages-mn a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "mn" .
+
+mcro:FacebookAIxlm-roberta-large-languages-mr a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "mr" .
+
+mcro:FacebookAIxlm-roberta-large-languages-mrj a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "mrj" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ms a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ms" .
+
+mcro:FacebookAIxlm-roberta-large-languages-my a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "my" .
+
+mcro:FacebookAIxlm-roberta-large-languages-myv a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "myv" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ne a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ne" .
+
+mcro:FacebookAIxlm-roberta-large-languages-nl a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "nl" .
+
+mcro:FacebookAIxlm-roberta-large-languages-or a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "or" .
+
+mcro:FacebookAIxlm-roberta-large-languages-pa a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "pa" .
+
+mcro:FacebookAIxlm-roberta-large-languages-pl a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "pl" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ps a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ps" .
+
+mcro:FacebookAIxlm-roberta-large-languages-pt a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "pt" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ru a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ru" .
+
+mcro:FacebookAIxlm-roberta-large-languages-sa a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "sa" .
+
+mcro:FacebookAIxlm-roberta-large-languages-sah a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "sah" .
+
+mcro:FacebookAIxlm-roberta-large-languages-sd a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "sd" .
+
+mcro:FacebookAIxlm-roberta-large-languages-si a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "si" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ta a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ta" .
+
+mcro:FacebookAIxlm-roberta-large-languages-tab a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "tab" .
+
+mcro:FacebookAIxlm-roberta-large-languages-te a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "te" .
+
+mcro:FacebookAIxlm-roberta-large-languages-tg a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "tg" .
+
+mcro:FacebookAIxlm-roberta-large-languages-th a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "th" .
+
+mcro:FacebookAIxlm-roberta-large-languages-tk a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "tk" .
+
+mcro:FacebookAIxlm-roberta-large-languages-tl a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "tl" .
+
+mcro:FacebookAIxlm-roberta-large-languages-tr a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "tr" .
+
+mcro:FacebookAIxlm-roberta-large-languages-tt a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "tt" .
+
+mcro:FacebookAIxlm-roberta-large-languages-tyv a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "tyv" .
+
+mcro:FacebookAIxlm-roberta-large-languages-udm a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "udm" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ug a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ug" .
+
+mcro:FacebookAIxlm-roberta-large-languages-ur a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ur" .
+
+mcro:FacebookAIxlm-roberta-large-languages-uz a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "uz" .
+
+mcro:FacebookAIxlm-roberta-large-languages-vi a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "vi" .
+
+mcro:FacebookAIxlm-roberta-large-languages-xmf a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "xmf" .
+
+mcro:FacebookAIxlm-roberta-large-languages-zh a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "zh" .
+
+mcro:FacebookAIxlm-roberta-large-libraries-HuggingFace-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace Transformers" .
+
+mcro:FacebookAIxlm-roberta-large-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:FacebookAIxlm-roberta-large-modelType-httppurlobolibraryorgobomcroowlMaskedLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#MaskedLanguageModel" .
+
+mcro:FacebookAIxlm-roberta-large-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:FacebookAIxlm-roberta-large-trainingData-CommonCrawl a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "CommonCrawl" .
+
+mcro:Falconsainsfwimagedetection a mcro:Model ;
+    mcro:hasArchitecture "Falconsainsfwimagedetection-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "Falconsainsfwimagedetection-citation-httpsarxivorgabs201011929" ;
+    mcro:hasLanguages "Falconsainsfwimagedetection-languages-Python" ;
+    mcro:hasLibraries "Falconsainsfwimagedetection-libraries-HuggingFace",
+        "Falconsainsfwimagedetection-libraries-PIL",
+        "Falconsainsfwimagedetection-libraries-PyTorch",
+        "Falconsainsfwimagedetection-libraries-onnxruntime" ;
+    mcro:hasMetrics "Falconsainsfwimagedetection-metrics-accuracy",
+        "Falconsainsfwimagedetection-metrics-loss" ;
+    mcro:hasModeltype "Falconsainsfwimagedetection-modelType-httppurlobolibraryorgobomcroowlImageClassification" ;
+    mcro:hasPretrainedmodel "Falconsainsfwimagedetection-pretrainedModel-googlevit-base-patch16-224-in21k" ;
+    mcro:hasTrainingdata "Falconsainsfwimagedetection-trainingData-ImageNet-21k",
+        "Falconsainsfwimagedetection-trainingData-Proprietary-Dataset" .
+
+mcro:Falconsainsfwimagedetection-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:Falconsainsfwimagedetection-citation-httpsarxivorgabs201011929 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "https://arxiv.org/abs/2010.11929" .
+
+mcro:Falconsainsfwimagedetection-languages-Python a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Python" .
+
+mcro:Falconsainsfwimagedetection-libraries-HuggingFace a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace" .
+
+mcro:Falconsainsfwimagedetection-libraries-PIL a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PIL" .
+
+mcro:Falconsainsfwimagedetection-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:Falconsainsfwimagedetection-libraries-onnxruntime a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "onnxruntime" .
+
+mcro:Falconsainsfwimagedetection-metrics-accuracy a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "accuracy" .
+
+mcro:Falconsainsfwimagedetection-metrics-loss a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "loss" .
+
+mcro:Falconsainsfwimagedetection-modelType-httppurlobolibraryorgobomcroowlImageClassification a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ImageClassificationModel" .
+
+mcro:Falconsainsfwimagedetection-pretrainedModel-googlevit-base-patch16-224-in21k a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "google/vit-base-patch16-224-in21k" .
+
+mcro:Falconsainsfwimagedetection-trainingData-ImageNet-21k a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "ImageNet-21k" .
+
+mcro:Falconsainsfwimagedetection-trainingData-Proprietary-Dataset a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Proprietary Dataset" .
+
+mcro:TheBlokephi-2-GGUF a mcro:Model ;
+    mcro:hasArchitecture "TheBlokephi-2-GGUF-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasModeltype "TheBlokephi-2-GGUF-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "TheBlokephi-2-GGUF-pretrainedModel-httpshuggingfacecomicrosoftphi-2" .
+
+mcro:TheBlokephi-2-GGUF-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:TheBlokephi-2-GGUF-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:TheBlokephi-2-GGUF-pretrainedModel-httpshuggingfacecomicrosoftphi-2 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/microsoft/phi-2" .
+
+mcro:amazonchronos-t5-small a mcro:Model ;
+    mcro:hasArchitecture "amazonchronos-t5-small-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "amazonchronos-t5-small-citation-url-httpsarxivorgabs240307815-name-Chronos-Learnin" ;
+    mcro:hasLibraries "amazonchronos-t5-small-libraries-PyTorch",
+        "amazonchronos-t5-small-libraries-matplotlib",
+        "amazonchronos-t5-small-libraries-numpy",
+        "amazonchronos-t5-small-libraries-pandas" ;
+    mcro:hasLicense "amazonchronos-t5-small-license-Apache-20" ;
+    mcro:hasModeltype "amazonchronos-t5-small-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-base",
+        "amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-large",
+        "amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-mini",
+        "amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-small",
+        "amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-tiny" ;
+    mcro:hasTrainingdata "amazonchronos-t5-small-trainingData-Publicly-available-time-series-data",
+        "amazonchronos-t5-small-trainingData-Synthetic-data-generated-using-Gaussian-processes" .
+
+mcro:amazonchronos-t5-small-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:amazonchronos-t5-small-citation-url-httpsarxivorgabs240307815-name-Chronos-Learnin a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2403.07815\", \"name\": \"Chronos: Learning the Language of Time Series\", \"authors\": [\"Ansari, Abdul Fatir\", \"Stella, Lorenzo\", \"Turkmen, Caner\", \"Zhang, Xiyuan\", \"Mercado, Pedro\", \"Shen, Huibin\", \"Shchur, Oleksandr\", \"Rangapuram, Syama Syndar\", \"Pineda Arango, Sebastian\", \"Kapoor, Shubham\", \"Zschiegner, Jasper\", \"Maddix, Danielle C.\", \"Mahoney, Michael W.\", \"Torkkola, Kari\", \"Gordon Wilson, Andrew\", \"Bohlke-Schneider, Michael\", \"Wang, Yuyang\"], \"journal\": \"Transactions on Machine Learning Research\", \"year\": 2024}"^^rdf:JSON .
+
+mcro:amazonchronos-t5-small-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:amazonchronos-t5-small-libraries-matplotlib a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "matplotlib" .
+
+mcro:amazonchronos-t5-small-libraries-numpy a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "numpy" .
+
+mcro:amazonchronos-t5-small-libraries-pandas a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "pandas" .
+
+mcro:amazonchronos-t5-small-license-Apache-20 a mcro:CustomLicense ;
+    dul:hasParameterDataValue "Apache-2.0" .
+
+mcro:amazonchronos-t5-small-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-base a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/amazon/chronos-t5-base" .
+
+mcro:amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-large a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/amazon/chronos-t5-large" .
+
+mcro:amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-mini a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/amazon/chronos-t5-mini" .
+
+mcro:amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-small a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/amazon/chronos-t5-small" .
+
+mcro:amazonchronos-t5-small-pretrainedModel-httpshuggingfacecoamazonchronos-t5-tiny a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/amazon/chronos-t5-tiny" .
+
+mcro:amazonchronos-t5-small-trainingData-Publicly-available-time-series-data a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Publicly available time series data" .
+
+mcro:amazonchronos-t5-small-trainingData-Synthetic-data-generated-using-Gaussian-processes a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Synthetic data generated using Gaussian processes" .
+
+mcro:autogluonchronos-bolt-base a mcro:Model ;
+    mcro:hasArchitecture "autogluonchronos-bolt-base-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "autogluonchronos-bolt-base-citation-name-Chronos-Learning-the-Language-of-Time-Series-" ;
+    mcro:hasLanguages "autogluonchronos-bolt-base-languages-Python" ;
+    mcro:hasLibraries "autogluonchronos-bolt-base-libraries-AutoGluon",
+        "autogluonchronos-bolt-base-libraries-PyTorch",
+        "autogluonchronos-bolt-base-libraries-SageMaker" ;
+    mcro:hasLicense "autogluonchronos-bolt-base-license-Apache-20" ;
+    mcro:hasMetrics "autogluonchronos-bolt-base-metrics-httppurlobolibraryorgobomcroowlMASE",
+        "autogluonchronos-bolt-base-metrics-httppurlobolibraryorgobomcroowlWQL" ;
+    mcro:hasModeltype "autogluonchronos-bolt-base-modelType-httppurlobolibraryorgobomcroowlEncoderDecoder" ;
+    mcro:hasPretrainedmodel "autogluonchronos-bolt-base-pretrainedModel-chronos-bolt-base",
+        "autogluonchronos-bolt-base-pretrainedModel-chronos-bolt-mini",
+        "autogluonchronos-bolt-base-pretrainedModel-chronos-bolt-small",
+        "autogluonchronos-bolt-base-pretrainedModel-chronos-bolt-tiny" .
+
+mcro:autogluonchronos-bolt-base-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:autogluonchronos-bolt-base-citation-name-Chronos-Learning-the-Language-of-Time-Series- a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"name\": \"Chronos: Learning the Language of Time Series\", \"url\": \"https://openreview.net/forum?id=gerNCVqqtR\", \"year\": 2024, \"authors\": [\"Ansari, Abdul Fatir\", \"Stella, Lorenzo\", \"Turkmen, Caner\", \"Zhang, Xiyuan\", \"Mercado, Pedro\", \"Shen, Huibin\", \"Shchur, Oleksandr\", \"Rangapuram, Syama Syndar\", \"Pineda Arango, Sebastian\", \"Kapoor, Shubham\", \"Zschiegner, Jasper\", \"Maddix, Danielle C.\", \"Mahoney, Michael W.\", \"Torkkola, Kari\", \"Gordon Wilson, Andrew\", \"Bohlke-Schneider, Michael\", \"Wang, Yuyang\"]}"^^rdf:JSON .
+
+mcro:autogluonchronos-bolt-base-languages-Python a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Python" .
+
+mcro:autogluonchronos-bolt-base-libraries-AutoGluon a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "AutoGluon" .
+
+mcro:autogluonchronos-bolt-base-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:autogluonchronos-bolt-base-libraries-SageMaker a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "SageMaker" .
+
+mcro:autogluonchronos-bolt-base-license-Apache-20 a mcro:CustomLicense ;
+    dul:hasParameterDataValue "Apache-2.0" .
+
+mcro:autogluonchronos-bolt-base-metrics-httppurlobolibraryorgobomcroowlMASE a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#MASE" .
+
+mcro:autogluonchronos-bolt-base-metrics-httppurlobolibraryorgobomcroowlWQL a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#WQL" .
+
+mcro:autogluonchronos-bolt-base-modelType-httppurlobolibraryorgobomcroowlEncoderDecoder a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#EncoderDecoder" .
+
+mcro:autogluonchronos-bolt-base-pretrainedModel-chronos-bolt-base a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "chronos-bolt-base" .
+
+mcro:autogluonchronos-bolt-base-pretrainedModel-chronos-bolt-mini a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "chronos-bolt-mini" .
+
+mcro:autogluonchronos-bolt-base-pretrainedModel-chronos-bolt-small a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "chronos-bolt-small" .
+
+mcro:autogluonchronos-bolt-base-pretrainedModel-chronos-bolt-tiny a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "chronos-bolt-tiny" .
+
+mcro:autogluonchronos-bolt-small a mcro:Model ;
+    mcro:hasArchitecture "autogluonchronos-bolt-small-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "autogluonchronos-bolt-small-citation-url-httpsarxivorgabs240307815-name-Chronos-Learnin" ;
+    mcro:hasLibraries "autogluonchronos-bolt-small-libraries-AutoGluon",
+        "autogluonchronos-bolt-small-libraries-PyTorch",
+        "autogluonchronos-bolt-small-libraries-SageMaker" ;
+    mcro:hasLicense "autogluonchronos-bolt-small-license-Apache-20" ;
+    mcro:hasMetrics "autogluonchronos-bolt-small-metrics-httppurlobolibraryorgobomcroowlMeanAbsoluteScaledE",
+        "autogluonchronos-bolt-small-metrics-httppurlobolibraryorgobomcroowlWeightedQuantileLos" ;
+    mcro:hasModeltype "autogluonchronos-bolt-small-modelType-httppurlobolibraryorgobomcroowlEncoder-Decoder" ;
+    mcro:hasPretrainedmodel "autogluonchronos-bolt-small-pretrainedModel-httpshuggingfacecoautogluonchronos-bolt-base",
+        "autogluonchronos-bolt-small-pretrainedModel-httpshuggingfacecoautogluonchronos-bolt-mini",
+        "autogluonchronos-bolt-small-pretrainedModel-httpshuggingfacecoautogluonchronos-bolt-small",
+        "autogluonchronos-bolt-small-pretrainedModel-httpshuggingfacecoautogluonchronos-bolt-tiny" .
+
+mcro:autogluonchronos-bolt-small-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:autogluonchronos-bolt-small-citation-url-httpsarxivorgabs240307815-name-Chronos-Learnin a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2403.07815\", \"name\": \"Chronos: Learning the Language of Time Series\"}"^^rdf:JSON .
+
+mcro:autogluonchronos-bolt-small-libraries-AutoGluon a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "AutoGluon" .
+
+mcro:autogluonchronos-bolt-small-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:autogluonchronos-bolt-small-libraries-SageMaker a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "SageMaker" .
+
+mcro:autogluonchronos-bolt-small-license-Apache-20 a mcro:CustomLicense ;
+    dul:hasParameterDataValue "Apache-2.0" .
+
+mcro:autogluonchronos-bolt-small-metrics-httppurlobolibraryorgobomcroowlMeanAbsoluteScaledE a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#MeanAbsoluteScaledError" .
+
+mcro:autogluonchronos-bolt-small-metrics-httppurlobolibraryorgobomcroowlWeightedQuantileLos a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#WeightedQuantileLoss" .
+
+mcro:autogluonchronos-bolt-small-modelType-httppurlobolibraryorgobomcroowlEncoder-Decoder a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Encoder-Decoder" .
+
+mcro:autogluonchronos-bolt-small-pretrainedModel-httpshuggingfacecoautogluonchronos-bolt-base a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/autogluon/chronos-bolt-base" .
+
+mcro:autogluonchronos-bolt-small-pretrainedModel-httpshuggingfacecoautogluonchronos-bolt-mini a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/autogluon/chronos-bolt-mini" .
+
+mcro:autogluonchronos-bolt-small-pretrainedModel-httpshuggingfacecoautogluonchronos-bolt-small a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/autogluon/chronos-bolt-small" .
+
+mcro:autogluonchronos-bolt-small-pretrainedModel-httpshuggingfacecoautogluonchronos-bolt-tiny a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/autogluon/chronos-bolt-tiny" .
+
+mcro:dima806fairfaceageimagedetection a mcro:Model ;
+    mcro:hasCitation "dima806fairfaceageimagedetection-citation-httpswwwkagglecomcodedima806age-group-image-classi" ;
+    mcro:hasMetrics "dima806fairfaceageimagedetection-metrics-name-accuracy-value-05892",
+        "dima806fairfaceageimagedetection-metrics-name-f1-score-value-05459-type-macro-avg",
+        "dima806fairfaceageimagedetection-metrics-name-precision-value-05971-type-macro-avg",
+        "dima806fairfaceageimagedetection-metrics-name-recall-value-05303-type-macro-avg" .
+
+mcro:dima806fairfaceageimagedetection-citation-httpswwwkagglecomcodedima806age-group-image-classi a mcro:CustomCitation ;
+    dul:hasParameterDataValue "https://www.kaggle.com/code/dima806/age-group-image-classification-vit" .
+
+mcro:dima806fairfaceageimagedetection-metrics-name-accuracy-value-05892 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"name\": \"accuracy\", \"value\": 0.5892}"^^rdf:JSON .
+
+mcro:dima806fairfaceageimagedetection-metrics-name-f1-score-value-05459-type-macro-avg a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"name\": \"f1-score\", \"value\": 0.5459, \"type\": \"macro avg\"}"^^rdf:JSON .
+
+mcro:dima806fairfaceageimagedetection-metrics-name-precision-value-05971-type-macro-avg a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"name\": \"precision\", \"value\": 0.5971, \"type\": \"macro avg\"}"^^rdf:JSON .
+
+mcro:dima806fairfaceageimagedetection-metrics-name-recall-value-05303-type-macro-avg a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"name\": \"recall\", \"value\": 0.5303, \"type\": \"macro avg\"}"^^rdf:JSON .
+
+mcro:distilbertdistilbert-base-uncased a mcro:Model ;
+    mcro:hasCitation "distilbertdistilbert-base-uncased-citation-url-httpsarxivorgabs191001108-name-DistilBERT-a-di" ;
+    mcro:hasHardware "distilbertdistilbert-base-uncased-hardware-V100" ;
+    mcro:hasLanguages "distilbertdistilbert-base-uncased-languages-en" ;
+    mcro:hasLibraries "distilbertdistilbert-base-uncased-libraries-PyTorch",
+        "distilbertdistilbert-base-uncased-libraries-TensorFlow" ;
+    mcro:hasMetrics "distilbertdistilbert-base-uncased-metrics-MNLI-822-QQP-885-QNLI-892-SST-2-913-CoLA-513-STS-B" ;
+    mcro:hasModeltype "distilbertdistilbert-base-uncased-modelType-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasPretrainedmodel "distilbertdistilbert-base-uncased-pretrainedModel-bert-base-uncased" ;
+    mcro:hasTrainingdata "distilbertdistilbert-base-uncased-trainingData-BookCorpus",
+        "distilbertdistilbert-base-uncased-trainingData-httpsenwikipediaorgwikiEnglishWikipedia" .
+
+mcro:distilbertdistilbert-base-uncased-citation-url-httpsarxivorgabs191001108-name-DistilBERT-a-di a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/1910.01108\", \"name\": \"DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter\", \"authors\": [\"Victor Sanh\", \"Lysandre Debut\", \"Julien Chaumond\", \"Thomas Wolf\"], \"year\": 2019}"^^rdf:JSON .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2- a mcro:Model ;
+    mcro:hasArchitecture "distilbertdistilbert-base-uncased-finetuned-sst-2--architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "distilbertdistilbert-base-uncased-finetuned-sst-2--citation-httpsarxivorgabs191001108" ;
+    mcro:hasLanguages "distilbertdistilbert-base-uncased-finetuned-sst-2--languages-en" ;
+    mcro:hasLibraries "distilbertdistilbert-base-uncased-finetuned-sst-2--libraries-PyTorch",
+        "distilbertdistilbert-base-uncased-finetuned-sst-2--libraries-transformers" ;
+    mcro:hasLicense "distilbertdistilbert-base-uncased-finetuned-sst-2--license-Apache-20" ;
+    mcro:hasModeltype "distilbertdistilbert-base-uncased-finetuned-sst-2--modelType-httppurlobolibraryorgobomcroowlTextClassificationM" ;
+    mcro:hasPretrainedmodel "distilbertdistilbert-base-uncased-finetuned-sst-2--pretrainedModel-httpshuggingfacecodistilbert-base-uncased" ;
+    mcro:hasTrainingdata "distilbertdistilbert-base-uncased-finetuned-sst-2--trainingData-httpshuggingfacecodatasetssst2" .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2--architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2--citation-httpsarxivorgabs191001108 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "https://arxiv.org/abs/1910.01108" .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2--languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2--libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2--libraries-transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "transformers" .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2--license-Apache-20 a mcro:CustomLicense ;
+    dul:hasParameterDataValue "Apache-2.0" .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2--modelType-httppurlobolibraryorgobomcroowlTextClassificationM a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#TextClassificationModel" .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2--pretrainedModel-httpshuggingfacecodistilbert-base-uncased a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/distilbert-base-uncased" .
+
+mcro:distilbertdistilbert-base-uncased-finetuned-sst-2--trainingData-httpshuggingfacecodatasetssst2 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/sst2" .
+
+mcro:distilbertdistilbert-base-uncased-hardware-V100 a mcro:CustomHardware ;
+    dul:hasParameterDataValue "V100" .
+
+mcro:distilbertdistilbert-base-uncased-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:distilbertdistilbert-base-uncased-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:distilbertdistilbert-base-uncased-libraries-TensorFlow a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "TensorFlow" .
+
+mcro:distilbertdistilbert-base-uncased-metrics-MNLI-822-QQP-885-QNLI-892-SST-2-913-CoLA-513-STS-B a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"MNLI\": 82.2, \"QQP\": 88.5, \"QNLI\": 89.2, \"SST-2\": 91.3, \"CoLA\": 51.3, \"STS-B\": 85.8, \"MRPC\": 87.5, \"RTE\": 59.9}"^^rdf:JSON .
+
+mcro:distilbertdistilbert-base-uncased-modelType-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:distilbertdistilbert-base-uncased-pretrainedModel-bert-base-uncased a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "bert-base-uncased" .
+
+mcro:distilbertdistilbert-base-uncased-trainingData-BookCorpus a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "BookCorpus" .
+
+mcro:distilbertdistilbert-base-uncased-trainingData-httpsenwikipediaorgwikiEnglishWikipedia a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://en.wikipedia.org/wiki/English_Wikipedia" .
+
+mcro:facebookcontriever-msmarco a mcro:Model ;
+    mcro:hasCitation "facebookcontriever-msmarco-citation-httpsarxivorgabs211209118" ;
+    mcro:hasLibraries "facebookcontriever-msmarco-libraries-HuggingFace-Transformers",
+        "facebookcontriever-msmarco-libraries-PyTorch" ;
+    mcro:hasModeltype "facebookcontriever-msmarco-modelType-httppurlobolibraryorgobomcroowlSentenceEmbeddingMo" ;
+    mcro:hasPretrainedmodel "facebookcontriever-msmarco-pretrainedModel-httpshuggingfacecofacebookcontriever" .
+
+mcro:facebookcontriever-msmarco-citation-httpsarxivorgabs211209118 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "https://arxiv.org/abs/2112.09118" .
+
+mcro:facebookcontriever-msmarco-libraries-HuggingFace-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace Transformers" .
+
+mcro:facebookcontriever-msmarco-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:facebookcontriever-msmarco-modelType-httppurlobolibraryorgobomcroowlSentenceEmbeddingMo a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#SentenceEmbeddingModel" .
+
+mcro:facebookcontriever-msmarco-pretrainedModel-httpshuggingfacecofacebookcontriever a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/facebook/contriever" .
+
+mcro:facebookdinov2-small a mcro:Model ;
+    mcro:hasArchitecture "facebookdinov2-small-architecture-httppurlobolibraryorgobomcroowlVisionTransformer" ;
+    mcro:hasCitation "facebookdinov2-small-citation-misc-title-DINOv2-Learning-Robust-Visual-Features-" ;
+    mcro:hasLanguages "facebookdinov2-small-languages-Python" ;
+    mcro:hasLibraries "facebookdinov2-small-libraries-PIL",
+        "facebookdinov2-small-libraries-PyTorch",
+        "facebookdinov2-small-libraries-transformers" ;
+    mcro:hasModeltype "facebookdinov2-small-modelType-httppurlobolibraryorgobomcroowlPreTrainedModel" ;
+    mcro:hasPretrainedmodel "facebookdinov2-small-pretrainedModel-facebookdinov2-small" .
+
+mcro:facebookdinov2-small-architecture-httppurlobolibraryorgobomcroowlVisionTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#VisionTransformer" .
+
+mcro:facebookdinov2-small-citation-misc-title-DINOv2-Learning-Robust-Visual-Features- a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"misc\": {\"title\": \"DINOv2: Learning Robust Visual Features without Supervision\", \"author\": \"Maxime Oquab and Timoth\\u00e9e Darcet and Th\\u00e9o Moutakanni and Huy Vo and Marc Szafraniec and Vasil Khalidov and Pierre Fernandez and Daniel Haziza and Francisco Massa and Alaaeldin El-Nouby and Mahmoud Assran and Nicolas Ballas and Wojciech Galuba and Russell Howes and Po-Yao Huang and Shang-Wen Li and Ishan Misra and Michael Rabbat and Vasu Sharma and Gabriel Synnaeve and Hu Xu and Herv\\u00e9 Jegou and Julien Mairal and Patrick Labatut and Armand Joulin and Piotr Bojanowski\", \"year\": \"2023\", \"eprint\": \"2304.07193\", \"archivePrefix\": \"arXiv\", \"primaryClass\": \"cs.CV\"}}"^^rdf:JSON .
+
+mcro:facebookdinov2-small-languages-Python a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Python" .
+
+mcro:facebookdinov2-small-libraries-PIL a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PIL" .
+
+mcro:facebookdinov2-small-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:facebookdinov2-small-libraries-transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "transformers" .
+
+mcro:facebookdinov2-small-modelType-httppurlobolibraryorgobomcroowlPreTrainedModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#PreTrainedModel" .
+
+mcro:facebookdinov2-small-pretrainedModel-facebookdinov2-small a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "facebook/dinov2-small" .
+
+mcro:facebookesmfoldv1 a mcro:Model ;
+    mcro:hasArchitecture "facebookesmfoldv1-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "facebookesmfoldv1-citation-url-httpswwwscienceorgdoi101126scienceade2574" ;
+    mcro:hasModeltype "facebookesmfoldv1-modelType-httppurlobolibraryorgobomcroowlProteinFoldingModel" ;
+    mcro:hasPretrainedmodel "facebookesmfoldv1-pretrainedModel-True" .
+
+mcro:facebookesmfoldv1-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:facebookesmfoldv1-citation-url-httpswwwscienceorgdoi101126scienceade2574 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://www.science.org/doi/10.1126/science.ade2574\"}"^^rdf:JSON .
+
+mcro:facebookesmfoldv1-modelType-httppurlobolibraryorgobomcroowlProteinFoldingModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ProteinFoldingModel" .
+
+mcro:facebookesmfoldv1-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:facebookopt-125m a mcro:Model ;
+    mcro:hasArchitecture "facebookopt-125m-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "facebookopt-125m-citation-url-httpsarxivorgabs220501068-name-OPT-Open-Pre-tr" ;
+    mcro:hasHardware "facebookopt-125m-hardware-80GB-A100-GPU" ;
+    mcro:hasLanguages "facebookopt-125m-languages-en" ;
+    mcro:hasModeltype "facebookopt-125m-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "facebookopt-125m-pretrainedModel-True" ;
+    mcro:hasTrainingdata "facebookopt-125m-trainingData-BookCorpus",
+        "facebookopt-125m-trainingData-CC-Stories",
+        "facebookopt-125m-trainingData-CCNewsV2",
+        "facebookopt-125m-trainingData-Pushshiftio-Reddit-dataset",
+        "facebookopt-125m-trainingData-The-Pile" .
+
+mcro:facebookopt-125m-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:facebookopt-125m-citation-url-httpsarxivorgabs220501068-name-OPT-Open-Pre-tr a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2205.01068\", \"name\": \"OPT: Open Pre-trained Transformer Language Models\", \"authors\": [\"Susan Zhang\", \"Stephen Roller\", \"Naman Goyal\", \"Mikel Artetxe\", \"Moya Chen\", \"Shuohui Chen\", \"Christopher Dewan\", \"Mona Diab\", \"Xian Li\", \"Xi Victoria Lin\", \"Todor Mihaylov\", \"Myle Ott\", \"Sam Shleifer\", \"Kurt Shuster\", \"Daniel Simig\", \"Punit Singh Koura\", \"Anjali Sridhar\", \"Tianlu Wang\", \"Luke Zettlemoyer\"], \"year\": 2022}"^^rdf:JSON .
+
+mcro:facebookopt-125m-hardware-80GB-A100-GPU a mcro:CustomHardware ;
+    dul:hasParameterDataValue "80GB A100 GPU" .
+
+mcro:facebookopt-125m-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:facebookopt-125m-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:facebookopt-125m-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:facebookopt-125m-trainingData-BookCorpus a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "BookCorpus" .
+
+mcro:facebookopt-125m-trainingData-CC-Stories a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "CC-Stories" .
+
+mcro:facebookopt-125m-trainingData-CCNewsV2 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "CCNewsV2" .
+
+mcro:facebookopt-125m-trainingData-Pushshiftio-Reddit-dataset a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Pushshift.io Reddit dataset" .
+
+mcro:facebookopt-125m-trainingData-The-Pile a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "The Pile" .
+
+mcro:google-bertbert-base-cased a mcro:Model ;
+    mcro:hasArchitecture "google-bertbert-base-cased-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "google-bertbert-base-cased-citation-url-httpsarxivorgabs181004805-name-BERT-Pre-traini" ;
+    mcro:hasHardware "google-bertbert-base-cased-hardware-Cloud-TPU" ;
+    mcro:hasLanguages "google-bertbert-base-cased-languages-en" ;
+    mcro:hasMetrics "google-bertbert-base-cased-metrics-task-Average-value-796",
+        "google-bertbert-base-cased-metrics-task-CoLA-value-521",
+        "google-bertbert-base-cased-metrics-task-MNLI-mmm-value-846834",
+        "google-bertbert-base-cased-metrics-task-MRPC-value-889",
+        "google-bertbert-base-cased-metrics-task-QNLI-value-905",
+        "google-bertbert-base-cased-metrics-task-QQP-value-712",
+        "google-bertbert-base-cased-metrics-task-RTE-value-664",
+        "google-bertbert-base-cased-metrics-task-SST-2-value-935",
+        "google-bertbert-base-cased-metrics-task-STS-B-value-858" ;
+    mcro:hasModeltype "google-bertbert-base-cased-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "google-bertbert-base-cased-pretrainedModel-True" ;
+    mcro:hasTrainingdata "google-bertbert-base-cased-trainingData-BookCorpus",
+        "google-bertbert-base-cased-trainingData-English-Wikipedia" .
+
+mcro:google-bertbert-base-cased-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:google-bertbert-base-cased-citation-url-httpsarxivorgabs181004805-name-BERT-Pre-traini a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/1810.04805\", \"name\": \"BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-hardware-Cloud-TPU a mcro:CustomHardware ;
+    dul:hasParameterDataValue "Cloud TPU" .
+
+mcro:google-bertbert-base-cased-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:google-bertbert-base-cased-metrics-task-Average-value-796 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"Average\", \"value\": \"79.6\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-metrics-task-CoLA-value-521 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"CoLA\", \"value\": \"52.1\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-metrics-task-MNLI-mmm-value-846834 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"MNLI-(m/mm)\", \"value\": \"84.6/83.4\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-metrics-task-MRPC-value-889 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"MRPC\", \"value\": \"88.9\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-metrics-task-QNLI-value-905 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"QNLI\", \"value\": \"90.5\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-metrics-task-QQP-value-712 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"QQP\", \"value\": \"71.2\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-metrics-task-RTE-value-664 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"RTE\", \"value\": \"66.4\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-metrics-task-SST-2-value-935 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"SST-2\", \"value\": \"93.5\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-metrics-task-STS-B-value-858 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"task\": \"STS-B\", \"value\": \"85.8\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-cased-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:google-bertbert-base-cased-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:google-bertbert-base-cased-trainingData-BookCorpus a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "BookCorpus" .
+
+mcro:google-bertbert-base-cased-trainingData-English-Wikipedia a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "English Wikipedia" .
+
+mcro:google-bertbert-base-multilingual-cased a mcro:Model ;
+    mcro:hasArchitecture "google-bertbert-base-multilingual-cased-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "google-bertbert-base-multilingual-cased-citation-url-httparxivorgabs181004805-name-BERT-Pre-trainin" ;
+    mcro:hasModeltype "google-bertbert-base-multilingual-cased-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "google-bertbert-base-multilingual-cased-pretrainedModel-True" ;
+    mcro:hasTrainingdata "google-bertbert-base-multilingual-cased-trainingData-Wikipedia" .
+
+mcro:google-bertbert-base-multilingual-cased-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:google-bertbert-base-multilingual-cased-citation-url-httparxivorgabs181004805-name-BERT-Pre-trainin a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"http://arxiv.org/abs/1810.04805\", \"name\": \"BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-multilingual-cased-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:google-bertbert-base-multilingual-cased-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:google-bertbert-base-multilingual-cased-trainingData-Wikipedia a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Wikipedia" .
+
+mcro:google-bertbert-base-uncased a mcro:Model ;
+    mcro:hasArchitecture "google-bertbert-base-uncased-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "google-bertbert-base-uncased-citation-url-httpsarxivorgabs181004805-name-BERT-Pre-traini" ;
+    mcro:hasLanguages "google-bertbert-base-uncased-languages-English" ;
+    mcro:hasModeltype "google-bertbert-base-uncased-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "google-bertbert-base-uncased-pretrainedModel-True" ;
+    mcro:hasTrainingdata "google-bertbert-base-uncased-trainingData-BookCorpus",
+        "google-bertbert-base-uncased-trainingData-English-Wikipedia" .
+
+mcro:google-bertbert-base-uncased-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:google-bertbert-base-uncased-citation-url-httpsarxivorgabs181004805-name-BERT-Pre-traini a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/1810.04805\", \"name\": \"BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\"}"^^rdf:JSON .
+
+mcro:google-bertbert-base-uncased-languages-English a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "English" .
+
+mcro:google-bertbert-base-uncased-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:google-bertbert-base-uncased-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:google-bertbert-base-uncased-trainingData-BookCorpus a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "BookCorpus" .
+
+mcro:google-bertbert-base-uncased-trainingData-English-Wikipedia a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "English Wikipedia" .
+
+mcro:google-t5t5-base a mcro:Model ;
+    mcro:hasArchitecture "google-t5t5-base-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "google-t5t5-base-citation-name-Exploring-the-Limits-of-Transfer-Learning-wit" ;
+    mcro:hasHardware "google-t5t5-base-hardware-Google-Cloud-TPU-Pods" ;
+    mcro:hasLanguages "google-t5t5-base-languages-English",
+        "google-t5t5-base-languages-French",
+        "google-t5t5-base-languages-German",
+        "google-t5t5-base-languages-Romanian" ;
+    mcro:hasLibraries "google-t5t5-base-libraries-HuggingFace",
+        "google-t5t5-base-libraries-PyTorch" ;
+    mcro:hasLicense "google-t5t5-base-license-Apache-20" ;
+    mcro:hasModeltype "google-t5t5-base-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "google-t5t5-base-pretrainedModel-True" ;
+    mcro:hasTrainingdata "google-t5t5-base-trainingData-BoolQ",
+        "google-t5t5-base-trainingData-CB",
+        "google-t5t5-base-trainingData-COPA",
+        "google-t5t5-base-trainingData-CoLA",
+        "google-t5t5-base-trainingData-MNLI",
+        "google-t5t5-base-trainingData-MRPC",
+        "google-t5t5-base-trainingData-MultiRC",
+        "google-t5t5-base-trainingData-QNLI",
+        "google-t5t5-base-trainingData-QQP",
+        "google-t5t5-base-trainingData-RTE",
+        "google-t5t5-base-trainingData-ReCoRD",
+        "google-t5t5-base-trainingData-SST-2",
+        "google-t5t5-base-trainingData-STS-B",
+        "google-t5t5-base-trainingData-WIC",
+        "google-t5t5-base-trainingData-httpshuggingfacecodatasetsc4",
+        "google-t5t5-base-trainingData-httpshuggingfacecodatasetswikidpr" .
+
+mcro:google-t5t5-base-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:google-t5t5-base-citation-name-Exploring-the-Limits-of-Transfer-Learning-wit a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"name\": \"Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer\", \"url\": \"http://jmlr.org/papers/v21/20-074.html\"}"^^rdf:JSON .
+
+mcro:google-t5t5-base-hardware-Google-Cloud-TPU-Pods a mcro:CustomHardware ;
+    dul:hasParameterDataValue "Google Cloud TPU Pods" .
+
+mcro:google-t5t5-base-languages-English a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "English" .
+
+mcro:google-t5t5-base-languages-French a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "French" .
+
+mcro:google-t5t5-base-languages-German a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "German" .
+
+mcro:google-t5t5-base-languages-Romanian a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Romanian" .
+
+mcro:google-t5t5-base-libraries-HuggingFace a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace" .
+
+mcro:google-t5t5-base-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:google-t5t5-base-license-Apache-20 a mcro:CustomLicense ;
+    dul:hasParameterDataValue "Apache 2.0" .
+
+mcro:google-t5t5-base-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:google-t5t5-base-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:google-t5t5-base-trainingData-BoolQ a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "BoolQ" .
+
+mcro:google-t5t5-base-trainingData-CB a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "CB" .
+
+mcro:google-t5t5-base-trainingData-COPA a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "COPA" .
+
+mcro:google-t5t5-base-trainingData-CoLA a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "CoLA" .
+
+mcro:google-t5t5-base-trainingData-MNLI a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "MNLI" .
+
+mcro:google-t5t5-base-trainingData-MRPC a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "MRPC" .
+
+mcro:google-t5t5-base-trainingData-MultiRC a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "MultiRC" .
+
+mcro:google-t5t5-base-trainingData-QNLI a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "QNLI" .
+
+mcro:google-t5t5-base-trainingData-QQP a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "QQP" .
+
+mcro:google-t5t5-base-trainingData-RTE a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "RTE" .
+
+mcro:google-t5t5-base-trainingData-ReCoRD a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "ReCoRD" .
+
+mcro:google-t5t5-base-trainingData-SST-2 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "SST-2" .
+
+mcro:google-t5t5-base-trainingData-STS-B a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "STS-B" .
+
+mcro:google-t5t5-base-trainingData-WIC a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "WIC" .
+
+mcro:google-t5t5-base-trainingData-httpshuggingfacecodatasetsc4 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/c4" .
+
+mcro:google-t5t5-base-trainingData-httpshuggingfacecodatasetswikidpr a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/wiki_dpr" .
+
+mcro:googleelectra-base-discriminator a mcro:Model ;
+    mcro:hasArchitecture "googleelectra-base-discriminator-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "googleelectra-base-discriminator-citation-name-ELECTRA-Pre-training-Text-Encoders-as-Discrim",
+        "googleelectra-base-discriminator-citation-name-Generative-Adversarial-Nets-url-httpsarxivorg" ;
+    mcro:hasLanguages "googleelectra-base-discriminator-languages-en" ;
+    mcro:hasLibraries "googleelectra-base-discriminator-libraries-PyTorch",
+        "googleelectra-base-discriminator-libraries-Transformers" ;
+    mcro:hasMetrics "googleelectra-base-discriminator-metrics-Accuracy" ;
+    mcro:hasModeltype "googleelectra-base-discriminator-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "googleelectra-base-discriminator-pretrainedModel-googleelectra-base-discriminator" .
+
+mcro:googleelectra-base-discriminator-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:googleelectra-base-discriminator-citation-name-ELECTRA-Pre-training-Text-Encoders-as-Discrim a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"name\": \"ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators\", \"url\": \"https://openreview.net/pdf?id=r1xMH1BtvB\"}"^^rdf:JSON .
+
+mcro:googleelectra-base-discriminator-citation-name-Generative-Adversarial-Nets-url-httpsarxivorg a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"name\": \"Generative Adversarial Nets\", \"url\": \"https://arxiv.org/pdf/1406.2661.pdf\"}"^^rdf:JSON .
+
+mcro:googleelectra-base-discriminator-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:googleelectra-base-discriminator-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:googleelectra-base-discriminator-libraries-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "Transformers" .
+
+mcro:googleelectra-base-discriminator-metrics-Accuracy a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "Accuracy" .
+
+mcro:googleelectra-base-discriminator-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:googleelectra-base-discriminator-pretrainedModel-googleelectra-base-discriminator a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "google/electra-base-discriminator" .
+
+mcro:googlesiglip-so400m-patch14-384 a mcro:Model ;
+    mcro:hasArchitecture "googlesiglip-so400m-patch14-384-architecture-httppurlobolibraryorgobomcroowlVisionTransformer" ;
+    mcro:hasCitation "googlesiglip-so400m-patch14-384-citation-url-httpsarxivorgabs220906794-name-WebLI",
+        "googlesiglip-so400m-patch14-384-citation-url-httpsarxivorgabs230315343-name-Sigmoid-Loss-fo",
+        "googlesiglip-so400m-patch14-384-citation-url-httpsarxivorgabs230513035-name-Getting-ViT-in-" ;
+    mcro:hasHardware "googlesiglip-so400m-patch14-384-hardware-TPU-v4" ;
+    mcro:hasLibraries "googlesiglip-so400m-patch14-384-libraries-HuggingFace-Transformers",
+        "googlesiglip-so400m-patch14-384-libraries-PyTorch" ;
+    mcro:hasModeltype "googlesiglip-so400m-patch14-384-modelType-httppurlobolibraryorgobomcroowlMultiModalModel" ;
+    mcro:hasPretrainedmodel "googlesiglip-so400m-patch14-384-pretrainedModel-googlesiglip-so400m-patch14-384" ;
+    mcro:hasTrainingdata "googlesiglip-so400m-patch14-384-trainingData-WebLI" .
+
+mcro:googlesiglip-so400m-patch14-384-architecture-httppurlobolibraryorgobomcroowlVisionTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#VisionTransformer" .
+
+mcro:googlesiglip-so400m-patch14-384-citation-url-httpsarxivorgabs220906794-name-WebLI a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2209.06794\", \"name\": \"WebLI\"}"^^rdf:JSON .
+
+mcro:googlesiglip-so400m-patch14-384-citation-url-httpsarxivorgabs230315343-name-Sigmoid-Loss-fo a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2303.15343\", \"name\": \"Sigmoid Loss for Language Image Pre-Training\"}"^^rdf:JSON .
+
+mcro:googlesiglip-so400m-patch14-384-citation-url-httpsarxivorgabs230513035-name-Getting-ViT-in- a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2305.13035\", \"name\": \"Getting ViT in Shape: Scaling Laws for Compute-Optimal Model Design\"}"^^rdf:JSON .
+
+mcro:googlesiglip-so400m-patch14-384-hardware-TPU-v4 a mcro:CustomHardware ;
+    dul:hasParameterDataValue "TPU-v4" .
+
+mcro:googlesiglip-so400m-patch14-384-libraries-HuggingFace-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace Transformers" .
+
+mcro:googlesiglip-so400m-patch14-384-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:googlesiglip-so400m-patch14-384-modelType-httppurlobolibraryorgobomcroowlMultiModalModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#MultiModalModel" .
+
+mcro:googlesiglip-so400m-patch14-384-pretrainedModel-googlesiglip-so400m-patch14-384 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "google/siglip-so400m-patch14-384" .
+
+mcro:googlesiglip-so400m-patch14-384-trainingData-WebLI a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "WebLI" .
+
+mcro:googlevit-base-patch16-224 a mcro:Model ;
+    mcro:hasArchitecture "googlevit-base-patch16-224-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "googlevit-base-patch16-224-citation-url-None-name-Imagenet-A-large-scale-hierarchical-",
+        "googlevit-base-patch16-224-citation-url-None-name-Visual-Transformers-Token-based-Imag",
+        "googlevit-base-patch16-224-citation-url-httpsarxivorgabs201011929-name-An-Image-is-Wor" ;
+    mcro:hasLibraries "googlevit-base-patch16-224-libraries-JAX",
+        "googlevit-base-patch16-224-libraries-PyTorch" ;
+    mcro:hasModeltype "googlevit-base-patch16-224-modelType-httppurlobolibraryorgobomcroowlVisionTransformer" ;
+    mcro:hasPretrainedmodel "googlevit-base-patch16-224-pretrainedModel-googlevit-base-patch16-224" ;
+    mcro:hasTrainingdata "googlevit-base-patch16-224-trainingData-ImageNet",
+        "googlevit-base-patch16-224-trainingData-ImageNet-21k" .
+
+mcro:googlevit-base-patch16-224-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:googlevit-base-patch16-224-citation-url-None-name-Imagenet-A-large-scale-hierarchical- a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{'url': None, 'name': 'Imagenet: A large-scale hierarchical image database'}" .
+
+mcro:googlevit-base-patch16-224-citation-url-None-name-Visual-Transformers-Token-based-Imag a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{'url': None, 'name': 'Visual Transformers: Token-based Image Representation and Processing for Computer Vision'}" .
+
+mcro:googlevit-base-patch16-224-citation-url-httpsarxivorgabs201011929-name-An-Image-is-Wor a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2010.11929\", \"name\": \"An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale\"}"^^rdf:JSON .
+
+mcro:googlevit-base-patch16-224-in21k a mcro:Model ;
+    mcro:hasArchitecture "googlevit-base-patch16-224-in21k-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "googlevit-base-patch16-224-in21k-citation-title-An-Image-is-Worth-16x16-Words-Transformers-f",
+        "googlevit-base-patch16-224-in21k-citation-title-Imagenet-A-large-scale-hierarchical-image-da",
+        "googlevit-base-patch16-224-in21k-citation-title-Visual-Transformers-Token-based-Image-Repres" ;
+    mcro:hasLanguages "googlevit-base-patch16-224-in21k-languages-JAX",
+        "googlevit-base-patch16-224-in21k-languages-Python" ;
+    mcro:hasLibraries "googlevit-base-patch16-224-in21k-libraries-Flax",
+        "googlevit-base-patch16-224-in21k-libraries-HuggingFace-Transformers",
+        "googlevit-base-patch16-224-in21k-libraries-JAX",
+        "googlevit-base-patch16-224-in21k-libraries-PyTorch" ;
+    mcro:hasModeltype "googlevit-base-patch16-224-in21k-modelType-httppurlobolibraryorgobomcroowlVisionTransformer" ;
+    mcro:hasPretrainedmodel "googlevit-base-patch16-224-in21k-pretrainedModel-googlevit-base-patch16-224-in21k" ;
+    mcro:hasTrainingdata "googlevit-base-patch16-224-in21k-trainingData-httpwwwimage-netorg" .
+
+mcro:googlevit-base-patch16-224-in21k-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:googlevit-base-patch16-224-in21k-citation-title-An-Image-is-Worth-16x16-Words-Transformers-f a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"title\": \"An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale\", \"author\": \"Dosovitskiy et al.\", \"year\": 2020, \"url\": \"https://arxiv.org/abs/2010.11929\"}"^^rdf:JSON .
+
+mcro:googlevit-base-patch16-224-in21k-citation-title-Imagenet-A-large-scale-hierarchical-image-da a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"title\": \"Imagenet: A large-scale hierarchical image database\", \"author\": \"Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, Li Fei-Fei\", \"booktitle\": \"2009 IEEE conference on computer vision and pattern recognition\", \"pages\": \"248--255\", \"year\": 2009, \"organization\": \"Ieee\"}"^^rdf:JSON .
+
+mcro:googlevit-base-patch16-224-in21k-citation-title-Visual-Transformers-Token-based-Image-Repres a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"title\": \"Visual Transformers: Token-based Image Representation and Processing for Computer Vision\", \"author\": \"Bichen Wu, Chenfeng Xu, Xiaoliang Dai, Alvin Wan, Peizhao Zhang, Zhicheng Yan, Masayoshi Tomizuka, Joseph Gonzalez, Kurt Keutzer, Peter Vajda\", \"year\": 2020, \"eprint\": \"2006.03677\", \"archivePrefix\": \"arXiv\", \"primaryClass\": \"cs.CV\"}"^^rdf:JSON .
+
+mcro:googlevit-base-patch16-224-in21k-languages-JAX a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "JAX" .
+
+mcro:googlevit-base-patch16-224-in21k-languages-Python a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Python" .
+
+mcro:googlevit-base-patch16-224-in21k-libraries-Flax a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "Flax" .
+
+mcro:googlevit-base-patch16-224-in21k-libraries-HuggingFace-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace Transformers" .
+
+mcro:googlevit-base-patch16-224-in21k-libraries-JAX a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "JAX" .
+
+mcro:googlevit-base-patch16-224-in21k-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:googlevit-base-patch16-224-in21k-modelType-httppurlobolibraryorgobomcroowlVisionTransformer a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#VisionTransformer" .
+
+mcro:googlevit-base-patch16-224-in21k-pretrainedModel-googlevit-base-patch16-224-in21k a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "google/vit-base-patch16-224-in21k" .
+
+mcro:googlevit-base-patch16-224-in21k-trainingData-httpwwwimage-netorg a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "http://www.image-net.org/" .
+
+mcro:googlevit-base-patch16-224-libraries-JAX a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "JAX" .
+
+mcro:googlevit-base-patch16-224-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:googlevit-base-patch16-224-modelType-httppurlobolibraryorgobomcroowlVisionTransformer a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#VisionTransformer" .
+
+mcro:googlevit-base-patch16-224-pretrainedModel-googlevit-base-patch16-224 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "google/vit-base-patch16-224" .
+
+mcro:googlevit-base-patch16-224-trainingData-ImageNet a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "ImageNet" .
+
+mcro:googlevit-base-patch16-224-trainingData-ImageNet-21k a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "ImageNet-21k" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese a mcro:Model ;
+    mcro:hasArchitecture "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-citation-title-Fine-tuned-XLSR-53-large-model-for-speech-re" ;
+    mcro:hasHardware "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-hardware-OVHcloud-GPU" ;
+    mcro:hasLanguages "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-languages-ja" ;
+    mcro:hasLibraries "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-libraries-HuggingFace",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-libraries-PyTorch",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-libraries-librosa" ;
+    mcro:hasMetrics "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-metrics-name-CER-value-2016",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-metrics-name-WER-value-8180" ;
+    mcro:hasModeltype "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-modelType-httppurlobolibraryorgobomcroowlAcousticModel" ;
+    mcro:hasPretrainedmodel "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-pretrainedModel-facebookwav2vec2-large-xlsr-53" ;
+    mcro:hasTrainingdata "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-trainingData-CSS10",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-trainingData-Common-Voice-61",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-japanese-trainingData-JSUT" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-citation-title-Fine-tuned-XLSR-53-large-model-for-speech-re a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"title\": \"Fine-tuned XLSR-53 large model for speech recognition in Japanese\", \"author\": \"Grosman, Jonatas\", \"year\": \"2021\", \"howpublished\": \"https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-japanese\"}"^^rdf:JSON .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-hardware-OVHcloud-GPU a mcro:CustomHardware ;
+    dul:hasParameterDataValue "OVHcloud GPU" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-languages-ja a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ja" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-libraries-HuggingFace a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-libraries-librosa a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "librosa" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-metrics-name-CER-value-2016 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"name\": \"CER\", \"value\": \"20.16%\"}"^^rdf:JSON .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-metrics-name-WER-value-8180 a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"name\": \"WER\", \"value\": \"81.80%\"}"^^rdf:JSON .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-modelType-httppurlobolibraryorgobomcroowlAcousticModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#AcousticModel" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-pretrainedModel-facebookwav2vec2-large-xlsr-53 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "facebook/wav2vec2-large-xlsr-53" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-trainingData-CSS10 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "CSS10" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-trainingData-Common-Voice-61 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Common Voice 6.1" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-japanese-trainingData-JSUT a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "JSUT" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese a mcro:Model ;
+    mcro:hasArchitecture "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-architecture-httppurlobolibraryorgobomcroowlWav2Vec2" ;
+    mcro:hasCitation "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-citation-title-Fine-tuned-XLSR-53-large-model-for-speech-re" ;
+    mcro:hasLanguages "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-languages-pt" ;
+    mcro:hasLibraries "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-HuggingFace",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-PyTorch",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-datasets",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-librosa",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-transformers" ;
+    mcro:hasModeltype "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-modelType-httppurlobolibraryorgobomcroowlAcousticModel" ;
+    mcro:hasPretrainedmodel "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-pretrainedModel-facebookwav2vec2-large-xlsr-53" ;
+    mcro:hasTrainingdata "jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-trainingData-httpshuggingfacecodatasetscommonvoice" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-architecture-httppurlobolibraryorgobomcroowlWav2Vec2 a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Wav2Vec2" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-citation-title-Fine-tuned-XLSR-53-large-model-for-speech-re a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"title\": \"Fine-tuned XLSR-53 large model for speech recognition in Portuguese\", \"author\": \"Grosman, Jonatas\", \"howpublished\": \"https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-portuguese\", \"year\": \"2021\"}"^^rdf:JSON .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-languages-pt a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "pt" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-HuggingFace a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-datasets a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "datasets" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-librosa a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "librosa" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-libraries-transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "transformers" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-modelType-httppurlobolibraryorgobomcroowlAcousticModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#AcousticModel" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-pretrainedModel-facebookwav2vec2-large-xlsr-53 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "facebook/wav2vec2-large-xlsr-53" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-portuguese-trainingData-httpshuggingfacecodatasetscommonvoice a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/common_voice" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian a mcro:Model ;
+    mcro:hasArchitecture "jonatasgrosmanwav2vec2-large-xlsr-53-russian-architecture-httppurlobolibraryorgobomcroowlWav2Vec2" ;
+    mcro:hasCitation "jonatasgrosmanwav2vec2-large-xlsr-53-russian-citation-title-Fine-tuned-XLSR-53-large-model-for-speech-re" ;
+    mcro:hasLanguages "jonatasgrosmanwav2vec2-large-xlsr-53-russian-languages-ru" ;
+    mcro:hasLibraries "jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-HuggingFace",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-PyTorch",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-datasets",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-librosa",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-transformers" ;
+    mcro:hasModeltype "jonatasgrosmanwav2vec2-large-xlsr-53-russian-modelType-httppurlobolibraryorgobomcroowlAutomaticSpeechReco" ;
+    mcro:hasPretrainedmodel "jonatasgrosmanwav2vec2-large-xlsr-53-russian-pretrainedModel-httpshuggingfacecofacebookwav2vec2-large-xlsr-53" ;
+    mcro:hasTrainingdata "jonatasgrosmanwav2vec2-large-xlsr-53-russian-trainingData-httpsgithubcomKyubyongcss10",
+        "jonatasgrosmanwav2vec2-large-xlsr-53-russian-trainingData-httpshuggingfacecodatasetscommonvoice" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-architecture-httppurlobolibraryorgobomcroowlWav2Vec2 a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Wav2Vec2" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-citation-title-Fine-tuned-XLSR-53-large-model-for-speech-re a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"title\": \"Fine-tuned XLSR-53 large model for speech recognition in Russian\", \"author\": \"Grosman, Jonatas\", \"howpublished\": \"https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-russian\", \"year\": \"2021\"}"^^rdf:JSON .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-languages-ru a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "ru" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-HuggingFace a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-datasets a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "datasets" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-librosa a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "librosa" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-libraries-transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "transformers" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-modelType-httppurlobolibraryorgobomcroowlAutomaticSpeechReco a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#AutomaticSpeechRecognition" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-pretrainedModel-httpshuggingfacecofacebookwav2vec2-large-xlsr-53 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/facebook/wav2vec2-large-xlsr-53" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-trainingData-httpsgithubcomKyubyongcss10 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/Kyubyong/css10" .
+
+mcro:jonatasgrosmanwav2vec2-large-xlsr-53-russian-trainingData-httpshuggingfacecodatasetscommonvoice a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/common_voice" .
+
+mcro:meta-llamaLlama-31-8B-Instruct a mcro:Model ;
+    mcro:hasArchitecture "meta-llamaLlama-31-8B-Instruct-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasHardware "meta-llamaLlama-31-8B-Instruct-hardware-H100-80GB" ;
+    mcro:hasLanguages "meta-llamaLlama-31-8B-Instruct-languages-English",
+        "meta-llamaLlama-31-8B-Instruct-languages-French",
+        "meta-llamaLlama-31-8B-Instruct-languages-German",
+        "meta-llamaLlama-31-8B-Instruct-languages-Hindi",
+        "meta-llamaLlama-31-8B-Instruct-languages-Italian",
+        "meta-llamaLlama-31-8B-Instruct-languages-Portuguese",
+        "meta-llamaLlama-31-8B-Instruct-languages-Spanish",
+        "meta-llamaLlama-31-8B-Instruct-languages-Thai" ;
+    mcro:hasLicense "meta-llamaLlama-31-8B-Instruct-license-httpsgithubcommeta-llamallama-modelsblobmainmodels" ;
+    mcro:hasModeltype "meta-llamaLlama-31-8B-Instruct-modelType-httppurlobolibraryorgobomcroowlAutoregressiveLM" ;
+    mcro:hasTrainingdata "meta-llamaLlama-31-8B-Instruct-trainingData-A-new-mix-of-publicly-available-online-data" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-hardware-H100-80GB a mcro:CustomHardware ;
+    dul:hasParameterDataValue "H100-80GB" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-languages-English a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "English" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-languages-French a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "French" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-languages-German a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "German" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-languages-Hindi a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Hindi" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-languages-Italian a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Italian" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-languages-Portuguese a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Portuguese" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-languages-Spanish a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Spanish" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-languages-Thai a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Thai" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-license-httpsgithubcommeta-llamallama-modelsblobmainmodels a mcro:CustomLicense ;
+    dul:hasParameterDataValue "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-modelType-httppurlobolibraryorgobomcroowlAutoregressiveLM a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#AutoregressiveLM" .
+
+mcro:meta-llamaLlama-31-8B-Instruct-trainingData-A-new-mix-of-publicly-available-online-data a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "A new mix of publicly available online data." .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF a mcro:Model ;
+    mcro:hasArchitecture "modularaiLlama-31-8B-Instruct-GGUF-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "modularaiLlama-31-8B-Instruct-GGUF-citation-httpsgithubcommeta-llamallama3" ;
+    mcro:hasHardware "modularaiLlama-31-8B-Instruct-GGUF-hardware-H100-80GB" ;
+    mcro:hasLanguages "modularaiLlama-31-8B-Instruct-GGUF-languages-English",
+        "modularaiLlama-31-8B-Instruct-GGUF-languages-French",
+        "modularaiLlama-31-8B-Instruct-GGUF-languages-German",
+        "modularaiLlama-31-8B-Instruct-GGUF-languages-Hindi",
+        "modularaiLlama-31-8B-Instruct-GGUF-languages-Italian",
+        "modularaiLlama-31-8B-Instruct-GGUF-languages-Portuguese",
+        "modularaiLlama-31-8B-Instruct-GGUF-languages-Spanish",
+        "modularaiLlama-31-8B-Instruct-GGUF-languages-Thai" ;
+    mcro:hasLicense "modularaiLlama-31-8B-Instruct-GGUF-license-Llama-31-Community-License" ;
+    mcro:hasModeltype "modularaiLlama-31-8B-Instruct-GGUF-modelType-httppurlobolibraryorgobomcroowlAutoregressiveLM" ;
+    mcro:hasPretrainedmodel "modularaiLlama-31-8B-Instruct-GGUF-pretrainedModel-meta-llamaMeta-Llama-3-8B-Instruct" ;
+    mcro:hasTrainingdata "modularaiLlama-31-8B-Instruct-GGUF-trainingData-A-new-mix-of-publicly-available-online-data" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-citation-httpsgithubcommeta-llamallama3 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "https://github.com/meta-llama/llama3" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-hardware-H100-80GB a mcro:CustomHardware ;
+    dul:hasParameterDataValue "H100-80GB" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-languages-English a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "English" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-languages-French a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "French" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-languages-German a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "German" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-languages-Hindi a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Hindi" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-languages-Italian a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Italian" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-languages-Portuguese a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Portuguese" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-languages-Spanish a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Spanish" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-languages-Thai a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "Thai" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-license-Llama-31-Community-License a mcro:CustomLicense ;
+    dul:hasParameterDataValue "Llama 3.1 Community License" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-modelType-httppurlobolibraryorgobomcroowlAutoregressiveLM a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#AutoregressiveLM" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-pretrainedModel-meta-llamaMeta-Llama-3-8B-Instruct a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "meta-llama/Meta-Llama-3-8B-Instruct" .
+
+mcro:modularaiLlama-31-8B-Instruct-GGUF-trainingData-A-new-mix-of-publicly-available-online-data a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "A new mix of publicly available online data." .
+
+mcro:openai-communitygpt2 a mcro:Model ;
+    mcro:hasArchitecture "openai-communitygpt2-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "openai-communitygpt2-citation-url-httpsd4mucfpksywvcloudfrontnetbetter-language-" ;
+    mcro:hasLanguages "openai-communitygpt2-languages-en" ;
+    mcro:hasLibraries "openai-communitygpt2-libraries-PyTorch",
+        "openai-communitygpt2-libraries-TensorFlow" ;
+    mcro:hasMetrics "openai-communitygpt2-metrics-dataset-1BW-metric-httppurlobolibraryorgobomcroowl",
+        "openai-communitygpt2-metrics-dataset-CBT-CN-metric-httppurlobolibraryorgobomcro",
+        "openai-communitygpt2-metrics-dataset-CBT-NE-metric-httppurlobolibraryorgobomcro",
+        "openai-communitygpt2-metrics-dataset-LAMBADA-metric-httppurlobolibraryorgobomcr",
+        "openai-communitygpt2-metrics-dataset-PTB-metric-httppurlobolibraryorgobomcroowl",
+        "openai-communitygpt2-metrics-dataset-WikiText103-metric-httppurlobolibraryorgob",
+        "openai-communitygpt2-metrics-dataset-WikiText2-metric-httppurlobolibraryorgobom",
+        "openai-communitygpt2-metrics-dataset-enwiki8-metric-httppurlobolibraryorgobomcr",
+        "openai-communitygpt2-metrics-dataset-text8-metric-httppurlobolibraryorgobomcroo" ;
+    mcro:hasModeltype "openai-communitygpt2-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "openai-communitygpt2-pretrainedModel-True" ;
+    mcro:hasTrainingdata "openai-communitygpt2-trainingData-WebText" .
+
+mcro:openai-communitygpt2-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:openai-communitygpt2-citation-url-httpsd4mucfpksywvcloudfrontnetbetter-language- a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf\", \"name\": \"Language Models are Unsupervised Multitask Learners\"}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:openai-communitygpt2-large a mcro:Model ;
+    mcro:hasArchitecture "openai-communitygpt2-large-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "openai-communitygpt2-large-citation-httpsd4mucfpksywvcloudfrontnetbetter-language-mode" ;
+    mcro:hasLanguages "openai-communitygpt2-large-languages-en" ;
+    mcro:hasLicense "openai-communitygpt2-large-license-httpsgithubcomopenaigpt-2blobmasterLICENSE" ;
+    mcro:hasModeltype "openai-communitygpt2-large-modelType-httppurlobolibraryorgobomcroowlLanguageModel" ;
+    mcro:hasPretrainedmodel "openai-communitygpt2-large-pretrainedModel-True" ;
+    mcro:hasTrainingdata "openai-communitygpt2-large-trainingData-WebText" .
+
+mcro:openai-communitygpt2-large-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:openai-communitygpt2-large-citation-httpsd4mucfpksywvcloudfrontnetbetter-language-mode a mcro:CustomCitation ;
+    dul:hasParameterDataValue "https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf" .
+
+mcro:openai-communitygpt2-large-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:openai-communitygpt2-large-license-httpsgithubcomopenaigpt-2blobmasterLICENSE a mcro:CustomLicense ;
+    dul:hasParameterDataValue "https://github.com/openai/gpt-2/blob/master/LICENSE" .
+
+mcro:openai-communitygpt2-large-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:openai-communitygpt2-large-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:openai-communitygpt2-large-trainingData-WebText a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "WebText" .
+
+mcro:openai-communitygpt2-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:openai-communitygpt2-libraries-TensorFlow a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "TensorFlow" .
+
+mcro:openai-communitygpt2-metrics-dataset-1BW-metric-httppurlobolibraryorgobomcroowl a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"dataset\": \"1BW\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#Perplexity\", \"value\": 75.2}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-metrics-dataset-CBT-CN-metric-httppurlobolibraryorgobomcro a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"dataset\": \"CBT-CN\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#Accuracy\", \"value\": 87.65}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-metrics-dataset-CBT-NE-metric-httppurlobolibraryorgobomcro a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"dataset\": \"CBT-NE\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#Accuracy\", \"value\": 83.4}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-metrics-dataset-LAMBADA-metric-httppurlobolibraryorgobomcr a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"dataset\": \"LAMBADA\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#Accuracy\", \"value\": 45.99}"^^rdf:JSON,
+        "{\"dataset\": \"LAMBADA\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#Perplexity\", \"value\": 35.13}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-metrics-dataset-PTB-metric-httppurlobolibraryorgobomcroowl a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"dataset\": \"PTB\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#Perplexity\", \"value\": 65.85}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-metrics-dataset-WikiText103-metric-httppurlobolibraryorgob a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"dataset\": \"WikiText103\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#Perplexity\", \"value\": 37.5}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-metrics-dataset-WikiText2-metric-httppurlobolibraryorgobom a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"dataset\": \"WikiText2\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#Perplexity\", \"value\": 29.41}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-metrics-dataset-enwiki8-metric-httppurlobolibraryorgobomcr a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"dataset\": \"enwiki8\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#BitsPerByte\", \"value\": 1.16}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-metrics-dataset-text8-metric-httppurlobolibraryorgobomcroo a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"dataset\": \"text8\", \"metric\": \"http://purl.obolibrary.org/obo/mcro.owl#BitsPerCharacter\", \"value\": 1.17}"^^rdf:JSON .
+
+mcro:openai-communitygpt2-modelType-httppurlobolibraryorgobomcroowlLanguageModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#LanguageModel" .
+
+mcro:openai-communitygpt2-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:openai-communitygpt2-trainingData-WebText a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "WebText" .
+
+mcro:openaiclip-vit-base-patch32 a mcro:Model ;
+    mcro:hasArchitecture "openaiclip-vit-base-patch32-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "openaiclip-vit-base-patch32-citation-url-httpsarxivorgabs210300020",
+        "openaiclip-vit-base-patch32-citation-url-httpsopenaicomblogclip" ;
+    mcro:hasLanguages "openaiclip-vit-base-patch32-languages-en" ;
+    mcro:hasLibraries "openaiclip-vit-base-patch32-libraries-PIL",
+        "openaiclip-vit-base-patch32-libraries-PyTorch",
+        "openaiclip-vit-base-patch32-libraries-requests",
+        "openaiclip-vit-base-patch32-libraries-transformers" ;
+    mcro:hasModeltype "openaiclip-vit-base-patch32-modelType-httppurlobolibraryorgobomcroowlVisionAndLanguageMo" ;
+    mcro:hasPretrainedmodel "openaiclip-vit-base-patch32-pretrainedModel-openaiclip-vit-base-patch32" ;
+    mcro:hasTrainingdata "openaiclip-vit-base-patch32-trainingData-YFCC100M" .
+
+mcro:openaiclip-vit-base-patch32-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:openaiclip-vit-base-patch32-citation-url-httpsarxivorgabs210300020 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2103.00020\"}"^^rdf:JSON .
+
+mcro:openaiclip-vit-base-patch32-citation-url-httpsopenaicomblogclip a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://openai.com/blog/clip/\"}"^^rdf:JSON .
+
+mcro:openaiclip-vit-base-patch32-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:openaiclip-vit-base-patch32-libraries-PIL a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PIL" .
+
+mcro:openaiclip-vit-base-patch32-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:openaiclip-vit-base-patch32-libraries-requests a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "requests" .
+
+mcro:openaiclip-vit-base-patch32-libraries-transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "transformers" .
+
+mcro:openaiclip-vit-base-patch32-modelType-httppurlobolibraryorgobomcroowlVisionAndLanguageMo a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#VisionAndLanguageModel" .
+
+mcro:openaiclip-vit-base-patch32-pretrainedModel-openaiclip-vit-base-patch32 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "openai/clip-vit-base-patch32" .
+
+mcro:openaiclip-vit-base-patch32-trainingData-YFCC100M a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "YFCC100M" .
+
+mcro:openaiclip-vit-large-patch14 a mcro:Model ;
+    mcro:hasArchitecture "openaiclip-vit-large-patch14-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "openaiclip-vit-large-patch14-citation-url-httpsarxivorgabs210300020" ;
+    mcro:hasLanguages "openaiclip-vit-large-patch14-languages-en" ;
+    mcro:hasLibraries "openaiclip-vit-large-patch14-libraries-HuggingFace",
+        "openaiclip-vit-large-patch14-libraries-PIL",
+        "openaiclip-vit-large-patch14-libraries-PyTorch" ;
+    mcro:hasModeltype "openaiclip-vit-large-patch14-modelType-httppurlobolibraryorgobomcroowlContrastiveLanguage" ;
+    mcro:hasPretrainedmodel "openaiclip-vit-large-patch14-pretrainedModel-openaiclip-vit-large-patch14" ;
+    mcro:hasTrainingdata "openaiclip-vit-large-patch14-trainingData-YFCC100M" .
+
+mcro:openaiclip-vit-large-patch14-336 a mcro:Model ;
+    mcro:hasArchitecture "openaiclip-vit-large-patch14-336-architecture-httppurlobolibraryorgobomcroowlVisionTransformer" ;
+    mcro:hasLibraries "openaiclip-vit-large-patch14-336-libraries-TensorFlow",
+        "openaiclip-vit-large-patch14-336-libraries-Tokenizers",
+        "openaiclip-vit-large-patch14-336-libraries-Transformers" ;
+    mcro:hasPretrainedmodel "openaiclip-vit-large-patch14-336-pretrainedModel-clip-vit-large-patch14-336" .
+
+mcro:openaiclip-vit-large-patch14-336-architecture-httppurlobolibraryorgobomcroowlVisionTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#VisionTransformer" .
+
+mcro:openaiclip-vit-large-patch14-336-libraries-TensorFlow a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "TensorFlow" .
+
+mcro:openaiclip-vit-large-patch14-336-libraries-Tokenizers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "Tokenizers" .
+
+mcro:openaiclip-vit-large-patch14-336-libraries-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "Transformers" .
+
+mcro:openaiclip-vit-large-patch14-336-pretrainedModel-clip-vit-large-patch14-336 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "clip-vit-large-patch14-336" .
+
+mcro:openaiclip-vit-large-patch14-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:openaiclip-vit-large-patch14-citation-url-httpsarxivorgabs210300020 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2103.00020\"}"^^rdf:JSON .
+
+mcro:openaiclip-vit-large-patch14-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:openaiclip-vit-large-patch14-libraries-HuggingFace a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace" .
+
+mcro:openaiclip-vit-large-patch14-libraries-PIL a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PIL" .
+
+mcro:openaiclip-vit-large-patch14-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:openaiclip-vit-large-patch14-modelType-httppurlobolibraryorgobomcroowlContrastiveLanguage a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ContrastiveLanguageImagePre-training" .
+
+mcro:openaiclip-vit-large-patch14-pretrainedModel-openaiclip-vit-large-patch14 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "openai/clip-vit-large-patch14" .
+
+mcro:openaiclip-vit-large-patch14-trainingData-YFCC100M a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "YFCC100M" .
+
+mcro:openaiwhisper-large-v3 a mcro:Model ;
+    mcro:hasArchitecture "openaiwhisper-large-v3-architecture-httppurlobolibraryorgobomcroowlEncoder-Decoder" ;
+    mcro:hasCitation "openaiwhisper-large-v3-citation-url-httpshuggingfacecopapers221204356-name-Robust-" ;
+    mcro:hasLibraries "openaiwhisper-large-v3-libraries-HuggingFace-Accelerate",
+        "openaiwhisper-large-v3-libraries-HuggingFace-Datasets",
+        "openaiwhisper-large-v3-libraries-HuggingFace-Transformers",
+        "openaiwhisper-large-v3-libraries-PyTorch" ;
+    mcro:hasModeltype "openaiwhisper-large-v3-modelType-httppurlobolibraryorgobomcroowlAutomaticSpeechReco" ;
+    mcro:hasPretrainedmodel "openaiwhisper-large-v3-pretrainedModel-openaiwhisper-large-v3" .
+
+mcro:openaiwhisper-large-v3-architecture-httppurlobolibraryorgobomcroowlEncoder-Decoder a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Encoder-Decoder" .
+
+mcro:openaiwhisper-large-v3-citation-url-httpshuggingfacecopapers221204356-name-Robust- a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://huggingface.co/papers/2212.04356\", \"name\": \"Robust Speech Recognition via Large-Scale Weak Supervision\"}"^^rdf:JSON .
+
+mcro:openaiwhisper-large-v3-libraries-HuggingFace-Accelerate a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace Accelerate" .
+
+mcro:openaiwhisper-large-v3-libraries-HuggingFace-Datasets a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace Datasets" .
+
+mcro:openaiwhisper-large-v3-libraries-HuggingFace-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace Transformers" .
+
+mcro:openaiwhisper-large-v3-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:openaiwhisper-large-v3-modelType-httppurlobolibraryorgobomcroowlAutomaticSpeechReco a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#AutomaticSpeechRecognitionModel" .
+
+mcro:openaiwhisper-large-v3-pretrainedModel-openaiwhisper-large-v3 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "openai/whisper-large-v3" .
+
+mcro:pyannotesegmentation a mcro:Model ;
+    mcro:hasArchitecture "pyannotesegmentation-architecture-httppurlobolibraryorgobomcroowlRecurrentNeuralNetw" ;
+    mcro:hasCitation "pyannotesegmentation-citation-url-None-name-pyannoteaudio-neural-building-blocks",
+        "pyannotesegmentation-citation-url-httparxivorgabs210404045-name-End-to-end-speak" ;
+    mcro:hasLibraries "pyannotesegmentation-libraries-pyannoteaudio" ;
+    mcro:hasModeltype "pyannotesegmentation-modelType-httppurlobolibraryorgobomcroowlSpeakerDiarization" ;
+    mcro:hasPretrainedmodel "pyannotesegmentation-pretrainedModel-pyannotesegmentation" ;
+    mcro:hasTrainingdata "pyannotesegmentation-trainingData-AMI-Mix-Headset",
+        "pyannotesegmentation-trainingData-DIHARD3",
+        "pyannotesegmentation-trainingData-VoxConverse" .
+
+mcro:pyannotesegmentation-30 a mcro:Model ;
+    mcro:hasArchitecture "pyannotesegmentation-30-architecture-unknown" ;
+    mcro:hasCitation "pyannotesegmentation-30-citation-name-Powerset-multi-class-cross-entropy-loss-for-n",
+        "pyannotesegmentation-30-citation-name-pyannoteaudio-21-speaker-diarization-pipeline" ;
+    mcro:hasLibraries "pyannotesegmentation-30-libraries-PyTorch",
+        "pyannotesegmentation-30-libraries-pyannoteaudio" ;
+    mcro:hasLicense "pyannotesegmentation-30-license-unknown" ;
+    mcro:hasModeltype "pyannotesegmentation-30-modelType-httppurlobolibraryorgobomcroowlSpeakerDiarizationM" ;
+    mcro:hasPretrainedmodel "pyannotesegmentation-30-pretrainedModel-pyannotesegmentation-30" ;
+    mcro:hasTrainingdata "pyannotesegmentation-30-trainingData-AISHELL",
+        "pyannotesegmentation-30-trainingData-AMI",
+        "pyannotesegmentation-30-trainingData-AVA-AVD",
+        "pyannotesegmentation-30-trainingData-AliMeeting",
+        "pyannotesegmentation-30-trainingData-DIHARD",
+        "pyannotesegmentation-30-trainingData-Ego4D",
+        "pyannotesegmentation-30-trainingData-MSDWILD",
+        "pyannotesegmentation-30-trainingData-REPERE",
+        "pyannotesegmentation-30-trainingData-VoxConverse" .
+
+mcro:pyannotesegmentation-30-architecture-unknown a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "unknown" .
+
+mcro:pyannotesegmentation-30-citation-name-Powerset-multi-class-cross-entropy-loss-for-n a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"name\": \"Powerset multi-class cross entropy loss for neural speaker diarization\", \"url\": \"https://www.isca-speech.org/archive/interspeech_2023/plaquet23_interspeech.html\"}"^^rdf:JSON .
+
+mcro:pyannotesegmentation-30-citation-name-pyannoteaudio-21-speaker-diarization-pipeline a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"name\": \"pyannote.audio 2.1 speaker diarization pipeline: principle, benchmark, and recipe\", \"url\": \"unknown\"}"^^rdf:JSON .
+
+mcro:pyannotesegmentation-30-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:pyannotesegmentation-30-libraries-pyannoteaudio a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "pyannote.audio" .
+
+mcro:pyannotesegmentation-30-license-unknown a mcro:CustomLicense ;
+    dul:hasParameterDataValue "unknown" .
+
+mcro:pyannotesegmentation-30-modelType-httppurlobolibraryorgobomcroowlSpeakerDiarizationM a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#SpeakerDiarizationModel" .
+
+mcro:pyannotesegmentation-30-pretrainedModel-pyannotesegmentation-30 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "pyannote/segmentation-3.0" .
+
+mcro:pyannotesegmentation-30-trainingData-AISHELL a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AISHELL" .
+
+mcro:pyannotesegmentation-30-trainingData-AMI a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AMI" .
+
+mcro:pyannotesegmentation-30-trainingData-AVA-AVD a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AVA-AVD" .
+
+mcro:pyannotesegmentation-30-trainingData-AliMeeting a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AliMeeting" .
+
+mcro:pyannotesegmentation-30-trainingData-DIHARD a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "DIHARD" .
+
+mcro:pyannotesegmentation-30-trainingData-Ego4D a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Ego4D" .
+
+mcro:pyannotesegmentation-30-trainingData-MSDWILD a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "MSDWILD" .
+
+mcro:pyannotesegmentation-30-trainingData-REPERE a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "REPERE" .
+
+mcro:pyannotesegmentation-30-trainingData-VoxConverse a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "VoxConverse" .
+
+mcro:pyannotesegmentation-architecture-httppurlobolibraryorgobomcroowlRecurrentNeuralNetw a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#RecurrentNeuralNetwork" .
+
+mcro:pyannotesegmentation-citation-url-None-name-pyannoteaudio-neural-building-blocks a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{'url': None, 'name': 'pyannote.audio: neural building blocks for speaker diarization'}" .
+
+mcro:pyannotesegmentation-citation-url-httparxivorgabs210404045-name-End-to-end-speak a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"http://arxiv.org/abs/2104.04045\", \"name\": \"End-to-end speaker segmentation for overlap-aware resegmentation\"}"^^rdf:JSON .
+
+mcro:pyannotesegmentation-libraries-pyannoteaudio a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "pyannote.audio" .
+
+mcro:pyannotesegmentation-modelType-httppurlobolibraryorgobomcroowlSpeakerDiarization a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#SpeakerDiarization" .
+
+mcro:pyannotesegmentation-pretrainedModel-pyannotesegmentation a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "pyannote/segmentation" .
+
+mcro:pyannotesegmentation-trainingData-AMI-Mix-Headset a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AMI Mix-Headset" .
+
+mcro:pyannotesegmentation-trainingData-DIHARD3 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "DIHARD3" .
+
+mcro:pyannotesegmentation-trainingData-VoxConverse a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "VoxConverse" .
+
+mcro:pyannotespeaker-diarization-31 a mcro:Model ;
+    mcro:hasCitation "pyannotespeaker-diarization-31-citation-citation-inproceedingsBredin21n--author--Bredin-He",
+        "pyannotespeaker-diarization-31-citation-citation-inproceedingsPlaquet23n--authorAlexis-Pla" ;
+    mcro:hasLibraries "pyannotespeaker-diarization-31-libraries-PyTorch",
+        "pyannotespeaker-diarization-31-libraries-pyannoteaudio",
+        "pyannotespeaker-diarization-31-libraries-torchaudio" ;
+    mcro:hasMetrics "pyannotespeaker-diarization-31-metrics-httppurlobolibraryorgobomcroowlConfusionRate",
+        "pyannotespeaker-diarization-31-metrics-httppurlobolibraryorgobomcroowlDER",
+        "pyannotespeaker-diarization-31-metrics-httppurlobolibraryorgobomcroowlFA",
+        "pyannotespeaker-diarization-31-metrics-httppurlobolibraryorgobomcroowlMissRate" ;
+    mcro:hasPretrainedmodel "pyannotespeaker-diarization-31-pretrainedModel-httpshfcopyannotespeaker-diarization-31" ;
+    mcro:hasTrainingdata "pyannotespeaker-diarization-31-trainingData-AISHELL-4",
+        "pyannotespeaker-diarization-31-trainingData-AMI",
+        "pyannotespeaker-diarization-31-trainingData-AVA-AVD",
+        "pyannotespeaker-diarization-31-trainingData-AliMeeting",
+        "pyannotespeaker-diarization-31-trainingData-DIHARD-3",
+        "pyannotespeaker-diarization-31-trainingData-MSDWild",
+        "pyannotespeaker-diarization-31-trainingData-REPERE",
+        "pyannotespeaker-diarization-31-trainingData-VoxConverse" .
+
+mcro:pyannotespeaker-diarization-31-citation-citation-inproceedingsBredin21n--author--Bredin-He a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{'citation': \"@inproceedings{Bredin21,\\n  author = {Bredin, Herv\\\\'e and Laurent, Antoine and Lafaye De Micheaux, Pierre and Wang, Xiaoyu},\\n  title = {{End-to-end speaker diarization: from dataset creation to model training.}},\\n  booktitle = {Interspeech 2021},\\n  year = {2021},\\n  address = {Brno, Czech Republic},\\n  organization = {ISCA},\\n  doi = {10.21437/Interspeech.2021-1796}\\n}\"}" .
+
+mcro:pyannotespeaker-diarization-31-citation-citation-inproceedingsPlaquet23n--authorAlexis-Pla a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{'citation': \"@inproceedings{Plaquet23,\\n  author={Alexis Plaquet and Herv\\\\'e Bredin},\\n  title={{Powerset multi-class cross\"}" .
+
+mcro:pyannotespeaker-diarization-31-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:pyannotespeaker-diarization-31-libraries-pyannoteaudio a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "pyannote.audio" .
+
+mcro:pyannotespeaker-diarization-31-libraries-torchaudio a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "torchaudio" .
+
+mcro:pyannotespeaker-diarization-31-metrics-httppurlobolibraryorgobomcroowlConfusionRate a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ConfusionRate" .
+
+mcro:pyannotespeaker-diarization-31-metrics-httppurlobolibraryorgobomcroowlDER a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#DER" .
+
+mcro:pyannotespeaker-diarization-31-metrics-httppurlobolibraryorgobomcroowlFA a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#FA" .
+
+mcro:pyannotespeaker-diarization-31-metrics-httppurlobolibraryorgobomcroowlMissRate a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#MissRate" .
+
+mcro:pyannotespeaker-diarization-31-pretrainedModel-httpshfcopyannotespeaker-diarization-31 a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://hf.co/pyannote/speaker-diarization-3.1" .
+
+mcro:pyannotespeaker-diarization-31-trainingData-AISHELL-4 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AISHELL-4" .
+
+mcro:pyannotespeaker-diarization-31-trainingData-AMI a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AMI" .
+
+mcro:pyannotespeaker-diarization-31-trainingData-AVA-AVD a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AVA-AVD" .
+
+mcro:pyannotespeaker-diarization-31-trainingData-AliMeeting a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AliMeeting" .
+
+mcro:pyannotespeaker-diarization-31-trainingData-DIHARD-3 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "DIHARD 3" .
+
+mcro:pyannotespeaker-diarization-31-trainingData-MSDWild a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "MSDWild" .
+
+mcro:pyannotespeaker-diarization-31-trainingData-REPERE a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "REPERE" .
+
+mcro:pyannotespeaker-diarization-31-trainingData-VoxConverse a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "VoxConverse" .
+
+mcro:pyannotevoice-activity-detection a mcro:Model ;
+    mcro:hasArchitecture "pyannotevoice-activity-detection-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "pyannotevoice-activity-detection-citation-name-End-to-end-speaker-segmentation-for-overlap-a",
+        "pyannotevoice-activity-detection-citation-name-pyannoteaudio-neural-building-blocks-for-spea" ;
+    mcro:hasLanguages "pyannotevoice-activity-detection-languages-eng" ;
+    mcro:hasLibraries "pyannotevoice-activity-detection-libraries-pyannoteaudio" ;
+    mcro:hasModeltype "pyannotevoice-activity-detection-modelType-httppurlobolibraryorgobomcroowlAudioModel" ;
+    mcro:hasPretrainedmodel "pyannotevoice-activity-detection-pretrainedModel-pyannotevoice-activity-detection" .
+
+mcro:pyannotevoice-activity-detection-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:pyannotevoice-activity-detection-citation-name-End-to-end-speaker-segmentation-for-overlap-a a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"name\": \"End-to-end speaker segmentation for overlap-aware resegmentation\", \"authors\": [\"Bredin, Herv\\u00e9\", \"Laurent, Antoine\"], \"venue\": \"Proc. Interspeech 2021\", \"location\": \"Brno, Czech Republic\", \"date\": \"August 2021\"}"^^rdf:JSON .
+
+mcro:pyannotevoice-activity-detection-citation-name-pyannoteaudio-neural-building-blocks-for-spea a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"name\": \"pyannote.audio: neural building blocks for speaker diarization\", \"authors\": [\"Bredin, Herv\\u00e9\", \"Yin, Ruiqing\", \"Coria, Juan Manuel\", \"Gelly, Gregory\", \"Korshunov, Pavel\", \"Lavechin, Marvin\", \"Fustes, Diego\", \"Titeux, Hadrien\", \"Bouaziz, Wassim\", \"Gill, Marie-Philippe\"], \"venue\": \"ICASSP 2020, IEEE International Conference on Acoustics, Speech, and Signal Processing\", \"location\": \"Barcelona, Spain\", \"date\": \"May 2020\"}"^^rdf:JSON .
+
+mcro:pyannotevoice-activity-detection-languages-eng a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "eng" .
+
+mcro:pyannotevoice-activity-detection-libraries-pyannoteaudio a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "pyannote.audio" .
+
+mcro:pyannotevoice-activity-detection-modelType-httppurlobolibraryorgobomcroowlAudioModel a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#AudioModel" .
+
+mcro:pyannotevoice-activity-detection-pretrainedModel-pyannotevoice-activity-detection a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "pyannote/voice-activity-detection" .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM a mcro:Model ;
+    mcro:hasArchitecture "pyannotewespeaker-voxceleb-resnet34-LM-architecture-httppurlobolibraryorgobomcroowlResNet" ;
+    mcro:hasCitation "pyannotewespeaker-voxceleb-resnet34-LM-citation-name-Bredin23-url-httpsdoiorg1021437Interspeech202",
+        "pyannotewespeaker-voxceleb-resnet34-LM-citation-name-Wang2023-url-None-citation-Wang-Hongji-and-Li" ;
+    mcro:hasLibraries "pyannotewespeaker-voxceleb-resnet34-LM-libraries-PyTorch",
+        "pyannotewespeaker-voxceleb-resnet34-LM-libraries-pyannoteaudio" ;
+    mcro:hasLicense "pyannotewespeaker-voxceleb-resnet34-LM-license-Creative-Commons-Attribution-40-International" ;
+    mcro:hasModeltype "pyannotewespeaker-voxceleb-resnet34-LM-modelType-httppurlobolibraryorgobomcroowlSpeakerEmbeddingMod" ;
+    mcro:hasPretrainedmodel "pyannotewespeaker-voxceleb-resnet34-LM-pretrainedModel-True" ;
+    mcro:hasTrainingdata "pyannotewespeaker-voxceleb-resnet34-LM-trainingData-VoxCeleb" .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM-architecture-httppurlobolibraryorgobomcroowlResNet a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ResNet" .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM-citation-name-Bredin23-url-httpsdoiorg1021437Interspeech202 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"name\": \"Bredin23\", \"url\": \"https://doi.org/10.21437/Interspeech.2023-105\", \"citation\": \"Herv\\u00e9 Bredin. pyannote.audio 2.1 speaker diarization pipeline: principle, benchmark, and recipe. In Proc. INTERSPEECH 2023, pages 1983--1987, 2023.\"}"^^rdf:JSON .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM-citation-name-Wang2023-url-None-citation-Wang-Hongji-and-Li a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{'name': 'Wang2023', 'url': None, 'citation': 'Wang, Hongji and Liang, Chengdong and Wang, Shuai and Chen, Zhengyang and Zhang, Binbin and Xiang, Xu and Deng, Yanlei and Qian, Yanmin. Wespeaker: A research and production oriented speaker embedding learning toolkit. In ICASSP 2023, IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pages 1--5. IEEE, 2023.'}" .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM-libraries-pyannoteaudio a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "pyannote.audio" .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM-license-Creative-Commons-Attribution-40-International a mcro:CustomLicense ;
+    dul:hasParameterDataValue "Creative Commons Attribution 4.0 International" .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM-modelType-httppurlobolibraryorgobomcroowlSpeakerEmbeddingMod a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#SpeakerEmbeddingModel" .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:pyannotewespeaker-voxceleb-resnet34-LM-trainingData-VoxCeleb a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "VoxCeleb" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2 a mcro:Model ;
+    mcro:hasArchitecture "sentence-transformersall-MiniLM-L6-v2-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasHardware "sentence-transformersall-MiniLM-L6-v2-hardware-TPU-v3-8" ;
+    mcro:hasLanguages "sentence-transformersall-MiniLM-L6-v2-languages-English" ;
+    mcro:hasLibraries "sentence-transformersall-MiniLM-L6-v2-libraries-PyTorch",
+        "sentence-transformersall-MiniLM-L6-v2-libraries-Transformers",
+        "sentence-transformersall-MiniLM-L6-v2-libraries-sentence-transformers" ;
+    mcro:hasModeltype "sentence-transformersall-MiniLM-L6-v2-modelType-httppurlobolibraryorgobomcroowlSentenceEmbedding" ;
+    mcro:hasPretrainedmodel "sentence-transformersall-MiniLM-L6-v2-pretrainedModel-nreimersMiniLM-L6-H384-uncased" ;
+    mcro:hasTrainingdata "sentence-transformersall-MiniLM-L6-v2-trainingData-AllNLI-SNLI-and-MultiNLI",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Altlex",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-COCO-Image-captions",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Code-Search",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Eli5",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Flickr-30k",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-GOOAQ-Open-Question-Answering-with-Diverse-Answer-",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-MS-MARCO-triplets",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Natural-Questions-NQ",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-PAQ-Question-Answer-pairs",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Quora-Question-Triplets",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Reddit-comments-2015-2018",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-S2ORC-Citation-pairs-Abstracts",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-S2ORC-Citation-pairs-Titles",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-S2ORC-Title-Abstract",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-SPECTER-citation-triplets",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-SQuAD20",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-SearchQA",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Sentence-Compression",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Simple-Wikipedia",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Duplicate-questions-bodies",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Duplicate-questions-titles",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Duplicate-questions-titlesbodies",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Title-Answer-pairs",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Title-Body-pairs",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-TitleBody-Answer-pairs",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-TriviaQA",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-WikiAnswers-Duplicate-question-pairs",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Wikihow",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Yahoo-Answers-Question-Answer",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Yahoo-Answers-Title-Answer",
+        "sentence-transformersall-MiniLM-L6-v2-trainingData-Yahoo-Answers-Title-Question" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-hardware-TPU-v3-8 a mcro:CustomHardware ;
+    dul:hasParameterDataValue "TPU v3-8" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-languages-English a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "English" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-libraries-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "Transformers" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-libraries-sentence-transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "sentence-transformers" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-modelType-httppurlobolibraryorgobomcroowlSentenceEmbedding a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#SentenceEmbedding" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-pretrainedModel-nreimersMiniLM-L6-H384-uncased a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "nreimers/MiniLM-L6-H384-uncased" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-AllNLI-SNLI-and-MultiNLI a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "AllNLI (SNLI and MultiNLI)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Altlex a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Altlex" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-COCO-Image-captions a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "COCO Image captions" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Code-Search a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Code Search" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Eli5 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Eli5" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Flickr-30k a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Flickr 30k" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-GOOAQ-Open-Question-Answering-with-Diverse-Answer- a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "GOOAQ: Open Question Answering with Diverse Answer Types" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-MS-MARCO-triplets a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "MS MARCO triplets" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Natural-Questions-NQ a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Natural Questions (NQ)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-PAQ-Question-Answer-pairs a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "PAQ (Question, Answer) pairs" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Quora-Question-Triplets a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Quora Question Triplets" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Reddit-comments-2015-2018 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Reddit comments (2015-2018)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-S2ORC-Citation-pairs-Abstracts a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "S2ORC Citation pairs (Abstracts)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-S2ORC-Citation-pairs-Titles a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "S2ORC Citation pairs (Titles)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-S2ORC-Title-Abstract a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "S2ORC (Title, Abstract)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-SPECTER-citation-triplets a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "SPECTER citation triplets" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-SQuAD20 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "SQuAD2.0" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-SearchQA a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "SearchQA" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Sentence-Compression a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Sentence Compression" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Simple-Wikipedia a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Simple Wikipedia" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Duplicate-questions-bodies a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Stack Exchange Duplicate questions (bodies)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Duplicate-questions-titles a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Stack Exchange Duplicate questions (titles)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Duplicate-questions-titlesbodies a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Stack Exchange Duplicate questions (titles+bodies)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Title-Answer-pairs a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Stack Exchange (Title, Answer) pairs" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-Title-Body-pairs a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Stack Exchange (Title, Body) pairs" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Stack-Exchange-TitleBody-Answer-pairs a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Stack Exchange (Title+Body, Answer) pairs" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-TriviaQA a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "TriviaQA" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-WikiAnswers-Duplicate-question-pairs a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "WikiAnswers Duplicate question pairs" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Wikihow a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Wikihow" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Yahoo-Answers-Question-Answer a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Yahoo Answers (Question, Answer)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Yahoo-Answers-Title-Answer a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Yahoo Answers (Title, Answer)" .
+
+mcro:sentence-transformersall-MiniLM-L6-v2-trainingData-Yahoo-Answers-Title-Question a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "Yahoo Answers (Title, Question)" .
+
+mcro:sentence-transformersall-mpnet-base-v2 a mcro:Model ;
+    mcro:hasArchitecture "sentence-transformersall-mpnet-base-v2-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasLanguages "sentence-transformersall-mpnet-base-v2-languages-en" ;
+    mcro:hasLibraries "sentence-transformersall-mpnet-base-v2-libraries-HuggingFace-Transformers",
+        "sentence-transformersall-mpnet-base-v2-libraries-PyTorch",
+        "sentence-transformersall-mpnet-base-v2-libraries-sentence-transformers" ;
+    mcro:hasModeltype "sentence-transformersall-mpnet-base-v2-modelType-httppurlobolibraryorgobomcroowlSentenceEmbedding" ;
+    mcro:hasPretrainedmodel "sentence-transformersall-mpnet-base-v2-pretrainedModel-httpshuggingfacecomicrosoftmpnet-base" ;
+    mcro:hasTrainingdata "sentence-transformersall-mpnet-base-v2-trainingData-httpsaigooglecomresearchNaturalQuestions",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpscocodatasetorghome",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpscspomonaedudkauchaksimplification",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomPolyAI-LDNconversational-datasetstre",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomafaderoqawikianswers-corpus",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomallenaigooaq",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomallenais2orc",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomallenaispecter",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomchrideyaltlex",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomfacebookresearchPAQ",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomgoogle-research-datasetssentence-com",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcompvlwikihowpairsdataset",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetscodesearchnet",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetseli5",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetsflax-sentence-embeddings",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetssearchqa",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetstriviaqa",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsmicrosoftgithubiomsmarco",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsquoradataquoracomFirst-Quora-Dataset-Release-",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsrajpurkargithubioSQuAD-explorer",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpsshannoncsillinoiseduDenotationGraph",
+        "sentence-transformersall-mpnet-base-v2-trainingData-httpswwwkagglecomsoumikrakshityahoo-answers-datase" .
+
+mcro:sentence-transformersall-mpnet-base-v2-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:sentence-transformersall-mpnet-base-v2-languages-en a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "en" .
+
+mcro:sentence-transformersall-mpnet-base-v2-libraries-HuggingFace-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace Transformers" .
+
+mcro:sentence-transformersall-mpnet-base-v2-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:sentence-transformersall-mpnet-base-v2-libraries-sentence-transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "sentence-transformers" .
+
+mcro:sentence-transformersall-mpnet-base-v2-modelType-httppurlobolibraryorgobomcroowlSentenceEmbedding a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#SentenceEmbedding" .
+
+mcro:sentence-transformersall-mpnet-base-v2-pretrainedModel-httpshuggingfacecomicrosoftmpnet-base a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/microsoft/mpnet-base" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsaigooglecomresearchNaturalQuestions a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://ai.google.com/research/NaturalQuestions" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpscocodatasetorghome a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://cocodataset.org/#home" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpscspomonaedudkauchaksimplification a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://cs.pomona.edu/~dkauchak/simplification/" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomPolyAI-LDNconversational-datasetstre a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomafaderoqawikianswers-corpus a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/afader/oqa#wikianswers-corpus" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomallenaigooaq a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/allenai/gooaq" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomallenais2orc a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/allenai/s2orc" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomallenaispecter a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/allenai/specter" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomchrideyaltlex a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/chridey/altlex/" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomfacebookresearchPAQ a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/facebookresearch/PAQ" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcomgoogle-research-datasetssentence-com a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/google-research-datasets/sentence-compression" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsgithubcompvlwikihowpairsdataset a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://github.com/pvl/wikihow_pairs_dataset" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetscodesearchnet a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/code_search_net" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetseli5 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/eli5" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetsflax-sentence-embeddings a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/flax-sentence-embeddings/stackexchange_xml" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetssearchqa a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/search_qa" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpshuggingfacecodatasetstriviaqa a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://huggingface.co/datasets/trivia_qa" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsmicrosoftgithubiomsmarco a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://microsoft.github.io/msmarco/" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsquoradataquoracomFirst-Quora-Dataset-Release- a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://quoradata.quora.com/First-Quora-Dataset-Release-Question-Pairs" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsrajpurkargithubioSQuAD-explorer a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://rajpurkar.github.io/SQuAD-explorer/" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpsshannoncsillinoiseduDenotationGraph a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://shannon.cs.illinois.edu/DenotationGraph/" .
+
+mcro:sentence-transformersall-mpnet-base-v2-trainingData-httpswwwkagglecomsoumikrakshityahoo-answers-datase a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://www.kaggle.com/soumikrakshit/yahoo-answers-dataset" .
+
+mcro:sentence-transformersparaphrase-multilingual-MiniL a mcro:Model ;
+    mcro:hasArchitecture "sentence-transformersparaphrase-multilingual-MiniL-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "sentence-transformersparaphrase-multilingual-MiniL-citation-title-Sentence-BERT-Sentence-Embeddings-using-Siam" ;
+    mcro:hasLibraries "sentence-transformersparaphrase-multilingual-MiniL-libraries-HuggingFace-Transformers",
+        "sentence-transformersparaphrase-multilingual-MiniL-libraries-PyTorch",
+        "sentence-transformersparaphrase-multilingual-MiniL-libraries-sentence-transformers" ;
+    mcro:hasModeltype "sentence-transformersparaphrase-multilingual-MiniL-modelType-httppurlobolibraryorgobomcroowlSentenceEmbedding" ;
+    mcro:hasPretrainedmodel "sentence-transformersparaphrase-multilingual-MiniL-pretrainedModel-sentence-transformersparaphrase-multilingual-MiniL" .
+
+mcro:sentence-transformersparaphrase-multilingual-MiniL-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:sentence-transformersparaphrase-multilingual-MiniL-citation-title-Sentence-BERT-Sentence-Embeddings-using-Siam a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"title\": \"Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks\", \"author\": \"Reimers, Nils and Gurevych, Iryna\", \"booktitle\": \"Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing\", \"month\": \"11\", \"year\": \"2019\", \"publisher\": \"Association for Computational Linguistics\", \"url\": \"http://arxiv.org/abs/1908.10084\"}"^^rdf:JSON .
+
+mcro:sentence-transformersparaphrase-multilingual-MiniL-libraries-HuggingFace-Transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "HuggingFace Transformers" .
+
+mcro:sentence-transformersparaphrase-multilingual-MiniL-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:sentence-transformersparaphrase-multilingual-MiniL-libraries-sentence-transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "sentence-transformers" .
+
+mcro:sentence-transformersparaphrase-multilingual-MiniL-modelType-httppurlobolibraryorgobomcroowlSentenceEmbedding a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#SentenceEmbedding" .
+
+mcro:sentence-transformersparaphrase-multilingual-MiniL-pretrainedModel-sentence-transformersparaphrase-multilingual-MiniL a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2" .
+
+mcro:sentence-transformersuse-cmlm-multilingual a mcro:Model ;
+    mcro:hasArchitecture "sentence-transformersuse-cmlm-multilingual-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasCitation "sentence-transformersuse-cmlm-multilingual-citation-httpstfhubdevgoogleuniversal-sentence-encoder-cmlm" ;
+    mcro:hasLanguages "sentence-transformersuse-cmlm-multilingual-languages-multilingual" ;
+    mcro:hasLibraries "sentence-transformersuse-cmlm-multilingual-libraries-PyTorch",
+        "sentence-transformersuse-cmlm-multilingual-libraries-sentence-transformers" ;
+    mcro:hasModeltype "sentence-transformersuse-cmlm-multilingual-modelType-httppurlobolibraryorgobomcroowlSentenceEmbedding" ;
+    mcro:hasPretrainedmodel "sentence-transformersuse-cmlm-multilingual-pretrainedModel-httpstfhubdevgoogleuniversal-sentence-encoder-cmlm" .
+
+mcro:sentence-transformersuse-cmlm-multilingual-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:sentence-transformersuse-cmlm-multilingual-citation-httpstfhubdevgoogleuniversal-sentence-encoder-cmlm a mcro:CustomCitation ;
+    dul:hasParameterDataValue "https://tfhub.dev/google/universal-sentence-encoder-cmlm/multilingual-base-br/1" .
+
+mcro:sentence-transformersuse-cmlm-multilingual-languages-multilingual a mcro:CustomLanguages ;
+    dul:hasParameterDataValue "multilingual" .
+
+mcro:sentence-transformersuse-cmlm-multilingual-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:sentence-transformersuse-cmlm-multilingual-libraries-sentence-transformers a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "sentence-transformers" .
+
+mcro:sentence-transformersuse-cmlm-multilingual-modelType-httppurlobolibraryorgobomcroowlSentenceEmbedding a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#SentenceEmbedding" .
+
+mcro:sentence-transformersuse-cmlm-multilingual-pretrainedModel-httpstfhubdevgoogleuniversal-sentence-encoder-cmlm a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://tfhub.dev/google/universal-sentence-encoder-cmlm/multilingual-base-br/1" .
+
+mcro:timmmobilenetv3small100lambin1k a mcro:Model ;
+    mcro:hasArchitecture "timmmobilenetv3small100lambin1k-architecture-httppurlobolibraryorgobomcroowlMobileNet-v3" ;
+    mcro:hasCitation "timmmobilenetv3small100lambin1k-citation-url-httpsarxivorgabs190502244-name-Searching-for-m",
+        "timmmobilenetv3small100lambin1k-citation-url-httpsgithubcomhuggingfacepytorch-image-models-" ;
+    mcro:hasLibraries "timmmobilenetv3small100lambin1k-libraries-PyTorch",
+        "timmmobilenetv3small100lambin1k-libraries-timm" ;
+    mcro:hasModeltype "timmmobilenetv3small100lambin1k-modelType-httppurlobolibraryorgobomcroowlImage-Classificatio" ;
+    mcro:hasPretrainedmodel "timmmobilenetv3small100lambin1k-pretrainedModel-True" ;
+    mcro:hasTrainingdata "timmmobilenetv3small100lambin1k-trainingData-httppurlobolibraryorgobomcroowlImageNet-1k" .
+
+mcro:timmmobilenetv3small100lambin1k-architecture-httppurlobolibraryorgobomcroowlMobileNet-v3 a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#MobileNet-v3" .
+
+mcro:timmmobilenetv3small100lambin1k-citation-url-httpsarxivorgabs190502244-name-Searching-for-m a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/1905.02244\", \"name\": \"Searching for mobilenetv3\", \"author\": \"Howard, Andrew and Sandler, Mark and Chu, Grace and Chen, Liang-Chieh and Chen, Bo and Tan, Mingxing and Wang, Weijun and Zhu, Yukun and Pang, Ruoming and Vasudevan, Vijay and others\", \"year\": 2019, \"venue\": \"Proceedings of the IEEE/CVF international conference on computer vision\"}"^^rdf:JSON .
+
+mcro:timmmobilenetv3small100lambin1k-citation-url-httpsgithubcomhuggingfacepytorch-image-models- a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://github.com/huggingface/pytorch-image-models\", \"name\": \"PyTorch Image Models\", \"author\": \"Ross Wightman\", \"year\": 2019, \"doi\": \"10.5281/zenodo.4414861\"}"^^rdf:JSON .
+
+mcro:timmmobilenetv3small100lambin1k-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:timmmobilenetv3small100lambin1k-libraries-timm a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "timm" .
+
+mcro:timmmobilenetv3small100lambin1k-modelType-httppurlobolibraryorgobomcroowlImage-Classificatio a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Image-Classification-Model" .
+
+mcro:timmmobilenetv3small100lambin1k-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:timmmobilenetv3small100lambin1k-trainingData-httppurlobolibraryorgobomcroowlImageNet-1k a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ImageNet-1k" .
+
+mcro:timmresnet50a1in1k a mcro:Model ;
+    mcro:hasArchitecture "timmresnet50a1in1k-architecture-httppurlobolibraryorgobomcroowlResNet" ;
+    mcro:hasCitation "timmresnet50a1in1k-citation-url-httpsarxivorgabs151203385",
+        "timmresnet50a1in1k-citation-url-httpsarxivorgabs211000476" ;
+    mcro:hasLibraries "timmresnet50a1in1k-libraries-PyTorch",
+        "timmresnet50a1in1k-libraries-timm" ;
+    mcro:hasModeltype "timmresnet50a1in1k-modelType-httppurlobolibraryorgobomcroowlImageClassification" ;
+    mcro:hasPretrainedmodel "timmresnet50a1in1k-pretrainedModel-True" ;
+    mcro:hasTrainingdata "timmresnet50a1in1k-trainingData-httppurlobolibraryorgobomcroowlImageNet-1k" .
+
+mcro:timmresnet50a1in1k-architecture-httppurlobolibraryorgobomcroowlResNet a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ResNet" .
+
+mcro:timmresnet50a1in1k-citation-url-httpsarxivorgabs151203385 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/1512.03385\"}"^^rdf:JSON .
+
+mcro:timmresnet50a1in1k-citation-url-httpsarxivorgabs211000476 a mcro:CustomCitation ;
+    dul:hasParameterDataValue "{\"url\": \"https://arxiv.org/abs/2110.00476\"}"^^rdf:JSON .
+
+mcro:timmresnet50a1in1k-libraries-PyTorch a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "PyTorch" .
+
+mcro:timmresnet50a1in1k-libraries-timm a mcro:CustomLibraries ;
+    dul:hasParameterDataValue "timm" .
+
+mcro:timmresnet50a1in1k-modelType-httppurlobolibraryorgobomcroowlImageClassification a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ImageClassificationModel" .
+
+mcro:timmresnet50a1in1k-pretrainedModel-True a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "True" .
+
+mcro:timmresnet50a1in1k-trainingData-httppurlobolibraryorgobomcroowlImageNet-1k a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#ImageNet-1k" .
+
+mcro:trpakovvit-face-expression a mcro:Model ;
+    mcro:hasArchitecture "trpakovvit-face-expression-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasMetrics "trpakovvit-face-expression-metrics-name-accuracy-value-07113-split-validation",
+        "trpakovvit-face-expression-metrics-name-accuracy-value-07116-split-test" ;
+    mcro:hasModeltype "trpakovvit-face-expression-modelType-httppurlobolibraryorgobomcroowlVisionTransformer" ;
+    mcro:hasPretrainedmodel "trpakovvit-face-expression-pretrainedModel-httpshuggingfacecogooglevit-base-patch16-224-in21k" ;
+    mcro:hasTrainingdata "trpakovvit-face-expression-trainingData-httpswwwkagglecomdatasetsmsambarefer2013" .
+
+mcro:trpakovvit-face-expression-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:trpakovvit-face-expression-metrics-name-accuracy-value-07113-split-validation a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"name\": \"accuracy\", \"value\": 0.7113, \"split\": \"validation\"}"^^rdf:JSON .
+
+mcro:trpakovvit-face-expression-metrics-name-accuracy-value-07116-split-test a mcro:CustomMetrics ;
+    dul:hasParameterDataValue "{\"name\": \"accuracy\", \"value\": 0.7116, \"split\": \"test\"}"^^rdf:JSON .
+
+mcro:trpakovvit-face-expression-modelType-httppurlobolibraryorgobomcroowlVisionTransformer a mcro:CustomModeltype ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#VisionTransformer" .
+
+mcro:trpakovvit-face-expression-pretrainedModel-httpshuggingfacecogooglevit-base-patch16-224-in21k a mcro:CustomPretrainedmodel ;
+    dul:hasParameterDataValue "https://huggingface.co/google/vit-base-patch16-224-in21k" .
+
+mcro:trpakovvit-face-expression-trainingData-httpswwwkagglecomdatasetsmsambarefer2013 a mcro:CustomTrainingdata ;
+    dul:hasParameterDataValue "https://www.kaggle.com/datasets/msambare/fer2013" .
+
+mcro:unslothai1 a mcro:Model ;
+    mcro:hasArchitecture "unslothai1-architecture-httppurlobolibraryorgobomcroowlTransformer" ;
+    mcro:hasLicense "unslothai1-license-MIT" .
+
+mcro:unslothai1-architecture-httppurlobolibraryorgobomcroowlTransformer a mcro:CustomArchitecture ;
+    dul:hasParameterDataValue "http://purl.obolibrary.org/obo/mcro.owl#Transformer" .
+
+mcro:unslothai1-license-MIT a mcro:CustomLicense ;
+    dul:hasParameterDataValue "MIT" .
+
+mcro:CustomHardware rdfs:subClassOf mcro:Component .
+
+mcro:CustomLicense rdfs:subClassOf mcro:Component .
+
+mcro:CustomArchitecture rdfs:subClassOf mcro:Component .
+
+mcro:CustomModeltype rdfs:subClassOf mcro:Component .
+
+mcro:CustomMetrics rdfs:subClassOf mcro:Component .
+
+mcro:CustomCitation rdfs:subClassOf mcro:Component .
+
+mcro:CustomPretrainedmodel rdfs:subClassOf mcro:Component .
+
+mcro:CustomLibraries rdfs:subClassOf mcro:Component .
+
+mcro:CustomLanguages rdfs:subClassOf mcro:Component .
+
+mcro:CustomTrainingdata rdfs:subClassOf mcro:Component .
+

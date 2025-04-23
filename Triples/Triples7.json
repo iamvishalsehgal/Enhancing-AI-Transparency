@@ -1,0 +1,5217 @@
+EXTRACTION_PROMPT = """
+Your task is to **extract all key-value pairs** explicitly mentioned in the model card text below.  
+Return the result as a **strict JSON object** with the following rules:
+
+### Rules:
+1. **Extract the architecture name** first (e.g., "RoBERTa", "ViT", "BERT") even if it’s part of a phrase like "based on XLM-RoBERTa".
+2. **Use exact terms** from the text for keys and values.
+3. **Arrays for lists**: Use square brackets (e.g., ["en", "fr"]).
+4. **No generic terms**: Avoid vague terms like "architecture"—only use explicit names.
+5. **Include all metadata**: Extract fields like "License", "Training Data", "Languages", etc.
+6. **Strict syntax**: Double quotes, no markdown, valid JSON.
+
+### Example Output:
+{{
+  "Architecture": "XLM-RoBERTa",
+  "License": "Apache-2.0",
+  "Training Data": ["CommonCrawl", "Books"],
+  "Languages": ["en", "fr", "100+ others"],
+  "Use Cases": ["classification", "translation"]
+}}
+
+### Text to Analyze:
+{{text}}
+""".strip()
+
+[
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-mt5"
+  },
+  {
+    "s": "hf:architecture-mt5",
+    "p": "dul:hasParameterDataValue",
+    "o": "mT5"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-arabic"
+  },
+  {
+    "s": "hf:languages-arabic",
+    "p": "dul:hasParameterDataValue",
+    "o": "Arabic"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-chinese"
+  },
+  {
+    "s": "hf:languages-chinese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Chinese"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-czech"
+  },
+  {
+    "s": "hf:languages-czech",
+    "p": "dul:hasParameterDataValue",
+    "o": "Czech"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-dutch"
+  },
+  {
+    "s": "hf:languages-dutch",
+    "p": "dul:hasParameterDataValue",
+    "o": "Dutch"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-finnish"
+  },
+  {
+    "s": "hf:languages-finnish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Finnish"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hindi"
+  },
+  {
+    "s": "hf:languages-hindi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hindi"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hungarian"
+  },
+  {
+    "s": "hf:languages-hungarian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hungarian"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-indonesian"
+  },
+  {
+    "s": "hf:languages-indonesian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Indonesian"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-italian"
+  },
+  {
+    "s": "hf:languages-italian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Italian"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-japanese"
+  },
+  {
+    "s": "hf:languages-japanese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Japanese"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-korean"
+  },
+  {
+    "s": "hf:languages-korean",
+    "p": "dul:hasParameterDataValue",
+    "o": "Korean"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-polish"
+  },
+  {
+    "s": "hf:languages-polish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Polish"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-portuguese"
+  },
+  {
+    "s": "hf:languages-portuguese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Portuguese"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-romanian"
+  },
+  {
+    "s": "hf:languages-romanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Romanian"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-russian"
+  },
+  {
+    "s": "hf:languages-russian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Russian"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-spanish"
+  },
+  {
+    "s": "hf:languages-spanish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Spanish"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-swedish"
+  },
+  {
+    "s": "hf:languages-swedish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Swedish"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-thai"
+  },
+  {
+    "s": "hf:languages-thai",
+    "p": "dul:hasParameterDataValue",
+    "o": "Thai"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-turkish"
+  },
+  {
+    "s": "hf:languages-turkish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Turkish"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-vietnamese"
+  },
+  {
+    "s": "hf:languages-vietnamese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vietnamese"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-mc4"
+  },
+  {
+    "s": "hf:training_data-mc4",
+    "p": "dul:hasParameterDataValue",
+    "o": "mC4"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-summarization"
+  },
+  {
+    "s": "hf:use_cases-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "summarization"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "question answering"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-text-classification"
+  },
+  {
+    "s": "hf:use_cases-text-classification",
+    "p": "dul:hasParameterDataValue",
+    "o": "text classification"
+  },
+  {
+    "s": "hf:facebookaixlm-roberta-large",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "translation"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5"
+  },
+  {
+    "s": "hf:architecture-t5",
+    "p": "dul:hasParameterDataValue",
+    "o": "T5"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasModel_description",
+    "o": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-inst"
+  },
+  {
+    "s": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-inst",
+    "p": "dul:hasParameterDataValue",
+    "o": "Flan-T5 is a chinchilla-optimal variant of T5 that has been instruction-tuned with a large set of varied instructions."
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-spanish"
+  },
+  {
+    "s": "hf:languages-spanish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Spanish"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-arabic"
+  },
+  {
+    "s": "hf:languages-arabic",
+    "p": "dul:hasParameterDataValue",
+    "o": "Arabic"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-chinese"
+  },
+  {
+    "s": "hf:languages-chinese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Chinese"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hindi"
+  },
+  {
+    "s": "hf:languages-hindi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hindi"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-japanese"
+  },
+  {
+    "s": "hf:languages-japanese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Japanese"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-korean"
+  },
+  {
+    "s": "hf:languages-korean",
+    "p": "dul:hasParameterDataValue",
+    "o": "Korean"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-portuguese"
+  },
+  {
+    "s": "hf:languages-portuguese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Portuguese"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-russian"
+  },
+  {
+    "s": "hf:languages-russian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Russian"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-vietnamese"
+  },
+  {
+    "s": "hf:languages-vietnamese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vietnamese"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-summarization"
+  },
+  {
+    "s": "hf:use_cases-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "Summarization"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "Question answering"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Translation"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-code-generation"
+  },
+  {
+    "s": "hf:use_cases-code-generation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Code generation"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-chatbot"
+  },
+  {
+    "s": "hf:use_cases-chatbot",
+    "p": "dul:hasParameterDataValue",
+    "o": "Chatbot"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-hallucinations"
+  },
+  {
+    "s": "hf:limitations-hallucinations",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hallucinations"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-bias"
+  },
+  {
+    "s": "hf:limitations-bias",
+    "p": "dul:hasParameterDataValue",
+    "o": "Bias"
+  },
+  {
+    "s": "hf:google-bertbert-base-uncased",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-toxicity"
+  },
+  {
+    "s": "hf:limitations-toxicity",
+    "p": "dul:hasParameterDataValue",
+    "o": "Toxicity"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5"
+  },
+  {
+    "s": "hf:architecture-t5",
+    "p": "dul:hasParameterDataValue",
+    "o": "T5"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasModel_description",
+    "o": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-furt"
+  },
+  {
+    "s": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-furt",
+    "p": "dul:hasParameterDataValue",
+    "o": "Flan-T5 is a chinchilla-optimal variant of T5 that has been further pre-trained by Google. The Flan-T5 models have been instruction-tuned to follow a wide range of instructions."
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasContact",
+    "o": "hf:contact-google-research-datasetsflangooglecom"
+  },
+  {
+    "s": "hf:contact-google-research-datasetsflangooglecom",
+    "p": "dul:hasParameterDataValue",
+    "o": "google-research-datasets+flan@google.com"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasParent_model",
+    "o": "hf:parent_model-googleflan-t5-xxl"
+  },
+  {
+    "s": "hf:parent_model-googleflan-t5-xxl",
+    "p": "dul:hasParameterDataValue",
+    "o": "google/flan-t5-xxl"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-a-variety-of-datasets-described-in-the-flan-collection-paper--s"
+  },
+  {
+    "s": "hf:training_data-a-variety-of-datasets-described-in-the-flan-collection-paper--s",
+    "p": "dul:hasParameterDataValue",
+    "o": "A variety of datasets described in the Flan Collection paper.  See more details here: https://arxiv.org/abs/2301.13688"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-zero-shot-generation"
+  },
+  {
+    "s": "hf:use_cases-zero-shot-generation",
+    "p": "dul:hasParameterDataValue",
+    "o": "zero-shot generation"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-few-shot-prompting"
+  },
+  {
+    "s": "hf:use_cases-few-shot-prompting",
+    "p": "dul:hasParameterDataValue",
+    "o": "few-shot prompting"
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-the-model-struggles-with-nuanced-language-tasks-that-involve-com"
+  },
+  {
+    "s": "hf:limitations-the-model-struggles-with-nuanced-language-tasks-that-involve-com",
+    "p": "dul:hasParameterDataValue",
+    "o": "The model struggles with nuanced language tasks that involve complex reasoning (e.g. nuanced fact verification and complex math word problems).  This is generally true of very large language models, even those that are instruction tuned."
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-the-model-may-produce-factually-inconsistent-output-and-may-hall"
+  },
+  {
+    "s": "hf:limitations-the-model-may-produce-factually-inconsistent-output-and-may-hall",
+    "p": "dul:hasParameterDataValue",
+    "o": "The model may produce factually inconsistent output and may hallucinate entities and facts."
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-the-model-can-reflect-societal-biases-from-the-data-that-it-is-t"
+  },
+  {
+    "s": "hf:limitations-the-model-can-reflect-societal-biases-from-the-data-that-it-is-t",
+    "p": "dul:hasParameterDataValue",
+    "o": "The model can reflect societal biases from the data that it is trained on."
+  },
+  {
+    "s": "hf:sentence-transformersall-minilm-l6-v2",
+    "p": "modelcard:hasFurther_information",
+    "o": "hf:further_information-see-the-associated-flan-t5-model-card-httpshuggingfacecogo"
+  },
+  {
+    "s": "hf:further_information-see-the-associated-flan-t5-model-card-httpshuggingfacecogo",
+    "p": "dul:hasParameterDataValue",
+    "o": "See the associated Flan-T5 model card (https://huggingface.co/google/flan-t5-xxl) for more details about the training process and the model architecture."
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-bert"
+  },
+  {
+    "s": "hf:architecture-bert",
+    "p": "dul:hasParameterDataValue",
+    "o": "BERT"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasModel_description",
+    "o": "hf:model_description-multilingual-bert-model-pre-trained-on-cased-text-in-104-languag"
+  },
+  {
+    "s": "hf:model_description-multilingual-bert-model-pre-trained-on-cased-text-in-104-languag",
+    "p": "dul:hasParameterDataValue",
+    "o": "Multilingual BERT model pre-trained on cased text in 104 languages. This model is intended to be fine-tuned for downstream tasks such as text classification, question answering, and more."
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-albanian"
+  },
+  {
+    "s": "hf:languages-albanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Albanian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-arabic"
+  },
+  {
+    "s": "hf:languages-arabic",
+    "p": "dul:hasParameterDataValue",
+    "o": "Arabic"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-armenian"
+  },
+  {
+    "s": "hf:languages-armenian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Armenian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-basque"
+  },
+  {
+    "s": "hf:languages-basque",
+    "p": "dul:hasParameterDataValue",
+    "o": "Basque"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-belarusian"
+  },
+  {
+    "s": "hf:languages-belarusian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Belarusian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-bulgarian"
+  },
+  {
+    "s": "hf:languages-bulgarian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Bulgarian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-catalan"
+  },
+  {
+    "s": "hf:languages-catalan",
+    "p": "dul:hasParameterDataValue",
+    "o": "Catalan"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-chinese-simplified"
+  },
+  {
+    "s": "hf:languages-chinese-simplified",
+    "p": "dul:hasParameterDataValue",
+    "o": "Chinese (Simplified)"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-chinese-traditional"
+  },
+  {
+    "s": "hf:languages-chinese-traditional",
+    "p": "dul:hasParameterDataValue",
+    "o": "Chinese (Traditional)"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-croatian"
+  },
+  {
+    "s": "hf:languages-croatian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Croatian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-czech"
+  },
+  {
+    "s": "hf:languages-czech",
+    "p": "dul:hasParameterDataValue",
+    "o": "Czech"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-danish"
+  },
+  {
+    "s": "hf:languages-danish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Danish"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-dutch"
+  },
+  {
+    "s": "hf:languages-dutch",
+    "p": "dul:hasParameterDataValue",
+    "o": "Dutch"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-estonian"
+  },
+  {
+    "s": "hf:languages-estonian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Estonian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-finnish"
+  },
+  {
+    "s": "hf:languages-finnish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Finnish"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-galician"
+  },
+  {
+    "s": "hf:languages-galician",
+    "p": "dul:hasParameterDataValue",
+    "o": "Galician"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-georgian"
+  },
+  {
+    "s": "hf:languages-georgian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Georgian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-greek"
+  },
+  {
+    "s": "hf:languages-greek",
+    "p": "dul:hasParameterDataValue",
+    "o": "Greek"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hebrew"
+  },
+  {
+    "s": "hf:languages-hebrew",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hebrew"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hindi"
+  },
+  {
+    "s": "hf:languages-hindi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hindi"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hungarian"
+  },
+  {
+    "s": "hf:languages-hungarian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hungarian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-icelandic"
+  },
+  {
+    "s": "hf:languages-icelandic",
+    "p": "dul:hasParameterDataValue",
+    "o": "Icelandic"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-indonesian"
+  },
+  {
+    "s": "hf:languages-indonesian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Indonesian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-italian"
+  },
+  {
+    "s": "hf:languages-italian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Italian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-japanese"
+  },
+  {
+    "s": "hf:languages-japanese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Japanese"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-kazakh"
+  },
+  {
+    "s": "hf:languages-kazakh",
+    "p": "dul:hasParameterDataValue",
+    "o": "Kazakh"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-korean"
+  },
+  {
+    "s": "hf:languages-korean",
+    "p": "dul:hasParameterDataValue",
+    "o": "Korean"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-latvian"
+  },
+  {
+    "s": "hf:languages-latvian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Latvian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-lithuanian"
+  },
+  {
+    "s": "hf:languages-lithuanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Lithuanian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-macedonian"
+  },
+  {
+    "s": "hf:languages-macedonian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Macedonian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-malay"
+  },
+  {
+    "s": "hf:languages-malay",
+    "p": "dul:hasParameterDataValue",
+    "o": "Malay"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-marathi"
+  },
+  {
+    "s": "hf:languages-marathi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Marathi"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-mongolian"
+  },
+  {
+    "s": "hf:languages-mongolian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Mongolian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-norwegian"
+  },
+  {
+    "s": "hf:languages-norwegian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Norwegian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-persian"
+  },
+  {
+    "s": "hf:languages-persian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Persian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-polish"
+  },
+  {
+    "s": "hf:languages-polish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Polish"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-portuguese"
+  },
+  {
+    "s": "hf:languages-portuguese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Portuguese"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-romanian"
+  },
+  {
+    "s": "hf:languages-romanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Romanian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-russian"
+  },
+  {
+    "s": "hf:languages-russian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Russian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-serbian"
+  },
+  {
+    "s": "hf:languages-serbian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Serbian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovak"
+  },
+  {
+    "s": "hf:languages-slovak",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovak"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovenian"
+  },
+  {
+    "s": "hf:languages-slovenian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovenian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-spanish"
+  },
+  {
+    "s": "hf:languages-spanish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Spanish"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-swahili"
+  },
+  {
+    "s": "hf:languages-swahili",
+    "p": "dul:hasParameterDataValue",
+    "o": "Swahili"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-swedish"
+  },
+  {
+    "s": "hf:languages-swedish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Swedish"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-tagalog"
+  },
+  {
+    "s": "hf:languages-tagalog",
+    "p": "dul:hasParameterDataValue",
+    "o": "Tagalog"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-tamil"
+  },
+  {
+    "s": "hf:languages-tamil",
+    "p": "dul:hasParameterDataValue",
+    "o": "Tamil"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-telugu"
+  },
+  {
+    "s": "hf:languages-telugu",
+    "p": "dul:hasParameterDataValue",
+    "o": "Telugu"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-thai"
+  },
+  {
+    "s": "hf:languages-thai",
+    "p": "dul:hasParameterDataValue",
+    "o": "Thai"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-turkish"
+  },
+  {
+    "s": "hf:languages-turkish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Turkish"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ukrainian"
+  },
+  {
+    "s": "hf:languages-ukrainian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Ukrainian"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-urdu"
+  },
+  {
+    "s": "hf:languages-urdu",
+    "p": "dul:hasParameterDataValue",
+    "o": "Urdu"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-vietnamese"
+  },
+  {
+    "s": "hf:languages-vietnamese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vietnamese"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-94-other-languages"
+  },
+  {
+    "s": "hf:languages-94-other-languages",
+    "p": "dul:hasParameterDataValue",
+    "o": "94 other languages"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasPre-trained_on",
+    "o": "hf:pre-trained_on-wikipedia-and-bookcorpus"
+  },
+  {
+    "s": "hf:pre-trained_on-wikipedia-and-bookcorpus",
+    "p": "dul:hasParameterDataValue",
+    "o": "Wikipedia and BookCorpus"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasDownstream_task(s)",
+    "o": "hf:downstream_task(s)-text-classification"
+  },
+  {
+    "s": "hf:downstream_task(s)-text-classification",
+    "p": "dul:hasParameterDataValue",
+    "o": "text classification"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasDownstream_task(s)",
+    "o": "hf:downstream_task(s)-question-answering"
+  },
+  {
+    "s": "hf:downstream_task(s)-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "question answering"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-license-20"
+  },
+  {
+    "s": "hf:license-apache-license-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache License 2.0"
+  },
+  {
+    "s": "hf:falconsainsfwimagedetection",
+    "p": "modelcard:hasCase",
+    "o": "hf:case-cased"
+  },
+  {
+    "s": "hf:case-cased",
+    "p": "dul:hasParameterDataValue",
+    "o": "Cased"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5-small"
+  },
+  {
+    "s": "hf:architecture-t5-small",
+    "p": "dul:hasParameterDataValue",
+    "o": "t5-small"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-c4"
+  },
+  {
+    "s": "hf:training_data-c4",
+    "p": "dul:hasParameterDataValue",
+    "o": "C4"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-summarization"
+  },
+  {
+    "s": "hf:use_cases-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "summarization"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "translation"
+  },
+  {
+    "s": "hf:dima806fairfaceageimagedetection",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "question answering"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-mbart-large-50"
+  },
+  {
+    "s": "hf:architecture-mbart-large-50",
+    "p": "dul:hasParameterDataValue",
+    "o": "mBART-large-50"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-czech"
+  },
+  {
+    "s": "hf:languages-czech",
+    "p": "dul:hasParameterDataValue",
+    "o": "Czech"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-spanish"
+  },
+  {
+    "s": "hf:languages-spanish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Spanish"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-italian"
+  },
+  {
+    "s": "hf:languages-italian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Italian"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-japanese"
+  },
+  {
+    "s": "hf:languages-japanese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Japanese"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-korean"
+  },
+  {
+    "s": "hf:languages-korean",
+    "p": "dul:hasParameterDataValue",
+    "o": "Korean"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-lithuanian"
+  },
+  {
+    "s": "hf:languages-lithuanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Lithuanian"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-latvian"
+  },
+  {
+    "s": "hf:languages-latvian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Latvian"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-burmese"
+  },
+  {
+    "s": "hf:languages-burmese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Burmese"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-nepali"
+  },
+  {
+    "s": "hf:languages-nepali",
+    "p": "dul:hasParameterDataValue",
+    "o": "Nepali"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-dutch"
+  },
+  {
+    "s": "hf:languages-dutch",
+    "p": "dul:hasParameterDataValue",
+    "o": "Dutch"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-romanian"
+  },
+  {
+    "s": "hf:languages-romanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Romanian"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-russian"
+  },
+  {
+    "s": "hf:languages-russian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Russian"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-sinhala"
+  },
+  {
+    "s": "hf:languages-sinhala",
+    "p": "dul:hasParameterDataValue",
+    "o": "Sinhala"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-turkish"
+  },
+  {
+    "s": "hf:languages-turkish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Turkish"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-vietnamese"
+  },
+  {
+    "s": "hf:languages-vietnamese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vietnamese"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-chinese"
+  },
+  {
+    "s": "hf:languages-chinese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Chinese"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-cc25"
+  },
+  {
+    "s": "hf:training_data-cc25",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC25"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-mc4"
+  },
+  {
+    "s": "hf:training_data-mc4",
+    "p": "dul:hasParameterDataValue",
+    "o": "mC4"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:timmmobilenetv3small100lambin1k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-multilingual-translation"
+  },
+  {
+    "s": "hf:use_cases-multilingual-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Multilingual Translation"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-wav2vec20"
+  },
+  {
+    "s": "hf:architecture-wav2vec20",
+    "p": "dul:hasParameterDataValue",
+    "o": "wav2vec2.0"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ar"
+  },
+  {
+    "s": "hf:languages-ar",
+    "p": "dul:hasParameterDataValue",
+    "o": "ar"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ca"
+  },
+  {
+    "s": "hf:languages-ca",
+    "p": "dul:hasParameterDataValue",
+    "o": "ca"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-cs"
+  },
+  {
+    "s": "hf:languages-cs",
+    "p": "dul:hasParameterDataValue",
+    "o": "cs"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-de"
+  },
+  {
+    "s": "hf:languages-de",
+    "p": "dul:hasParameterDataValue",
+    "o": "de"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-es"
+  },
+  {
+    "s": "hf:languages-es",
+    "p": "dul:hasParameterDataValue",
+    "o": "es"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-et"
+  },
+  {
+    "s": "hf:languages-et",
+    "p": "dul:hasParameterDataValue",
+    "o": "et"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-fa"
+  },
+  {
+    "s": "hf:languages-fa",
+    "p": "dul:hasParameterDataValue",
+    "o": "fa"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-fi"
+  },
+  {
+    "s": "hf:languages-fi",
+    "p": "dul:hasParameterDataValue",
+    "o": "fi"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-fr"
+  },
+  {
+    "s": "hf:languages-fr",
+    "p": "dul:hasParameterDataValue",
+    "o": "fr"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-id"
+  },
+  {
+    "s": "hf:languages-id",
+    "p": "dul:hasParameterDataValue",
+    "o": "id"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-it"
+  },
+  {
+    "s": "hf:languages-it",
+    "p": "dul:hasParameterDataValue",
+    "o": "it"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ja"
+  },
+  {
+    "s": "hf:languages-ja",
+    "p": "dul:hasParameterDataValue",
+    "o": "ja"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ko"
+  },
+  {
+    "s": "hf:languages-ko",
+    "p": "dul:hasParameterDataValue",
+    "o": "ko"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-lv"
+  },
+  {
+    "s": "hf:languages-lv",
+    "p": "dul:hasParameterDataValue",
+    "o": "lv"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-mn"
+  },
+  {
+    "s": "hf:languages-mn",
+    "p": "dul:hasParameterDataValue",
+    "o": "mn"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-nl"
+  },
+  {
+    "s": "hf:languages-nl",
+    "p": "dul:hasParameterDataValue",
+    "o": "nl"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-pl"
+  },
+  {
+    "s": "hf:languages-pl",
+    "p": "dul:hasParameterDataValue",
+    "o": "pl"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-pt"
+  },
+  {
+    "s": "hf:languages-pt",
+    "p": "dul:hasParameterDataValue",
+    "o": "pt"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ro"
+  },
+  {
+    "s": "hf:languages-ro",
+    "p": "dul:hasParameterDataValue",
+    "o": "ro"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ru"
+  },
+  {
+    "s": "hf:languages-ru",
+    "p": "dul:hasParameterDataValue",
+    "o": "ru"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-sv"
+  },
+  {
+    "s": "hf:languages-sv",
+    "p": "dul:hasParameterDataValue",
+    "o": "sv"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-tr"
+  },
+  {
+    "s": "hf:languages-tr",
+    "p": "dul:hasParameterDataValue",
+    "o": "tr"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-uk"
+  },
+  {
+    "s": "hf:languages-uk",
+    "p": "dul:hasParameterDataValue",
+    "o": "uk"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-zh"
+  },
+  {
+    "s": "hf:languages-zh",
+    "p": "dul:hasParameterDataValue",
+    "o": "zh"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-multilingual-librispeech-mls"
+  },
+  {
+    "s": "hf:training_data-multilingual-librispeech-mls",
+    "p": "dul:hasParameterDataValue",
+    "o": "Multilingual LibriSpeech (MLS)"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-common-voice"
+  },
+  {
+    "s": "hf:training_data-common-voice",
+    "p": "dul:hasParameterDataValue",
+    "o": "Common Voice"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-voxpopuli"
+  },
+  {
+    "s": "hf:training_data-voxpopuli",
+    "p": "dul:hasParameterDataValue",
+    "o": "VoxPopuli"
+  },
+  {
+    "s": "hf:amazonchronos-t5-small",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-cc-by-40"
+  },
+  {
+    "s": "hf:license-cc-by-40",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC-BY-4.0"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5-small"
+  },
+  {
+    "s": "hf:architecture-t5-small",
+    "p": "dul:hasParameterDataValue",
+    "o": "t5-small"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-c4"
+  },
+  {
+    "s": "hf:training_data-c4",
+    "p": "dul:hasParameterDataValue",
+    "o": "C4"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasTraining_steps",
+    "o": "hf:training_steps-1000000"
+  },
+  {
+    "s": "hf:training_steps-1000000",
+    "p": "dul:hasParameterDataValue",
+    "o": "1,000,000"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasLearning_rate",
+    "o": "hf:learning_rate-0001"
+  },
+  {
+    "s": "hf:learning_rate-0001",
+    "p": "dul:hasParameterDataValue",
+    "o": "0.001"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasBatch_size",
+    "o": "hf:batch_size-128"
+  },
+  {
+    "s": "hf:batch_size-128",
+    "p": "dul:hasParameterDataValue",
+    "o": "128"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasTokenizer",
+    "o": "hf:tokenizer-sentencepiece"
+  },
+  {
+    "s": "hf:tokenizer-sentencepiece",
+    "p": "dul:hasParameterDataValue",
+    "o": "SentencePiece"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasVocabulary_size",
+    "o": "hf:vocabulary_size-32128"
+  },
+  {
+    "s": "hf:vocabulary_size-32128",
+    "p": "dul:hasParameterDataValue",
+    "o": "32,128"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasSoftware",
+    "o": "hf:software-tensorflow-280"
+  },
+  {
+    "s": "hf:software-tensorflow-280",
+    "p": "dul:hasParameterDataValue",
+    "o": "TensorFlow 2.8.0"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasHardware",
+    "o": "hf:hardware-tpuv3-8"
+  },
+  {
+    "s": "hf:hardware-tpuv3-8",
+    "p": "dul:hasParameterDataValue",
+    "o": "TPUv3-8"
+  },
+  {
+    "s": "hf:openaiclip-vit-large-patch14",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache-2.0"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5"
+  },
+  {
+    "s": "hf:architecture-t5",
+    "p": "dul:hasParameterDataValue",
+    "o": "T5"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasModel_description",
+    "o": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-furt"
+  },
+  {
+    "s": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-furt",
+    "p": "dul:hasParameterDataValue",
+    "o": "Flan-T5 is a chinchilla-optimal variant of T5 that has been further pre-trained on a massive dataset of varied natural language tasks."
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-multilingual"
+  },
+  {
+    "s": "hf:languages-multilingual",
+    "p": "dul:hasParameterDataValue",
+    "o": "Multilingual"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-text-summarization"
+  },
+  {
+    "s": "hf:use_cases-text-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "Text Summarization"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "Question Answering"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Translation"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-code-generation"
+  },
+  {
+    "s": "hf:use_cases-code-generation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Code Generation"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-reasoning"
+  },
+  {
+    "s": "hf:use_cases-reasoning",
+    "p": "dul:hasParameterDataValue",
+    "o": "Reasoning"
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-the-model-can-struggle-with-hallucination-it-can-sometimes-prov"
+  },
+  {
+    "s": "hf:limitations-the-model-can-struggle-with-hallucination-it-can-sometimes-prov",
+    "p": "dul:hasParameterDataValue",
+    "o": "The model can struggle with hallucination. It can sometimes provide answers that sound plausible but are not grounded in reality. The model's performance can vary depending on the length, style and complexity of the input, and sometimes it can be difficult to interpret model outputs. Also, as the model is trained on large-scale public data, it inherits biases present in the dataset."
+  },
+  {
+    "s": "hf:sentence-transformersall-mpnet-base-v2",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-the-model-was-trained-on-a-massive-dataset-of-text-and-code"
+  },
+  {
+    "s": "hf:training_data-the-model-was-trained-on-a-massive-dataset-of-text-and-code",
+    "p": "dul:hasParameterDataValue",
+    "o": "The model was trained on a massive dataset of text and code."
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5"
+  },
+  {
+    "s": "hf:architecture-t5",
+    "p": "dul:hasParameterDataValue",
+    "o": "T5"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasModel_description",
+    "o": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-furt"
+  },
+  {
+    "s": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-furt",
+    "p": "dul:hasParameterDataValue",
+    "o": "Flan-T5 is a chinchilla-optimal variant of T5 that has been further pre-trained on a massive collection of more diverse tasks than the original T5 model or its UL2 variant."
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasFinetuned_from_model",
+    "o": "hf:finetuned_from_model-googleflan-t5-xl"
+  },
+  {
+    "s": "hf:finetuned_from_model-googleflan-t5-xl",
+    "p": "dul:hasParameterDataValue",
+    "o": "google/flan-t5-xl"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-a-100000-row-subset-of-the-ultrachat-data-consisting-of-questi"
+  },
+  {
+    "s": "hf:training_data-a-100000-row-subset-of-the-ultrachat-data-consisting-of-questi",
+    "p": "dul:hasParameterDataValue",
+    "o": "A 100,000 row subset of the UltraChat data, consisting of question/answer pairs."
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-chat"
+  },
+  {
+    "s": "hf:use_cases-chat",
+    "p": "dul:hasParameterDataValue",
+    "o": "chat"
+  },
+  {
+    "s": "hf:googleelectra-base-discriminator",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "question answering"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-mbart-large-50"
+  },
+  {
+    "s": "hf:architecture-mbart-large-50",
+    "p": "dul:hasParameterDataValue",
+    "o": "mBART-large-50"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-czech"
+  },
+  {
+    "s": "hf:languages-czech",
+    "p": "dul:hasParameterDataValue",
+    "o": "Czech"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-spanish"
+  },
+  {
+    "s": "hf:languages-spanish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Spanish"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-italian"
+  },
+  {
+    "s": "hf:languages-italian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Italian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-lithuanian"
+  },
+  {
+    "s": "hf:languages-lithuanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Lithuanian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-latvian"
+  },
+  {
+    "s": "hf:languages-latvian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Latvian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-estonian"
+  },
+  {
+    "s": "hf:languages-estonian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Estonian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-finnish"
+  },
+  {
+    "s": "hf:languages-finnish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Finnish"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-swedish"
+  },
+  {
+    "s": "hf:languages-swedish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Swedish"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-danish"
+  },
+  {
+    "s": "hf:languages-danish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Danish"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-norwegian"
+  },
+  {
+    "s": "hf:languages-norwegian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Norwegian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-icelandic"
+  },
+  {
+    "s": "hf:languages-icelandic",
+    "p": "dul:hasParameterDataValue",
+    "o": "Icelandic"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-faroese"
+  },
+  {
+    "s": "hf:languages-faroese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Faroese"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-dutch"
+  },
+  {
+    "s": "hf:languages-dutch",
+    "p": "dul:hasParameterDataValue",
+    "o": "Dutch"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-portuguese"
+  },
+  {
+    "s": "hf:languages-portuguese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Portuguese"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-polish"
+  },
+  {
+    "s": "hf:languages-polish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Polish"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-romanian"
+  },
+  {
+    "s": "hf:languages-romanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Romanian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-russian"
+  },
+  {
+    "s": "hf:languages-russian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Russian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-belarusian"
+  },
+  {
+    "s": "hf:languages-belarusian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Belarusian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ukrainian"
+  },
+  {
+    "s": "hf:languages-ukrainian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Ukrainian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-bulgarian"
+  },
+  {
+    "s": "hf:languages-bulgarian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Bulgarian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-macedonian"
+  },
+  {
+    "s": "hf:languages-macedonian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Macedonian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-serbian"
+  },
+  {
+    "s": "hf:languages-serbian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Serbian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-croatian"
+  },
+  {
+    "s": "hf:languages-croatian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Croatian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-bosnian"
+  },
+  {
+    "s": "hf:languages-bosnian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Bosnian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovenian"
+  },
+  {
+    "s": "hf:languages-slovenian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovenian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovak"
+  },
+  {
+    "s": "hf:languages-slovak",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovak"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-afrikaans"
+  },
+  {
+    "s": "hf:languages-afrikaans",
+    "p": "dul:hasParameterDataValue",
+    "o": "Afrikaans"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-albanian"
+  },
+  {
+    "s": "hf:languages-albanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Albanian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-armenian"
+  },
+  {
+    "s": "hf:languages-armenian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Armenian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-azerbaijani"
+  },
+  {
+    "s": "hf:languages-azerbaijani",
+    "p": "dul:hasParameterDataValue",
+    "o": "Azerbaijani"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-basque"
+  },
+  {
+    "s": "hf:languages-basque",
+    "p": "dul:hasParameterDataValue",
+    "o": "Basque"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-bengali"
+  },
+  {
+    "s": "hf:languages-bengali",
+    "p": "dul:hasParameterDataValue",
+    "o": "Bengali"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-catalan"
+  },
+  {
+    "s": "hf:languages-catalan",
+    "p": "dul:hasParameterDataValue",
+    "o": "Catalan"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-chinese"
+  },
+  {
+    "s": "hf:languages-chinese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Chinese"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-georgian"
+  },
+  {
+    "s": "hf:languages-georgian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Georgian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-greek"
+  },
+  {
+    "s": "hf:languages-greek",
+    "p": "dul:hasParameterDataValue",
+    "o": "Greek"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-gujarati"
+  },
+  {
+    "s": "hf:languages-gujarati",
+    "p": "dul:hasParameterDataValue",
+    "o": "Gujarati"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-haitian-creole"
+  },
+  {
+    "s": "hf:languages-haitian-creole",
+    "p": "dul:hasParameterDataValue",
+    "o": "Haitian Creole"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hebrew"
+  },
+  {
+    "s": "hf:languages-hebrew",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hebrew"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hindi"
+  },
+  {
+    "s": "hf:languages-hindi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hindi"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hungarian"
+  },
+  {
+    "s": "hf:languages-hungarian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hungarian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-indonesian"
+  },
+  {
+    "s": "hf:languages-indonesian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Indonesian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-japanese"
+  },
+  {
+    "s": "hf:languages-japanese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Japanese"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-javanese"
+  },
+  {
+    "s": "hf:languages-javanese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Javanese"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-kannada"
+  },
+  {
+    "s": "hf:languages-kannada",
+    "p": "dul:hasParameterDataValue",
+    "o": "Kannada"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-kazakh"
+  },
+  {
+    "s": "hf:languages-kazakh",
+    "p": "dul:hasParameterDataValue",
+    "o": "Kazakh"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-khmer"
+  },
+  {
+    "s": "hf:languages-khmer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Khmer"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-korean"
+  },
+  {
+    "s": "hf:languages-korean",
+    "p": "dul:hasParameterDataValue",
+    "o": "Korean"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-kyrgyz"
+  },
+  {
+    "s": "hf:languages-kyrgyz",
+    "p": "dul:hasParameterDataValue",
+    "o": "Kyrgyz"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-lao"
+  },
+  {
+    "s": "hf:languages-lao",
+    "p": "dul:hasParameterDataValue",
+    "o": "Lao"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-malay"
+  },
+  {
+    "s": "hf:languages-malay",
+    "p": "dul:hasParameterDataValue",
+    "o": "Malay"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-malayalam"
+  },
+  {
+    "s": "hf:languages-malayalam",
+    "p": "dul:hasParameterDataValue",
+    "o": "Malayalam"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-marathi"
+  },
+  {
+    "s": "hf:languages-marathi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Marathi"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-mongolian"
+  },
+  {
+    "s": "hf:languages-mongolian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Mongolian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-myanmar"
+  },
+  {
+    "s": "hf:languages-myanmar",
+    "p": "dul:hasParameterDataValue",
+    "o": "Myanmar"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-nepali"
+  },
+  {
+    "s": "hf:languages-nepali",
+    "p": "dul:hasParameterDataValue",
+    "o": "Nepali"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-persian"
+  },
+  {
+    "s": "hf:languages-persian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Persian"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-punjabi"
+  },
+  {
+    "s": "hf:languages-punjabi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Punjabi"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-sinhala"
+  },
+  {
+    "s": "hf:languages-sinhala",
+    "p": "dul:hasParameterDataValue",
+    "o": "Sinhala"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-sundanese"
+  },
+  {
+    "s": "hf:languages-sundanese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Sundanese"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-swahili"
+  },
+  {
+    "s": "hf:languages-swahili",
+    "p": "dul:hasParameterDataValue",
+    "o": "Swahili"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-tagalog"
+  },
+  {
+    "s": "hf:languages-tagalog",
+    "p": "dul:hasParameterDataValue",
+    "o": "Tagalog"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-tamil"
+  },
+  {
+    "s": "hf:languages-tamil",
+    "p": "dul:hasParameterDataValue",
+    "o": "Tamil"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-telugu"
+  },
+  {
+    "s": "hf:languages-telugu",
+    "p": "dul:hasParameterDataValue",
+    "o": "Telugu"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-thai"
+  },
+  {
+    "s": "hf:languages-thai",
+    "p": "dul:hasParameterDataValue",
+    "o": "Thai"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-turkish"
+  },
+  {
+    "s": "hf:languages-turkish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Turkish"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-urdu"
+  },
+  {
+    "s": "hf:languages-urdu",
+    "p": "dul:hasParameterDataValue",
+    "o": "Urdu"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-uzbek"
+  },
+  {
+    "s": "hf:languages-uzbek",
+    "p": "dul:hasParameterDataValue",
+    "o": "Uzbek"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-vietnamese"
+  },
+  {
+    "s": "hf:languages-vietnamese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vietnamese"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-yoruba"
+  },
+  {
+    "s": "hf:languages-yoruba",
+    "p": "dul:hasParameterDataValue",
+    "o": "Yoruba"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-cc25"
+  },
+  {
+    "s": "hf:training_data-cc25",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC25"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-opus-books"
+  },
+  {
+    "s": "hf:training_data-opus-books",
+    "p": "dul:hasParameterDataValue",
+    "o": "OPUS books"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-paracrawl-v5"
+  },
+  {
+    "s": "hf:training_data-paracrawl-v5",
+    "p": "dul:hasParameterDataValue",
+    "o": "ParaCrawl v5"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-cc-by-nc-40"
+  },
+  {
+    "s": "hf:license-cc-by-nc-40",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC-BY-NC-4.0"
+  },
+  {
+    "s": "hf:bingsuadetailer",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "translation"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5"
+  },
+  {
+    "s": "hf:architecture-t5",
+    "p": "dul:hasParameterDataValue",
+    "o": "T5"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasModel_description",
+    "o": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-trained-by-google"
+  },
+  {
+    "s": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-trained-by-google",
+    "p": "dul:hasParameterDataValue",
+    "o": "Flan-T5 is a chinchilla-optimal variant of T5, trained by Google."
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasFinetuned_from_model",
+    "o": "hf:finetuned_from_model-googleflan-t5-xl"
+  },
+  {
+    "s": "hf:finetuned_from_model-googleflan-t5-xl",
+    "p": "dul:hasParameterDataValue",
+    "o": "google/flan-t5-xl"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-public-datasets-available-through-bigquery"
+  },
+  {
+    "s": "hf:training_data-public-datasets-available-through-bigquery",
+    "p": "dul:hasParameterDataValue",
+    "o": "Public datasets available through BigQuery"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-classification"
+  },
+  {
+    "s": "hf:use_cases-classification",
+    "p": "dul:hasParameterDataValue",
+    "o": "classification"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-code-generation"
+  },
+  {
+    "s": "hf:use_cases-code-generation",
+    "p": "dul:hasParameterDataValue",
+    "o": "code generation"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "question answering"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-summarization"
+  },
+  {
+    "s": "hf:use_cases-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "summarization"
+  },
+  {
+    "s": "hf:timmresnet50a1in1k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "translation"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-roberta"
+  },
+  {
+    "s": "hf:architecture-roberta",
+    "p": "dul:hasParameterDataValue",
+    "o": "RoBERTa"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasModel_name",
+    "o": "hf:model_name-xlm-roberta-base-finetuned-paws-x"
+  },
+  {
+    "s": "hf:model_name-xlm-roberta-base-finetuned-paws-x",
+    "p": "dul:hasParameterDataValue",
+    "o": "xlm-roberta-base-finetuned-paws-x"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-de"
+  },
+  {
+    "s": "hf:languages-de",
+    "p": "dul:hasParameterDataValue",
+    "o": "de"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-en"
+  },
+  {
+    "s": "hf:languages-en",
+    "p": "dul:hasParameterDataValue",
+    "o": "en"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-es"
+  },
+  {
+    "s": "hf:languages-es",
+    "p": "dul:hasParameterDataValue",
+    "o": "es"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-fr"
+  },
+  {
+    "s": "hf:languages-fr",
+    "p": "dul:hasParameterDataValue",
+    "o": "fr"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ja"
+  },
+  {
+    "s": "hf:languages-ja",
+    "p": "dul:hasParameterDataValue",
+    "o": "ja"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ko"
+  },
+  {
+    "s": "hf:languages-ko",
+    "p": "dul:hasParameterDataValue",
+    "o": "ko"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-zh"
+  },
+  {
+    "s": "hf:languages-zh",
+    "p": "dul:hasParameterDataValue",
+    "o": "zh"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-paws-x"
+  },
+  {
+    "s": "hf:training_data-paws-x",
+    "p": "dul:hasParameterDataValue",
+    "o": "PAWS-X"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:sentence-transformersmulti-qa-minilm-l6-cos-v1",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-paraphrase-identification"
+  },
+  {
+    "s": "hf:use_cases-paraphrase-identification",
+    "p": "dul:hasParameterDataValue",
+    "o": "paraphrase identification"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5"
+  },
+  {
+    "s": "hf:architecture-t5",
+    "p": "dul:hasParameterDataValue",
+    "o": "T5"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasModel_description",
+    "o": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-furt"
+  },
+  {
+    "s": "hf:model_description-flan-t5-is-a-chinchilla-optimal-variant-of-t5-that-has-been-furt",
+    "p": "dul:hasParameterDataValue",
+    "o": "Flan-T5 is a chinchilla-optimal variant of T5 that has been further pre-trained on a massive dataset of varied tasks. Flan-T5 achieves state-of-the-art performance on a wide range of downstream tasks."
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-multilingual"
+  },
+  {
+    "s": "hf:languages-multilingual",
+    "p": "dul:hasParameterDataValue",
+    "o": "Multilingual"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasFinetuned_from_model",
+    "o": "hf:finetuned_from_model-googleflan-t5-xl"
+  },
+  {
+    "s": "hf:finetuned_from_model-googleflan-t5-xl",
+    "p": "dul:hasParameterDataValue",
+    "o": "google/flan-t5-xl"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-a-massive-dataset-of-varied-tasks-curated-by-google"
+  },
+  {
+    "s": "hf:training_data-a-massive-dataset-of-varied-tasks-curated-by-google",
+    "p": "dul:hasParameterDataValue",
+    "o": "A massive dataset of varied tasks curated by Google"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-text-summarization"
+  },
+  {
+    "s": "hf:use_cases-text-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "Text Summarization"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "Question Answering"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Translation"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-hallucinations"
+  },
+  {
+    "s": "hf:limitations-hallucinations",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hallucinations"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-bias"
+  },
+  {
+    "s": "hf:limitations-bias",
+    "p": "dul:hasParameterDataValue",
+    "o": "Bias"
+  },
+  {
+    "s": "hf:openai-communitygpt2",
+    "p": "modelcard:hasLimitations",
+    "o": "hf:limitations-toxicity"
+  },
+  {
+    "s": "hf:limitations-toxicity",
+    "p": "dul:hasParameterDataValue",
+    "o": "Toxicity"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5-small"
+  },
+  {
+    "s": "hf:architecture-t5-small",
+    "p": "dul:hasParameterDataValue",
+    "o": "t5-small"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-summarization"
+  },
+  {
+    "s": "hf:use_cases-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "summarization"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "translation"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "question answering"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-text-generation"
+  },
+  {
+    "s": "hf:use_cases-text-generation",
+    "p": "dul:hasParameterDataValue",
+    "o": "text generation"
+  },
+  {
+    "s": "hf:openaiclip-vit-base-patch32",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-c4"
+  },
+  {
+    "s": "hf:training_data-c4",
+    "p": "dul:hasParameterDataValue",
+    "o": "C4"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5-small"
+  },
+  {
+    "s": "hf:architecture-t5-small",
+    "p": "dul:hasParameterDataValue",
+    "o": "t5-small"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-c4"
+  },
+  {
+    "s": "hf:training_data-c4",
+    "p": "dul:hasParameterDataValue",
+    "o": "C4"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-summarization"
+  },
+  {
+    "s": "hf:use_cases-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "summarization"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "translation"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-english",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "question answering"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-mt5"
+  },
+  {
+    "s": "hf:architecture-mt5",
+    "p": "dul:hasParameterDataValue",
+    "o": "mT5"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-mc4"
+  },
+  {
+    "s": "hf:training_data-mc4",
+    "p": "dul:hasParameterDataValue",
+    "o": "mC4"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-arabic"
+  },
+  {
+    "s": "hf:languages-arabic",
+    "p": "dul:hasParameterDataValue",
+    "o": "Arabic"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-basque"
+  },
+  {
+    "s": "hf:languages-basque",
+    "p": "dul:hasParameterDataValue",
+    "o": "Basque"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-breton"
+  },
+  {
+    "s": "hf:languages-breton",
+    "p": "dul:hasParameterDataValue",
+    "o": "Breton"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-catalan"
+  },
+  {
+    "s": "hf:languages-catalan",
+    "p": "dul:hasParameterDataValue",
+    "o": "Catalan"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-chinese"
+  },
+  {
+    "s": "hf:languages-chinese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Chinese"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-czech"
+  },
+  {
+    "s": "hf:languages-czech",
+    "p": "dul:hasParameterDataValue",
+    "o": "Czech"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-dutch"
+  },
+  {
+    "s": "hf:languages-dutch",
+    "p": "dul:hasParameterDataValue",
+    "o": "Dutch"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-esperanto"
+  },
+  {
+    "s": "hf:languages-esperanto",
+    "p": "dul:hasParameterDataValue",
+    "o": "Esperanto"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-estonian"
+  },
+  {
+    "s": "hf:languages-estonian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Estonian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-finnish"
+  },
+  {
+    "s": "hf:languages-finnish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Finnish"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-galician"
+  },
+  {
+    "s": "hf:languages-galician",
+    "p": "dul:hasParameterDataValue",
+    "o": "Galician"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-greek"
+  },
+  {
+    "s": "hf:languages-greek",
+    "p": "dul:hasParameterDataValue",
+    "o": "Greek"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hebrew"
+  },
+  {
+    "s": "hf:languages-hebrew",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hebrew"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hindi"
+  },
+  {
+    "s": "hf:languages-hindi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hindi"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hungarian"
+  },
+  {
+    "s": "hf:languages-hungarian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hungarian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-indonesian"
+  },
+  {
+    "s": "hf:languages-indonesian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Indonesian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-italian"
+  },
+  {
+    "s": "hf:languages-italian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Italian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-japanese"
+  },
+  {
+    "s": "hf:languages-japanese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Japanese"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-kazakh"
+  },
+  {
+    "s": "hf:languages-kazakh",
+    "p": "dul:hasParameterDataValue",
+    "o": "Kazakh"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-korean"
+  },
+  {
+    "s": "hf:languages-korean",
+    "p": "dul:hasParameterDataValue",
+    "o": "Korean"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-latvian"
+  },
+  {
+    "s": "hf:languages-latvian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Latvian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-lithuanian"
+  },
+  {
+    "s": "hf:languages-lithuanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Lithuanian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-maltese"
+  },
+  {
+    "s": "hf:languages-maltese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Maltese"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-norwegian-bokmal"
+  },
+  {
+    "s": "hf:languages-norwegian-bokmal",
+    "p": "dul:hasParameterDataValue",
+    "o": "Norwegian (Bokmal)"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-persian"
+  },
+  {
+    "s": "hf:languages-persian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Persian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-polish"
+  },
+  {
+    "s": "hf:languages-polish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Polish"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-portuguese"
+  },
+  {
+    "s": "hf:languages-portuguese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Portuguese"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-romanian"
+  },
+  {
+    "s": "hf:languages-romanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Romanian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-russian"
+  },
+  {
+    "s": "hf:languages-russian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Russian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-serbian"
+  },
+  {
+    "s": "hf:languages-serbian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Serbian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovak"
+  },
+  {
+    "s": "hf:languages-slovak",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovak"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovenian"
+  },
+  {
+    "s": "hf:languages-slovenian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovenian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-spanish"
+  },
+  {
+    "s": "hf:languages-spanish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Spanish"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-swedish"
+  },
+  {
+    "s": "hf:languages-swedish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Swedish"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-tamil"
+  },
+  {
+    "s": "hf:languages-tamil",
+    "p": "dul:hasParameterDataValue",
+    "o": "Tamil"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-telugu"
+  },
+  {
+    "s": "hf:languages-telugu",
+    "p": "dul:hasParameterDataValue",
+    "o": "Telugu"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-thai"
+  },
+  {
+    "s": "hf:languages-thai",
+    "p": "dul:hasParameterDataValue",
+    "o": "Thai"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-turkish"
+  },
+  {
+    "s": "hf:languages-turkish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Turkish"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ukrainian"
+  },
+  {
+    "s": "hf:languages-ukrainian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Ukrainian"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-urdu"
+  },
+  {
+    "s": "hf:languages-urdu",
+    "p": "dul:hasParameterDataValue",
+    "o": "Urdu"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-vietnamese"
+  },
+  {
+    "s": "hf:languages-vietnamese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vietnamese"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-welsh"
+  },
+  {
+    "s": "hf:languages-welsh",
+    "p": "dul:hasParameterDataValue",
+    "o": "Welsh"
+  },
+  {
+    "s": "hf:jonatasgrosmanwav2vec2-large-xlsr-53-chinese-zh-cn",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-t5"
+  },
+  {
+    "s": "hf:architecture-t5",
+    "p": "dul:hasParameterDataValue",
+    "o": "T5"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "modelcard:hasModel",
+    "o": "hf:model-flan-t5-xxl"
+  },
+  {
+    "s": "hf:model-flan-t5-xxl",
+    "p": "dul:hasParameterDataValue",
+    "o": "Flan-T5-XXL"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-apache-20"
+  },
+  {
+    "s": "hf:license-apache-20",
+    "p": "dul:hasParameterDataValue",
+    "o": "Apache 2.0"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-massively-multilingual-mixture-of-datasets"
+  },
+  {
+    "s": "hf:training_data-massively-multilingual-mixture-of-datasets",
+    "p": "dul:hasParameterDataValue",
+    "o": "Massively Multilingual Mixture of Datasets"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-translation"
+  },
+  {
+    "s": "hf:use_cases-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Translation"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "Question Answering"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-summarization"
+  },
+  {
+    "s": "hf:use_cases-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "Summarization"
+  },
+  {
+    "s": "hf:googlevit-base-patch16-224-in21k",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-code-generation"
+  },
+  {
+    "s": "hf:use_cases-code-generation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Code Generation"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-mbart-large-50"
+  },
+  {
+    "s": "hf:architecture-mbart-large-50",
+    "p": "dul:hasParameterDataValue",
+    "o": "mBART-large-50"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-czech"
+  },
+  {
+    "s": "hf:languages-czech",
+    "p": "dul:hasParameterDataValue",
+    "o": "Czech"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-spanish"
+  },
+  {
+    "s": "hf:languages-spanish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Spanish"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-italian"
+  },
+  {
+    "s": "hf:languages-italian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Italian"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-japanese"
+  },
+  {
+    "s": "hf:languages-japanese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Japanese"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-korean"
+  },
+  {
+    "s": "hf:languages-korean",
+    "p": "dul:hasParameterDataValue",
+    "o": "Korean"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-lithuanian"
+  },
+  {
+    "s": "hf:languages-lithuanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Lithuanian"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-latvian"
+  },
+  {
+    "s": "hf:languages-latvian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Latvian"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-polish"
+  },
+  {
+    "s": "hf:languages-polish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Polish"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-portuguese"
+  },
+  {
+    "s": "hf:languages-portuguese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Portuguese"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-romanian"
+  },
+  {
+    "s": "hf:languages-romanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Romanian"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-russian"
+  },
+  {
+    "s": "hf:languages-russian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Russian"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovak"
+  },
+  {
+    "s": "hf:languages-slovak",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovak"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovenian"
+  },
+  {
+    "s": "hf:languages-slovenian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovenian"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-chinese"
+  },
+  {
+    "s": "hf:languages-chinese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Chinese"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-vietnamese"
+  },
+  {
+    "s": "hf:languages-vietnamese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vietnamese"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-arabic"
+  },
+  {
+    "s": "hf:languages-arabic",
+    "p": "dul:hasParameterDataValue",
+    "o": "Arabic"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-indonesian"
+  },
+  {
+    "s": "hf:languages-indonesian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Indonesian"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-thai"
+  },
+  {
+    "s": "hf:languages-thai",
+    "p": "dul:hasParameterDataValue",
+    "o": "Thai"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-hindi"
+  },
+  {
+    "s": "hf:languages-hindi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Hindi"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-bengali"
+  },
+  {
+    "s": "hf:languages-bengali",
+    "p": "dul:hasParameterDataValue",
+    "o": "Bengali"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-telugu"
+  },
+  {
+    "s": "hf:languages-telugu",
+    "p": "dul:hasParameterDataValue",
+    "o": "Telugu"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-marathi"
+  },
+  {
+    "s": "hf:languages-marathi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Marathi"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-tamil"
+  },
+  {
+    "s": "hf:languages-tamil",
+    "p": "dul:hasParameterDataValue",
+    "o": "Tamil"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-urdu"
+  },
+  {
+    "s": "hf:languages-urdu",
+    "p": "dul:hasParameterDataValue",
+    "o": "Urdu"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-gujarati"
+  },
+  {
+    "s": "hf:languages-gujarati",
+    "p": "dul:hasParameterDataValue",
+    "o": "Gujarati"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-kannada"
+  },
+  {
+    "s": "hf:languages-kannada",
+    "p": "dul:hasParameterDataValue",
+    "o": "Kannada"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-malayalam"
+  },
+  {
+    "s": "hf:languages-malayalam",
+    "p": "dul:hasParameterDataValue",
+    "o": "Malayalam"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-oriya"
+  },
+  {
+    "s": "hf:languages-oriya",
+    "p": "dul:hasParameterDataValue",
+    "o": "Oriya"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-punjabi"
+  },
+  {
+    "s": "hf:languages-punjabi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Punjabi"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-assamese"
+  },
+  {
+    "s": "hf:languages-assamese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Assamese"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-maithili"
+  },
+  {
+    "s": "hf:languages-maithili",
+    "p": "dul:hasParameterDataValue",
+    "o": "Maithili"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-sanskrit"
+  },
+  {
+    "s": "hf:languages-sanskrit",
+    "p": "dul:hasParameterDataValue",
+    "o": "Sanskrit"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-sindhi"
+  },
+  {
+    "s": "hf:languages-sindhi",
+    "p": "dul:hasParameterDataValue",
+    "o": "Sindhi"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-nepali"
+  },
+  {
+    "s": "hf:languages-nepali",
+    "p": "dul:hasParameterDataValue",
+    "o": "Nepali"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-sinhala"
+  },
+  {
+    "s": "hf:languages-sinhala",
+    "p": "dul:hasParameterDataValue",
+    "o": "Sinhala"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-khmer"
+  },
+  {
+    "s": "hf:languages-khmer",
+    "p": "dul:hasParameterDataValue",
+    "o": "Khmer"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-lao"
+  },
+  {
+    "s": "hf:languages-lao",
+    "p": "dul:hasParameterDataValue",
+    "o": "Lao"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-burmese"
+  },
+  {
+    "s": "hf:languages-burmese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Burmese"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-tagalog"
+  },
+  {
+    "s": "hf:languages-tagalog",
+    "p": "dul:hasParameterDataValue",
+    "o": "Tagalog"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-vietnamese"
+  },
+  {
+    "s": "hf:languages-vietnamese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Vietnamese"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-malay"
+  },
+  {
+    "s": "hf:languages-malay",
+    "p": "dul:hasParameterDataValue",
+    "o": "Malay"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-cc25"
+  },
+  {
+    "s": "hf:training_data-cc25",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC25"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-paracrawl-v5"
+  },
+  {
+    "s": "hf:training_data-paracrawl-v5",
+    "p": "dul:hasParameterDataValue",
+    "o": "ParaCrawl v5"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-mc4"
+  },
+  {
+    "s": "hf:training_data-mc4",
+    "p": "dul:hasParameterDataValue",
+    "o": "mC4"
+  },
+  {
+    "s": "hf:sentence-transformersparaphrase-multilingual-minilm-l12-v2",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-cc-by-nc-40"
+  },
+  {
+    "s": "hf:license-cc-by-nc-40",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC-BY-NC 4.0"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "rdf:type",
+    "o": "ModelCard:Model"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasArchitecture",
+    "o": "hf:architecture-mbart-large-50"
+  },
+  {
+    "s": "hf:architecture-mbart-large-50",
+    "p": "dul:hasParameterDataValue",
+    "o": "mBART-large-50"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-czech"
+  },
+  {
+    "s": "hf:languages-czech",
+    "p": "dul:hasParameterDataValue",
+    "o": "Czech"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-german"
+  },
+  {
+    "s": "hf:languages-german",
+    "p": "dul:hasParameterDataValue",
+    "o": "German"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-english"
+  },
+  {
+    "s": "hf:languages-english",
+    "p": "dul:hasParameterDataValue",
+    "o": "English"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-spanish"
+  },
+  {
+    "s": "hf:languages-spanish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Spanish"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-french"
+  },
+  {
+    "s": "hf:languages-french",
+    "p": "dul:hasParameterDataValue",
+    "o": "French"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-italian"
+  },
+  {
+    "s": "hf:languages-italian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Italian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-lithuanian"
+  },
+  {
+    "s": "hf:languages-lithuanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Lithuanian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-latvian"
+  },
+  {
+    "s": "hf:languages-latvian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Latvian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-estonian"
+  },
+  {
+    "s": "hf:languages-estonian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Estonian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-finnish"
+  },
+  {
+    "s": "hf:languages-finnish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Finnish"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-dutch"
+  },
+  {
+    "s": "hf:languages-dutch",
+    "p": "dul:hasParameterDataValue",
+    "o": "Dutch"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-romanian"
+  },
+  {
+    "s": "hf:languages-romanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Romanian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-portuguese"
+  },
+  {
+    "s": "hf:languages-portuguese",
+    "p": "dul:hasParameterDataValue",
+    "o": "Portuguese"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-swedish"
+  },
+  {
+    "s": "hf:languages-swedish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Swedish"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-danish"
+  },
+  {
+    "s": "hf:languages-danish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Danish"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-norwegian"
+  },
+  {
+    "s": "hf:languages-norwegian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Norwegian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-icelandic"
+  },
+  {
+    "s": "hf:languages-icelandic",
+    "p": "dul:hasParameterDataValue",
+    "o": "Icelandic"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-russian"
+  },
+  {
+    "s": "hf:languages-russian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Russian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-ukrainian"
+  },
+  {
+    "s": "hf:languages-ukrainian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Ukrainian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-belarusian"
+  },
+  {
+    "s": "hf:languages-belarusian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Belarusian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-bulgarian"
+  },
+  {
+    "s": "hf:languages-bulgarian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Bulgarian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-polish"
+  },
+  {
+    "s": "hf:languages-polish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Polish"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovak"
+  },
+  {
+    "s": "hf:languages-slovak",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovak"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-slovenian"
+  },
+  {
+    "s": "hf:languages-slovenian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Slovenian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-croatian"
+  },
+  {
+    "s": "hf:languages-croatian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Croatian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-serbian"
+  },
+  {
+    "s": "hf:languages-serbian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Serbian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-macedonian"
+  },
+  {
+    "s": "hf:languages-macedonian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Macedonian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-bosnian"
+  },
+  {
+    "s": "hf:languages-bosnian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Bosnian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-montenegrin"
+  },
+  {
+    "s": "hf:languages-montenegrin",
+    "p": "dul:hasParameterDataValue",
+    "o": "Montenegrin"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-albanian"
+  },
+  {
+    "s": "hf:languages-albanian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Albanian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-greek"
+  },
+  {
+    "s": "hf:languages-greek",
+    "p": "dul:hasParameterDataValue",
+    "o": "Greek"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-armenian"
+  },
+  {
+    "s": "hf:languages-armenian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Armenian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-georgian"
+  },
+  {
+    "s": "hf:languages-georgian",
+    "p": "dul:hasParameterDataValue",
+    "o": "Georgian"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-turkish"
+  },
+  {
+    "s": "hf:languages-turkish",
+    "p": "dul:hasParameterDataValue",
+    "o": "Turkish"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-azerbaijani"
+  },
+  {
+    "s": "hf:languages-azerbaijani",
+    "p": "dul:hasParameterDataValue",
+    "o": "Azerbaijani"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-basque"
+  },
+  {
+    "s": "hf:languages-basque",
+    "p": "dul:hasParameterDataValue",
+    "o": "Basque"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-catalan"
+  },
+  {
+    "s": "hf:languages-catalan",
+    "p": "dul:hasParameterDataValue",
+    "o": "Catalan"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLanguages",
+    "o": "hf:languages-galician"
+  },
+  {
+    "s": "hf:languages-galician",
+    "p": "dul:hasParameterDataValue",
+    "o": "Galician"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-cc25"
+  },
+  {
+    "s": "hf:training_data-cc25",
+    "p": "dul:hasParameterDataValue",
+    "o": "CC25"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-paracrawl-v5"
+  },
+  {
+    "s": "hf:training_data-paracrawl-v5",
+    "p": "dul:hasParameterDataValue",
+    "o": "ParaCrawl v.5"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-europarl-v9"
+  },
+  {
+    "s": "hf:training_data-europarl-v9",
+    "p": "dul:hasParameterDataValue",
+    "o": "Europarl v.9"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-un-v3"
+  },
+  {
+    "s": "hf:training_data-un-v3",
+    "p": "dul:hasParameterDataValue",
+    "o": "UN v.3"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-dcep-v1"
+  },
+  {
+    "s": "hf:training_data-dcep-v1",
+    "p": "dul:hasParameterDataValue",
+    "o": "DCEP v.1"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasTraining_data",
+    "o": "hf:training_data-opus-100-v1"
+  },
+  {
+    "s": "hf:training_data-opus-100-v1",
+    "p": "dul:hasParameterDataValue",
+    "o": "OPUS-100 v.1"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-machine-translation"
+  },
+  {
+    "s": "hf:use_cases-machine-translation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Machine Translation"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-multilingual-natural-language-inference"
+  },
+  {
+    "s": "hf:use_cases-multilingual-natural-language-inference",
+    "p": "dul:hasParameterDataValue",
+    "o": "Multilingual Natural Language Inference"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-cross-lingual-sentence-retrieval"
+  },
+  {
+    "s": "hf:use_cases-cross-lingual-sentence-retrieval",
+    "p": "dul:hasParameterDataValue",
+    "o": "Cross-lingual Sentence Retrieval"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-question-answering"
+  },
+  {
+    "s": "hf:use_cases-question-answering",
+    "p": "dul:hasParameterDataValue",
+    "o": "Question Answering"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-summarization"
+  },
+  {
+    "s": "hf:use_cases-summarization",
+    "p": "dul:hasParameterDataValue",
+    "o": "Summarization"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasUse_cases",
+    "o": "hf:use_cases-other-tasks-that-require-text-understanding-or-generation"
+  },
+  {
+    "s": "hf:use_cases-other-tasks-that-require-text-understanding-or-generation",
+    "p": "dul:hasParameterDataValue",
+    "o": "Other tasks that require text understanding or generation"
+  },
+  {
+    "s": "hf:facebookesmfoldv1",
+    "p": "modelcard:hasLicense",
+    "o": "hf:license-mit"
+  },
+  {
+    "s": "hf:license-mit",
+    "p": "dul:hasParameterDataValue",
+    "o": "MIT"
+  }
+]
