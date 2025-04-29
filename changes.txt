@@ -148,3 +148,29 @@ SELECT DISTINCT ?term WHERE {
 - Now the next part is : text to sparql and sparql to text both using llm - for this I am using graphdb again and gonna use auto-kgql approach first for now I used paper "Few-shot learning or RAG in LLM-based text-to-SPARQL? Why not both? By Caio Viktor S" used section 3-b of the paper to create a question normalisation and kg subgraph retrieval (it replicate auto kgqa's sliding window + relevance scoring which is done in section 3-b.2 of paper) and it return verbalised triples from the kg subgraph and named this file as"kgqa_online.ipynb"
 - in "kgqa_online.ipynb" it implement search_kg_index() with t-box/a-box indexes, added error handling (it will retry api call and sparql validation), it also cache frequently used subgraphs, added subgraph retrieval in get_kg_subgraph() function (RAG), Few shot learning, added llm (gemini).
 - in kgqa_online.ipynb : added special handling for mcro:has* property as it was giving error, include properties with or without labels/comments, added handling for dul:hasParameterDataValue literals, added rules for parameter literals and relationships, more structured output explanations and special handling for model specific metrics 
+- changed file name to kgqa.ipynb from kgqa_online.ipynb
+- Runned the code without changing any prompt 
+
+Tried few commands and got this 
+{PREFIXES}
+    
+    Convert this question to SPARQL using the following schema terms:
+    {context}
+    
+    Question: {question}
+    
+    Rules:
+    1. Use SELECT DISTINCT for model queries
+    2. mcro:Model is the base class
+    3. Use FILTER with xsd:decimal for numeric comparisons
+    4. Always include prefixes
+    5. Return only valid SPARQL within ```sparql blocks
+    
+    SPARQL:
+    """
+
+    question: "provide me all the dataset" is giving me sparql but - in output where provide me all the models giving me sparql and output [query is working in graphdb but not here]
+
+to fix this i have to update the format_result function, instead of only models i change it to work for any type of entities so now it auto detect primary variable name and return the results 
+
+-

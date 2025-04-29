@@ -1,0 +1,21 @@
+{PREFIXES}
+    
+    Convert this question to SPARQL using the following schema terms:
+    {context}
+    
+    Question: {question}
+    
+    Rules:
+    1. Use SELECT DISTINCT for model queries
+    2. mcro:Model is the base class
+    3. Use FILTER with xsd:decimal for numeric comparisons
+    4. Always include prefixes
+    5. Return only valid SPARQL within ```sparql blocks
+    
+    SPARQL:
+    """
+
+    question: "provide me all the database" is giving me sparql but - in output where provide me all the models giving me sparql and output
+
+
+    
