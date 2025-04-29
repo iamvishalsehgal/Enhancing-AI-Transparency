@@ -173,4 +173,4 @@ Tried few commands and got this
 
 to fix this i have to update the format_result function, instead of only models i change it to work for any type of entities so now it auto detect primary variable name and return the results 
 
--
+- Did a change in triple_creation.ipynb file that llm must use the ontology to provide triples. Change that in prompt - it will only extract terms that exist in mcro ontology.

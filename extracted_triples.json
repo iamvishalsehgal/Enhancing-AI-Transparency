@@ -1,0 +1,1402 @@
+[
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasModeltype",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-modelType"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-modelType",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Modeltype"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-modelType",
+    "p": "dul:hasParameterDataValue",
+    "o": "Image classification / feature backbone"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Modeltype",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "ImageNet-1k"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Dataset",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasOptimizer",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-optimizer"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-optimizer",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Optimizer"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-optimizer",
+    "p": "dul:hasParameterDataValue",
+    "o": "LAMB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Optimizer",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasOptimizer",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-optimizer"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-optimizer",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Optimizer"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-optimizer",
+    "p": "dul:hasParameterDataValue",
+    "o": "RMSProp"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingprocedure",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-trainingProcedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-trainingProcedure",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Trainingprocedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-trainingProcedure",
+    "p": "dul:hasParameterDataValue",
+    "o": "50% longer than ResNet Strikes Back A2 with EMA weight averaging, no CutMix"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Trainingprocedure",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasLearningrateschedule",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-learningRateSchedule"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-learningRateSchedule",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Learningrateschedule"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-learningRateSchedule",
+    "p": "dul:hasParameterDataValue",
+    "o": "Step (exponential decay w/ staircase) LR schedule with warmup"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Learningrateschedule",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasModelarchitecture",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-modelArchitecture"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-modelArchitecture",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Modelarchitecture"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-modelArchitecture",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Modelarchitecture",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingprocedure",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingProcedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingProcedure",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Trainingprocedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingProcedure",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'preTrainingModel': 'nreimers/MiniLM-L6-H384-uncased', 'objectiveFunction': 'contrastive learning', 'hyperparameters': {'batchSize': 1024, 'learningRate': '2e-5', 'optimizer': 'AdamW', 'trainingSteps': 100000, 'learningRateWarmupSteps': 500, 'sequenceLength': 128}, 'hardware': '7 TPUs v3-8'}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Reddit comments (2015-2018)', 'numberOfTuples': 726484430}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'S2ORC Citation pairs (Abstracts)', 'numberOfTuples': 116288806}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'WikiAnswers Duplicate question pairs', 'numberOfTuples': 77427422}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'PAQ (Question, Answer) pairs', 'numberOfTuples': 64371441}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'S2ORC Citation pairs (Titles)', 'numberOfTuples': 52603982}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'S2ORC (Title, Abstract)', 'numberOfTuples': 41769185}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Stack Exchange (Title, Body) pairs', 'numberOfTuples': 25316456}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Stack Exchange (Title+Body, Answer) pairs', 'numberOfTuples': 21396559}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Stack Exchange (Title, Answer) pairs', 'numberOfTuples': 21396559}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'MS MARCO triplets', 'numberOfTuples': 9144553}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'GOOAQ: Open Question Answering with Diverse Answer Types', 'numberOfTuples': 3012496}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Yahoo Answers (Title, Answer)', 'numberOfTuples': 1198260}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Code Search', 'numberOfTuples': 1151414}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'COCO Image captions', 'numberOfTuples': 828395}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'SPECTER citation triplets', 'numberOfTuples': 684100}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Yahoo Answers (Question, Answer)', 'numberOfTuples': 681164}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Yahoo Answers (Title, Question)', 'numberOfTuples': 659896}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'SearchQA', 'numberOfTuples': 582261}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Eli5', 'numberOfTuples': 325475}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Flickr 30k', 'numberOfTuples': 317695}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Stack Exchange Duplicate questions (titles)', 'numberOfTuples': 304525}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'AllNLI ([SNLI](https://nlp.stanford.edu/projects/snli/) and [MultiNLI](https://cims.nyu.edu/~sbowman/multinli/))', 'numberOfTuples': 277230}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Stack Exchange Duplicate questions (bodies)', 'numberOfTuples': 250519}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Stack Exchange Duplicate questions (titles+bodies)', 'numberOfTuples': 250460}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Sentence Compression', 'numberOfTuples': 180000}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Wikihow', 'numberOfTuples': 128542}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Altlex', 'numberOfTuples': 112696}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Quora Question Triplets', 'numberOfTuples': 103663}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Simple Wikipedia', 'numberOfTuples': 102225}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'Natural Questions (NQ)', 'numberOfTuples': 100231}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'SQuAD2.0', 'numberOfTuples': 87599}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'name': 'TriviaQA', 'numberOfTuples': 73346}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTotalnumberoftrainingtuples",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-totalNumberOfTrainingTuples"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-totalNumberOfTrainingTuples",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Totalnumberoftrainingtuples"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-totalNumberOfTrainingTuples",
+    "p": "dul:hasParameterDataValue",
+    "o": "1170060424"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Totalnumberoftrainingtuples",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEmbeddingdimension",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-embeddingDimension"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-embeddingDimension",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Embeddingdimension"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-embeddingDimension",
+    "p": "dul:hasParameterDataValue",
+    "o": "384"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Embeddingdimension",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasArchitecture",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-architecture"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-architecture",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Architecture"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-architecture",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Architecture",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "proprietary dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingprocedure",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-trainingProcedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-trainingProcedure",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Trainingprocedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-trainingProcedure",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'hyperparameter': {'batchSize': '16', 'learningRate': '5e-5'}, 'numberOfExamples': '80000'}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationresult",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-EvaluationResult"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-EvaluationResult",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Evaluationresult"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-EvaluationResult",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'metric': 'eval_accuracy', 'evaluationScore': '0.980375'}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Evaluationresult",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationmetric",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationMetric"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationMetric",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Evaluationmetric"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationMetric",
+    "p": "dul:hasParameterDataValue",
+    "o": "accuracy"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Evaluationmetric",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationscore",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationScore"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationScore",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Evaluationscore"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationScore",
+    "p": "dul:hasParameterDataValue",
+    "o": "0.5892"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Evaluationscore",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "Unspecified"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasArchitecture",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Architecture"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Architecture",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Architecture"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Architecture",
+    "p": "dul:hasParameterDataValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "BookCorpus"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "English Wikipedia"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingprocedure",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-TrainingProcedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-TrainingProcedure",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Trainingprocedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-TrainingProcedure",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'Preprocessing': 'lowercased and tokenized using WordPiece and a vocabulary size of 30,000', 'Objective': ['Masked Language Modeling', 'Next Sentence Prediction'], 'Hyperparameters': {'Batch Size': 256, 'Learning Rate': '1e-4', 'Optimizer': 'Adam', 'Weight Decay': 0.01, 'Steps': 1000000}}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationresult",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-EvaluationResult"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-EvaluationResult",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Evaluationresult"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-EvaluationResult",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'Metric': ['MNLI-(m/mm)', 'QQP', 'QNLI', 'SST-2', 'CoLA', 'STS-B', 'MRPC', 'RTE', 'Average'], 'Score': [84.6, 83.4, 71.2, 90.5, 93.5, 52.1, 85.8, 88.9, 66.4, 79.6]}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasConfiguration",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Configuration"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Configuration",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Configuration"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-Configuration",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'Model Variations': ['base', 'large', 'cased', 'uncased', 'whole word masking'], 'Languages': ['English', 'Chinese', 'Multilingual']}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Configuration",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasModelcreator",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-modelCreator"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-modelCreator",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Modelcreator"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-modelCreator",
+    "p": "dul:hasParameterDataValue",
+    "o": "Microsoft"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Modelcreator",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasFormat",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-format"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-format",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Format"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-format",
+    "p": "dul:hasParameterDataValue",
+    "o": "GGUF"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Format",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q2_K"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q3_K_S"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q3_K_M"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q4_0"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q3_K_L"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q4_K_S"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q4_K_M"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q5_0"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q5_K_S"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q5_K_M"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q6_K"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasQuantizationmethod",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Quantizationmethod"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-quantizationMethod",
+    "p": "dul:hasParameterDataValue",
+    "o": "Q8_0"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.17 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#Size",
+    "p": "rdfs:subClassOf",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.25 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.48 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.60 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.60 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.62 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.79 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.93 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "1.93 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "2.07 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "2.29 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasSize",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Size"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-size",
+    "p": "dul:hasParameterDataValue",
+    "o": "2.96 GB"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasArchitecture",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1-architecture"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1-architecture",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Architecture"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1-architecture",
+    "p": "dul:hasParameterDataValue",
+    "o": "ESM-2 backbone"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-Dataset",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-Dataset",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'datasetDescription': 'Large corpus of publicly available time series data, as well as synthetic data generated using Gaussian processes'}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingprocedure",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-TrainingProcedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-TrainingProcedure",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Trainingprocedure"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-TrainingProcedure",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'lossFunction': 'cross-entropy loss', 'optimizationAlgorithm': None}"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small",
+    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationresult",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-EvaluationResult"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-EvaluationResult",
+    "p": "rdf:type",
+    "o": "http://purl.obolibrary.org/obo/mcro.owl#Evaluationresult"
+  },
+  {
+    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-EvaluationResult",
+    "p": "dul:hasParameterDataValue",
+    "o": "{'evaluationMetric': None, 'evaluationScore': None}"
+  }
+]
