@@ -34,7 +34,7 @@ Important Rules:
 - No explanation or markdown
 - Keep all responses strictly within JSON format"""
 
-Declining this bcoz its giving things like "swo:SWO_0000002"
+Declining this bcoz its giving things like "swo:SWO_0000002". I asked professor he told me I checked the ontology. obo:IAO—* are annotations (used to describe a property). There should not be instances of them. obo:MCRO_* are the real properties. We need to extract the instances of them. They are the actual object properties. I checked the ontology - there are object properties such as IAO_0000136.  So, instances of some IAC_* possible 
 [
   {
     "s": "mcro:sentencetransformersallMiniLML6v2",

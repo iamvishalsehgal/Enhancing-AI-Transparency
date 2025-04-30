@@ -1,462 +1,277 @@
 [
   {
-    "s": "mcro:timmmobilenetv3small100lambin1k",
+    "s": "mcro:mobilenetv3small100lambin1k",
     "p": "rdf:type",
     "o": "mcro:Model"
   },
   {
-    "s": "mcro:timmmobilenetv3small100lambin1k",
-    "p": "mcro:HasLicense",
-    "o": "mcro:timmmobilenetv3small100lambin1k-License"
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:mobilenetv3small100lambin1k-ModelDetail"
   },
   {
-    "s": "mcro:timmmobilenetv3small100lambin1k-License",
-    "p": "rdf:type",
-    "o": "swo:SWO_0000002"
-  },
-  {
-    "s": "mcro:timmmobilenetv3small100lambin1k-License",
-    "p": "prov:hasTextValue",
-    "o": "mit"
-  },
-  {
-    "s": "mcro:sentencetransformersallMiniLML6v2",
-    "p": "rdf:type",
-    "o": "mcro:Model"
-  },
-  {
-    "s": "mcro:sentencetransformersallMiniLML6v2",
-    "p": "mcro:HasLicense",
-    "o": "mcro:sentencetransformersallMiniLML6v2-LicenseInformationSection"
-  },
-  {
-    "s": "mcro:sentencetransformersallMiniLML6v2-LicenseInformationSection",
-    "p": "rdf:type",
-    "o": "mcro:LicenseInformationSection"
-  },
-  {
-    "s": "mcro:sentencetransformersallMiniLML6v2-LicenseInformationSection",
-    "p": "prov:hasTextValue",
-    "o": "mit"
-  },
-  {
-    "s": "mcro:sentencetransformersallMiniLML6v2",
-    "p": "mcro:hasDataset",
-    "o": "mcro:modelDataset"
-  },
-  {
-    "s": "mcro:modelDataset",
-    "p": "rdf:type",
-    "o": "mcro:DatasetInformationSection"
-  },
-  {
-    "s": "mcro:sentencetransformersallMiniLML6v2",
-    "p": "mcro:hasArchitecture",
-    "o": "mcro:modelArchitecture"
-  },
-  {
-    "s": "mcro:modelArchitecture",
-    "p": "rdf:type",
-    "o": "mcro:ModelArchitectureInformationSection"
-  },
-  {
-    "s": "mcro:Falconsainsfwimagedetection",
-    "p": "rdf:type",
-    "o": "mcro:Model"
-  },
-  {
-    "s": "mcro:Falconsainsfwimagedetection",
-    "p": "mcro:HasLicense",
-    "o": "mcro:Falconsainsfwimagedetection-LicenseInformationSection"
-  },
-  {
-    "s": "mcro:Falconsainsfwimagedetection-LicenseInformationSection",
-    "p": "rdf:type",
-    "o": "mcro:LicenseInformationSection"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "rdf:type",
-    "o": "mcro:Model"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "mcro:HasLicense",
-    "o": "mcro:dima806fairfaceageimagedetection-License"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection-License",
-    "p": "rdf:type",
-    "o": "swo:SWO_0000002"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection-License",
-    "p": "prov:hasTextValue",
-    "o": "mit"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "mcro:hasDataset",
-    "o": "mcro:dima806fairfaceageimagedetection-Dataset"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection-Dataset",
-    "p": "rdf:type",
-    "o": "obo:IAO_0000310"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "prov:hasTextValue",
-    "o": "FairFace"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:ModelArchitecture"
-  },
-  {
-    "s": "mcro:ModelArchitecture",
-    "p": "rdf:type",
-    "o": "mcro:ModelArchitectureInformationSection"
-  },
-  {
-    "s": "mcro:ModelArchitecture",
-    "p": "prov:hasTextValue",
-    "o": "CNN"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "prov:hasTextValue",
-    "o": "age estimation"
-  },
-  {
-    "s": "mcro:bert-base-uncased",
-    "p": "rdf:type",
-    "o": "mcro:Model"
-  },
-  {
-    "s": "mcro:bert-base-uncased",
-    "p": "mcro:HasLicense",
-    "o": "mcro:bert-base-uncased-License"
-  },
-  {
-    "s": "mcro:bert-base-uncased-License",
-    "p": "rdf:type",
-    "o": "mcro:License"
-  },
-  {
-    "s": "mcro:bert-base-uncased-License",
-    "p": "prov:hasTextValue",
-    "o": "apache-2.0"
-  },
-  {
-    "s": "mcro:clip-vit-large-patch14-336",
-    "p": "rdf:type",
-    "o": "mcro:Model"
-  },
-  {
-    "s": "mcro:clip-vit-large-patch14-336",
-    "p": "mcro:HasLicense",
-    "o": "mcro:clip-vit-large-patch14-336-License"
-  },
-  {
-    "s": "mcro:clip-vit-large-patch14-336-License",
-    "p": "rdf:type",
-    "o": "mcro:License"
-  },
-  {
-    "s": "mcro:clip-vit-large-patch14-336-License",
-    "p": "prov:hasTextValue",
-    "o": "mit"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF",
-    "p": "rdf:type",
-    "o": "mcro:Model"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF",
-    "p": "mcro:HasLicense",
-    "o": "mcro:TheBlokephi2GGUF-License"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF-License",
-    "p": "rdf:type",
-    "o": "mcro:LicenseInformationSection"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF-License",
-    "p": "prov:hasTextValue",
-    "o": "mit"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF",
-    "p": "mcro:HasDataset",
-    "o": "mcro:TheBlokephi2GGUF-Dataset"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF-Dataset",
-    "p": "rdf:type",
-    "o": "mcro:DatasetInformationSection"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF-Dataset",
-    "p": "prov:hasTextValue",
-    "o": "Unknown"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF",
-    "p": "mcro:HasIntendedUseCase",
-    "o": "mcro:TheBlokephi2GGUF-UseCase"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF-UseCase",
-    "p": "rdf:type",
-    "o": "mcro:UseCaeInformationSection"
-  },
-  {
-    "s": "mcro:TheBlokephi2GGUF-UseCase",
-    "p": "prov:hasTextValue",
-    "o": "language-model"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1",
-    "p": "rdf:type",
-    "o": "mcro:Model"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1",
-    "p": "mcro:HasLicense",
-    "o": "mcro:facebookesmfoldv1-License"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1-License",
-    "p": "rdf:type",
-    "o": "swo:SWO_0000002"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1-License",
-    "p": "prov:hasTextValue",
-    "o": "mit"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:facebookesmfoldv1-Description"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1-Description",
-    "p": "rdf:type",
-    "o": "obo:IAO_0000301"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:facebookesmfoldv1-Tags"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1-Tags",
-    "p": "rdf:type",
-    "o": "obo:IAO_0000301"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:facebookesmfoldv1-Dataset"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1-Dataset",
-    "p": "rdf:type",
-    "o": "obo:IAO_0000301"
-  },
-  {
-    "s": "mcro:huggingfacemodel",
-    "p": "rdf:type",
-    "o": "mcro:Model"
-  },
-  {
-    "s": "mcro:huggingfacemodel",
-    "p": "mcro:HasLicense",
-    "o": "mcro:huggingfacemodel-License"
-  },
-  {
-    "s": "mcro:huggingfacemodel-License",
-    "p": "rdf:type",
-    "o": "mcro:LicenseInformationSection"
-  },
-  {
-    "s": "mcro:huggingfacemodel",
-    "p": "mcro:HasDataset",
-    "o": "mcro:huggingfacemodel-Dataset"
-  },
-  {
-    "s": "mcro:huggingfacemodel-Dataset",
-    "p": "rdf:type",
-    "o": "mcro:DatasetInformationSection"
-  },
-  {
-    "s": "mcro:huggingfacemodel",
-    "p": "mcro:HasModelArchitecture",
-    "o": "mcro:huggingfacemodel-ModelArchitecture"
-  },
-  {
-    "s": "mcro:huggingfacemodel-ModelArchitecture",
-    "p": "rdf:type",
-    "o": "mcro:ModelArchitectureInformationSection"
-  },
-  {
-    "s": "mcro:huggingfacemodel",
-    "p": "mcro:HasOwner",
-    "o": "mcro:huggingfacemodel-Owner"
-  },
-  {
-    "s": "mcro:huggingfacemodel-Owner",
-    "p": "rdf:type",
-    "o": "mcro:OwnerInformationSection"
-  },
-  {
-    "s": "mcro:huggingfacemodel",
-    "p": "mcro:HasVersion",
-    "o": "mcro:huggingfacemodel-Version"
-  },
-  {
-    "s": "mcro:huggingfacemodel-Version",
-    "p": "rdf:type",
-    "o": "mcro:VersionInformationSection"
-  },
-  {
-    "s": "mcro:huggingfacemodel",
-    "p": "mcro:HasCitation",
-    "o": "mcro:huggingfacemodel-Citation"
-  },
-  {
-    "s": "mcro:huggingfacemodel-Citation",
-    "p": "rdf:type",
-    "o": "mcro:CitationInformationSection"
-  },
-  {
-    "s": "mcro:huggingfacemodel",
-    "p": "mcro:HasIntendedUse",
-    "o": "mcro:huggingfacemodel-IntendedUse"
-  },
-  {
-    "s": "mcro:huggingfacemodel-IntendedUse",
-    "p": "rdf:type",
-    "o": "mcro:UseCaseInformationSection"
-  },
-  {
-    "s": "mcro:huggingfacemodel",
-    "p": "mcro:HasLimitation",
-    "o": "mcro:huggingfacemodel-Limitation"
-  },
-  {
-    "s": "mcro:huggingfacemodel-Limitation",
-    "p": "rdf:type",
-    "o": "mcro:LimitationInformationSection"
-  },
-  {
-    "s": "mcro:ModelCardReportInstance",
-    "p": "rdf:type",
-    "o": "mcro:ModelCardReport"
-  },
-  {
-    "s": "mcro:ModelCardReportInstance",
-    "p": "mcro:HasModelDetailSection",
-    "o": "mcro:ModelDetailSectionInstance"
-  },
-  {
-    "s": "mcro:ModelDetailSectionInstance",
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetail",
     "p": "rdf:type",
     "o": "mcro:ModelDetailSection"
   },
   {
-    "s": "mcro:ModelDetailSectionInstance",
-    "p": "mcro:HasLicenseInformationSection",
-    "o": "mcro:LicenseInformationSectionInstance"
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetail",
+    "p": "mcro:hasCitation",
+    "o": "mcro:mobilenetv3small100lambin1k-Citation"
   },
   {
-    "s": "mcro:LicenseInformationSectionInstance",
+    "s": "mcro:mobilenetv3small100lambin1k-Citation",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetail",
+    "p": "mcro:hasLicense",
+    "o": "mcro:mobilenetv3small100lambin1k-License"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-License",
     "p": "rdf:type",
     "o": "mcro:LicenseInformationSection"
   },
   {
-    "s": "mcro:LicenseInformationSectionInstance",
-    "p": "prov:hasTextValue",
-    "o": "unkown"
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetail",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:mobilenetv3small100lambin1k-ModelArchitecture"
   },
   {
-    "s": "mcro:ModelCardReportInstance",
-    "p": "mcro:HasDatasetInformationSection",
-    "o": "mcro:DatasetInformationSectionInstance"
+    "s": "mcro:mobilenetv3small100lambin1k-ModelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
   },
   {
-    "s": "mcro:DatasetInformationSectionInstance",
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasDataset",
+    "o": "mcro:mobilenetv3small100lambin1k-Dataset"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-Dataset",
     "p": "rdf:type",
     "o": "mcro:DatasetInformationSection"
   },
   {
-    "s": "mcro:DatasetInformationSectionInstance",
+    "s": "mcro:mobilenetv3small100lambin1k-Dataset",
     "p": "prov:hasTextValue",
-    "o": "unkown"
+    "o": "ImageNet-1k"
   },
   {
-    "s": "mcro:ModelCardReportInstance",
-    "p": "mcro:HasIntendedUseCaseSection",
-    "o": "mcro:UseCaseInformationSectionInstance"
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:mobilenetv3small100lambin1k-UseCase"
   },
   {
-    "s": "mcro:UseCaseInformationSectionInstance",
+    "s": "mcro:mobilenetv3small100lambin1k-UseCase",
     "p": "rdf:type",
     "o": "mcro:UseCaseInformationSection"
   },
   {
-    "s": "mcro:UseCaseInformationSectionInstance",
+    "s": "mcro:mobilenetv3small100lambin1k",
     "p": "prov:hasTextValue",
-    "o": "unkown"
+    "o": "mobilenetv3_small_100.lamb_in1k"
   },
   {
-    "s": "mcro:ModelCardReportInstance",
-    "p": "mcro:HasLimitationInformationSection",
-    "o": "mcro:LimitationInformationSectionInstance"
+    "s": "mcro:mobilenetv3small100lambin1k-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "MobileNet-v3"
   },
   {
-    "s": "mcro:LimitationInformationSectionInstance",
+    "s": "mcro:allMiniLML6v2",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:allMiniLML6v2",
+    "p": "mcro:hasIntendedUseCase",
+    "o": "mcro:allMiniLML6v2-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-UseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Our model is intended to be used as a sentence and short paragraph encoder. Given an input text, it outputs a vector which captures \nthe semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks.\n\nBy default, input text longer than 256 word pieces is truncated."
+  },
+  {
+    "s": "mcro:allMiniLML6v2",
+    "p": "mcro:hasTrainingDataInformation",
+    "o": "mcro:allMiniLML6v2-TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-TrainingDataInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-TrainingDataInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "We use the concatenation from multiple datasets to fine-tune our model. The total number of sentence pairs is above 1 billion sentences.\nWe sampled each dataset given a weighted probability which configuration is detailed in the `data_config.json` file."
+  },
+  {
+    "s": "mcro:allMiniLML6v2",
+    "p": "mcro:hasModelArchitectureInformation",
+    "o": "mcro:allMiniLML6v2-ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelArchitectureInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelArchitectureInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "We used the pretrained [`nreimers/MiniLM-L6-H384-uncased`](https://huggingface.co/nreimers/MiniLM-L6-H384-uncased) model and fine-tuned in on a \n1B sentence pairs dataset. We use a contrastive learning objective: given a sentence from the pair, the model should predict which out of a set of randomly sampled other sentences, was actually paired with it in our dataset."
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:Falconsainsfwimagedetection-ModelDetail"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelDetail",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelDetail",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:Falconsainsfwimagedetection-ModelArchitecture"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "Vision Transformer (ViT)"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelDetail",
+    "p": "mcro:hasLicense",
+    "o": "mcro:Falconsainsfwimagedetection-License"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-License",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:Falconsainsfwimagedetection-UseCase"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-UseCase",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-UseCase",
+    "p": "prov:hasTextValue",
+    "o": "NSFW Image Classification"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:Falconsainsfwimagedetection-TrainingData"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-TrainingData",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasReference",
+    "o": "mcro:Falconsainsfwimagedetection-Reference"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Reference",
+    "p": "rdf:type",
+    "o": "mcro:ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasLimitation",
+    "o": "mcro:Falconsainsfwimagedetection-Limitation"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Limitation",
     "p": "rdf:type",
     "o": "mcro:LimitationInformationSection"
   },
   {
-    "s": "mcro:LimitationInformationSectionInstance",
-    "p": "prov:hasTextValue",
-    "o": "unkown"
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasDataset",
+    "o": "mcro:Falconsainsfwimagedetection-Dataset"
   },
   {
-    "s": "mcro:ModelCardReportInstance",
-    "p": "mcro:HasConsiderationInformationSection",
-    "o": "mcro:ConsiderationInformationSectionInstance"
-  },
-  {
-    "s": "mcro:ConsiderationInformationSectionInstance",
+    "s": "mcro:Falconsainsfwimagedetection-Dataset",
     "p": "rdf:type",
-    "o": "mcro:ConsiderationInformationSection"
+    "o": "mcro:DatasetInformationSection"
   },
   {
-    "s": "mcro:ConsiderationInformationSectionInstance",
-    "p": "prov:hasTextValue",
-    "o": "unkown"
-  },
-  {
-    "s": "mcro:ModelCardReportInstance",
-    "p": "mcro:HasPerformanceMetricInformationSection",
-    "o": "mcro:PerformanceMetricInformationSectionInstance"
-  },
-  {
-    "s": "mcro:PerformanceMetricInformationSectionInstance",
+    "s": "mcro:dima806fairfaceageimagedetection",
     "p": "rdf:type",
-    "o": "mcro:PerformanceMetricInformationSection"
+    "o": "mcro:Model"
   },
   {
-    "s": "mcro:PerformanceMetricInformationSectionInstance",
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "mcro:hasUseCaseInformationSection",
+    "o": "mcro:dima806fairfaceageimagedetection-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-UseCaseInformationSection",
     "p": "prov:hasTextValue",
-    "o": "unkown"
+    "o": "Detects age group with about 59% accuracy based on an image."
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "mcro:hasCitationInformationSection",
+    "o": "mcro:dima806fairfaceageimagedetection-CitationInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-CitationInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-CitationInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "See https://www.kaggle.com/code/dima806/age-group-image-classification-vit for details."
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "mcro:hasQuantativeAnalysisSection",
+    "o": "mcro:dima806fairfaceageimagedetection-QuantativeAnalysisSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-QuantativeAnalysisSection",
+    "p": "rdf:type",
+    "o": "mcro:QuantativeAnalysisSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-QuantativeAnalysisSection",
+    "p": "prov:hasTextValue",
+    "o": "Classification report:\n\n              precision    recall  f1-score   support\n\n         0-2     0.7803    0.7500    0.7649       180\n         3-9     0.7998    0.7998    0.7998      1249\n       10-19     0.5361    0.4236    0.4733      1086\n       20-29     0.6402    0.7221    0.6787      3026\n       30-39     0.4935    0.5083    0.5008      2099\n       40-49     0.4848    0.4386    0.4606      1238\n       50-59     0.5000    0.4814    0.4905       725\n       60-69     0.4497    0.4685    0.4589       286\nmore than 70     0.6897    0.1802    0.2857       111\n\n    accuracy                         0.5892     10000\n   macro avg     0.5971    0.5303    0.5459     10000\nweighted avg     0.5863    0.5892    0.5844     10000"
   }
 ]
