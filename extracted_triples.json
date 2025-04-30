@@ -1,1962 +1,492 @@
 [
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
+    "s": "mcro:sentenceTransformersAllMiniLML6V2",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+    "o": "mcro:Model"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-dataset"
+    "s": "mcro:sentenceTransformersAllMiniLML6V2",
+    "p": "mcro:HasLicense",
+    "o": "mcro:sentenceTransformersAllMiniLML6V2-License"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-dataset",
+    "s": "mcro:sentenceTransformersAllMiniLML6V2-License",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
+    "o": "swo:SWO_0000002"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "ImageNet-1k"
+    "s": "mcro:sentenceTransformersAllMiniLML6V2-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Dataset",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+    "s": "mcro:sentenceTransformersAllMiniLML6V2",
+    "p": "prov:hasTextValue",
+    "o": "sentence-transformers/all-MiniLM-L6-v2 is a sentence transformer model, meaning that it maps sentences & paragraphs into a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search."
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasHasParameter",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-hasparameter"
+    "s": "mcro:sentenceTransformersAllMiniLML6V2",
+    "p": "mcro:HasDataset",
+    "o": "mcro:sentenceTransformersAllMiniLML6V2-Dataset"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-hasparameter",
+    "s": "mcro:sentenceTransformersAllMiniLML6V2-Dataset",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#HasParameter"
+    "o": "mcro:Dataset"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-hasparameter",
-    "p": "dul:hasParameterDataValue",
-    "o": "2.5"
+    "s": "mcro:sentenceTransformersAllMiniLML6V2-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "wikipedia-corpus"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#HasParameter",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+    "s": "mcro:sentenceTransformersAllMiniLML6V2",
+    "p": "mcro:HasIntendedUseCase",
+    "o": "mcro:sentenceTransformersAllMiniLML6V2-IntendedUseCase"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasHasInput",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-hasinput"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-hasinput",
+    "s": "mcro:sentenceTransformersAllMiniLML6V2-IntendedUseCase",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#HasInput"
+    "o": "mcro:MCRO_0000038"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#timmmobilenetv3small100lambin1k-hasinput",
-    "p": "dul:hasParameterDataValue",
-    "o": "224 x 224"
+    "s": "mcro:sentenceTransformersAllMiniLML6V2-IntendedUseCase",
+    "p": "prov:hasTextValue",
+    "o": "This model maps sentences & paragraphs into a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search."
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#HasInput",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+    "s": "mcro:sentenceTransformersAllMiniLML6V2",
+    "p": "mcro:HasModelArchitecture",
+    "o": "mcro:sentenceTransformersAllMiniLML6V2-ModelArchitecture"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
+    "s": "mcro:sentenceTransformersAllMiniLML6V2-ModelArchitecture",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
+    "o": "mcro:MCRO_0000019"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasIntendedUse",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-intendeduse"
+    "s": "mcro:sentenceTransformersAllMiniLML6V2-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "Sentence Transformers"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-intendeduse",
+    "s": "mcro:dima806fairfaceageimagedetection",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#IntendedUse"
+    "o": "mcro:Model"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-intendeduse",
-    "p": "dul:hasParameterDataValue",
-    "o": "sentence and short paragraph encoder"
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "mcro:HasLicense",
+    "o": "mcro:dima806fairfaceageimagedetection-LicenseInformationSection"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#IntendedUse",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDownstreamTask",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-downstreamtask"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-downstreamtask",
+    "s": "mcro:dima806fairfaceageimagedetection-LicenseInformationSection",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#DownstreamTask"
+    "o": "mcro:LicenseInformationSection"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-downstreamtask",
-    "p": "dul:hasParameterDataValue",
-    "o": "information retrieval"
+    "s": "mcro:dima806fairfaceageimagedetection-LicenseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "mit"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#DownstreamTask",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "terms:description",
+    "o": "mcro:dima806fairfaceageimagedetection-description"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDownstreamTask",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-downstreamtask"
+    "s": "mcro:dima806fairfaceageimagedetection-description",
+    "p": "prov:hasTextValue",
+    "o": "fairface-age is a model for estimating the age of a person from an image based on the FairFace dataset. It uses a convolutional neural network (CNN) architecture and is trained on a diverse set of faces with varying ages, races, and genders."
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-downstreamtask",
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:dima806fairfaceageimagedetection-tags"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-tags",
+    "p": "prov:hasTextValue",
+    "o": "image-age-estimation"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:dima806fairfaceageimagedetection-tags2"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-tags2",
+    "p": "prov:hasTextValue",
+    "o": "age-estimation"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:dima806fairfaceageimagedetection-tags3"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-tags3",
+    "p": "prov:hasTextValue",
+    "o": "face-analysis"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:dima806fairfaceageimagedetection-tags4"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-tags4",
+    "p": "prov:hasTextValue",
+    "o": "computer-vision"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:dima806fairfaceageimagedetection-tags5"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-tags5",
+    "p": "prov:hasTextValue",
+    "o": "image-classification"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:dima806fairfaceageimagedetection-dataset"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-dataset",
+    "p": "prov:hasTextValue",
+    "o": "fairface"
+  },
+  {
+    "s": "mcro:bert-base-cased",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#DownstreamTask"
+    "o": "mcro:Model"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-downstreamtask",
-    "p": "dul:hasParameterDataValue",
-    "o": "clustering"
+    "s": "mcro:bert-base-cased",
+    "p": "mcro:HasLicense",
+    "o": "mcro:bert-base-cased-License"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDownstreamTask",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-downstreamtask"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-downstreamtask",
+    "s": "mcro:bert-base-cased-License",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#DownstreamTask"
+    "o": "mcro:LicenseInformationSection"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-downstreamtask",
-    "p": "dul:hasParameterDataValue",
-    "o": "sentence similarity tasks"
+    "s": "mcro:bert-base-cased-License",
+    "p": "prov:hasTextValue",
+    "o": "apache-2.0"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingProcedure",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingprocedure"
+    "s": "mcro:bert-base-cased",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:transformers"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingprocedure",
+    "s": "mcro:transformers",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingProcedure"
+    "o": "swo:SWO_0000001"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingprocedure",
-    "p": "dul:hasParameterDataValue",
-    "o": "contrastive objective"
+    "s": "mcro:bert-base-cased",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:pytorch"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TrainingProcedure",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasOptimizer",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-optimizer"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-optimizer",
+    "s": "mcro:pytorch",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Optimizer"
+    "o": "swo:SWO_0000001"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-optimizer",
-    "p": "dul:hasParameterDataValue",
-    "o": "AdamW"
+    "s": "mcro:bert-base-cased",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:bert"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Optimizer",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasLearningRate",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-learningrate"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-learningrate",
+    "s": "mcro:bert",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#LearningRate"
+    "o": "swo:SWO_0000001"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-learningrate",
-    "p": "dul:hasParameterDataValue",
-    "o": "2e-5"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#LearningRate",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasBatchSize",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-batchsize"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-batchsize",
+    "s": "mcro:EleutherAIpythia70m-deduped",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#BatchSize"
+    "o": "mcro:Model"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-batchsize",
-    "p": "dul:hasParameterDataValue",
-    "o": "1024"
+    "s": "mcro:EleutherAIpythia70m-deduped",
+    "p": "mcro:HasLicense",
+    "o": "mcro:EleutherAIpythia70m-deduped-License"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#BatchSize",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:EleutherAIpythia70m-deduped-License",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:License"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Reddit comments (2015-2018)"
+    "s": "mcro:EleutherAIpythia70m-deduped-License",
+    "p": "prov:hasTextValue",
+    "o": "apache-2.0"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
+    "s": "mcro:EleutherAIpythia70m-deduped",
+    "p": "prov:hasTextValue",
+    "o": "Pythia is a suite of large language models trained on the same data as GPT-NeoX-20B."
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:EleutherAIpythia70m-deduped",
+    "p": "mcro:HasDataset",
+    "o": "mcro:EleutherAIpythia70m-deduped-Dataset"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:EleutherAIpythia70m-deduped-Dataset",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:Dataset"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "S2ORC Citation pairs (Abstracts)"
+    "s": "mcro:EleutherAIpythia70m-deduped-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "the Pile"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:EleutherAIpythia70m-deduped",
+    "p": "mcro:HasTag",
+    "o": "mcro:EleutherAIpythia70m-deduped-Tag"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:EleutherAIpythia70m-deduped-Tag",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:Tag"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "WikiAnswers Duplicate question pairs"
+    "s": "mcro:EleutherAIpythia70m-deduped-Tag",
+    "p": "prov:hasTextValue",
+    "o": "causal-lm"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:EleutherAIpythia70m-deduped",
+    "p": "mcro:HasTag",
+    "o": "mcro:EleutherAIpythia70m-deduped-Tag2"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:EleutherAIpythia70m-deduped-Tag2",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:Tag"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "PAQ (Question, Answer) pairs"
+    "s": "mcro:EleutherAIpythia70m-deduped-Tag2",
+    "p": "prov:hasTextValue",
+    "o": "transformers"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:EleutherAIpythia70m-deduped",
+    "p": "mcro:HasTag",
+    "o": "mcro:EleutherAIpythia70m-deduped-Tag3"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:EleutherAIpythia70m-deduped-Tag3",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:Tag"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "S2ORC Citation pairs (Titles)"
+    "s": "mcro:EleutherAIpythia70m-deduped-Tag3",
+    "p": "prov:hasTextValue",
+    "o": "EleutherAI"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:EleutherAIpythia70m-deduped",
+    "p": "mcro:HasTag",
+    "o": "mcro:EleutherAIpythia70m-deduped-Tag4"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:EleutherAIpythia70m-deduped-Tag4",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:Tag"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "S2ORC (Title, Abstract)"
+    "s": "mcro:EleutherAIpythia70m-deduped-Tag4",
+    "p": "prov:hasTextValue",
+    "o": "Pythia"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:facebookesmfoldv1",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:Model"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Stack Exchange (Title, Body) pairs"
+    "s": "mcro:facebookesmfoldv1",
+    "p": "mcro:HasLicense",
+    "o": "mcro:facebookesmfoldv1-License"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:facebookesmfoldv1-License",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:LicenseInformationSection"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Stack Exchange (Title+Body, Answer) pairs"
+    "s": "mcro:facebookesmfoldv1-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:facebookesmfoldv1",
+    "p": "mcro:HasDataset",
+    "o": "mcro:facebookesmfoldv1-Dataset"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:facebookesmfoldv1-Dataset",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:DatasetInformationSection"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Stack Exchange (Title, Answer) pairs"
+    "s": "mcro:facebookesmfoldv1",
+    "p": "mcro:HasDescription",
+    "o": "mcro:facebookesmfoldv1-Description"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:facebookesmfoldv1-Description",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "obo:IAO_0000314"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "MS MARCO triplets"
+    "s": "mcro:facebookesmfoldv1",
+    "p": "mcro:HasTag",
+    "o": "mcro:facebookesmfoldv1-Tag"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:facebookesmfoldv1-Tag",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "obo:IAO_0000314"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "GOOAQ: Open Question Answering with Diverse Answer Types"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:roberta",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:Model"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Yahoo Answers (Title, Answer)"
+    "s": "mcro:roberta",
+    "p": "mcro:HasLicense",
+    "o": "mcro:roberta-License"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:roberta-License",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:LicenseInformationSection"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Code Search"
+    "s": "mcro:roberta-License",
+    "p": "prov:hasTextValue",
+    "o": "apache-2.0"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:roberta",
+    "p": "mcro:HasDataset",
+    "o": "mcro:roberta-Dataset"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:roberta-Dataset",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:DatasetInformationSection"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "COCO Image captions"
+    "s": "mcro:roberta-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "bookcorpus, english wikipedia"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:roberta",
+    "p": "mcro:HasModelArchitecture",
+    "o": "mcro:roberta-ModelArchitecture"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:roberta-ModelArchitecture",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:ModelArchitectureInformationSection"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "SPECTER citation triplets"
+    "s": "mcro:roberta-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "transformer"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:roberta",
+    "p": "mcro:hasIntendedUseCase",
+    "o": "mcro:roberta-IntendedUseCase"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:roberta-IntendedUseCase",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:UseCaseInformationSection"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Yahoo Answers (Question, Answer)"
+    "s": "mcro:roberta-IntendedUseCase",
+    "p": "prov:hasTextValue",
+    "o": "text understanding and generation"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:Bingsuadetailer",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "mcro:Model"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Yahoo Answers (Title, Question)"
+    "s": "mcro:Bingsuadetailer",
+    "p": "mcro:HasLicense",
+    "o": "mcro:Bingsuadetailer-License"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:Bingsuadetailer-License",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "swo:SWO_0000002"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "SearchQA"
+    "s": "mcro:Bingsuadetailer-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:Bingsuadetailer",
+    "p": "mcro:HasDescription",
+    "o": "mcro:Bingsuadetailer-Description"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:Bingsuadetailer-Description",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "obo:IAO_0000310"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Eli5"
+    "s": "mcro:Bingsuadetailer-Description",
+    "p": "prov:hasTextValue",
+    "o": "Bingsu a model for image detailer "
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
+    "s": "mcro:Bingsuadetailer",
+    "p": "mcro:HasTag",
+    "o": "mcro:Bingsuadetailer-Tag"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
+    "s": "mcro:Bingsuadetailer-Tag",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
+    "o": "obo:IAO_0000320"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Flickr 30k"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Stack Exchange Duplicate questions (titles)"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "AllNLI"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Stack Exchange Duplicate questions (bodies)"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Stack Exchange Duplicate questions (titles+bodies)"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Sentence Compression"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Wikihow"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Altlex"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Quora Question Triplets"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Simple Wikipedia"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Natural Questions (NQ)"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "SQuAD2.0"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#sentencetransformersallMiniLML6v2-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "TriviaQA"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasArchitecture",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-architecture"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-architecture",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Architecture"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-architecture",
-    "p": "dul:hasParameterDataValue",
-    "o": "Vision Transformer"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Architecture",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "ImageNet-21k"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "proprietary dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasClasses",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-classes"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-classes",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Classes"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-classes",
-    "p": "dul:hasParameterDataValue",
-    "o": "normal"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Classes",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasClasses",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-classes"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-classes",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Classes"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-classes",
-    "p": "dul:hasParameterDataValue",
-    "o": "nsfw"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasMetric",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-metric"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-metric",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Metric"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-metric",
-    "p": "dul:hasParameterDataValue",
-    "o": "accuracy"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Metric",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationResult",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-evaluationresult"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-evaluationresult",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationResult"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-evaluationresult",
-    "p": "dul:hasParameterDataValue",
-    "o": "0.980375"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationResult",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingProcedure",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-trainingprocedure"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-trainingprocedure",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingProcedure"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Falconsainsfwimagedetection-trainingprocedure",
-    "p": "dul:hasParameterDataValue",
-    "o": "{'batch_size': 16, 'learning_rate': 5e-05}"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-dataset",
-    "p": "dul:hasParameterDataValue",
+    "s": "mcro:Bingsuadetailer-Tag",
+    "p": "prov:hasTextValue",
     "o": "image"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationMetric",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationmetric"
+    "s": "mcro:Bingsuadetailer",
+    "p": "mcro:HasDataset",
+    "o": "mcro:Bingsuadetailer-Dataset"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationmetric",
+    "s": "mcro:Bingsuadetailer-Dataset",
     "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationMetric"
+    "o": "obo:IAO_0000314"
   },
   {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationmetric",
-    "p": "dul:hasParameterDataValue",
-    "o": "accuracy"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationMetric",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationResult",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationresult"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationresult",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationResult"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#dima806fairfaceageimagedetection-evaluationresult",
-    "p": "dul:hasParameterDataValue",
-    "o": "0.5892"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-trainingdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-trainingdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-trainingdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "English Wikipedia"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingObjective",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-trainingobjective"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-trainingobjective",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingObjective"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-trainingobjective",
-    "p": "dul:hasParameterDataValue",
-    "o": "next sentence prediction"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TrainingObjective",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasLanguage",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-language"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-language",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Language"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#googlebertbertbaseuncased-language",
-    "p": "dul:hasParameterDataValue",
-    "o": "English"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Language",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasModelDate",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-modeldate"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-modeldate",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#ModelDate"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-modeldate",
-    "p": "dul:hasParameterDataValue",
-    "o": "January 2021"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#ModelDate",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasModelType",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-modeltype"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-modeltype",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#ModelType"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-modeltype",
-    "p": "dul:hasParameterDataValue",
-    "o": "Transformer"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#ModelType",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasArchitecture",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-architecture"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-architecture",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Architecture"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-architecture",
-    "p": "dul:hasParameterDataValue",
-    "o": "ViT-L/14"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "YFCC100M"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingProcedure",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-trainingprocedure"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-trainingprocedure",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingProcedure"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-trainingprocedure",
-    "p": "dul:hasParameterDataValue",
-    "o": "contrastive loss"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Food101"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "CIFAR10"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "CIFAR100"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Birdsnap"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "SUN397"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Stanford Cars"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "FGVC Aircraft"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "VOC2007"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "DTD"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Oxford-IIIT Pet dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Caltech101"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Flowers102"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "MNIST"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "SVHN"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "IIIT5K"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Hateful Memes"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "SST-2"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "UCF101"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Kinetics700"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Country211"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "CLEVR Counting"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "KITTI Distance"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "STL-10"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "RareAct"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Flickr30"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "MSCOCO"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "ImageNet"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "ImageNet-A"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "ImageNet-R"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "ImageNet Sketch"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "ObjectNet (ImageNet Overlap)"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Youtube-BB"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "ImageNet-Vid"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasEvaluationDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#EvaluationDataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#openaiclipvitlargepatch14-evaluationdataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Fairface"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasModelCreator",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-modelcreator"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-modelcreator",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#ModelCreator"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-modelcreator",
-    "p": "dul:hasParameterDataValue",
-    "o": "Microsoft"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#ModelCreator",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasFormat",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-format"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-format",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Format"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#TheBlokephi2GGUF-format",
-    "p": "dul:hasParameterDataValue",
-    "o": "GGUF"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Format",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasArchitecture",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1-architecture"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1-architecture",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Architecture"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1-architecture",
-    "p": "dul:hasParameterDataValue",
-    "o": "ESM-2 backbone"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTrainingProcedure",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1-trainingprocedure"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1-trainingprocedure",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#TrainingProcedure"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#facebookesmfoldv1-trainingprocedure",
-    "p": "dul:hasParameterDataValue",
-    "o": "end-to-end protein folding"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasArchitecture",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-architecture"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-architecture",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Architecture"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-architecture",
-    "p": "dul:hasParameterDataValue",
-    "o": "T5 architecture"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasParadigm",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-paradigm"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-paradigm",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Paradigm"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-paradigm",
-    "p": "dul:hasParameterDataValue",
-    "o": "time series forecasting"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Paradigm",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasLicense",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-license"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-license",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#License"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#amazonchronost5small-license",
-    "p": "dul:hasParameterDataValue",
-    "o": "Apache-2.0 License"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#License",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Model"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "Anime Face CreateML"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "xml2txt"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "AN"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "wider face"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "AnHDet"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "hand-detection-fuao9"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "coco2017"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "AniSeg"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "skytnt/anime-segmentation"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasDataset",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Dataset"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-dataset",
-    "p": "dul:hasParameterDataValue",
-    "o": "deepfashion2"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasMetric",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-metric"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-metric",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Metric"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-metric",
-    "p": "dul:hasParameterDataValue",
-    "o": "mAP 50"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasMetric",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-metric"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-metric",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Metric"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-metric",
-    "p": "dul:hasParameterDataValue",
-    "o": "mAP 50-95"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTarget",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Target"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target",
-    "p": "dul:hasParameterDataValue",
-    "o": "face"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Target",
-    "p": "rdfs:subClassOf",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Component"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTarget",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Target"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target",
-    "p": "dul:hasParameterDataValue",
-    "o": "hand"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTarget",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Target"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target",
-    "p": "dul:hasParameterDataValue",
-    "o": "person"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer",
-    "p": "http://purl.obolibrary.org/obo/mcro.owl#hasTarget",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target",
-    "p": "rdf:type",
-    "o": "http://purl.obolibrary.org/obo/mcro.owl#Target"
-  },
-  {
-    "s": "http://purl.obolibrary.org/obo/mcro.owl#Bingsuadetailer-target",
-    "p": "dul:hasParameterDataValue",
-    "o": "clothes"
+    "s": "mcro:Bingsuadetailer-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "None"
   }
 ]

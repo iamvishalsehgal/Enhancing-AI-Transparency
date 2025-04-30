@@ -1,0 +1,2211 @@
+{
+  "summary": {
+    "overall_semantic_accuracy": 0.0,
+    "average_match_confidence": 95.03448275862068,
+    "validation_stats": {
+      "valid": 0,
+      "invalid": 29,
+      "skipped": 118,
+      "unmapped": 136,
+      "errors": 1
+    },
+    "predicate_accuracy": {
+      "rdf:type": {
+        "accuracy": 0.0,
+        "count": 93
+      },
+      "hasDataset": {
+        "accuracy": 0.0,
+        "count": 15
+      },
+      "dul:hasParameterDataValue": {
+        "accuracy": 0.0,
+        "count": 83
+      },
+      "rdfs:subClassOf": {
+        "accuracy": 0.0,
+        "count": 25
+      },
+      "hasParameterQuantity": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasModelType": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasIntendedUse": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasDownstreamTask": {
+        "accuracy": 0.0,
+        "count": 3
+      },
+      "hasPreTrainingDataset": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasFineTuningObjective": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasOptimizer": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasLearningRate": {
+        "accuracy": 0.0,
+        "count": 2
+      },
+      "hasBatchSize": {
+        "accuracy": 0.0,
+        "count": 2
+      },
+      "hasTrainingData": {
+        "accuracy": 0.0,
+        "count": 32
+      },
+      "hasTrainingProcedure": {
+        "accuracy": 0.0,
+        "count": 3
+      },
+      "hasHyperparameter": {
+        "accuracy": 0.0,
+        "count": 2
+      },
+      "hasArchitecture": {
+        "accuracy": 0.0,
+        "count": 4
+      },
+      "hasTrainingDataset": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasClasses": {
+        "accuracy": 0.0,
+        "count": 2
+      },
+      "hasMetric": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasEvaluationAccuracy": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasEvaluationMetric": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasEvaluationResult": {
+        "accuracy": 0.0,
+        "count": 3
+      },
+      "hasLanguage": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasModelDate": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasModelCreator": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasFormat": {
+        "accuracy": 0.0,
+        "count": 1
+      },
+      "hasParadigm": {
+        "accuracy": 0.0,
+        "count": 1
+      }
+    },
+    "confidence_stats": {
+      "average": 95.03448275862068,
+      "highest": 97,
+      "lowest": 93,
+      "threshold": 70
+    }
+  },
+  "detailed_results": [
+    {
+      "s": "timmmobilenetv3small100lambin1k",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "timmmobilenetv3small100lambin1k",
+      "p": "hasDataset",
+      "o": "timmmobilenetv3small100lambin1k-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "timm/mobilenetv3_small_100.lamb_in1k",
+      "confidence": 93
+    },
+    {
+      "s": "timmmobilenetv3small100lambin1k-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "timmmobilenetv3small100lambin1k-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "ImageNet-1k",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Dataset",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "timmmobilenetv3small100lambin1k",
+      "p": "hasParameterQuantity",
+      "o": "timmmobilenetv3small100lambin1k-parameterquantity",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasParameterQuantity"
+    },
+    {
+      "s": "timmmobilenetv3small100lambin1k-parameterquantity",
+      "p": "rdf:type",
+      "o": "ParameterQuantity",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "timmmobilenetv3small100lambin1k-parameterquantity",
+      "p": "dul:hasParameterDataValue",
+      "o": "2500000",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "ParameterQuantity",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "timmmobilenetv3small100lambin1k",
+      "p": "hasModelType",
+      "o": "timmmobilenetv3small100lambin1k-modeltype",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasModelType"
+    },
+    {
+      "s": "timmmobilenetv3small100lambin1k-modeltype",
+      "p": "rdf:type",
+      "o": "ModelType",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "timmmobilenetv3small100lambin1k-modeltype",
+      "p": "dul:hasParameterDataValue",
+      "o": "Image classification model",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "ModelType",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasIntendedUse",
+      "o": "sentencetransformersallMiniLML6v2-intendeduse",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasIntendedUse"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-intendeduse",
+      "p": "rdf:type",
+      "o": "IntendedUse",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-intendeduse",
+      "p": "dul:hasParameterDataValue",
+      "o": "sentence and short paragraph encoder",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "IntendedUse",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasDownstreamTask",
+      "o": "sentencetransformersallMiniLML6v2-downstreamtask",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasDownstreamTask"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-downstreamtask",
+      "p": "rdf:type",
+      "o": "DownstreamTask",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-downstreamtask",
+      "p": "dul:hasParameterDataValue",
+      "o": "information retrieval",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "DownstreamTask",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasDownstreamTask",
+      "o": "sentencetransformersallMiniLML6v2-downstreamtask",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasDownstreamTask"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-downstreamtask",
+      "p": "rdf:type",
+      "o": "DownstreamTask",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-downstreamtask",
+      "p": "dul:hasParameterDataValue",
+      "o": "clustering",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasDownstreamTask",
+      "o": "sentencetransformersallMiniLML6v2-downstreamtask",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasDownstreamTask"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-downstreamtask",
+      "p": "rdf:type",
+      "o": "DownstreamTask",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-downstreamtask",
+      "p": "dul:hasParameterDataValue",
+      "o": "sentence similarity",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasPreTrainingDataset",
+      "o": "sentencetransformersallMiniLML6v2-pretrainingdataset",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasPreTrainingDataset"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-pretrainingdataset",
+      "p": "rdf:type",
+      "o": "PreTrainingDataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-pretrainingdataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "nreimers/MiniLM-L6-H384-uncased",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "PreTrainingDataset",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasFineTuningObjective",
+      "o": "sentencetransformersallMiniLML6v2-finetuningobjective",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasFineTuningObjective"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-finetuningobjective",
+      "p": "rdf:type",
+      "o": "FineTuningObjective",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-finetuningobjective",
+      "p": "dul:hasParameterDataValue",
+      "o": "contrastive learning",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "FineTuningObjective",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasOptimizer",
+      "o": "sentencetransformersallMiniLML6v2-optimizer",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasOptimizer"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-optimizer",
+      "p": "rdf:type",
+      "o": "Optimizer",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-optimizer",
+      "p": "dul:hasParameterDataValue",
+      "o": "AdamW",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Optimizer",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasLearningRate",
+      "o": "sentencetransformersallMiniLML6v2-learningrate",
+      "status": false,
+      "actual_value": null,
+      "field": "learning_rate",
+      "hf_model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "confidence": 93
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-learningrate",
+      "p": "rdf:type",
+      "o": "LearningRate",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-learningrate",
+      "p": "dul:hasParameterDataValue",
+      "o": "2e-5",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "LearningRate",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasBatchSize",
+      "o": "sentencetransformersallMiniLML6v2-batchsize",
+      "status": false,
+      "actual_value": null,
+      "field": "batch_size",
+      "hf_model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "confidence": 93
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-batchsize",
+      "p": "rdf:type",
+      "o": "BatchSize",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-batchsize",
+      "p": "dul:hasParameterDataValue",
+      "o": "1024",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "BatchSize",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Reddit comments (2015-2018)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "TrainingData",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "S2ORC Citation pairs (Abstracts)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "WikiAnswers Duplicate question pairs",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "PAQ (Question, Answer) pairs",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "S2ORC Citation pairs (Titles)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "S2ORC (Title, Abstract)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Stack Exchange (Title, Body) pairs",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Stack Exchange (Title+Body, Answer) pairs",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Stack Exchange (Title, Answer) pairs",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "MS MARCO triplets",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "GOOAQ: Open Question Answering with Diverse Answer Types",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Yahoo Answers (Title, Answer)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Code Search",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "COCO Image captions",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "SPECTER citation triplets",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Yahoo Answers (Question, Answer)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Yahoo Answers (Title, Question)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "SearchQA",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Eli5",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Flickr 30k",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Stack Exchange Duplicate questions (titles)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "AllNLI (SNLI and MultiNLI",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Stack Exchange Duplicate questions (bodies)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Stack Exchange Duplicate questions (titles+bodies)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Sentence Compression",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Wikihow",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Altlex",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Quora Question Triplets",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Simple Wikipedia",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "Natural Questions (NQ)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "SQuAD2.0",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingData",
+      "o": "sentencetransformersallMiniLML6v2-trainingdata",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingData"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "rdf:type",
+      "o": "TrainingData",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingdata",
+      "p": "dul:hasParameterDataValue",
+      "o": "TriviaQA",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasTrainingProcedure",
+      "o": "sentencetransformersallMiniLML6v2-trainingprocedure",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingProcedure"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingprocedure",
+      "p": "rdf:type",
+      "o": "TrainingProcedure",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-trainingprocedure",
+      "p": "dul:hasParameterDataValue",
+      "o": "fine-tuning",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "TrainingProcedure",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasHyperparameter",
+      "o": "sentencetransformersallMiniLML6v2-hyperparameter",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasHyperparameter"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-hyperparameter",
+      "p": "rdf:type",
+      "o": "Hyperparameter",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-hyperparameter",
+      "p": "dul:hasParameterDataValue",
+      "o": "learning rate warm up of 500",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Hyperparameter",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2",
+      "p": "hasHyperparameter",
+      "o": "sentencetransformersallMiniLML6v2-hyperparameter",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasHyperparameter"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-hyperparameter",
+      "p": "rdf:type",
+      "o": "Hyperparameter",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "sentencetransformersallMiniLML6v2-hyperparameter",
+      "p": "dul:hasParameterDataValue",
+      "o": "sequence length was limited to 128 tokens",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "hasArchitecture",
+      "o": "Falconsainsfwimagedetection-architecture",
+      "status": false,
+      "actual_value": "nsfw_image_detection",
+      "field": "architecture",
+      "hf_model_id": "Falconsai/nsfw_image_detection",
+      "confidence": 95
+    },
+    {
+      "s": "Falconsainsfwimagedetection-architecture",
+      "p": "rdf:type",
+      "o": "Architecture",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection-architecture",
+      "p": "dul:hasParameterDataValue",
+      "o": "Vision Transformer (ViT)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Architecture",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "hasDataset",
+      "o": "Falconsainsfwimagedetection-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Falconsai/nsfw_image_detection",
+      "confidence": 95
+    },
+    {
+      "s": "Falconsainsfwimagedetection-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "ImageNet-21k",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "hasTrainingDataset",
+      "o": "Falconsainsfwimagedetection-trainingdataset",
+      "status": false,
+      "actual_value": "",
+      "field": "train_dataset",
+      "hf_model_id": "Falconsai/nsfw_image_detection",
+      "confidence": 95
+    },
+    {
+      "s": "Falconsainsfwimagedetection-trainingdataset",
+      "p": "rdf:type",
+      "o": "TrainingDataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection-trainingdataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "proprietary dataset",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "TrainingDataset",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "hasClasses",
+      "o": "Falconsainsfwimagedetection-classes",
+      "status": false,
+      "actual_value": true,
+      "field": "classification",
+      "hf_model_id": "Falconsai/nsfw_image_detection",
+      "confidence": 95
+    },
+    {
+      "s": "Falconsainsfwimagedetection-classes",
+      "p": "rdf:type",
+      "o": "Classes",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection-classes",
+      "p": "dul:hasParameterDataValue",
+      "o": "normal",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Classes",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "hasClasses",
+      "o": "Falconsainsfwimagedetection-classes",
+      "status": false,
+      "actual_value": true,
+      "field": "classification",
+      "hf_model_id": "Falconsai/nsfw_image_detection",
+      "confidence": 95
+    },
+    {
+      "s": "Falconsainsfwimagedetection-classes",
+      "p": "rdf:type",
+      "o": "Classes",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection-classes",
+      "p": "dul:hasParameterDataValue",
+      "o": "nsfw",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "hasBatchSize",
+      "o": "Falconsainsfwimagedetection-batchsize",
+      "status": false,
+      "actual_value": null,
+      "field": "batch_size",
+      "hf_model_id": "Falconsai/nsfw_image_detection",
+      "confidence": 95
+    },
+    {
+      "s": "Falconsainsfwimagedetection-batchsize",
+      "p": "rdf:type",
+      "o": "BatchSize",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection-batchsize",
+      "p": "dul:hasParameterDataValue",
+      "o": "16",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "hasLearningRate",
+      "o": "Falconsainsfwimagedetection-learningrate",
+      "status": false,
+      "actual_value": null,
+      "field": "learning_rate",
+      "hf_model_id": "Falconsai/nsfw_image_detection",
+      "confidence": 95
+    },
+    {
+      "s": "Falconsainsfwimagedetection-learningrate",
+      "p": "rdf:type",
+      "o": "LearningRate",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection-learningrate",
+      "p": "dul:hasParameterDataValue",
+      "o": "5e-05",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "hasMetric",
+      "o": "Falconsainsfwimagedetection-metric",
+      "status": false,
+      "actual_value": false,
+      "field": "metric",
+      "hf_model_id": "Falconsai/nsfw_image_detection",
+      "confidence": 95
+    },
+    {
+      "s": "Falconsainsfwimagedetection-metric",
+      "p": "rdf:type",
+      "o": "Metric",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection-metric",
+      "p": "dul:hasParameterDataValue",
+      "o": "accuracy",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Metric",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection",
+      "p": "hasEvaluationAccuracy",
+      "o": "Falconsainsfwimagedetection-evaluationaccuracy",
+      "status": false,
+      "actual_value": false,
+      "field": "accuracy",
+      "hf_model_id": "Falconsai/nsfw_image_detection",
+      "confidence": 95
+    },
+    {
+      "s": "Falconsainsfwimagedetection-evaluationaccuracy",
+      "p": "rdf:type",
+      "o": "EvaluationAccuracy",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Falconsainsfwimagedetection-evaluationaccuracy",
+      "p": "dul:hasParameterDataValue",
+      "o": "0.980375",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "EvaluationAccuracy",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "dima806fairfaceageimagedetection",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "dima806fairfaceageimagedetection",
+      "p": "hasEvaluationMetric",
+      "o": "dima806fairfaceageimagedetection-evaluationmetric",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasEvaluationMetric"
+    },
+    {
+      "s": "dima806fairfaceageimagedetection-evaluationmetric",
+      "p": "rdf:type",
+      "o": "EvaluationMetric",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "dima806fairfaceageimagedetection-evaluationmetric",
+      "p": "dul:hasParameterDataValue",
+      "o": "accuracy",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "EvaluationMetric",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "dima806fairfaceageimagedetection",
+      "p": "hasEvaluationResult",
+      "o": "dima806fairfaceageimagedetection-evaluationresult",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasEvaluationResult"
+    },
+    {
+      "s": "dima806fairfaceageimagedetection-evaluationresult",
+      "p": "rdf:type",
+      "o": "EvaluationResult",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "dima806fairfaceageimagedetection-evaluationresult",
+      "p": "dul:hasParameterDataValue",
+      "o": "0.5892",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "EvaluationResult",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "googlebertbertbaseuncased",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "googlebertbertbaseuncased",
+      "p": "hasLanguage",
+      "o": "googlebertbertbaseuncased-language",
+      "status": false,
+      "actual_value": true,
+      "field": "language",
+      "hf_model_id": "google-bert/bert-base-uncased",
+      "confidence": 93
+    },
+    {
+      "s": "googlebertbertbaseuncased-language",
+      "p": "rdf:type",
+      "o": "Language",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "googlebertbertbaseuncased-language",
+      "p": "dul:hasParameterDataValue",
+      "o": "English",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Language",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "googlebertbertbaseuncased",
+      "p": "hasTrainingProcedure",
+      "o": "googlebertbertbaseuncased-trainingprocedure",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingProcedure"
+    },
+    {
+      "s": "googlebertbertbaseuncased-trainingprocedure",
+      "p": "rdf:type",
+      "o": "TrainingProcedure",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "googlebertbertbaseuncased-trainingprocedure",
+      "p": "dul:hasParameterDataValue",
+      "o": "Masked language modeling (MLM), Next sentence prediction (NSP)",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "googlebertbertbaseuncased",
+      "p": "hasDataset",
+      "o": "googlebertbertbaseuncased-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "google-bert/bert-base-uncased",
+      "confidence": 93
+    },
+    {
+      "s": "googlebertbertbaseuncased-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "googlebertbertbaseuncased-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "BookCorpus, English Wikipedia",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "openaiclipvitlargepatch14",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "openaiclipvitlargepatch14",
+      "p": "hasArchitecture",
+      "o": "openaiclipvitlargepatch14-architecture",
+      "status": false,
+      "actual_value": "clip-vit-large-patch14",
+      "field": "architecture",
+      "hf_model_id": "openai/clip-vit-large-patch14",
+      "confidence": 93
+    },
+    {
+      "s": "openaiclipvitlargepatch14-architecture",
+      "p": "rdf:type",
+      "o": "Architecture",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "openaiclipvitlargepatch14-architecture",
+      "p": "dul:hasParameterDataValue",
+      "o": "ViT-L/14 Transformer",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "openaiclipvitlargepatch14",
+      "p": "hasTrainingProcedure",
+      "o": "openaiclipvitlargepatch14-trainingprocedure",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasTrainingProcedure"
+    },
+    {
+      "s": "openaiclipvitlargepatch14-trainingprocedure",
+      "p": "rdf:type",
+      "o": "TrainingProcedure",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "openaiclipvitlargepatch14-trainingprocedure",
+      "p": "dul:hasParameterDataValue",
+      "o": "contrastive loss",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "openaiclipvitlargepatch14",
+      "p": "hasDataset",
+      "o": "openaiclipvitlargepatch14-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "openai/clip-vit-large-patch14",
+      "confidence": 93
+    },
+    {
+      "s": "openaiclipvitlargepatch14-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "openaiclipvitlargepatch14-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "YFCC100M",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "openaiclipvitlargepatch14",
+      "p": "hasModelDate",
+      "o": "openaiclipvitlargepatch14-modeldate",
+      "status": "ERROR",
+      "reason": "'NoneType' object has no attribute 'split'",
+      "hf_model_id": "openai/clip-vit-large-patch14"
+    },
+    {
+      "s": "openaiclipvitlargepatch14-modeldate",
+      "p": "rdf:type",
+      "o": "ModelDate",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "openaiclipvitlargepatch14-modeldate",
+      "p": "dul:hasParameterDataValue",
+      "o": "January 2021",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "ModelDate",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "TheBlokephi2GGUF",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "TheBlokephi2GGUF",
+      "p": "hasModelCreator",
+      "o": "TheBlokephi2GGUF-modelcreator",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasModelCreator"
+    },
+    {
+      "s": "TheBlokephi2GGUF-modelcreator",
+      "p": "rdf:type",
+      "o": "ModelCreator",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "TheBlokephi2GGUF-modelcreator",
+      "p": "dul:hasParameterDataValue",
+      "o": "Microsoft",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "ModelCreator",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "TheBlokephi2GGUF",
+      "p": "hasFormat",
+      "o": "TheBlokephi2GGUF-format",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasFormat"
+    },
+    {
+      "s": "TheBlokephi2GGUF-format",
+      "p": "rdf:type",
+      "o": "Format",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "TheBlokephi2GGUF-format",
+      "p": "dul:hasParameterDataValue",
+      "o": "GGUF",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Format",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "facebookesmfoldv1",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "facebookesmfoldv1",
+      "p": "hasArchitecture",
+      "o": "facebookesmfoldv1-architecture",
+      "status": false,
+      "actual_value": "esmfold_v1",
+      "field": "architecture",
+      "hf_model_id": "facebook/esmfold_v1",
+      "confidence": 94
+    },
+    {
+      "s": "facebookesmfoldv1-architecture",
+      "p": "rdf:type",
+      "o": "Architecture",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "facebookesmfoldv1-architecture",
+      "p": "dul:hasParameterDataValue",
+      "o": "ESM-2 backbone",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "amazonchronost5small",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "amazonchronost5small",
+      "p": "hasArchitecture",
+      "o": "amazonchronost5small-architecture",
+      "status": false,
+      "actual_value": "chronos-t5-small",
+      "field": "architecture",
+      "hf_model_id": "amazon/chronos-t5-small",
+      "confidence": 93
+    },
+    {
+      "s": "amazonchronost5small-architecture",
+      "p": "rdf:type",
+      "o": "Architecture",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "amazonchronost5small-architecture",
+      "p": "dul:hasParameterDataValue",
+      "o": "T5 architecture",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "amazonchronost5small",
+      "p": "hasParadigm",
+      "o": "amazonchronost5small-paradigm",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasParadigm"
+    },
+    {
+      "s": "amazonchronost5small-paradigm",
+      "p": "rdf:type",
+      "o": "Paradigm",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "amazonchronost5small-paradigm",
+      "p": "dul:hasParameterDataValue",
+      "o": "time series forecasting",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Paradigm",
+      "p": "rdfs:subClassOf",
+      "o": "Component",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "amazonchronost5small",
+      "p": "hasDataset",
+      "o": "amazonchronost5small-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "amazon/chronos-t5-small",
+      "confidence": 93
+    },
+    {
+      "s": "amazonchronost5small-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "amazonchronost5small-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "publicly available time series data, synthetic data generated using Gaussian processes",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "rdf:type",
+      "o": "Model",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "Anime Face CreateML",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "xml2txt",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "AN",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "wider face",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "AnHDet",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "hand-detection-fuao9",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "coco2017",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "AniSeg",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "skytnt/anime-segmentation",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasDataset",
+      "o": "Bingsuadetailer-dataset",
+      "status": false,
+      "actual_value": "",
+      "field": "dataset_name",
+      "hf_model_id": "Bingsu/adetailer",
+      "confidence": 97
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "rdf:type",
+      "o": "Dataset",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-dataset",
+      "p": "dul:hasParameterDataValue",
+      "o": "deepfashion2",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasEvaluationResult",
+      "o": "Bingsuadetailer-evaluationresult",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasEvaluationResult"
+    },
+    {
+      "s": "Bingsuadetailer-evaluationresult",
+      "p": "rdf:type",
+      "o": "EvaluationResult",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-evaluationresult",
+      "p": "dul:hasParameterDataValue",
+      "o": "mAP 50",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    },
+    {
+      "s": "Bingsuadetailer",
+      "p": "hasEvaluationResult",
+      "o": "Bingsuadetailer-evaluationresult",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: hasEvaluationResult"
+    },
+    {
+      "s": "Bingsuadetailer-evaluationresult",
+      "p": "rdf:type",
+      "o": "EvaluationResult",
+      "status": "SKIPPED",
+      "reason": "Ontology statement"
+    },
+    {
+      "s": "Bingsuadetailer-evaluationresult",
+      "p": "dul:hasParameterDataValue",
+      "o": "mAP 50-95",
+      "status": "UNMAPPED",
+      "reason": "Unknown predicate: dul:hasParameterDataValue"
+    }
+  ]
+}

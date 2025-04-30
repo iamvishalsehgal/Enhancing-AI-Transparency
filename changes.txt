@@ -173,4 +173,22 @@ Tried few commands and got this
 
 to fix this i have to update the format_result function, instead of only models i change it to work for any type of entities so now it auto detect primary variable name and return the results 
 
-- Did a change in triple_creation.ipynb file that llm must use the ontology to provide triples. Change that in prompt - it will only extract terms that exist in mcro ontology.
+- Did a change in triple_creation.ipynb file that llm must use the ontology to provide triples. Change that in prompt - it will only extract terms that exist in mcro ontology. Also fixed the delimiter error coming from prompt by putting better json validation , added fallback so it won't skip models.
+- So I found gemini can not use mcro url from the prompt without providing actual context. So I think it's better to have an actual file and give that to llm. Instead of owl file I prefer .ttl bcoz it's fast to parse and use less memory and can extract classes/properties without dealing with xml namespace and complex hierarchies, added curie to make the output simple and short, with onto + llm, I got some triple but I am still getting some values like "obo:IAO_0000310" they are in ontology file but it's not understandable to human like me unless I look in the file so I have 2 options here I can enrich triples with labels for example add "rdfs:label" triples for every class and property used or I can map obscure curies to readable labels so basically if I can't resolve directly I just pre map it so instead of this 
+  {
+    "s": "mcro:timmMobilenetV3small100lambin1K-Description",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000310"
+  }
+It will show like 
+  {
+    "s": "mcro:timmMobilenetV3small100lambin1K-Description",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000310"
+  },
+  {
+    "s": "obo:IAO_0000310",
+    "p": "rdfs:label",
+    "o": "Information Content Entity"
+  }
+- 
