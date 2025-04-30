@@ -191,4 +191,4 @@ It will show like
     "p": "rdfs:label",
     "o": "Information Content Entity"
   }
-- 
+- I saw it was the problem with obo and two so I specify in prompt to only use those namespace if its absolutely needed.

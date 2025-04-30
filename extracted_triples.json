@@ -1,73 +1,78 @@
 [
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2",
+    "s": "mcro:timmmobilenetv3small100lambin1k",
     "p": "rdf:type",
     "o": "mcro:Model"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2",
+    "s": "mcro:timmmobilenetv3small100lambin1k",
     "p": "mcro:HasLicense",
-    "o": "mcro:sentenceTransformersAllMiniLML6V2-License"
+    "o": "mcro:timmmobilenetv3small100lambin1k-License"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2-License",
+    "s": "mcro:timmmobilenetv3small100lambin1k-License",
     "p": "rdf:type",
     "o": "swo:SWO_0000002"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2-License",
+    "s": "mcro:timmmobilenetv3small100lambin1k-License",
     "p": "prov:hasTextValue",
     "o": "mit"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2",
-    "p": "prov:hasTextValue",
-    "o": "sentence-transformers/all-MiniLM-L6-v2 is a sentence transformer model, meaning that it maps sentences & paragraphs into a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search."
-  },
-  {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2",
-    "p": "mcro:HasDataset",
-    "o": "mcro:sentenceTransformersAllMiniLML6V2-Dataset"
-  },
-  {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2-Dataset",
+    "s": "mcro:sentencetransformersallMiniLML6v2",
     "p": "rdf:type",
-    "o": "mcro:Dataset"
+    "o": "mcro:Model"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2-Dataset",
-    "p": "prov:hasTextValue",
-    "o": "wikipedia-corpus"
+    "s": "mcro:sentencetransformersallMiniLML6v2",
+    "p": "mcro:HasLicense",
+    "o": "mcro:sentencetransformersallMiniLML6v2-LicenseInformationSection"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2",
-    "p": "mcro:HasIntendedUseCase",
-    "o": "mcro:sentenceTransformersAllMiniLML6V2-IntendedUseCase"
-  },
-  {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2-IntendedUseCase",
+    "s": "mcro:sentencetransformersallMiniLML6v2-LicenseInformationSection",
     "p": "rdf:type",
-    "o": "mcro:MCRO_0000038"
+    "o": "mcro:LicenseInformationSection"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2-IntendedUseCase",
+    "s": "mcro:sentencetransformersallMiniLML6v2-LicenseInformationSection",
     "p": "prov:hasTextValue",
-    "o": "This model maps sentences & paragraphs into a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    "o": "mit"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2",
-    "p": "mcro:HasModelArchitecture",
-    "o": "mcro:sentenceTransformersAllMiniLML6V2-ModelArchitecture"
+    "s": "mcro:sentencetransformersallMiniLML6v2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:modelDataset"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2-ModelArchitecture",
+    "s": "mcro:modelDataset",
     "p": "rdf:type",
-    "o": "mcro:MCRO_0000019"
+    "o": "mcro:DatasetInformationSection"
   },
   {
-    "s": "mcro:sentenceTransformersAllMiniLML6V2-ModelArchitecture",
-    "p": "prov:hasTextValue",
-    "o": "Sentence Transformers"
+    "s": "mcro:sentencetransformersallMiniLML6v2",
+    "p": "mcro:hasArchitecture",
+    "o": "mcro:modelArchitecture"
+  },
+  {
+    "s": "mcro:modelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:HasLicense",
+    "o": "mcro:Falconsainsfwimagedetection-LicenseInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-LicenseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
   },
   {
     "s": "mcro:dima806fairfaceageimagedetection",
@@ -77,237 +82,142 @@
   {
     "s": "mcro:dima806fairfaceageimagedetection",
     "p": "mcro:HasLicense",
-    "o": "mcro:dima806fairfaceageimagedetection-LicenseInformationSection"
+    "o": "mcro:dima806fairfaceageimagedetection-License"
   },
   {
-    "s": "mcro:dima806fairfaceageimagedetection-LicenseInformationSection",
+    "s": "mcro:dima806fairfaceageimagedetection-License",
     "p": "rdf:type",
-    "o": "mcro:LicenseInformationSection"
+    "o": "swo:SWO_0000002"
   },
   {
-    "s": "mcro:dima806fairfaceageimagedetection-LicenseInformationSection",
+    "s": "mcro:dima806fairfaceageimagedetection-License",
     "p": "prov:hasTextValue",
     "o": "mit"
   },
   {
     "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "terms:description",
-    "o": "mcro:dima806fairfaceageimagedetection-description"
+    "p": "mcro:hasDataset",
+    "o": "mcro:dima806fairfaceageimagedetection-Dataset"
   },
   {
-    "s": "mcro:dima806fairfaceageimagedetection-description",
+    "s": "mcro:dima806fairfaceageimagedetection-Dataset",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000310"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
     "p": "prov:hasTextValue",
-    "o": "fairface-age is a model for estimating the age of a person from an image based on the FairFace dataset. It uses a convolutional neural network (CNN) architecture and is trained on a diverse set of faces with varying ages, races, and genders."
+    "o": "FairFace"
   },
   {
     "s": "mcro:dima806fairfaceageimagedetection",
     "p": "obo:IAO_0000136",
-    "o": "mcro:dima806fairfaceageimagedetection-tags"
+    "o": "mcro:ModelArchitecture"
   },
   {
-    "s": "mcro:dima806fairfaceageimagedetection-tags",
+    "s": "mcro:ModelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:ModelArchitecture",
     "p": "prov:hasTextValue",
-    "o": "image-age-estimation"
+    "o": "CNN"
   },
   {
     "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:dima806fairfaceageimagedetection-tags2"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection-tags2",
     "p": "prov:hasTextValue",
-    "o": "age-estimation"
+    "o": "age estimation"
   },
   {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:dima806fairfaceageimagedetection-tags3"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection-tags3",
-    "p": "prov:hasTextValue",
-    "o": "face-analysis"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:dima806fairfaceageimagedetection-tags4"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection-tags4",
-    "p": "prov:hasTextValue",
-    "o": "computer-vision"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:dima806fairfaceageimagedetection-tags5"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection-tags5",
-    "p": "prov:hasTextValue",
-    "o": "image-classification"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:dima806fairfaceageimagedetection-dataset"
-  },
-  {
-    "s": "mcro:dima806fairfaceageimagedetection-dataset",
-    "p": "prov:hasTextValue",
-    "o": "fairface"
-  },
-  {
-    "s": "mcro:bert-base-cased",
+    "s": "mcro:bert-base-uncased",
     "p": "rdf:type",
     "o": "mcro:Model"
   },
   {
-    "s": "mcro:bert-base-cased",
+    "s": "mcro:bert-base-uncased",
     "p": "mcro:HasLicense",
-    "o": "mcro:bert-base-cased-License"
+    "o": "mcro:bert-base-uncased-License"
   },
   {
-    "s": "mcro:bert-base-cased-License",
-    "p": "rdf:type",
-    "o": "mcro:LicenseInformationSection"
-  },
-  {
-    "s": "mcro:bert-base-cased-License",
-    "p": "prov:hasTextValue",
-    "o": "apache-2.0"
-  },
-  {
-    "s": "mcro:bert-base-cased",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:transformers"
-  },
-  {
-    "s": "mcro:transformers",
-    "p": "rdf:type",
-    "o": "swo:SWO_0000001"
-  },
-  {
-    "s": "mcro:bert-base-cased",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:pytorch"
-  },
-  {
-    "s": "mcro:pytorch",
-    "p": "rdf:type",
-    "o": "swo:SWO_0000001"
-  },
-  {
-    "s": "mcro:bert-base-cased",
-    "p": "obo:IAO_0000136",
-    "o": "mcro:bert"
-  },
-  {
-    "s": "mcro:bert",
-    "p": "rdf:type",
-    "o": "swo:SWO_0000001"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped",
-    "p": "rdf:type",
-    "o": "mcro:Model"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped",
-    "p": "mcro:HasLicense",
-    "o": "mcro:EleutherAIpythia70m-deduped-License"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped-License",
+    "s": "mcro:bert-base-uncased-License",
     "p": "rdf:type",
     "o": "mcro:License"
   },
   {
-    "s": "mcro:EleutherAIpythia70m-deduped-License",
+    "s": "mcro:bert-base-uncased-License",
     "p": "prov:hasTextValue",
     "o": "apache-2.0"
   },
   {
-    "s": "mcro:EleutherAIpythia70m-deduped",
-    "p": "prov:hasTextValue",
-    "o": "Pythia is a suite of large language models trained on the same data as GPT-NeoX-20B."
+    "s": "mcro:clip-vit-large-patch14-336",
+    "p": "rdf:type",
+    "o": "mcro:Model"
   },
   {
-    "s": "mcro:EleutherAIpythia70m-deduped",
+    "s": "mcro:clip-vit-large-patch14-336",
+    "p": "mcro:HasLicense",
+    "o": "mcro:clip-vit-large-patch14-336-License"
+  },
+  {
+    "s": "mcro:clip-vit-large-patch14-336-License",
+    "p": "rdf:type",
+    "o": "mcro:License"
+  },
+  {
+    "s": "mcro:clip-vit-large-patch14-336-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:HasLicense",
+    "o": "mcro:TheBlokephi2GGUF-License"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-License",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
     "p": "mcro:HasDataset",
-    "o": "mcro:EleutherAIpythia70m-deduped-Dataset"
+    "o": "mcro:TheBlokephi2GGUF-Dataset"
   },
   {
-    "s": "mcro:EleutherAIpythia70m-deduped-Dataset",
+    "s": "mcro:TheBlokephi2GGUF-Dataset",
     "p": "rdf:type",
-    "o": "mcro:Dataset"
+    "o": "mcro:DatasetInformationSection"
   },
   {
-    "s": "mcro:EleutherAIpythia70m-deduped-Dataset",
+    "s": "mcro:TheBlokephi2GGUF-Dataset",
     "p": "prov:hasTextValue",
-    "o": "the Pile"
+    "o": "Unknown"
   },
   {
-    "s": "mcro:EleutherAIpythia70m-deduped",
-    "p": "mcro:HasTag",
-    "o": "mcro:EleutherAIpythia70m-deduped-Tag"
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:HasIntendedUseCase",
+    "o": "mcro:TheBlokephi2GGUF-UseCase"
   },
   {
-    "s": "mcro:EleutherAIpythia70m-deduped-Tag",
+    "s": "mcro:TheBlokephi2GGUF-UseCase",
     "p": "rdf:type",
-    "o": "mcro:Tag"
+    "o": "mcro:UseCaeInformationSection"
   },
   {
-    "s": "mcro:EleutherAIpythia70m-deduped-Tag",
+    "s": "mcro:TheBlokephi2GGUF-UseCase",
     "p": "prov:hasTextValue",
-    "o": "causal-lm"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped",
-    "p": "mcro:HasTag",
-    "o": "mcro:EleutherAIpythia70m-deduped-Tag2"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped-Tag2",
-    "p": "rdf:type",
-    "o": "mcro:Tag"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped-Tag2",
-    "p": "prov:hasTextValue",
-    "o": "transformers"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped",
-    "p": "mcro:HasTag",
-    "o": "mcro:EleutherAIpythia70m-deduped-Tag3"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped-Tag3",
-    "p": "rdf:type",
-    "o": "mcro:Tag"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped-Tag3",
-    "p": "prov:hasTextValue",
-    "o": "EleutherAI"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped",
-    "p": "mcro:HasTag",
-    "o": "mcro:EleutherAIpythia70m-deduped-Tag4"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped-Tag4",
-    "p": "rdf:type",
-    "o": "mcro:Tag"
-  },
-  {
-    "s": "mcro:EleutherAIpythia70m-deduped-Tag4",
-    "p": "prov:hasTextValue",
-    "o": "Pythia"
+    "o": "language-model"
   },
   {
     "s": "mcro:facebookesmfoldv1",
@@ -322,7 +232,7 @@
   {
     "s": "mcro:facebookesmfoldv1-License",
     "p": "rdf:type",
-    "o": "mcro:LicenseInformationSection"
+    "o": "swo:SWO_0000002"
   },
   {
     "s": "mcro:facebookesmfoldv1-License",
@@ -331,162 +241,222 @@
   },
   {
     "s": "mcro:facebookesmfoldv1",
-    "p": "mcro:HasDataset",
-    "o": "mcro:facebookesmfoldv1-Dataset"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1-Dataset",
-    "p": "rdf:type",
-    "o": "mcro:DatasetInformationSection"
-  },
-  {
-    "s": "mcro:facebookesmfoldv1",
-    "p": "mcro:HasDescription",
+    "p": "obo:IAO_0000136",
     "o": "mcro:facebookesmfoldv1-Description"
   },
   {
     "s": "mcro:facebookesmfoldv1-Description",
     "p": "rdf:type",
-    "o": "obo:IAO_0000314"
+    "o": "obo:IAO_0000301"
   },
   {
     "s": "mcro:facebookesmfoldv1",
-    "p": "mcro:HasTag",
-    "o": "mcro:facebookesmfoldv1-Tag"
+    "p": "obo:IAO_0000136",
+    "o": "mcro:facebookesmfoldv1-Tags"
   },
   {
-    "s": "mcro:facebookesmfoldv1-Tag",
+    "s": "mcro:facebookesmfoldv1-Tags",
     "p": "rdf:type",
-    "o": "obo:IAO_0000314"
+    "o": "obo:IAO_0000301"
   },
   {
-    "s": "mcro:roberta",
+    "s": "mcro:facebookesmfoldv1",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:facebookesmfoldv1-Dataset"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1-Dataset",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000301"
+  },
+  {
+    "s": "mcro:huggingfacemodel",
     "p": "rdf:type",
     "o": "mcro:Model"
   },
   {
-    "s": "mcro:roberta",
+    "s": "mcro:huggingfacemodel",
     "p": "mcro:HasLicense",
-    "o": "mcro:roberta-License"
+    "o": "mcro:huggingfacemodel-License"
   },
   {
-    "s": "mcro:roberta-License",
+    "s": "mcro:huggingfacemodel-License",
     "p": "rdf:type",
     "o": "mcro:LicenseInformationSection"
   },
   {
-    "s": "mcro:roberta-License",
-    "p": "prov:hasTextValue",
-    "o": "apache-2.0"
-  },
-  {
-    "s": "mcro:roberta",
+    "s": "mcro:huggingfacemodel",
     "p": "mcro:HasDataset",
-    "o": "mcro:roberta-Dataset"
+    "o": "mcro:huggingfacemodel-Dataset"
   },
   {
-    "s": "mcro:roberta-Dataset",
+    "s": "mcro:huggingfacemodel-Dataset",
     "p": "rdf:type",
     "o": "mcro:DatasetInformationSection"
   },
   {
-    "s": "mcro:roberta-Dataset",
-    "p": "prov:hasTextValue",
-    "o": "bookcorpus, english wikipedia"
-  },
-  {
-    "s": "mcro:roberta",
+    "s": "mcro:huggingfacemodel",
     "p": "mcro:HasModelArchitecture",
-    "o": "mcro:roberta-ModelArchitecture"
+    "o": "mcro:huggingfacemodel-ModelArchitecture"
   },
   {
-    "s": "mcro:roberta-ModelArchitecture",
+    "s": "mcro:huggingfacemodel-ModelArchitecture",
     "p": "rdf:type",
     "o": "mcro:ModelArchitectureInformationSection"
   },
   {
-    "s": "mcro:roberta-ModelArchitecture",
-    "p": "prov:hasTextValue",
-    "o": "transformer"
+    "s": "mcro:huggingfacemodel",
+    "p": "mcro:HasOwner",
+    "o": "mcro:huggingfacemodel-Owner"
   },
   {
-    "s": "mcro:roberta",
-    "p": "mcro:hasIntendedUseCase",
-    "o": "mcro:roberta-IntendedUseCase"
+    "s": "mcro:huggingfacemodel-Owner",
+    "p": "rdf:type",
+    "o": "mcro:OwnerInformationSection"
   },
   {
-    "s": "mcro:roberta-IntendedUseCase",
+    "s": "mcro:huggingfacemodel",
+    "p": "mcro:HasVersion",
+    "o": "mcro:huggingfacemodel-Version"
+  },
+  {
+    "s": "mcro:huggingfacemodel-Version",
+    "p": "rdf:type",
+    "o": "mcro:VersionInformationSection"
+  },
+  {
+    "s": "mcro:huggingfacemodel",
+    "p": "mcro:HasCitation",
+    "o": "mcro:huggingfacemodel-Citation"
+  },
+  {
+    "s": "mcro:huggingfacemodel-Citation",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:huggingfacemodel",
+    "p": "mcro:HasIntendedUse",
+    "o": "mcro:huggingfacemodel-IntendedUse"
+  },
+  {
+    "s": "mcro:huggingfacemodel-IntendedUse",
     "p": "rdf:type",
     "o": "mcro:UseCaseInformationSection"
   },
   {
-    "s": "mcro:roberta-IntendedUseCase",
-    "p": "prov:hasTextValue",
-    "o": "text understanding and generation"
+    "s": "mcro:huggingfacemodel",
+    "p": "mcro:HasLimitation",
+    "o": "mcro:huggingfacemodel-Limitation"
   },
   {
-    "s": "mcro:Bingsuadetailer",
+    "s": "mcro:huggingfacemodel-Limitation",
     "p": "rdf:type",
-    "o": "mcro:Model"
+    "o": "mcro:LimitationInformationSection"
   },
   {
-    "s": "mcro:Bingsuadetailer",
-    "p": "mcro:HasLicense",
-    "o": "mcro:Bingsuadetailer-License"
-  },
-  {
-    "s": "mcro:Bingsuadetailer-License",
+    "s": "mcro:ModelCardReportInstance",
     "p": "rdf:type",
-    "o": "swo:SWO_0000002"
+    "o": "mcro:ModelCardReport"
   },
   {
-    "s": "mcro:Bingsuadetailer-License",
-    "p": "prov:hasTextValue",
-    "o": "mit"
+    "s": "mcro:ModelCardReportInstance",
+    "p": "mcro:HasModelDetailSection",
+    "o": "mcro:ModelDetailSectionInstance"
   },
   {
-    "s": "mcro:Bingsuadetailer",
-    "p": "mcro:HasDescription",
-    "o": "mcro:Bingsuadetailer-Description"
-  },
-  {
-    "s": "mcro:Bingsuadetailer-Description",
+    "s": "mcro:ModelDetailSectionInstance",
     "p": "rdf:type",
-    "o": "obo:IAO_0000310"
+    "o": "mcro:ModelDetailSection"
   },
   {
-    "s": "mcro:Bingsuadetailer-Description",
-    "p": "prov:hasTextValue",
-    "o": "Bingsu a model for image detailer "
+    "s": "mcro:ModelDetailSectionInstance",
+    "p": "mcro:HasLicenseInformationSection",
+    "o": "mcro:LicenseInformationSectionInstance"
   },
   {
-    "s": "mcro:Bingsuadetailer",
-    "p": "mcro:HasTag",
-    "o": "mcro:Bingsuadetailer-Tag"
-  },
-  {
-    "s": "mcro:Bingsuadetailer-Tag",
+    "s": "mcro:LicenseInformationSectionInstance",
     "p": "rdf:type",
-    "o": "obo:IAO_0000320"
+    "o": "mcro:LicenseInformationSection"
   },
   {
-    "s": "mcro:Bingsuadetailer-Tag",
+    "s": "mcro:LicenseInformationSectionInstance",
     "p": "prov:hasTextValue",
-    "o": "image"
+    "o": "unkown"
   },
   {
-    "s": "mcro:Bingsuadetailer",
-    "p": "mcro:HasDataset",
-    "o": "mcro:Bingsuadetailer-Dataset"
+    "s": "mcro:ModelCardReportInstance",
+    "p": "mcro:HasDatasetInformationSection",
+    "o": "mcro:DatasetInformationSectionInstance"
   },
   {
-    "s": "mcro:Bingsuadetailer-Dataset",
+    "s": "mcro:DatasetInformationSectionInstance",
     "p": "rdf:type",
-    "o": "obo:IAO_0000314"
+    "o": "mcro:DatasetInformationSection"
   },
   {
-    "s": "mcro:Bingsuadetailer-Dataset",
+    "s": "mcro:DatasetInformationSectionInstance",
     "p": "prov:hasTextValue",
-    "o": "None"
+    "o": "unkown"
+  },
+  {
+    "s": "mcro:ModelCardReportInstance",
+    "p": "mcro:HasIntendedUseCaseSection",
+    "o": "mcro:UseCaseInformationSectionInstance"
+  },
+  {
+    "s": "mcro:UseCaseInformationSectionInstance",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:UseCaseInformationSectionInstance",
+    "p": "prov:hasTextValue",
+    "o": "unkown"
+  },
+  {
+    "s": "mcro:ModelCardReportInstance",
+    "p": "mcro:HasLimitationInformationSection",
+    "o": "mcro:LimitationInformationSectionInstance"
+  },
+  {
+    "s": "mcro:LimitationInformationSectionInstance",
+    "p": "rdf:type",
+    "o": "mcro:LimitationInformationSection"
+  },
+  {
+    "s": "mcro:LimitationInformationSectionInstance",
+    "p": "prov:hasTextValue",
+    "o": "unkown"
+  },
+  {
+    "s": "mcro:ModelCardReportInstance",
+    "p": "mcro:HasConsiderationInformationSection",
+    "o": "mcro:ConsiderationInformationSectionInstance"
+  },
+  {
+    "s": "mcro:ConsiderationInformationSectionInstance",
+    "p": "rdf:type",
+    "o": "mcro:ConsiderationInformationSection"
+  },
+  {
+    "s": "mcro:ConsiderationInformationSectionInstance",
+    "p": "prov:hasTextValue",
+    "o": "unkown"
+  },
+  {
+    "s": "mcro:ModelCardReportInstance",
+    "p": "mcro:HasPerformanceMetricInformationSection",
+    "o": "mcro:PerformanceMetricInformationSectionInstance"
+  },
+  {
+    "s": "mcro:PerformanceMetricInformationSectionInstance",
+    "p": "rdf:type",
+    "o": "mcro:PerformanceMetricInformationSection"
+  },
+  {
+    "s": "mcro:PerformanceMetricInformationSectionInstance",
+    "p": "prov:hasTextValue",
+    "o": "unkown"
   }
 ]

@@ -1,0 +1,564 @@
+prompt = f"""Using the attached MCRO ontology file ({mcro_file.uri}), analyze this Hugging Face model card and return:
+
+1. All metadata fields (like license, description, tags, dataset, etc.)
+2. Map each to appropriate MCRO ontology concepts using exact CURIE syntax
+   - Example CURIE: mcro:HasLicense
+3. Return ONLY a JSON array of triples in this format:
+[
+  {{
+    "s": "mcro:{clean_identifier(model_id)}",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  }},
+  {{
+    "s": "mcro:{clean_identifier(model_id)}",
+    "p": "mcro:HasLicense",
+    "o": "mcro:{clean_identifier(model_id)}-License"
+  }},
+  {{
+    "s": "mcro:{clean_identifier(model_id)}-License",
+    "p": "rdf:type",
+    "o": "mcro:License"
+  }},
+  {{
+    "s": "mcro:{clean_identifier(model_id)}-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  }}
+]
+Important Rules:
+- Only use terms from the ontology
+- Use CURIE format (prefix:localname)
+- Always link back to base namespace: http://sbmi.uth.edu/ontology/mcro#
+- For literal values, use prov:hasTextValue
+- No explanation or markdown
+- Keep all responses strictly within JSON format"""
+
+Declining this bcoz its giving things like "swo:SWO_0000002"
+[
+  {
+    "s": "mcro:sentencetransformersallMiniLML6v2",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:sentencetransformersallMiniLML6v2",
+    "p": "mcro:HasLicense",
+    "o": "mcro:sentencetransformersallMiniLML6v2-License"
+  },
+  {
+    "s": "mcro:sentencetransformersallMiniLML6v2-License",
+    "p": "rdf:type",
+    "o": "swo:SWO_0000002"
+  },
+  {
+    "s": "mcro:sentencetransformersallMiniLML6v2-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:HasLicense",
+    "o": "mcro:Falconsainsfwimagedetection-License"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-License",
+    "p": "rdf:type",
+    "o": "swo:SWO_0000002"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  },
+  {
+    "s": "mcro:card",
+    "p": "rdf:type",
+    "o": "mcro:ModelCardReport"
+  },
+  {
+    "s": "mcro:card",
+    "p": "mcro:HasLicense",
+    "o": "mcro:license"
+  },
+  {
+    "s": "mcro:license",
+    "p": "rdf:type",
+    "o": "swo:SWO_0000002"
+  },
+  {
+    "s": "mcro:license",
+    "p": "prov:hasTextValue",
+    "o": "apache-2.0"
+  },
+  {
+    "s": "mcro:card",
+    "p": "mcro:hasDataset",
+    "o": "mcro:dataset"
+  },
+  {
+    "s": "mcro:dataset",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000310"
+  },
+  {
+    "s": "mcro:dataset",
+    "p": "prov:hasTextValue",
+    "o": "fairface"
+  },
+  {
+    "s": "mcro:card",
+    "p": "mcro:hasTask",
+    "o": "mcro:task"
+  },
+  {
+    "s": "mcro:task",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000030"
+  },
+  {
+    "s": "mcro:task",
+    "p": "prov:hasTextValue",
+    "o": "image-classification"
+  },
+  {
+    "s": "mcro:bert-base-uncased",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:bert-base-uncased",
+    "p": "mcro:HasLicense",
+    "o": "mcro:bert-base-uncased-License"
+  },
+  {
+    "s": "mcro:bert-base-uncased-License",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  },
+  {
+    "s": "mcro:bert-base-uncased-License",
+    "p": "prov:hasTextValue",
+    "o": "apache-2.0"
+  },
+  {
+    "s": "mcro:bert-base-uncased",
+    "p": "mcro:HasDataset",
+    "o": "mcro:bert-base-uncased-Dataset"
+  },
+  {
+    "s": "mcro:bert-base-uncased-Dataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:bert-base-uncased-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "bookcorpus"
+  },
+  {
+    "s": "mcro:bert-base-uncased-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "english wikipedia"
+  },
+  {
+    "s": "mcro:bert-base-uncased",
+    "p": "mcro:hasArchitecture",
+    "o": "mcro:bert-base-uncased-Architecture"
+  },
+  {
+    "s": "mcro:bert-base-uncased-Architecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:bert-base-uncased-Architecture",
+    "p": "prov:hasTextValue",
+    "o": "bert"
+  },
+  {
+    "s": "mcro:bert-base-uncased",
+    "p": "mcro:hasIntendedUse",
+    "o": "mcro:bert-base-uncased-IntendedUse"
+  },
+  {
+    "s": "mcro:bert-base-uncased-IntendedUse",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:bert-base-uncased-IntendedUse",
+    "p": "prov:hasTextValue",
+    "o": "masked language modeling"
+  },
+  {
+    "s": "mcro:bert-base-uncased-IntendedUse",
+    "p": "prov:hasTextValue",
+    "o": "next sentence prediction"
+  },
+  {
+    "s": "mcro:model_card",
+    "p": "rdf:type",
+    "o": "mcro:ModelCardReport"
+  },
+  {
+    "s": "mcro:model_card",
+    "p": "mcro:hasLicense",
+    "o": "mcro:model_card-LicenseInformationSection"
+  },
+  {
+    "s": "mcro:model_card-LicenseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  },
+  {
+    "s": "mcro:model_card-LicenseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "apache-2.0"
+  },
+  {
+    "s": "mcro:model_card",
+    "p": "obo:MCRO_0000048",
+    "o": "mcro:model_card-Description"
+  },
+  {
+    "s": "mcro:model_card-Description",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000301"
+  },
+  {
+    "s": "mcro:model_card-Description",
+    "p": "prov:hasTextValue",
+    "o": "sentence-transformers is a framework for state-of-the-art sentence, text and image embeddings."
+  },
+  {
+    "s": "mcro:model_card",
+    "p": "obo:MCRO_0000048",
+    "o": "mcro:model_card-Tags"
+  },
+  {
+    "s": "mcro:model_card-Tags",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000301"
+  },
+  {
+    "s": "mcro:model_card-Tags",
+    "p": "prov:hasTextValue",
+    "o": "transformer, sentence-transformers, feature-extraction, sentence-similarity"
+  },
+  {
+    "s": "mcro:model_card",
+    "p": "obo:MCRO_0000048",
+    "o": "mcro:model_card-Dataset"
+  },
+  {
+    "s": "mcro:model_card-Dataset",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000301"
+  },
+  {
+    "s": "mcro:model_card-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "nreimers/mmarco-v2-passage-reranking"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:HasLicense",
+    "o": "mcro:TheBlokephi2GGUF-License"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-License",
+    "p": "rdf:type",
+    "o": "swo:SWO_0000002"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:HasDataset",
+    "o": "mcro:TheBlokephi2GGUF-Dataset"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Dataset",
+    "p": "rdf:type",
+    "o": "mcro:Dataset"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "N/A"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:HasModelArchitecture",
+    "o": "mcro:TheBlokephi2GGUF-ModelArchitecture"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-ModelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:HasLanguage",
+    "o": "mcro:TheBlokephi2GGUF-Language"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Language",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000129"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Language",
+    "p": "prov:hasTextValue",
+    "o": "English"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1",
+    "p": "mcro:HasLicense",
+    "o": "mcro:facebookesmfoldv1-License"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1-License",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1",
+    "p": "mcro:HasDescription",
+    "o": "mcro:facebookesmfoldv1-Description"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1-Description",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000310"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1-Description",
+    "p": "prov:hasTextValue",
+    "o": "Accurate and fast protein structure prediction with sequence homology and deep learning."
+  },
+  {
+    "s": "mcro:facebookesmfoldv1",
+    "p": "mcro:HasTag",
+    "o": "mcro:facebookesmfoldv1-Tag"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1-Tag",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000310"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1-Tag",
+    "p": "prov:hasTextValue",
+    "o": "protein-folding"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1",
+    "p": "mcro:HasDataset",
+    "o": "mcro:facebookesmfoldv1-Dataset"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1-Dataset",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000310"
+  },
+  {
+    "s": "mcro:facebookesmfoldv1-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "custom"
+  },
+  {
+    "s": "mcro:bert-base-uncased-finetuned-sst2",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:bert-base-uncased-finetuned-sst2",
+    "p": "mcro:HasLicense",
+    "o": "mcro:bert-base-uncased-finetuned-sst2-License"
+  },
+  {
+    "s": "mcro:bert-base-uncased-finetuned-sst2-License",
+    "p": "rdf:type",
+    "o": "mcro:License"
+  },
+  {
+    "s": "mcro:bert-base-uncased-finetuned-sst2-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  },
+  {
+    "s": "mcro:bert-base-uncased-finetuned-sst2",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:SentimentAnalysis"
+  },
+  {
+    "s": "mcro:SentimentAnalysis",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000064"
+  },
+  {
+    "s": "mcro:bert-base-uncased-finetuned-sst2",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:TextClassification"
+  },
+  {
+    "s": "mcro:TextClassification",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000064"
+  },
+  {
+    "s": "mcro:bert-base-uncased-finetuned-sst2",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:FineTunedModel"
+  },
+  {
+    "s": "mcro:FineTunedModel",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000064"
+  },
+  {
+    "s": "mcro:bert-base-uncased-finetuned-sst2",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:HuggingFaceModel"
+  },
+  {
+    "s": "mcro:HuggingFaceModel",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000064"
+  },
+  {
+    "s": "mcro:bert-base-uncased-finetuned-sst2",
+    "p": "obo:IAO_0000136",
+    "o": "mcro:BERT"
+  },
+  {
+    "s": "mcro:BERT",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000064"
+  },
+  {
+    "s": "mcro:bingsuadetailer",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:bingsuadetailer",
+    "p": "mcro:HasLicense",
+    "o": "mcro:bingsuadetailer-License"
+  },
+  {
+    "s": "mcro:bingsuadetailer-License",
+    "p": "rdf:type",
+    "o": "swo:SWO_0000002"
+  },
+  {
+    "s": "mcro:bingsuadetailer-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  },
+  {
+    "s": "mcro:bingsuadetailer",
+    "p": "mcro:HasDataset",
+    "o": "mcro:bingsuadetailer-Dataset"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Dataset",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000310"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "laion2b-en-aesthetic"
+  },
+  {
+    "s": "mcro:bingsuadetailer",
+    "p": "mcro:HasDescription",
+    "o": "mcro:bingsuadetailer-Description"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Description",
+    "p": "rdf:type",
+    "o": "obo:IAO_0000301"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Description",
+    "p": "prov:hasTextValue",
+    "o": "bingsu/adetailer is a fine-tuned version of stabilityai/stable-diffusion-xl-base-1.0, optimized to enhance detail quality for close-up objects, particularly faces and hands."
+  },
+  {
+    "s": "mcro:bingsuadetailer",
+    "p": "mcro:HasTag",
+    "o": "mcro:bingsuadetailer-Tag-sdxl"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Tag-sdxl",
+    "p": "rdf:type",
+    "o": "skos:Concept"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Tag-sdxl",
+    "p": "prov:hasTextValue",
+    "o": "sdxl"
+  },
+  {
+    "s": "mcro:bingsuadetailer",
+    "p": "mcro:HasTag",
+    "o": "mcro:bingsuadetailer-Tag-face"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Tag-face",
+    "p": "rdf:type",
+    "o": "skos:Concept"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Tag-face",
+    "p": "prov:hasTextValue",
+    "o": "face"
+  },
+  {
+    "s": "mcro:bingsuadetailer",
+    "p": "mcro:HasTag",
+    "o": "mcro:bingsuadetailer-Tag-detailer"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Tag-detailer",
+    "p": "rdf:type",
+    "o": "skos:Concept"
+  },
+  {
+    "s": "mcro:bingsuadetailer-Tag-detailer",
+    "p": "prov:hasTextValue",
+    "o": "detailer"
+  }
+]
