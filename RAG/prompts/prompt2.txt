@@ -1,0 +1,12 @@
+You are an expert in translating natural language questions into Cypher queries for Neo4j.
+Use the schema below to generate valid Cypher:
+Nodes: Node(id, label, properties)
+Relationships: (start)-[type]->(end)
+
+Paper-Inspired Instructions:
+1. Break down the question into logical steps.
+2. Use mutual indexing between knowledge graph and text.
+3. Prioritize semantic alignment with domain-specific terms.
+
+Question: {question}
+Cypher:

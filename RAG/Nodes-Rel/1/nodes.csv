@@ -1,0 +1,158 @@
+:ID,:LABEL,properties
+mcro_allMiniLML6v2,NamedIndividual;mcro_Model,{}
+mcro_clipmodel-performance-imagenetvid,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'ImageNet-Vid'}
+mcro_resnet50a1in1k,NamedIndividual;mcro_Model,{}
+mcro_resnet50a1in1k-ModelDetail,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_llama318BInstructGGUF-ModelArchitecture,NamedIndividual;mcro_ModelArchitectureInformationSection,{'prov_hasTextValue': 'Llama 3.1 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety.'}
+mcro_clipmodel-performance-voc2007,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'VOC2007'}
+mcro_bertbasemodeluncased,NamedIndividual;mcro_Model,{}
+mcro_bertbasemodeluncased-ModelDetail,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_clipmodel-performance-country211,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Country211'}
+mcro_dima806fairfaceageimagedetection,NamedIndividual;mcro_Model,{}
+mcro_dima806fairfaceageimagedetection-UseCaseInformationSection,NamedIndividual;mcro_UseCaseInformationSection,{'prov_hasTextValue': 'Detects age group with about 59% accuracy based on an image.'}
+mcro_pyannotesegmentation30,NamedIndividual;mcro_Model,{}
+mcro_pyannotesegmentation30-Architecture,NamedIndividual;mcro_ModelArchitectureInformationSection,"{'prov_hasTextValue': '10 seconds of mono audio sampled at 16kHz and outputs speaker diarization as a (num_frames, num_classes) matrix where the 7 classes are _non-speech_, _speaker #1_, _speaker #2_, _speaker #3_, _speakers #1 and #2_, _speakers #1 and #3_, and _speakers #2 and #3_.'}"
+mcro_clipmodel-modelarchitecture,NamedIndividual;mcro_ModelArchitectureInformationSection,{'prov_hasTextValue': 'ViT-L/14 Transformer architecture'}
+mcro_clipmodel-performance-sun397,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'SUN397'}
+mcro_Falconsainsfwimagedetection,NamedIndividual;mcro_Model,{}
+mcro_Falconsainsfwimagedetection-ModelDetail,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_YOLOv8DetectionModel-DatasetInformationSection,NamedIndividual;mcro_DatasetInformationSection,{}
+mcro_clipmodel-performance-caltech101,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Caltech101'}
+mcro_Falconsainsfwimagedetection-Reference,NamedIndividual;mcro_ReferenceInformationSection,{'prov_hasTextValue': '- [Hugging Face Model Hub](https://huggingface.co/models)\n- [Vision Transformer (ViT) Paper](https://arxiv.org/abs/2010.11929)\n- [ImageNet-21k Dataset](http://www.image-net.org/)'}
+mcro_gpt2-License,NamedIndividual;mcro_LicenseInformationSection,{}
+mcro_pyannotesegmentation30-Citation2,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@inproceedings{Bredin23,\n  author={Hervé Bredin},\n  title={{pyannote.audio 2.1 speaker diarization pipeline: principle, benchmark, and recipe}},\n  year=2023,\n  booktitle={Proc. INTERSPEECH 2023},\n}'}"
+mcro_bertbasemodeluncased-ModelArchitecture,NamedIndividual;mcro_ModelArchitectureInformationSection,{'prov_hasTextValue': 'BERT is a transformers model pretrained on a large corpus of English data in a self-supervised fashion.'}
+mcro_clipmodel-performance-imageneta,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'ImageNet-A'}
+mcro_clipmodel-performance-cifar10,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'CIFAR10'}
+mcro_mobilenetv3small100lambin1k-ModelDetail,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_mobilenetv3small100lambin1k-Dataset,NamedIndividual;mcro_DatasetInformationSection,{'prov_hasTextValue': 'ImageNet-1k'}
+mcro_chronos-t5-small-Citation,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@article{ansari2024chronos,\n    title={Chronos: Learning the Language of Time Series},\n    author={Ansari, Abdul Fatir and Stella, Lorenzo and Turkmen, Caner and Zhang, Xiyuan, and Mercado, Pedro and Shen, Huibin and Shchur, Oleksandr and Rangapuram, Syama Syndar and Pineda Arango, Sebastian and Kapoor, Shubham and Zschiegner, Jasper and Maddix, Danielle C. and Mahoney, Michael W. and Torkkola, Kari and Gordon Wilson, Andrew and Bohlke-Schneider, Michael and Wang, Yuyang},\n    journal={Transactions on Machine Learning Research},\n    issn={2835-8856},\n    year={2024},\n    url={https://openreview.net/forum?id=gerNCVqqtR}\n}'}"
+mcro_clipmodel-performance-birdsnap,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Birdsnap'}
+mcro_clipmodel-performance-ucf101,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'UCF101'}
+mcro_bertbasemodeluncased-TrainingProcedure,NamedIndividual;mcro_ModelParameterSection,{}
+mcro_clipmodel-performance-rareact,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'RareAct'}
+mcro_clipmodel,NamedIndividual;mcro_Model,{}
+mcro_clipmodel-dataset,NamedIndividual;mcro_DatasetInformationSection,{'prov_hasTextValue': 'publicly available image-caption data'}
+mcro_clipmodel-performance,NamedIndividual;mcro_QuantativeAnalysisSection,{}
+mcro_clipmodel-performance-hatefulmemes,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Hateful Memes'}
+mcro_clipmodel-performance-objectnet,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'ObjectNet (ImageNet Overlap)'}
+mcro_clip,NamedIndividual;mcro_Model,{}
+mcro_clip-LimitationInformationSection,NamedIndividual;mcro_LimitationInformationSection,{}
+mcro_clipmodel-performance-cifar100,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'CIFAR100'}
+mcro_clipmodel-performance-clevrcounting,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'CLEVR Counting'}
+mcro_gpt2-TrainingProcedure,NamedIndividual;obo_http_//purl.obolibrary.org/obo/IAO_0000310,{}
+mcro_resnet50a1in1k-Dataset,NamedIndividual;mcro_DatasetInformationSection,{'prov_hasTextValue': 'ImageNet-1k'}
+mcro_resnet50a1in1k-Architecture,NamedIndividual;mcro_ModelArchitectureInformationSection,{'prov_hasTextValue': 'single layer 7x7 convolution with pooling; 1x1 convolution shortcut downsample; ReLU activations'}
+mcro_Phi2GGUF-LicenseSection,NamedIndividual;mcro_LicenseInformationSection,{'prov_hasTextValue': 'microsoft-research-license'}
+mcro_chronos-t5-small-ModelArchitecture,NamedIndividual;mcro_ModelArchitectureInformationSection,"{'prov_hasTextValue': 'The models in this repository are based on the [T5 architecture](https://arxiv.org/abs/1910.10683). The only difference is in the vocabulary size: Chronos-T5 models use 4096 different tokens, compared to 32128 of the original T5 models, resulting in fewer parameters.'}"
+mcro_robertalargemodel,NamedIndividual;mcro_Model,{}
+mcro_robertalargemodel-Architecture,NamedIndividual;mcro_ModelArchitectureInformationSection,"{'prov_hasTextValue': 'RoBERTa is a transformers model pretrained on a large corpus of English data in a self-supervised fashion. This means\nit was pretrained on the raw texts only, with no humans labelling them in any way (which is why it can use lots of\npublicly available data) with an automatic process to generate inputs and labels from those texts.\n\nMore precisely, it was pretrained with the Masked language modeling (MLM) objective. Taking a sentence, the model\nrandomly masks 15% of the words in the input then run the entire masked sentence through the model and has to predict\nthe masked words. This is different from traditional recurrent neural networks (RNNs) that usually see the words one\nafter the other, or from autoregressive models like GPT which internally mask the future tokens. It allows the model to\nlearn a bidirectional representation of the sentence.\n\nThis way, the model learns an inner representation of the English language that can then be used to extract features\nuseful for downstream tasks: if you have a dataset of labeled sentences for instance, you can train a standard\nclassifier using the features produced by the BERT model as inputs.'}"
+mcro_Phi2GGUF-ModelDetailSection,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_Phi2GGUF-CitationSection,NamedIndividual;mcro_CitationInformationSection,{}
+mcro_bertbasemodeluncased-Dataset,NamedIndividual;mcro_DatasetInformationSection,"{'prov_hasTextValue': 'BookCorpus, a dataset consisting of 11,038\nunpublished books and English Wikipedia (excluding lists, tables and\nheaders).'}"
+mcro_pyannotewespeakervoxcelebresnet34LM-Architecture,NamedIndividual;mcro_ModelArchitectureInformationSection,{'prov_hasTextValue': 'wrapper around WeSpeaker wespeaker-voxceleb-resnet34-LM pretrained speaker embedding model'}
+mcro_allMiniLML6v2-ModelArchitectureInformationSection,NamedIndividual;mcro_ModelArchitectureInformationSection,"{'prov_hasTextValue': 'We used the pretrained [`nreimers/MiniLM-L6-H384-uncased`](https://huggingface.co/nreimers/MiniLM-L6-H384-uncased) model and fine-tuned in on a \n1B sentence pairs dataset. We use a contrastive learning objective: given a sentence from the pair, the model should predict which out of a set of randomly sampled other sentences, was actually paired with it in our dataset.'}"
+mcro_electramodel,NamedIndividual;mcro_Model,{}
+mcro_electramodel-Citation,NamedIndividual;mcro_CitationInformationSection,{'prov_hasTextValue': 'ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators'}
+n339c54dc22d648508eb7b630b75534ccb1,Ontology,{}
+mcro_Phi2GGUF-ConsiderationSection,NamedIndividual;mcro_ConsiderationInformationSection,{}
+mcro_clipmodel-performance-iiit5k,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'IIIT5K'}
+mcro_gpt2-TrainingDataInformationSection,NamedIndividual;mcro_TrainingDataInformationSection,{'prov_hasTextValue': 'WebText'}
+mcro_mobilenetv3small100lambin1k-Citation,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@misc{rw2019timm,\n  author = {Ross Wightman},\n  title = {PyTorch Image Models},\n  year = {2019},\n  publisher = {GitHub},\n  journal = {GitHub repository},\n  doi = {10.5281/zenodo.4414861},\n  howpublished = {\\url{https://github.com/huggingface/pytorch-image-models}}\n}'}"
+mcro_allMiniLML6v2-TrainingDataInformationSection,NamedIndividual;mcro_TrainingDataInformationSection,{'prov_hasTextValue': 'We use the concatenation from multiple datasets to fine-tune our model. The total number of sentence pairs is above 1 billion sentences.\nWe sampled each dataset given a weighted probability which configuration is detailed in the `data_config.json` file.'}
+mcro_Phi2GGUF,NamedIndividual;mcro_Model,{}
+mcro_Phi2GGUF-DatasetSection,NamedIndividual;mcro_DatasetInformationSection,{}
+mcro_clipmodel-performance-imagenetsketch,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'ImageNet Sketch'}
+mcro_clipmodel-primaryuse,NamedIndividual;mcro_PrimaryIntendedUseInformationSection,{'prov_hasTextValue': 'AI researchers'}
+mcro_Falconsainsfwimagedetection-Limitation,NamedIndividual;mcro_LimitationInformationSection,"{'prov_hasTextValue': '- Specialized Task Fine-Tuning: While the model is adept at NSFW image classification, its performance may vary when applied to other tasks.\n- Users interested in employing this model for different tasks should explore fine-tuned versions available in the model hub for optimal results.'}"
+mcro_clipmodel-modeldetail,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_pyannotewespeakervoxcelebresnet34LM-Citation1,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@inproceedings{Wang2023,\n  title={Wespeaker: A research and production oriented speaker embedding learning toolkit},\n  author={Wang, Hongji and Liang, Chengdong and Wang, Shuai and Chen, Zhengyang and Zhang, Binbin and Xiang, Xu and Deng, Yanlei and Qian, Yanmin},\n  booktitle={ICASSP 2023, IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={1--5},\n  year={2023},\n  organization={IEEE}\n}'}"
+mcro_electramodel-UseCase,NamedIndividual;mcro_UseCaseInformationSection,{'prov_hasTextValue': 'classification tasks'}
+mcro_chronos-t5-small-License,NamedIndividual;mcro_LicenseInformationSection,{'prov_hasTextValue': 'This project is licensed under the Apache-2.0 License.'}
+mcro_gpt2-ModelDetail,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_bertbasemodeluncased-IntendedUse,NamedIndividual;mcro_UseCaseInformationSection,{}
+mcro_clipmodel-performance-fgvcaircraft,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'FGVC Aircraft'}
+mcro_gpt2-CitationInformationSection,NamedIndividual;mcro_CitationInformationSection,{}
+mcro_Falconsainsfwimagedetection-Architecture,NamedIndividual;mcro_ModelArchitectureInformationSection,{'prov_hasTextValue': 'Fine-Tuned Vision Transformer (ViT)'}
+mcro_bertbasemodeluncased-TrainingData,NamedIndividual;mcro_DatasetInformationSection,{}
+mcro_Phi2GGUF-UseCaseSection,NamedIndividual;mcro_UseCaseInformationSection,{}
+mcro_resnet50a1in1k-UseCase,NamedIndividual;mcro_UseCaseInformationSection,{'prov_hasTextValue': 'feature backbone; Image classification'}
+mcro_Falconsainsfwimagedetection-License,NamedIndividual;mcro_LicenseInformationSection,{}
+mcro_clipmodel-performance-stanfordcars,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Stanford Cars'}
+mcro_clipmodel-performance-mnist,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'MNIST'}
+mcro_bertbasemodeluncased-Citation,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@article{DBLP:journals/corr/abs-1810-04805,\n  author    = {Jacob Devlin and\n               Ming{-}Wei Chang and\n               Kenton Lee and\n               Kristina Toutanova},\n  title     = {{BERT:} Pre-training of Deep Bidirectional Transformers for Language\n               Understanding},\n  journal   = {CoRR},\n  volume    = {abs/1810.04805},\n  year      = {2018},\n  url       = {http://arxiv.org/abs/1810.04805},\n  archivePrefix = {arXiv},\n  eprint    = {1810.04805},\n  timestamp = {Tue, 30 Oct 2018 20:39:56 +0100},\n  biburl    = {https://dblp.org/rec/journals/corr/abs-1810-04805.bib},\n  bibsource = {dblp computer science bibliography, https://dblp.org}\n}'}"
+mcro_clipmodel-performance-svhn,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'SVHN'}
+mcro_gpt2-UseCaseInformationSection,NamedIndividual;mcro_UseCaseInformationSection,{}
+mcro_robertalargemodel-ModelDetail,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_robertalargemodel-Citation,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@article{DBLP:journals/corr/abs-1907-11692,\n  author    = {Yinhan Liu and\n               Myle Ott and\n               Naman Goyal and\n               Jingfei Du and\n               Mandar Joshi and\n               Danqi Chen and\n               Omer Levy and\n               Mike Lewis and\n               Luke Zettlemoyer and\n               Veselin Stoyanov},\n  title     = {RoBERTa: {A} Robustly Optimized {BERT} Pretraining Approach},\n  journal   = {CoRR},\n  volume    = {abs/1907.11692},\n  year      = {2019},\n  url       = {http://arxiv.org/abs/1907.11692},\n  archivePrefix = {arXiv},\n  eprint    = {1907.11692},\n  timestamp = {Thu, 01 Aug 2019 08:59:33 +0200},\n  biburl    = {https://dblp.org/rec/journals/corr/abs-1907-11692.bib},\n  bibsource = {dblp computer science bibliography, https://dblp.org}\n}'}"
+mcro_electramodel-UseCase3,NamedIndividual;mcro_UseCaseInformationSection,{'prov_hasTextValue': 'sequence tagging tasks'}
+mcro_Phi2GGUF-ArchitectureSection,NamedIndividual;mcro_ModelArchitectureInformationSection,{}
+mcro_gpt2,NamedIndividual;mcro_Model,{}
+mcro_gpt2-ModelArchitectureInformationSection,NamedIndividual;mcro_ModelArchitectureInformationSection,{}
+mcro_mobilenetv3small100lambin1k-Citation2,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@inproceedings{howard2019searching,\n  title={Searching for mobilenetv3},\n  author={Howard, Andrew and Sandler, Mark and Chu, Grace and Chen, Liang-Chieh and Chen, Bo and Tan, Mingxing and Wang, Weijun and Zhu, Yukun and Pang, Ruoming and Vasudevan, Vijay and others},\n  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},\n  pages={1314--1324},\n  year={2019}\n}'}"
+mcro_mobilenetv3small100lambin1k-ModelArchitecture,NamedIndividual;mcro_ModelArchitectureInformationSection,{'prov_hasTextValue': 'Image classification / feature backbone'}
+mcro_pyannotewespeakervoxcelebresnet34LM-License,NamedIndividual;mcro_LicenseInformationSection,"{'prov_hasTextValue': ""The pretrained model in WeNet follows the license of it's corresponding dataset. For example, the pretrained model on VoxCeleb follows Creative Commons Attribution 4.0 International License., since it is used as license of the VoxCeleb dataset, see https://mm.kaist.ac.kr/datasets/voxceleb/.""}"
+mcro_clip-ModelArchitectureInformationSection,NamedIndividual;mcro_ModelArchitectureInformationSection,{}
+mcro_clipmodel-performance-kittidistance,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'KITTI Distance'}
+mcro_clipmodel-performance-flowers102,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Flowers102'}
+mcro_electramodel-Dataset,NamedIndividual;mcro_DatasetInformationSection,{'prov_hasTextValue': 'SQuAD 2.0'}
+mcro_allmpnetbasev2-TrainingData,NamedIndividual;mcro_DatasetInformationSection,{'prov_hasTextValue': 'We use the concatenation from multiple datasets to fine-tune our model. The total number of sentence pairs is above 1 billion sentences.\nWe sampled each dataset given a weighted probability which configuration is detailed in the `data_config.json` file.'}
+mcro_clip-UseCaseInformationSection,NamedIndividual;mcro_UseCaseInformationSection,{}
+mcro_clip-ConsiderationInformationSection,NamedIndividual;mcro_ConsiderationInformationSection,{}
+mcro_Phi2GGUF-ModelParameterSection,NamedIndividual;mcro_ModelParameterSection,{}
+mcro_gpt2-DatasetInformationSection,NamedIndividual;mcro_DatasetInformationSection,{}
+mcro_clip-DatasetInformationSection,NamedIndividual;mcro_DatasetInformationSection,{}
+mcro_clipmodel-performance-mscoco,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'MSCOCO'}
+mcro_clipmodel-performance-imagenet,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'ImageNet'}
+mcro_electramodel-ModelArchitecture,NamedIndividual;mcro_ModelArchitectureInformationSection,{'prov_hasTextValue': 'transformer networks'}
+mcro_mobilenetv3small100lambin1k-UseCase,NamedIndividual;mcro_UseCaseInformationSection,{'prov_hasTextValue': 'None'}
+mcro_esmfold-ModelArchitecture,NamedIndividual;mcro_ModelArchitectureInformationSection,{'prov_hasTextValue': 'ESMFold is a state-of-the-art end-to-end protein folding model based on an ESM-2 backbone.'}
+mcro_llama318BInstructGGUF,NamedIndividual;mcro_Model,{}
+mcro_llama318BInstructGGUF-DatasetInformation,NamedIndividual;mcro_DatasetInformationSection,"{'prov_hasTextValue': 'Llama 3.1 was pretrained on ~15 trillion tokens of data from publicly available sources. The fine-tuning data includes publicly available instruction datasets, as well as over 25M synthetically generated examples.'}"
+mcro_clipmodel-limitation,NamedIndividual;mcro_LimitationInformationSection,{'prov_hasTextValue': 'CLIP currently struggles with respect to certain tasks such as fine grained classification and counting objects.'}
+mcro_clipmodel-performance-youtubebb,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Youtube-BB'}
+mcro_esmfold-Citation,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': 'For details on the model architecture and training, please refer to the accompanying paper'}"
+mcro_clipmodel-performance-sst2,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'SST-2'}
+mcro_clipmodel-performance-dtd,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'DTD'}
+mcro_YOLOv8DetectionModel,NamedIndividual;mcro_Model,{}
+mcro_allMiniLML6v2-UseCaseInformationSection,NamedIndividual;mcro_UseCaseInformationSection,"{'prov_hasTextValue': 'Our model is intended to be used as a sentence and short paragraph encoder. Given an input text, it outputs a vector which captures \nthe semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks.\n\nBy default, input text longer than 256 word pieces is truncated.'}"
+mcro_clip-ModelDetailSection,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_clipmodel-performance-food101,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Food101'}
+mcro_pyannotespeakerdiarization31-CitationInformationSection,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@inproceedings{Plaquet23,\n  author={Alexis Plaquet and Hervé Bredin},\n  title={{Powerset multi-class cross entropy loss for neural speaker diarization}},\n  year=2023,\n  booktitle={Proc. INTERSPEECH 2023},\n}; @inproceedings{Bredin23,\n  author={Hervé Bredin},\n  title={{pyannote.audio 2.1 speaker diarization pipeline: principle, benchmark, and recipe}},\n  year=2023,\n  booktitle={Proc. INTERSPEECH 2023},\n}'}"
+mcro_allmpnetbasev2-UseCase,NamedIndividual;mcro_UseCaseInformationSection,"{'prov_hasTextValue': 'Our model is intented to be used as a sentence and short paragraph encoder. Given an input text, it ouptuts a vector which captures \nthe semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks.\n\nBy default, input text longer than 384 word pieces is truncated.'}"
+mcro_llama318BInstructGGUF-ModelDetail,NamedIndividual;mcro_ModelDetailSection,{}
+mcro_llama318BInstructGGUF-License,NamedIndividual;mcro_LicenseInformationSection,"{'prov_hasTextValue': 'A custom commercial license, the Llama 3.1 Community License, is available at: [https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE)'}"
+mcro_bertbasemodeluncased-Limitation,NamedIndividual;mcro_LimitationInformationSection,"{'prov_hasTextValue': 'Even if the training data used for this model could be characterized as fairly neutral, this model can have biased\npredictions:'}"
+mcro_llama318BInstructGGUF-IntendedUseCase,NamedIndividual;mcro_UseCaseInformationSection,"{'prov_hasTextValue': 'Llama 3.1 is intended for commercial and research use in multiple languages. Instruction tuned text only models are intended for assistant-like chat, whereas pretrained models can be adapted for a variety of natural language generation tasks. The Llama 3.1 model collection also supports the ability to leverage the outputs of its models to improve other models including synthetic data generation and distillation. The Llama 3.1 Community License allows for these use cases.'}"
+mcro_clipmodel-performance-flickr30,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Flickr30'}
+mcro_electramodel-UseCase2,NamedIndividual;mcro_UseCaseInformationSection,{'prov_hasTextValue': 'QA tasks'}
+mcro_pyannotesegmentation30-Citation,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@inproceedings{Plaquet23,\n  author={Alexis Plaquet and Hervé Bredin},\n  title={{Powerset multi-class cross entropy loss for neural speaker diarization}},\n  year=2023,\n  booktitle={Proc. INTERSPEECH 2023},\n}'}"
+mcro_YOLOv8DetectionModel-UseCaseInformationSection,NamedIndividual;mcro_UseCaseInformationSection,{}
+mcro_clipmodel-performance-oxfordiiitpet,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Oxford-IIIT Pet dataset'}
+mcro_clip-CitationInformationSection,NamedIndividual;mcro_CitationInformationSection,{}
+mcro_Falconsainsfwimagedetection-TrainingData,NamedIndividual;mcro_TrainingDataInformationSection,"{'prov_hasTextValue': 'The model\'s training data includes a proprietary dataset comprising approximately 80,000 images. This dataset encompasses a significant amount of variability and consists of two distinct classes: ""normal"" and ""nsfw."" The training process on this data aimed to equip the model with the ability to distinguish between safe and explicit content effectively.'}"
+mcro_allmpnetbasev2-Architecture,NamedIndividual;mcro_ModelArchitectureInformationSection,"{'prov_hasTextValue': 'We used the pretrained [`microsoft/mpnet-base`](https://huggingface.co/microsoft/mpnet-base) model and fine-tuned in on a \n1B sentence pairs dataset. We use a contrastive learning objective: given a sentence from the pair, the model should predict which out of a set of randomly sampled other sentences, was actually paired with it in our dataset.'}"
+mcro_pyannotewespeakervoxcelebresnet34LM,NamedIndividual;mcro_Model,{}
+mcro_llama318BInstructGGUF-CitationInformation,NamedIndividual;mcro_CitationInformationSection,{}
+mcro_robertalargemodel-UseCase,NamedIndividual;mcro_UseCaseInformationSection,"{'prov_hasTextValue': ""You can use the raw model for masked language modeling, but it's mostly intended to be fine-tuned on a downstream task.\nSee the [model hub](https://huggingface.co/models?filter=roberta) to look for fine-tuned versions on a task that\ninterests you.""}"
+mcro_resnet50a1in1k-Citation,NamedIndividual;mcro_CitationInformationSection,{}
+mcro_allmpnetbasev2,NamedIndividual;mcro_Model,{}
+mcro_pyannotespeakerdiarization31,NamedIndividual;mcro_Model,{}
+mcro_clipmodel-usecase,NamedIndividual;mcro_UseCaseInformationSection,{'prov_hasTextValue': 'research output for research communities'}
+mcro_clipmodel-outofscope,NamedIndividual;mcro_OutOfScopeUseCaseSectionInformation,{'prov_hasTextValue': 'Any deployed use case of the model - whether commercial or not - is currently out of scope'}
+mcro_clipmodel-citation1,NamedIndividual;mcro_CitationInformationSection,{'prov_hasTextValue': 'CLIP Paper'}
+mcro_pyannotewespeakervoxcelebresnet34LM-Citation2,NamedIndividual;mcro_CitationInformationSection,"{'prov_hasTextValue': '@inproceedings{Bredin23,\n  author={Hervé Bredin},\n  title={{pyannote.audio 2.1 speaker diarization pipeline: principle, benchmark, and recipe}},\n  year=2023,\n  booktitle={Proc. INTERSPEECH 2023},\n  pages={1983--1987},\n  doi={10.21437/Interspeech.2023-105}\n}'}"
+mcro_esmfold-UseCase,NamedIndividual;mcro_UseCaseInformationSection,"{'prov_hasTextValue': ""If you're interested in using ESMFold in practice, please check out the associated tutorial notebook.""}"
+mcro_clipmodel-citation2,NamedIndividual;mcro_CitationInformationSection,{'prov_hasTextValue': 'Blog Post'}
+mcro_gpt2-ConsiderationInformationSection,NamedIndividual;mcro_ConsiderationInformationSection,{}
+mcro_mobilenetv3small100lambin1k,NamedIndividual;mcro_Model,{}
+mcro_clipmodel-performance-stl10,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'STL-10'}
+mcro_clipmodel-performance-imagenetr,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'ImageNet-R'}
+mcro_chronos-t5-small,NamedIndividual;mcro_Model,{}
+mcro_dima806fairfaceageimagedetection-ReferenceInformationSection,NamedIndividual;mcro_ReferenceInformationSection,{'prov_hasTextValue': 'See https://www.kaggle.com/code/dima806/age-group-image-classification-vit for details.'}
+mcro_clipmodel-performance-kinetics700,NamedIndividual;mcro_PerformanceMetricInformationSection,{'prov_hasTextValue': 'Kinetics700'}
+mcro_YOLOv8DetectionModel-QuantativeAnalysisSection,NamedIndividual;mcro_QuantativeAnalysisSection,{}
+mcro_esmfold,NamedIndividual;mcro_Model,{}
+mcro_Falconsainsfwimagedetection-UseCase,NamedIndividual;mcro_UseCaseInformationSection,"{'prov_hasTextValue': 'NSFW Image Classification: The primary intended use of this model is for the classification of NSFW (Not Safe for Work) images. It has been fine-tuned for this purpose, making it suitable for filtering explicit or inappropriate content in various applications.'}"
+obo_http_//purl.obolibrary.org/obo/2023-03-07/mcro.owl,Undefined,{}
+mcro_robertalargemodel-TrainingData,NamedIndividual;mcro_TrainingDataInformationSection,"{'prov_hasTextValue': 'The RoBERTa model was pretrained on the reunion of five datasets:\n- [BookCorpus](https://yknzhu.wixsite.com/mbweb), a dataset consisting of 11,038 unpublished books;\n- [English Wikipedia](https://en.wikipedia.org/wiki/English_Wikipedia) (excluding lists, tables and headers) ;\n- [CC-News](https://commoncrawl.org/2016/10/news-dataset-available/), a dataset containing 63 millions English news\n  articles crawled between September 2016 and February 2019.\n- [OpenWebText](https://github.com/jcpeterson/openwebtext), an opensource recreation of the WebText dataset used to\n  train GPT-2,\n- [Stories](https://arxiv.org/abs/1806.02847) a dataset containing a subset of CommonCrawl data filtered to match the\n  story-like style of Winograd schemas.\n\nTogether theses datasets weight 160GB of text.'}"
