@@ -1,0 +1,320 @@
+@prefix mcro: <http://purl.obolibrary.org/obo/MCRO_> .
+@prefix prov1: <https://www.w3.org/ns/prov#> .
+
+mcro:Falconsainsfwimagedetection a mcro:Model ;
+    mcro:hasLimitation mcro:Falconsainsfwimagedetection-Limitation ;
+    mcro:hasModelDetail mcro:Falconsainsfwimagedetection-ModelDetail ;
+    mcro:hasReference mcro:Falconsainsfwimagedetection-Reference ;
+    mcro:hasTrainingData mcro:Falconsainsfwimagedetection-TrainingData ;
+    mcro:hasUseCase mcro:Falconsainsfwimagedetection-UseCase .
+
+mcro:RoBERTaLargeModel a mcro:Model ;
+    mcro:hasConsideration mcro:RoBERTaLargeModel-Consideration ;
+    mcro:hasIntendedUseCase mcro:RoBERTaLargeModel-IntendedUseCase ;
+    mcro:hasModelDetail mcro:RoBERTaLargeModel-ModelDetail ;
+    mcro:hasModelParameter mcro:RoBERTaLargeModel-ModelParameter ;
+    mcro:hasQuantativeAnalysis mcro:RoBERTaLargeModel-QuantativeAnalysis .
+
+mcro:TheBlokephi2GGUF a mcro:Model ;
+    mcro:hasConsideration mcro:TheBlokephi2GGUF-Consideration ;
+    mcro:hasDataset mcro:TheBlokephi2GGUF-Dataset ;
+    mcro:hasModelDetail mcro:TheBlokephi2GGUF-ModelDetailSection ;
+    mcro:hasParameter mcro:TheBlokephi2GGUF-Parameter ;
+    mcro:hasQuantativeAnalysis mcro:TheBlokephi2GGUF-QuantativeAnalysis ;
+    mcro:hasUseCase mcro:TheBlokephi2GGUF-UseCase ;
+    mcro:hasVersion mcro:TheBlokephi2GGUF-Version .
+
+mcro:allMiniLML6v2 a mcro:Model ;
+    mcro:hasIntendedUseCase mcro:allMiniLML6v2-UseCaseInformationSection ;
+    mcro:hasModelArchitecture mcro:allMiniLML6v2-ModelArchitectureInformationSection ;
+    mcro:hasTrainingData mcro:allMiniLML6v2-TrainingDataInformationSection .
+
+mcro:bertbasemodeluncased a mcro:Model ;
+    mcro:hasConsideration mcro:bertbasemodeluncased-Consideration ;
+    mcro:hasEvaluationResults mcro:bertbasemodeluncased-EvaluationResults ;
+    mcro:hasLimitation mcro:bertbasemodeluncased-Limitation ;
+    mcro:hasModelDetail mcro:bertbasemodeluncased-ModelDetail ;
+    mcro:hasTrainingData mcro:bertbasemodeluncased-TrainingData ;
+    mcro:hasTrainingProcedure mcro:bertbasemodeluncased-TrainingProcedure ;
+    mcro:hasUseCase mcro:bertbasemodeluncased-UseCase .
+
+mcro:chronos-t5-small a mcro:Model ;
+    mcro:hasCitation mcro:chronos-t5-small-Citation ;
+    mcro:hasLicense mcro:chronos-t5-small-License ;
+    mcro:hasModelArchitecture mcro:chronos-t5-small-Architecture ;
+    mcro:hasUseCase mcro:chronos-t5-small-UseCase .
+
+mcro:clip a mcro:Model ;
+    mcro:hasDataset mcro:clip-DatasetInformationSection ;
+    mcro:hasModelDetail mcro:clip-ModelDetailSection ;
+    mcro:hasQuantativeAnalysis mcro:clip-QuantativeAnalysisSection ;
+    mcro:hasUseCase mcro:clip-UseCaseInformationSection .
+
+mcro:esmfold a mcro:Model ;
+    mcro:hasCitation mcro:esmfold-Citation ;
+    mcro:hasModelArchitecture mcro:esmfold-ModelArchitecture ;
+    mcro:hasUseCase mcro:esmfold-UseCase .
+
+mcro:fairfaceageimagedetection a mcro:Model ;
+    mcro:hasCitation mcro:fairfaceageimagedetection-Citation ;
+    mcro:hasPerformanceMetric mcro:fairfaceageimagedetection-Performance .
+
+mcro:mobilenetv3small100lambin1k a mcro:Model ;
+    mcro:hasModelDetail mcro:mobilenetv3small100lambin1k-ModelDetail ;
+    mcro:hasUseCase mcro:mobilenetv3small100lambin1k-UseCase .
+
+mcro:Falconsainsfwimagedetection-Dataset a mcro:DatasetInformationSection ;
+    prov1:hasTextValue "ImageNet-21k dataset" .
+
+mcro:Falconsainsfwimagedetection-Limitation a mcro:LimitationInformationSection ;
+    prov1:hasTextValue "Specialized Task Fine-Tuning" .
+
+mcro:Falconsainsfwimagedetection-ModelArchitecture a mcro:ModelArchitectureInformationSection ;
+    prov1:hasTextValue "transformer encoder architecture" .
+
+mcro:Falconsainsfwimagedetection-ModelDetail a mcro:ModelDetailSection ;
+    mcro:hasDataset mcro:Falconsainsfwimagedetection-Dataset ;
+    mcro:hasModelArchitecture mcro:Falconsainsfwimagedetection-ModelArchitecture .
+
+mcro:Falconsainsfwimagedetection-Reference a mcro:ReferenceInformationSection ;
+    prov1:hasTextValue "Hugging Face Model Hub",
+        "ImageNet-21k Dataset",
+        "Vision Transformer (ViT) Paper" .
+
+mcro:Falconsainsfwimagedetection-TrainingData a mcro:TrainingDataInformationSection ;
+    prov1:hasTextValue "proprietary dataset comprising approximately 80,000 images" .
+
+mcro:Falconsainsfwimagedetection-UseCase a mcro:UseCaseInformationSection ;
+    prov1:hasTextValue "NSFW Image Classification" .
+
+mcro:RoBERTaLargeModel-Citation a mcro:CitationInformationSection ;
+    prov1:hasTextValue """@article{DBLP:journals/corr/abs-1907-11692,
+  author    = {Yinhan Liu and
+               Myle Ott and
+               Naman Goyal and
+               Jingfei Du and
+               Mandar Joshi and
+               Danqi Chen and
+               Omer Levy and
+               Mike Lewis and
+               Luke Zettlemoyer and
+               Veselin Stoyanov},
+  title     = {RoBERTa: {A} Robustly Optimized {BERT} Pretraining Approach},
+  journal   = {CoRR},
+  volume    = {abs/1907.11692},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1907.11692},
+  archivePrefix = {arXiv},
+  eprint    = {1907.11692},
+  timestamp = {Thu, 01 Aug 2019 08:59:33 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1907-11692.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}""" .
+
+mcro:RoBERTaLargeModel-Consideration a mcro:ConsiderationInformationSection ;
+    mcro:hasLimitation mcro:RoBERTaLargeModel-Limitation .
+
+mcro:RoBERTaLargeModel-InputFormat a mcro:InputFormatInformationSection ;
+    prov1:hasTextValue """The texts are tokenized using a byte version of Byte-Pair Encoding (BPE) and a vocabulary size of 50,000. The inputs of
+the model take pieces of 512 contiguous token that may span over documents. The beginning of a new document is marked
+with `<s>` and the end of one by `</s>`""" .
+
+mcro:RoBERTaLargeModel-IntendedUseCase a mcro:UseCaseInformationSection ;
+    prov1:hasTextValue "You can use the raw model for masked language modeling, but it's mostly intended to be fine-tuned on a downstream task." .
+
+mcro:RoBERTaLargeModel-Limitation a mcro:LimitationInformationSection ;
+    prov1:hasTextValue "The training data used for this model contains a lot of unfiltered content from the internet, which is far from neutral. Therefore, the model can have biased predictions" .
+
+mcro:RoBERTaLargeModel-ModelArchitecture a mcro:ModelArchitectureInformationSection ;
+    prov1:hasTextValue "RoBERTa is a transformers model pretrained on a large corpus of English data in a self-supervised fashion." .
+
+mcro:RoBERTaLargeModel-ModelDetail a mcro:ModelDetailSection ;
+    mcro:hasCitation mcro:RoBERTaLargeModel-Citation ;
+    mcro:hasModelArchitecture mcro:RoBERTaLargeModel-ModelArchitecture .
+
+mcro:RoBERTaLargeModel-ModelParameter a mcro:ModelParameterSection ;
+    mcro:hasInputFormat mcro:RoBERTaLargeModel-InputFormat ;
+    mcro:hasTrainingData mcro:RoBERTaLargeModel-TrainingData .
+
+mcro:RoBERTaLargeModel-PerformanceMetric a mcro:PerformanceMetricInformationSection ;
+    prov1:hasTextValue """Glue test results:
+
+| Task | MNLI | QQP  | QNLI | SST-2 | CoLA | STS-B | MRPC | RTE  |
+|:----:|:----:|:----:|:----:|:-----:|:----:|:-----:|:----:|:----:|
+|      | 90.2 | 92.2 | 94.7 | 96.4  | 68.0 | 96.4  | 90.9 | 86.6 |""" .
+
+mcro:RoBERTaLargeModel-QuantativeAnalysis a mcro:QuantativeAnalysisSection ;
+    mcro:hasPerformanceMetric mcro:RoBERTaLargeModel-PerformanceMetric .
+
+mcro:RoBERTaLargeModel-TrainingData a mcro:TrainingDataInformationSection ;
+    prov1:hasTextValue """The RoBERTa model was pretrained on the reunion of five datasets:
+- [BookCorpus](https://yknzhu.wixsite.com/mbweb), a dataset consisting of 11,038 unpublished books;
+- [English Wikipedia](https://en.wikipedia.org/wiki/English_Wikipedia) (excluding lists, tables and headers) ;
+- [CC-News](https://commoncrawl.org/2016/10/news-dataset-available/), a dataset containing 63 millions English news
+  articles crawled between September 2016 and February 2019.
+- [OpenWebText](https://github.com/jcpeterson/openwebtext), an opensource recreation of the WebText dataset used to
+  train GPT-2,
+- [Stories](https://arxiv.org/abs/1806.02847) a dataset containing a subset of CommonCrawl data filtered to match the
+  story-like style of Winograd schemas.""" .
+
+mcro:TheBlokephi2GGUF-Citation a mcro:CitationInformationSection .
+
+mcro:TheBlokephi2GGUF-Consideration a mcro:ConsiderationInformationSection .
+
+mcro:TheBlokephi2GGUF-Dataset a mcro:DatasetInformationSection .
+
+mcro:TheBlokephi2GGUF-InputFormat a mcro:InputFormatInformationSection .
+
+mcro:TheBlokephi2GGUF-License a mcro:LicenseInformationSection ;
+    prov1:hasTextValue "microsoft-research-license" .
+
+mcro:TheBlokephi2GGUF-ModelArchitecture a mcro:ModelArchitectureInformationSection ;
+    prov1:hasTextValue "Transformer" .
+
+mcro:TheBlokephi2GGUF-ModelDetailSection a mcro:ModelDetailSection ;
+    mcro:hasCitation mcro:TheBlokephi2GGUF-Citation ;
+    mcro:hasLicense mcro:TheBlokephi2GGUF-License ;
+    mcro:hasModelArchitecture mcro:TheBlokephi2GGUF-ModelArchitecture .
+
+mcro:TheBlokephi2GGUF-OutputFormat a mcro:OutputFormatInformationSection .
+
+mcro:TheBlokephi2GGUF-Parameter a mcro:ModelParameterSection ;
+    mcro:hasInputFormat mcro:TheBlokephi2GGUF-InputFormat ;
+    mcro:hasOutputFormat mcro:TheBlokephi2GGUF-OutputFormat .
+
+mcro:TheBlokephi2GGUF-QuantativeAnalysis a mcro:QuantativeAnalysisSection .
+
+mcro:TheBlokephi2GGUF-UseCase a mcro:UseCaseInformationSection ;
+    prov1:hasTextValue "research purposes only" .
+
+mcro:TheBlokephi2GGUF-Version a mcro:VersionInformationSection .
+
+mcro:allMiniLML6v2-ModelArchitectureInformationSection a mcro:ModelArchitectureInformationSection ;
+    prov1:hasTextValue """We used the pretrained [`nreimers/MiniLM-L6-H384-uncased`](https://huggingface.co/nreimers/MiniLM-L6-H384-uncased) model and fine-tuned in on a 
+1B sentence pairs dataset. We use a contrastive learning objective: given a sentence from the pair, the model should predict which out of a set of randomly sampled other sentences, was actually paired with it in our dataset.""" .
+
+mcro:allMiniLML6v2-TrainingDataInformationSection a mcro:TrainingDataInformationSection ;
+    prov1:hasTextValue """We use the concatenation from multiple datasets to fine-tune our model. The total number of sentence pairs is above 1 billion sentences.
+We sampled each dataset given a weighted probability which configuration is detailed in the `data_config.json` file.""" .
+
+mcro:allMiniLML6v2-UseCaseInformationSection a mcro:UseCaseInformationSection ;
+    prov1:hasTextValue """Our model is intended to be used as a sentence and short paragraph encoder. Given an input text, it outputs a vector which captures 
+the semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks.
+
+By default, input text longer than 256 word pieces is truncated.""" .
+
+mcro:bertbasemodeluncased-Architecture a mcro:ModelArchitectureInformationSection .
+
+mcro:bertbasemodeluncased-Citation a mcro:CitationInformationSection .
+
+mcro:bertbasemodeluncased-Consideration a mcro:ConsiderationInformationSection .
+
+mcro:bertbasemodeluncased-EvaluationResults a mcro:QuantativeAnalysisSection .
+
+mcro:bertbasemodeluncased-License a mcro:LicenseInformationSection .
+
+mcro:bertbasemodeluncased-Limitation a mcro:LimitationInformationSection .
+
+mcro:bertbasemodeluncased-ModelDetail a mcro:ModelDetailSection ;
+    mcro:hasCitation mcro:bertbasemodeluncased-Citation ;
+    mcro:hasLicense mcro:bertbasemodeluncased-License ;
+    mcro:hasModelArchitecture mcro:bertbasemodeluncased-Architecture .
+
+mcro:bertbasemodeluncased-TrainingData a mcro:DatasetInformationSection .
+
+mcro:bertbasemodeluncased-TrainingProcedure a mcro:ModelParameterSection .
+
+mcro:bertbasemodeluncased-UseCase a mcro:UseCaseInformationSection .
+
+mcro:chronos-t5-small-Architecture a mcro:ModelArchitectureInformationSection ;
+    prov1:hasTextValue "The models in this repository are based on the [T5 architecture](https://arxiv.org/abs/1910.10683). The only difference is in the vocabulary size: Chronos-T5 models use 4096 different tokens, compared to 32128 of the original T5 models, resulting in fewer parameters." .
+
+mcro:chronos-t5-small-Citation a mcro:CitationInformationSection ;
+    prov1:hasTextValue """@article{ansari2024chronos,
+    title={Chronos: Learning the Language of Time Series},
+    author={Ansari, Abdul Fatir and Stella, Lorenzo and Turkmen, Caner and Zhang, Xiyuan, and Mercado, Pedro and Shen, Huibin and Shchur, Oleksandr and Rangapuram, Syama Syndar and Pineda Arango, Sebastian and Kapoor, Shubham and Zschiegner, Jasper and Maddix, Danielle C. and Mahoney, Michael W. and Torkkola, Kari and Gordon Wilson, Andrew and Bohlke-Schneider, Michael and Wang, Yuyang},
+    journal={Transactions on Machine Learning Research},
+    issn={2835-8856},
+    year={2024},
+    url={https://openreview.net/forum?id=gerNCVqqtR}
+}""" .
+
+mcro:chronos-t5-small-License a mcro:LicenseInformationSection ;
+    prov1:hasTextValue "This project is licensed under the Apache-2.0 License." .
+
+mcro:chronos-t5-small-UseCase a mcro:UseCaseInformationSection ;
+    prov1:hasTextValue "Chronos is a family of **pretrained time series forecasting models** based on language model architectures. A time series is transformed into a sequence of tokens via scaling and quantization, and a language model is trained on these tokens using the cross-entropy loss. Once trained, probabilistic forecasts are obtained by sampling multiple future trajectories given the historical context. Chronos models have been trained on a large corpus of publicly available time series data, as well as synthetic data generated using Gaussian processes." .
+
+mcro:clip-CitationInformationSection a mcro:CitationInformationSection ;
+    prov1:hasTextValue "https://arxiv.org/abs/2103.00020" .
+
+mcro:clip-DatasetInformationSection a mcro:DatasetInformationSection ;
+    prov1:hasTextValue "publicly available image-caption data" .
+
+mcro:clip-ModelArchitectureInformationSection a mcro:ModelArchitectureInformationSection ;
+    prov1:hasTextValue "ViT-L/14 Transformer" .
+
+mcro:clip-ModelDetailSection a mcro:ModelDetailSection ;
+    mcro:hasCitation mcro:clip-CitationInformationSection ;
+    mcro:hasModelArchitecture mcro:clip-ModelArchitectureInformationSection .
+
+mcro:clip-PrimaryIntendedUseCase a mcro:PrimaryIntendedUseCaseInformationSection ;
+    prov1:hasTextValue "research output for research communities" .
+
+mcro:clip-QuantativeAnalysisSection a mcro:QuantativeAnalysisSection .
+
+mcro:clip-UseCaseInformationSection a mcro:UseCaseInformationSection ;
+    mcro:hasPrimaryIntendedUseCase mcro:clip-PrimaryIntendedUseCase .
+
+mcro:esmfold-Citation a mcro:CitationInformationSection ;
+    prov1:hasTextValue "For details on the model architecture and training, please refer to the [accompanying paper](https://www.science.org/doi/10.1126/science.ade2574)." .
+
+mcro:esmfold-ModelArchitecture a mcro:ModelArchitectureInformationSection ;
+    prov1:hasTextValue "ESMFold is a state-of-the-art end-to-end protein folding model based on an ESM-2 backbone." .
+
+mcro:esmfold-UseCase a mcro:UseCaseInformationSection ;
+    prov1:hasTextValue "If you're interested in using ESMFold in practice, please check out the associated [tutorial notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/protein_folding.ipynb)." .
+
+mcro:fairfaceageimagedetection-Citation a mcro:CitationInformationSection ;
+    prov1:hasTextValue "See https://www.kaggle.com/code/dima806/age-group-image-classification-vit for details." .
+
+mcro:fairfaceageimagedetection-Performance a mcro:PerformanceMetricInformationSection ;
+    prov1:hasTextValue "accuracy 59%" .
+
+mcro:mobilenetv3small100lambin1k-Citation a mcro:CitationInformationSection ;
+    prov1:hasTextValue """@misc{rw2019timm,
+  author = {Ross Wightman},
+  title = {PyTorch Image Models},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  doi = {10.5281/zenodo.4414861},
+  howpublished = {\\url{https://github.com/huggingface/pytorch-image-models}}
+}""" .
+
+mcro:mobilenetv3small100lambin1k-Citation2 a mcro:CitationInformationSection ;
+    prov1:hasTextValue """@inproceedings{howard2019searching,
+  title={Searching for mobilenetv3},
+  author={Howard, Andrew and Sandler, Mark and Chu, Grace and Chen, Liang-Chieh and Chen, Bo and Tan, Mingxing and Wang, Weijun and Zhu, Yukun and Pang, Ruoming and Vasudevan, Vijay and others},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={1314--1324},
+  year={2019}
+}""" .
+
+mcro:mobilenetv3small100lambin1k-Dataset a mcro:DatasetInformationSection ;
+    prov1:hasTextValue "ImageNet-1k" .
+
+mcro:mobilenetv3small100lambin1k-ModelArchitecture a mcro:ModelArchitectureInformationSection ;
+    prov1:hasTextValue "Image classification / feature backbone" .
+
+mcro:mobilenetv3small100lambin1k-ModelDetail a mcro:ModelDetailSection ;
+    mcro:hasCitation mcro:mobilenetv3small100lambin1k-Citation,
+        mcro:mobilenetv3small100lambin1k-Citation2 ;
+    mcro:hasDataset mcro:mobilenetv3small100lambin1k-Dataset ;
+    mcro:hasModelArchitecture mcro:mobilenetv3small100lambin1k-ModelArchitecture .
+
+mcro:mobilenetv3small100lambin1k-UseCase a mcro:UseCaseInformationSection ;
+    prov1:hasTextValue "Feature Map Extraction",
+        "Image Classification",
+        "Image Embeddings" .
+

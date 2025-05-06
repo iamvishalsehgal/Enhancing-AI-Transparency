@@ -1,0 +1,907 @@
+[
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:mobilenetv3small100lambin1k-ModelDetail"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetail",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetail",
+    "p": "mcro:hasCitation",
+    "o": "mcro:mobilenetv3small100lambin1k-Citation"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-Citation",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-Citation",
+    "p": "prov:hasTextValue",
+    "o": "@misc{rw2019timm,\n  author = {Ross Wightman},\n  title = {PyTorch Image Models},\n  year = {2019},\n  publisher = {GitHub},\n  journal = {GitHub repository},\n  doi = {10.5281/zenodo.4414861},\n  howpublished = {\\url{https://github.com/huggingface/pytorch-image-models}}\n}"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetail",
+    "p": "mcro:hasCitation",
+    "o": "mcro:mobilenetv3small100lambin1k-Citation2"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-Citation2",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-Citation2",
+    "p": "prov:hasTextValue",
+    "o": "@inproceedings{howard2019searching,\n  title={Searching for mobilenetv3},\n  author={Howard, Andrew and Sandler, Mark and Chu, Grace and Chen, Liang-Chieh and Chen, Bo and Tan, Mingxing and Wang, Weijun and Zhu, Yukun and Pang, Ruoming and Vasudevan, Vijay and others},\n  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},\n  pages={1314--1324},\n  year={2019}\n}"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetail",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:mobilenetv3small100lambin1k-ModelArchitecture"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "Image classification / feature backbone"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetail",
+    "p": "mcro:hasDataset",
+    "o": "mcro:mobilenetv3small100lambin1k-Dataset"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-Dataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "ImageNet-1k"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:mobilenetv3small100lambin1k-UseCase"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-UseCase",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-UseCase",
+    "p": "prov:hasTextValue",
+    "o": "Image Classification"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-UseCase",
+    "p": "prov:hasTextValue",
+    "o": "Feature Map Extraction"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-UseCase",
+    "p": "prov:hasTextValue",
+    "o": "Image Embeddings"
+  },
+  {
+    "s": "mcro:allMiniLML6v2",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:allMiniLML6v2",
+    "p": "mcro:hasIntendedUseCase",
+    "o": "mcro:allMiniLML6v2-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-UseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Our model is intended to be used as a sentence and short paragraph encoder. Given an input text, it outputs a vector which captures \nthe semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks.\n\nBy default, input text longer than 256 word pieces is truncated."
+  },
+  {
+    "s": "mcro:allMiniLML6v2",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:allMiniLML6v2-TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-TrainingDataInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-TrainingDataInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "We use the concatenation from multiple datasets to fine-tune our model. The total number of sentence pairs is above 1 billion sentences.\nWe sampled each dataset given a weighted probability which configuration is detailed in the `data_config.json` file."
+  },
+  {
+    "s": "mcro:allMiniLML6v2",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:allMiniLML6v2-ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelArchitectureInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelArchitectureInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "We used the pretrained [`nreimers/MiniLM-L6-H384-uncased`](https://huggingface.co/nreimers/MiniLM-L6-H384-uncased) model and fine-tuned in on a \n1B sentence pairs dataset. We use a contrastive learning objective: given a sentence from the pair, the model should predict which out of a set of randomly sampled other sentences, was actually paired with it in our dataset."
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:Falconsainsfwimagedetection-ModelDetail"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelDetail",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelDetail",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:Falconsainsfwimagedetection-ModelArchitecture"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "transformer encoder architecture"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelDetail",
+    "p": "mcro:hasDataset",
+    "o": "mcro:Falconsainsfwimagedetection-Dataset"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Dataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Dataset",
+    "p": "prov:hasTextValue",
+    "o": "ImageNet-21k dataset"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasLimitation",
+    "o": "mcro:Falconsainsfwimagedetection-Limitation"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Limitation",
+    "p": "rdf:type",
+    "o": "mcro:LimitationInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Limitation",
+    "p": "prov:hasTextValue",
+    "o": "Specialized Task Fine-Tuning"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:Falconsainsfwimagedetection-TrainingData"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-TrainingData",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-TrainingData",
+    "p": "prov:hasTextValue",
+    "o": "proprietary dataset comprising approximately 80,000 images"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasReference",
+    "o": "mcro:Falconsainsfwimagedetection-Reference"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Reference",
+    "p": "rdf:type",
+    "o": "mcro:ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Reference",
+    "p": "prov:hasTextValue",
+    "o": "Hugging Face Model Hub"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Reference",
+    "p": "prov:hasTextValue",
+    "o": "Vision Transformer (ViT) Paper"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-Reference",
+    "p": "prov:hasTextValue",
+    "o": "ImageNet-21k Dataset"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:Falconsainsfwimagedetection-UseCase"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-UseCase",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-UseCase",
+    "p": "prov:hasTextValue",
+    "o": "NSFW Image Classification"
+  },
+  {
+    "s": "mcro:fairfaceageimagedetection",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:fairfaceageimagedetection",
+    "p": "mcro:hasPerformanceMetric",
+    "o": "mcro:fairfaceageimagedetection-Performance"
+  },
+  {
+    "s": "mcro:fairfaceageimagedetection-Performance",
+    "p": "rdf:type",
+    "o": "mcro:PerformanceMetricInformationSection"
+  },
+  {
+    "s": "mcro:fairfaceageimagedetection-Performance",
+    "p": "prov:hasTextValue",
+    "o": "accuracy 59%"
+  },
+  {
+    "s": "mcro:fairfaceageimagedetection",
+    "p": "mcro:hasCitation",
+    "o": "mcro:fairfaceageimagedetection-Citation"
+  },
+  {
+    "s": "mcro:fairfaceageimagedetection-Citation",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:fairfaceageimagedetection-Citation",
+    "p": "prov:hasTextValue",
+    "o": "See https://www.kaggle.com/code/dima806/age-group-image-classification-vit for details."
+  },
+  {
+    "s": "mcro:bertbasemodeluncased",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:bertbasemodeluncased-ModelDetail"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-ModelDetail",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-ModelDetail",
+    "p": "mcro:hasCitation",
+    "o": "mcro:bertbasemodeluncased-Citation"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-Citation",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-ModelDetail",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:bertbasemodeluncased-Architecture"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-Architecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-ModelDetail",
+    "p": "mcro:hasLicense",
+    "o": "mcro:bertbasemodeluncased-License"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-License",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:bertbasemodeluncased-UseCase"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-UseCase",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased",
+    "p": "mcro:hasConsideration",
+    "o": "mcro:bertbasemodeluncased-Consideration"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-Consideration",
+    "p": "rdf:type",
+    "o": "mcro:ConsiderationInformationSection"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:bertbasemodeluncased-TrainingData"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-TrainingData",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased",
+    "p": "mcro:hasLimitation",
+    "o": "mcro:bertbasemodeluncased-Limitation"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-Limitation",
+    "p": "rdf:type",
+    "o": "mcro:LimitationInformationSection"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased",
+    "p": "mcro:hasTrainingProcedure",
+    "o": "mcro:bertbasemodeluncased-TrainingProcedure"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-TrainingProcedure",
+    "p": "rdf:type",
+    "o": "mcro:ModelParameterSection"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased",
+    "p": "mcro:hasEvaluationResults",
+    "o": "mcro:bertbasemodeluncased-EvaluationResults"
+  },
+  {
+    "s": "mcro:bertbasemodeluncased-EvaluationResults",
+    "p": "rdf:type",
+    "o": "mcro:QuantativeAnalysisSection"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:clip-ModelDetailSection"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:clip-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasDataset",
+    "o": "mcro:clip-DatasetInformationSection"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasQuantativeAnalysis",
+    "o": "mcro:clip-QuantativeAnalysisSection"
+  },
+  {
+    "s": "mcro:clip-ModelDetailSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:clip-ModelDetailSection",
+    "p": "mcro:hasCitation",
+    "o": "mcro:clip-CitationInformationSection"
+  },
+  {
+    "s": "mcro:clip-ModelDetailSection",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:clip-ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:clip-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:clip-DatasetInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:clip-QuantativeAnalysisSection",
+    "p": "rdf:type",
+    "o": "mcro:QuantativeAnalysisSection"
+  },
+  {
+    "s": "mcro:clip-CitationInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:clip-CitationInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "https://arxiv.org/abs/2103.00020"
+  },
+  {
+    "s": "mcro:clip-ModelArchitectureInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:clip-ModelArchitectureInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "ViT-L/14 Transformer"
+  },
+  {
+    "s": "mcro:clip-UseCaseInformationSection",
+    "p": "mcro:hasPrimaryIntendedUseCase",
+    "o": "mcro:clip-PrimaryIntendedUseCase"
+  },
+  {
+    "s": "mcro:clip-PrimaryIntendedUseCase",
+    "p": "rdf:type",
+    "o": "mcro:PrimaryIntendedUseCaseInformationSection"
+  },
+  {
+    "s": "mcro:clip-PrimaryIntendedUseCase",
+    "p": "prov:hasTextValue",
+    "o": "research output for research communities"
+  },
+  {
+    "s": "mcro:clip-DatasetInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "publicly available image-caption data"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:TheBlokephi2GGUF-ModelDetailSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-ModelDetailSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-ModelDetailSection",
+    "p": "mcro:hasLicense",
+    "o": "mcro:TheBlokephi2GGUF-License"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-License",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-ModelDetailSection",
+    "p": "mcro:hasCitation",
+    "o": "mcro:TheBlokephi2GGUF-Citation"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Citation",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-ModelDetailSection",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:TheBlokephi2GGUF-ModelArchitecture"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-ModelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:hasDataset",
+    "o": "mcro:TheBlokephi2GGUF-Dataset"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Dataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:hasConsideration",
+    "o": "mcro:TheBlokephi2GGUF-Consideration"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Consideration",
+    "p": "rdf:type",
+    "o": "mcro:ConsiderationInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:TheBlokephi2GGUF-UseCase"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-UseCase",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:hasQuantativeAnalysis",
+    "o": "mcro:TheBlokephi2GGUF-QuantativeAnalysis"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-QuantativeAnalysis",
+    "p": "rdf:type",
+    "o": "mcro:QuantativeAnalysisSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:hasParameter",
+    "o": "mcro:TheBlokephi2GGUF-Parameter"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Parameter",
+    "p": "rdf:type",
+    "o": "mcro:ModelParameterSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Parameter",
+    "p": "mcro:hasInputFormat",
+    "o": "mcro:TheBlokephi2GGUF-InputFormat"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-InputFormat",
+    "p": "rdf:type",
+    "o": "mcro:InputFormatInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Parameter",
+    "p": "mcro:hasOutputFormat",
+    "o": "mcro:TheBlokephi2GGUF-OutputFormat"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-OutputFormat",
+    "p": "rdf:type",
+    "o": "mcro:OutputFormatInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF",
+    "p": "mcro:hasVersion",
+    "o": "mcro:TheBlokephi2GGUF-Version"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-Version",
+    "p": "rdf:type",
+    "o": "mcro:VersionInformationSection"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-License",
+    "p": "prov:hasTextValue",
+    "o": "microsoft-research-license"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-UseCase",
+    "p": "prov:hasTextValue",
+    "o": "research purposes only"
+  },
+  {
+    "s": "mcro:TheBlokephi2GGUF-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "Transformer"
+  },
+  {
+    "s": "mcro:chronos-t5-small",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:chronos-t5-small",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:chronos-t5-small-Architecture"
+  },
+  {
+    "s": "mcro:chronos-t5-small-Architecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:chronos-t5-small-Architecture",
+    "p": "prov:hasTextValue",
+    "o": "The models in this repository are based on the [T5 architecture](https://arxiv.org/abs/1910.10683). The only difference is in the vocabulary size: Chronos-T5 models use 4096 different tokens, compared to 32128 of the original T5 models, resulting in fewer parameters."
+  },
+  {
+    "s": "mcro:chronos-t5-small",
+    "p": "mcro:hasLicense",
+    "o": "mcro:chronos-t5-small-License"
+  },
+  {
+    "s": "mcro:chronos-t5-small-License",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  },
+  {
+    "s": "mcro:chronos-t5-small-License",
+    "p": "prov:hasTextValue",
+    "o": "This project is licensed under the Apache-2.0 License."
+  },
+  {
+    "s": "mcro:chronos-t5-small",
+    "p": "mcro:hasCitation",
+    "o": "mcro:chronos-t5-small-Citation"
+  },
+  {
+    "s": "mcro:chronos-t5-small-Citation",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:chronos-t5-small-Citation",
+    "p": "prov:hasTextValue",
+    "o": "@article{ansari2024chronos,\n    title={Chronos: Learning the Language of Time Series},\n    author={Ansari, Abdul Fatir and Stella, Lorenzo and Turkmen, Caner and Zhang, Xiyuan, and Mercado, Pedro and Shen, Huibin and Shchur, Oleksandr and Rangapuram, Syama Syndar and Pineda Arango, Sebastian and Kapoor, Shubham and Zschiegner, Jasper and Maddix, Danielle C. and Mahoney, Michael W. and Torkkola, Kari and Gordon Wilson, Andrew and Bohlke-Schneider, Michael and Wang, Yuyang},\n    journal={Transactions on Machine Learning Research},\n    issn={2835-8856},\n    year={2024},\n    url={https://openreview.net/forum?id=gerNCVqqtR}\n}"
+  },
+  {
+    "s": "mcro:chronos-t5-small",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:chronos-t5-small-UseCase"
+  },
+  {
+    "s": "mcro:chronos-t5-small-UseCase",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:chronos-t5-small-UseCase",
+    "p": "prov:hasTextValue",
+    "o": "Chronos is a family of **pretrained time series forecasting models** based on language model architectures. A time series is transformed into a sequence of tokens via scaling and quantization, and a language model is trained on these tokens using the cross-entropy loss. Once trained, probabilistic forecasts are obtained by sampling multiple future trajectories given the historical context. Chronos models have been trained on a large corpus of publicly available time series data, as well as synthetic data generated using Gaussian processes."
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:RoBERTaLargeModel-ModelDetail"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-ModelDetail",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-ModelDetail",
+    "p": "mcro:hasCitation",
+    "o": "mcro:RoBERTaLargeModel-Citation"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-Citation",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-Citation",
+    "p": "prov:hasTextValue",
+    "o": "@article{DBLP:journals/corr/abs-1907-11692,\n  author    = {Yinhan Liu and\n               Myle Ott and\n               Naman Goyal and\n               Jingfei Du and\n               Mandar Joshi and\n               Danqi Chen and\n               Omer Levy and\n               Mike Lewis and\n               Luke Zettlemoyer and\n               Veselin Stoyanov},\n  title     = {RoBERTa: {A} Robustly Optimized {BERT} Pretraining Approach},\n  journal   = {CoRR},\n  volume    = {abs/1907.11692},\n  year      = {2019},\n  url       = {http://arxiv.org/abs/1907.11692},\n  archivePrefix = {arXiv},\n  eprint    = {1907.11692},\n  timestamp = {Thu, 01 Aug 2019 08:59:33 +0200},\n  biburl    = {https://dblp.org/rec/journals/corr/abs-1907-11692.bib},\n  bibsource = {dblp computer science bibliography, https://dblp.org}\n}"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-ModelDetail",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:RoBERTaLargeModel-ModelArchitecture"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-ModelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "RoBERTa is a transformers model pretrained on a large corpus of English data in a self-supervised fashion."
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel",
+    "p": "mcro:hasIntendedUseCase",
+    "o": "mcro:RoBERTaLargeModel-IntendedUseCase"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-IntendedUseCase",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-IntendedUseCase",
+    "p": "prov:hasTextValue",
+    "o": "You can use the raw model for masked language modeling, but it's mostly intended to be fine-tuned on a downstream task."
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel",
+    "p": "mcro:hasConsideration",
+    "o": "mcro:RoBERTaLargeModel-Consideration"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-Consideration",
+    "p": "rdf:type",
+    "o": "mcro:ConsiderationInformationSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-Consideration",
+    "p": "mcro:hasLimitation",
+    "o": "mcro:RoBERTaLargeModel-Limitation"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-Limitation",
+    "p": "rdf:type",
+    "o": "mcro:LimitationInformationSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-Limitation",
+    "p": "prov:hasTextValue",
+    "o": "The training data used for this model contains a lot of unfiltered content from the internet, which is far from neutral. Therefore, the model can have biased predictions"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel",
+    "p": "mcro:hasModelParameter",
+    "o": "mcro:RoBERTaLargeModel-ModelParameter"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-ModelParameter",
+    "p": "rdf:type",
+    "o": "mcro:ModelParameterSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-ModelParameter",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:RoBERTaLargeModel-TrainingData"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-TrainingData",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-TrainingData",
+    "p": "prov:hasTextValue",
+    "o": "The RoBERTa model was pretrained on the reunion of five datasets:\n- [BookCorpus](https://yknzhu.wixsite.com/mbweb), a dataset consisting of 11,038 unpublished books;\n- [English Wikipedia](https://en.wikipedia.org/wiki/English_Wikipedia) (excluding lists, tables and headers) ;\n- [CC-News](https://commoncrawl.org/2016/10/news-dataset-available/), a dataset containing 63 millions English news\n  articles crawled between September 2016 and February 2019.\n- [OpenWebText](https://github.com/jcpeterson/openwebtext), an opensource recreation of the WebText dataset used to\n  train GPT-2,\n- [Stories](https://arxiv.org/abs/1806.02847) a dataset containing a subset of CommonCrawl data filtered to match the\n  story-like style of Winograd schemas."
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-ModelParameter",
+    "p": "mcro:hasInputFormat",
+    "o": "mcro:RoBERTaLargeModel-InputFormat"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-InputFormat",
+    "p": "rdf:type",
+    "o": "mcro:InputFormatInformationSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-InputFormat",
+    "p": "prov:hasTextValue",
+    "o": "The texts are tokenized using a byte version of Byte-Pair Encoding (BPE) and a vocabulary size of 50,000. The inputs of\nthe model take pieces of 512 contiguous token that may span over documents. The beginning of a new document is marked\nwith `<s>` and the end of one by `</s>`"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel",
+    "p": "mcro:hasQuantativeAnalysis",
+    "o": "mcro:RoBERTaLargeModel-QuantativeAnalysis"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-QuantativeAnalysis",
+    "p": "rdf:type",
+    "o": "mcro:QuantativeAnalysisSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-QuantativeAnalysis",
+    "p": "mcro:hasPerformanceMetric",
+    "o": "mcro:RoBERTaLargeModel-PerformanceMetric"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-PerformanceMetric",
+    "p": "rdf:type",
+    "o": "mcro:PerformanceMetricInformationSection"
+  },
+  {
+    "s": "mcro:RoBERTaLargeModel-PerformanceMetric",
+    "p": "prov:hasTextValue",
+    "o": "Glue test results:\n\n| Task | MNLI | QQP  | QNLI | SST-2 | CoLA | STS-B | MRPC | RTE  |\n|:----:|:----:|:----:|:----:|:-----:|:----:|:-----:|:----:|:----:|\n|      | 90.2 | 92.2 | 94.7 | 96.4  | 68.0 | 96.4  | 90.9 | 86.6 |"
+  },
+  {
+    "s": "mcro:esmfold",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:esmfold",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:esmfold-ModelArchitecture"
+  },
+  {
+    "s": "mcro:esmfold-ModelArchitecture",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:esmfold-ModelArchitecture",
+    "p": "prov:hasTextValue",
+    "o": "ESMFold is a state-of-the-art end-to-end protein folding model based on an ESM-2 backbone."
+  },
+  {
+    "s": "mcro:esmfold",
+    "p": "mcro:hasCitation",
+    "o": "mcro:esmfold-Citation"
+  },
+  {
+    "s": "mcro:esmfold-Citation",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:esmfold-Citation",
+    "p": "prov:hasTextValue",
+    "o": "For details on the model architecture and training, please refer to the [accompanying paper](https://www.science.org/doi/10.1126/science.ade2574)."
+  },
+  {
+    "s": "mcro:esmfold",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:esmfold-UseCase"
+  },
+  {
+    "s": "mcro:esmfold-UseCase",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:esmfold-UseCase",
+    "p": "prov:hasTextValue",
+    "o": "If you're interested in using ESMFold in practice, please check out the associated [tutorial notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/protein_folding.ipynb)."
+  }
+]
