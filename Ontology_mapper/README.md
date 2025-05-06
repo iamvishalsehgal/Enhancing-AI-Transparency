@@ -66,7 +66,7 @@ You will also need API keys for Hugging Face and Google Gemini.
 
 ## Usage
 
-Run the script to process the top 10 Hugging Face models by downloads:
+Run the script to process the top Hugging Face models by downloads:
 
 ```bash
 python triple_creation.py
