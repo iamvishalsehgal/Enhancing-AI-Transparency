@@ -44,7 +44,7 @@ To retrieve all models, use the following structure:
 MATCH (n:Node) WHERE n.label CONTAINS 'mcro_Model' RETURN n.id AS model
 
 Given a question, write the correct Cypher query using this structure.
-Question: {input}
+Question: {query}
 Cypher Query:
 """
 

@@ -43,7 +43,7 @@ def retrieve_context(query):
 tools = [
     Tool(
         name="GraphQuery",
-        func=lambda q: chain.run({"input": q}),
+        func=lambda q: chain.run({"query": q}),
         description="Answer structured questions using Neo4j graph queries"
     ),
     Tool(
