@@ -1,3 +1,5 @@
+Still in working the problem is that the agent is generating the wrong query format or missing some input keys. [In short prompt issue]
+
 First run the `RAG.py` [Make sure to change the file path of extracted_triples.ttl]
 Then Nodes and relationships will store in `RAG/Nodes-Rel` folder.
 Run `Validate_relationship.py` to verify if all relationships have nodes and viceversa.

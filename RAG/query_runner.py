@@ -1,9 +1,21 @@
+"""
+Interactive CLI for querying the RAG agent.
+"""
+
 from KG_RAG import rag_agent
 
-# Test basic graph queries
-print(rag_agent.run("What models are trained on ImageNet-1k?"))
-print(rag_agent.run("What are the limitations of FalconSafesFWImageDetection?"))
+print("RAG + Neo4j Query System (type 'exit' to quit)")
 
-# Test hybrid reasoning
-print(rag_agent.run("Compare the architectures of ResNet50 and MobileNetV3"))
-print(rag_agent.run("What datasets are used for training BERT?"))
+while True:
+    question = input("\nQuestion: ")
+    if question.strip().lower() in {"exit", "quit"}:
+        print("Exiting.")
+        break
+
+    print("\nGenerating Cypher query")
+    try:
+        response = rag_agent.run(question)
+        print("\nResponse:\n")
+        print(response)
+    except Exception as e:
+        print(f"\nAn error occurred: {e}")

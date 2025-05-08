@@ -10,8 +10,8 @@ relationships_file = "RAG/Nodes-Rel/1/relationships.csv"
 invalid_relationships = []
 with open(relationships_file, "r", encoding="utf-8") as f:
     reader = csv.reader(f)
-    next(reader)  # Skip header row
-    for i, row in enumerate(reader, start=2):  # Start line count at 2 (after header)
+    next(reader)  
+    for i, row in enumerate(reader, start=2):  
         if len(row) < 3:
             continue
         start_id, _, end_id = row
@@ -20,8 +20,8 @@ with open(relationships_file, "r", encoding="utf-8") as f:
 
 # Print results
 if invalid_relationships:
-    print("❌ Invalid relationships found:")
+    print(" Invalid relationships found:")
     for line_num, row in invalid_relationships:
         print(f"Line {line_num}: {row}")
 else:
-    print("✅ All relationships are valid!")
+    print(" All relationships are valid!")

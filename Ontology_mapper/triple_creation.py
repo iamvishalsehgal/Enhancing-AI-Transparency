@@ -8,13 +8,11 @@ import os
 
 load_dotenv()
 
-# Configuration
 GTOKEN = os.getenv("GEMINI_API_KEY")
 HFTOKEN = os.getenv("HFTOKEN")
 MCRO_TTL_PATH = "Ontology_mapper/Base_ontology/mcro.ttl"
 
 
-# Initialize Gemini
 genai.configure(api_key=GTOKEN)
 gemini_model = genai.GenerativeModel('gemini-2.0-flash')
 
@@ -45,7 +43,7 @@ def upload_mcro_ontology():
 def get_mapped_triples(model_card_text, mcro_file, model_id):
     prompt = f"""Using the attached Model Card Ontology (MCRO) file ({mcro_file.uri}), analyze this Hugging Face model card text and return only RDF triples in JSON format. Follow these strict rules:
 
-### Rules for Mapping
+ Rules for Mapping
 1. Only use terms defined in the MCRO ontology.
 2. Always map metadata fields to appropriate MCRO concepts **by their CURIEs**, such as:
    - license → mcro:LicenseInformationSection
@@ -59,8 +57,11 @@ def get_mapped_triples(model_card_text, mcro_file, model_id):
    - Appropriate `mcro:hasX` properties for linking model to its sections
 4. Never assign `rdf:type` to abstract IAO classes like `obo:IAO_*`.
 5. Never directly type instances with `obo:MCRO_0000004`, `obo:MCRO_0000016`, etc. — always use CURIEs like `mcro:CitationInformationSection`, `mcro:LicenseInformationSection`.
+6. Only the root model instance (e.g., `mcro:{clean_identifier(model_id)}`) should be assigned `rdf:type mcro:Model`.
+   - Do NOT assign `rdf:type mcro:Model` to supporting entities like `mcro:{clean_identifier(model_id)}-ModelDetail`, `-ModelDetailSection`, or other sections.
+   - Instead, assign their appropriate type such as `mcro:ModelArchitectureInformationSection`, `mcro:UseCaseInformationSection`, etc.
 
-### Sample Output Format:
+Sample Output Format:
 [
   {{
     "s": "mcro:{clean_identifier(model_id)}",
@@ -85,7 +86,7 @@ def get_mapped_triples(model_card_text, mcro_file, model_id):
 ]
 Important: Return ONLY the JSON array. No explanation. No markdown.
 
-### Input Text:
+Input Text:
 {model_card_text}
 """
 
@@ -173,7 +174,7 @@ def convert_json_triples_to_turtle(json_triples_path, turtle_output_path, prefix
     print(f"Turtle file saved to {turtle_output_path}")
 
 if __name__ == "__main__":
-    print("=== Ontology-aware triple generation started ===")
+    print(" Ontology-aware triple generation started ")
     
     output_dir = get_next_output_directory()
     json_path = os.path.join(output_dir, "triples.json")

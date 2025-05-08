@@ -1,0 +1,61 @@
+prompt = f"""Using the attached Model Card Ontology (MCRO) file ({mcro_file.uri}), analyze this Hugging Face model card text and return only RDF triples in JSON format. Follow these strict rules:
+
+### Rules for Mapping
+1. Only use terms defined in the MCRO ontology.
+2. Always map metadata fields to appropriate MCRO concepts **by their CURIEs**, such as:
+   - license → mcro:LicenseInformationSection
+   - dataset → mcro:DatasetInformationSection
+   - model architecture → mcro:ModelArchitectureInformationSection
+   - citation → mcro:CitationInformationSection
+   - intended use case → mcro:UseCaseInformationSection
+3. Use proper relationships:
+   - `rdf:type` for types
+   - `prov:hasTextValue` for textual values (like "mit", "CNN", "ImageNet")
+   - Appropriate `mcro:hasX` properties for linking model to its sections
+4. Never assign `rdf:type` to abstract IAO classes like `obo:IAO_*`.
+5. Never directly type instances with `obo:MCRO_0000004`, `obo:MCRO_0000016`, etc. — always use CURIEs like `mcro:CitationInformationSection`, `mcro:LicenseInformationSection`.
+
+### Sample Output Format:
+[
+  {{
+    "s": "mcro:{clean_identifier(model_id)}",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  }},
+  {{
+    "s": "mcro:{clean_identifier(model_id)}",
+    "p": "mcro:hasLicense",
+    "o": "mcro:{clean_identifier(model_id)}-License"
+  }},
+  {{
+    "s": "mcro:{clean_identifier(model_id)}-License",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  }},
+  {{
+    "s": "mcro:{clean_identifier(model_id)}-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  }}
+]
+Important: Return ONLY the JSON array. No explanation. No markdown.
+
+### Input Text:
+{model_card_text}
+"""
+
+While working with this .ttl file in GraphDB, I ran a query to retrieve a list of all models containing "vit". The result included 10 entries:
+
+MCRO_CLIPViTB16LAION2B
+MCRO_Salesforceblipbootstrapping
+MCRO_Salesforceblipimagecaptioninglarge
+MCRO_clip-ModelDetail
+MCRO_clip-ModelDetailSection
+MCRO_fashionclip-ModelDetail
+MCRO_siglipso400mpatch14384-ModelDetail
+MCRO_visiontransformerbase
+MCRO_vit-face-expression
+MCRO_vitmatte-ModelDetail
+ I noticed that some of the entries include both ModelDetail and ModelDetailSection. These appear to represent duplicate or closely related models, even though they have slightly different suffixes.
+
+To improve accuracy in future queries, I'm going to refine the search rules in the prompt to avoid such duplicates or ambiguous results.
