@@ -1,4 +1,4 @@
 .DS_Store
 .venv
 .env
-.changes
+dump/changes.txt
