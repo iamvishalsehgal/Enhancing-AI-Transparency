@@ -185,4 +185,4 @@ This code is licensed under the [MIT License](LICENSE).
 
 ## Contact Information
 
-For questions, issues, or further inquiries, please open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency.git).
+For questions, issues, or further inquiries, please open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency.git). 
