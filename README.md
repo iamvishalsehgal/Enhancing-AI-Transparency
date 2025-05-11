@@ -10,7 +10,6 @@ This repository hosts the codebase for a Master’s thesis project at the Jheron
 - [Dependencies](#dependencies)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Neo4j Database Setup](#neo4j-database-setup)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact Information](#contact-information)
