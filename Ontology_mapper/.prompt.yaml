@@ -1,6 +1,6 @@
 # .prompt.yml
 name: MCRO Ontology Mapper
-description: Extract model card metadata and map to MCRO ontology triples with strict CURIE rules
+description: Extract metadata from Hugging Face model cards and map to MCRO ontology using strict CURIE rules
 model: gemini-2.0-flash
 modelParameters:
   temperature: 0.1
@@ -58,37 +58,35 @@ messages:
       {{model_card_text}}
 
 testData:
-  - input:
-      model_id: bert-base-uncased
-      mcro_file_uri: "http://purl.obolibrary.org/obo/MCRO.owl"
-      model_card_text: |
-        # Model Card for BERT Base Uncased
-        ## License
-        MIT
-        ## Dataset
-        BookCorpus + English Wikipedia
-        ## Model Architecture
-        Transformer
-        ## Citation
-        Devlin et al., 2018
-        ## Intended Use
-        General purpose language understanding
+  - model_id: bert-base-uncased
+    mcro_file_uri: "http://purl.obolibrary.org/obo/MCRO.owl"
+    model_card_text: |
+      # Model Card for BERT Base Uncased
+      ## License
+      MIT
+      ## Dataset
+      BookCorpus + English Wikipedia
+      ## Model Architecture
+      Transformer
+      ## Citation
+      Devlin et al., 2018
+      ## Intended Use
+      General purpose language understanding
 
-  - input:
-      model_id: gpt2
-      mcro_file_uri: "http://purl.obolibrary.org/obo/MCRO.owl"
-      model_card_text: |
-        # Model Card for GPT-2
-        ## License
-        MIT
-        ## Dataset
-        WebText
-        ## Model Architecture
-        Transformer
-        ## Citation
-        Radford et al., 2019
-        ## Intended Use
-        Text generation
+  - model_id: gpt2
+    mcro_file_uri: "http://purl.obolibrary.org/obo/MCRO.owl"
+    model_card_text: |
+      # Model Card for GPT-2
+      ## License
+      MIT
+      ## Dataset
+      WebText
+      ## Model Architecture
+      Transformer
+      ## Citation
+      Radford et al., 2019
+      ## Intended Use
+      Text generation
 
 evaluators:
   - name: Output is valid JSON
