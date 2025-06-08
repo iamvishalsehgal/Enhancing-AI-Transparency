@@ -1,0 +1,101 @@
+# .prompt.yml
+name: MCRO Ontology Mapper
+description: Extract model card metadata and map to MCRO ontology triples with strict CURIE rules
+model: gemini-2.0-flash
+modelParameters:
+  temperature: 0.1
+messages:
+  - role: system
+    content: |
+      Using the attached Model Card Ontology (MCRO) file ({{mcro_file_uri}}), analyze this Hugging Face model card text and return only RDF triples in JSON format. Follow these strict rules:
+
+      Rules for Mapping
+      1. Only use terms defined in the MCRO ontology.
+      2. Always map metadata fields to appropriate MCRO concepts **by their CURIEs**, such as:
+         - license → mcro:LicenseInformationSection
+         - dataset → mcro:DatasetInformationSection
+         - model architecture → mcro:ModelArchitectureInformationSection
+         - citation → mcro:CitationInformationSection
+         - intended use case → mcro:UseCaseInformationSection
+      3. Use proper relationships:
+         - `rdf:type` for types
+         - `prov:hasTextValue` for textual values (like "mit", "CNN", "ImageNet")
+         - Appropriate `mcro:hasX` properties for linking model to its sections
+      4. Never assign `rdf:type` to abstract IAO classes like `obo:IAO_*`.
+      5. Never directly type instances with `obo:MCRO_0000004`, `obo:MCRO_0000016`, etc. — always use CURIEs like `mcro:CitationInformationSection`, `mcro:LicenseInformationSection`.
+      6. Only the root model instance (e.g., `mcro:{{model_id}}`) should be assigned `rdf:type mcro:Model`.
+         - Do NOT assign `rdf:type mcro:Model` to supporting entities like `mcro:{{model_id}}-ModelDetail`, `-ModelDetailSection`, or other sections.
+         - Instead, assign their appropriate type such as `mcro:ModelArchitectureInformationSection`, `mcro:UseCaseInformationSection`, etc.
+
+      Sample Output Format:
+      [
+        {
+          "s": "mcro:{{model_id}}",
+          "p": "rdf:type",
+          "o": "mcro:Model"
+        },
+        {
+          "s": "mcro:{{model_id}}",
+          "p": "mcro:hasLicense",
+          "o": "mcro:{{model_id}}-License"
+        },
+        {
+          "s": "mcro:{{model_id}}-License",
+          "p": "rdf:type",
+          "o": "mcro:LicenseInformationSection"
+        },
+        {
+          "s": "mcro:{{model_id}}-License",
+          "p": "prov:hasTextValue",
+          "o": "mit"
+        }
+      ]
+      Important: Return ONLY the JSON array. No explanation. No markdown.
+
+  - role: user
+    content: |
+      Input Text:
+      {{model_card_text}}
+
+testData:
+  - input:
+      model_id: bert-base-uncased
+      mcro_file_uri: "http://purl.obolibrary.org/obo/MCRO.owl"
+      model_card_text: |
+        # Model Card for BERT Base Uncased
+        ## License
+        MIT
+        ## Dataset
+        BookCorpus + English Wikipedia
+        ## Model Architecture
+        Transformer
+        ## Citation
+        Devlin et al., 2018
+        ## Intended Use
+        General purpose language understanding
+
+  - input:
+      model_id: gpt2
+      mcro_file_uri: "http://purl.obolibrary.org/obo/MCRO.owl"
+      model_card_text: |
+        # Model Card for GPT-2
+        ## License
+        MIT
+        ## Dataset
+        WebText
+        ## Model Architecture
+        Transformer
+        ## Citation
+        Radford et al., 2019
+        ## Intended Use
+        Text generation
+
+evaluators:
+  - name: Output is valid JSON
+    json: {}
+  - name: Output contains mcro:Model type
+    substring:
+      contains: '"p": "rdf:type", "o": "mcro:Model"'
+  - name: No abstract IAO classes
+    notSubstring:
+      contains: "obo:IAO_"
