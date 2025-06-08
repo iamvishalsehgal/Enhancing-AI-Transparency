@@ -36,7 +36,7 @@ The project addresses the lack of comprehensive model cards for AI models on pla
 
 - **Ontology_mapper**: Generates RDF triples from Hugging Face model cards. See [README](Ontology_mapper/README.md).
 - **KGQuerySystem**: Supports natural language querying of a GraphDB knowledge graph. See [README](KGQuerySystem/README.md).
-- **RAG**: Implements a RAG pipeline with Neo4j for vector and Cypher queries. See [README](RAG/README.md).
+- **RAG**: Implements a RAG pipeline with Neo4j for vector and Cypher queries. See [README](RAG/Readme.md).
 - **.env.copy**: Environment variable template (rename to `.env`).
 - **requirements.txt**: Python dependencies.
 
@@ -88,19 +88,19 @@ Required:
 Follow component-specific READMEs:
 - **Ontology_mapper**: Run `Ontology_mapper/triple_creation.py`. See [README](Ontology_mapper/README.md).
 - **KGQuerySystem**: Run `KGQuerySystem/KGQA.py`. See [README](KGQuerySystem/README.md).
-- **RAG**: Run `RAG/RAG.py` and `RAG/query_runner.py`. See [README](RAG/README.md).
+- **RAG**: Run `RAG/RAG.py` and `RAG/query_runner.py`. See [README](RAG/Readme.md).
 
 
 ## Contributing
 
 Contributions are limited due to the thesis scope. To contribute:
-- Open an issue on [GitHub](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency.git).
+- Open an issue on [GitHub](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency/issues).
 - Follow coding style and update documentation.
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License](license)
 
 ## Contact Information
 
-Open an issue on [GitHub](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency.git) or contact Vishal Sehgal via v.sehgal@student.tue.nl
+Open an issue on [GitHub](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency/issues) or contact Vishal Sehgal via v.sehgal@student.tue.nl

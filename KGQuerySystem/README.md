@@ -118,15 +118,15 @@ NSFW Image Classification
 ## Contributing
 
 As this is part of a thesis project, contributions are limited but welcome. If you have suggestions for improvements or identify issues, please:
-- Open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency.git).
+- Open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency/issues).
 - Follow the project's coding style and conventions.
 - Provide clear and descriptive commit messages.
 - Update documentation as necessary.
 
 ## License
 
-This code is licensed under the [MIT License](LICENSE).
+This code is licensed under the [MIT License](license).
 
 ## Contact Information
 
-For questions, issues, or further inquiries, please open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency.git).
+For questions, issues, or further inquiries, please open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency/issues).

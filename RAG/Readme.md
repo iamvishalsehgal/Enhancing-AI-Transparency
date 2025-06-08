@@ -156,33 +156,33 @@ To set up a Neo4j database and import the data:
 
     Generating Cypher query
     > Entering new AgentExecutor chain...
-   I need to find the use cases for the Falconsainsfwimagedetection model. I can use VectorSearch to find information about the model's use cases from its model card.
-   Action: VectorSearch
-   Action Input: "Falconsainsfwimagedetection use cases"
-   Observation: [Document(metadata={'label': 'NamedIndividual;mcro_UseCaseInformationSection', 'textValue': 'NSFW Image Classification: The primary intended use of this model is for the classification of NSFW (Not Safe for Work) images. It has been fine-tuned for this purpose, making it suitable for filtering explicit or inappropriate content in various applications.'}, page_content="\nproperties: {'prov_hasTextValue': 'NSFW Image Classification: The primary intended use of this model is for the classification of NSFW (Not Safe for Work) images. It has been fine-tuned for this purpose, making it suitable for filtering explicit or inappropriate content in various applications.'}"), Document(metadata={'label': 'NamedIndividual;mcro_LimitationInformationSection', 'textValue': '- Specialized Task Fine-Tuning: While the model is adept at NSFW image classification, its performance may vary when applied to other tasks.\\n- Users interested in employing this model for different tasks should explore fine-tuned versions available in the model hub for optimal results.'}, page_content="\nproperties: {'prov_hasTextValue': '- Specialized Task Fine-Tuning: While the model is adept at NSFW image classification, its performance may vary when applied to other tasks.\\n- Users interested in employing this model for different tasks should explore fine-tuned versions available in the model hub for optimal results.'}")]
-   Thought:The model is primarily intended for NSFW image classification, filtering explicit or inappropriate content in various applications. It is fine-tuned for this specific purpose. Its performance may vary when applied to other tasks, and users interested in employing it for different tasks should explore fine-tuned versions available in the model hub.
-   Final Answer: The primary use case for the Falconsainsfwimagedetection model is NSFW image classification, which involves filtering explicit or inappropriate content in various applications.
+    I need to find the use cases for the Falconsainsfwimagedetection model. I can use VectorSearch to find information about the model's use cases from its model card.
+    Action: VectorSearch
+    Action Input: "Falconsainsfwimagedetection use cases"
+    Observation: [Document(metadata={'label': 'NamedIndividual;mcro_UseCaseInformationSection', 'textValue': 'NSFW Image Classification: The primary intended use of this model is for the classification of NSFW (Not Safe for Work) images. It has been fine-tuned for this purpose, making it suitable for filtering explicit or inappropriate content in various applications.'}, page_content="\nproperties: {'prov_hasTextValue': 'NSFW Image Classification: The primary intended use of this model is for the classification of NSFW (Not Safe for Work) images. It has been fine-tuned for this purpose, making it suitable for filtering explicit or inappropriate content in various applications.'}"), Document(metadata={'label': 'NamedIndividual;mcro_LimitationInformationSection', 'textValue': '- Specialized Task Fine-Tuning: While the model is adept at NSFW image classification, its performance may vary when applied to other tasks.\\n- Users interested in employing this model for different tasks should explore fine-tuned versions available in the model hub for optimal results.'}, page_content="\nproperties: {'prov_hasTextValue': '- Specialized Task Fine-Tuning: While the model is adept at NSFW image classification, its performance may vary when applied to other tasks.\\n- Users interested in employing this model for different tasks should explore fine-tuned versions available in the model hub for optimal results.'}")]
+    Thought:The model is primarily intended for NSFW image classification, filtering explicit or inappropriate content in various applications. It is fine-tuned for this specific purpose. Its performance may vary when applied to other tasks, and users interested in employing it for different tasks should explore fine-tuned versions available in the model hub.
+    Final Answer: The primary use case for the Falconsainsfwimagedetection model is NSFW image classification, which involves filtering explicit or inappropriate content in various applications.
 
 
-   > Finished chain.
+    > Finished chain.
 
-   Response:
+    Response:
 
-   The primary use case for the Falconsainsfwimagedetection model is NSFW image classification, which involves filtering explicit or inappropriate content in various applications.
+    The primary use case for the Falconsainsfwimagedetection model is NSFW image classification, which involves filtering explicit or inappropriate content in various applications.
     ```
 
 ## Contributing
 
 As this is part of a thesis project, contributions are limited but welcome. If you have suggestions for improvements or identify issues, please:
-- Open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency.git).
+- Open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency/issues).
 - Follow the project's coding style and conventions.
 - Provide clear and descriptive commit messages.
 - Update documentation as necessary.
 
 ## License
 
-This code is licensed under the [MIT License](LICENSE).
+This code is licensed under the [MIT License](license).
 
 ## Contact Information
 
-For questions, issues, or further inquiries, please open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency.git). 
+For questions, issues, or further inquiries, please open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency/issues). 

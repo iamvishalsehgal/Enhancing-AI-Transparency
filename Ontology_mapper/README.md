@@ -103,10 +103,10 @@ As this is part of a thesis project, contributions are limited but welcome. If y
 
 ## License
 
-This code is licensed under the [MIT License](LICENSE).
+This code is licensed under the [MIT License](license).
 
 ## Contact Information
 
-For questions, issues, or further inquiries, please open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency.git).
+For questions, issues, or further inquiries, please open an issue on the [main project repository](https://github.com/iamvishalsehgal/Enhancing-AI-Transparency/issues).
 
 
