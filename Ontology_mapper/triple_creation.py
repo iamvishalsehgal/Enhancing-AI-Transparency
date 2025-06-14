@@ -174,18 +174,18 @@ def convert_json_triples_to_turtle(json_triples_path, turtle_output_path, prefix
     print(f"Turtle file saved to {turtle_output_path}")
 
 if __name__ == "__main__":
-    print(" Ontology-aware triple generation started ")
+    print(" Triple generation started ")
     
     output_dir = get_next_output_directory()
     json_path = os.path.join(output_dir, "triples.json")
     ttl_path = os.path.join(output_dir, "triples.ttl")
     
-    all_triples = process_huggingface_models(limit=10)
+    all_triples = process_huggingface_models(limit=1000)
 
     with open(json_path, "w") as f:
         json.dump(all_triples, f, indent=2)
     print(f"Saved triples to {json_path}")
     
-    print("Converting to Turtle...")
+    print("Converting to Turtle")
     convert_json_triples_to_turtle(json_path, ttl_path, prefix_map)
     print("Completed.")

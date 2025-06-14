@@ -1,0 +1,22 @@
+Available patterns:
+- Models: ?model a mcro:Model
+- Architecture: ?model mcro:hasModelArchitecture ?section
+- Text values: ?section prov1:hasTextValue ?value
+
+Rules:
+1. Always include the PREFIX declarations
+2. Use the exact property path patterns shown above
+3. For model name filtering:
+   - Use FILTER with CONTAINS and LCASE on the model URI
+   - Example: FILTER (CONTAINS(LCASE(STR(?model)), "bert"))
+4. Return ?value as the result
+
+
+
+old 
+
+Rules:
+1. Always include the PREFIX declarations.
+2. Use path patterns like:
+   ?model mcro:hasUseCase ?section .
+   ?section prov1:hasTextValue ?value .

@@ -7,7 +7,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
-INPUT_FILE = "Ontology_mapper/Output/1/triples.ttl"
+INPUT_FILE = "Ontology_mapper/Output/5/triples.ttl"
 OUTPUT_BASE_PATH = Path(os.getenv("OUTPUT_BASE_PATH"))
 OUTPUT_DIR = OUTPUT_BASE_PATH / str(
     max([int(d.name) for d in OUTPUT_BASE_PATH.iterdir() if d.is_dir() and d.name.isdigit()], default=0) + 1

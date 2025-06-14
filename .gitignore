@@ -1,4 +1,6 @@
 .DS_Store
 .venv
 .env
-dump/changes.txt
+.github/workflows
+.venv
+RAG/__pycache__
