@@ -4,3 +4,52 @@
 .github/workflows
 .venv
 RAG/__pycache__
+# Ignore Python cache files
+__pycache__/
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore virtual environment directories
+# Ignore log files
+*.log
+# Ignore coverage reports
+coverage.xml
+# Ignore test output files
+*.out
+# Ignore build directories
+build/
+# Ignore distribution files
+dist/
+# Ignore Python bytecode files
+*.pyc
+# Ignore Python egg files
+*.egg
+# Ignore Python egg-info directories
+*.egg-info/
+# Ignore pipenv files
+Pipfile.lock
+# Ignore pip cache
+pip-wheel-metadata/
+# Ignore local configuration files
+*.local
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+# Ignore macOS specific files
+*.DS_Store
+# Ignore Windows specific files
+Thumbs.db
+# Ignore temporary files
+*.tmp
+# Ignore backup files
+*~
+# Ignore environment variable files
+.env
+# Ignore database files
+*.sqlite3
+# Ignore Docker files
+Dockerfile
+docker-compose.yml
+# Ignore Kubernetes files
+k8s/
+# Ignore Terraform files
+*.tf

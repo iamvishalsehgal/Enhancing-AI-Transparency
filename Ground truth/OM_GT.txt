@@ -1,0 +1,529 @@
+Falconsai/nsfw_image_detection
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+         "Fine-Tuned Vision Transformer (ViT) for NSFW Image Classification" 
+    ;
+
+   has part 
+        License Information ;
+         "apache-2.0" 
+    ;
+
+   has part 
+        Intended Use Case ;
+         "- NSFW Image Classification: The primary intended use of this model is for the classification of NSFW (Not Safe for Work) images. It has been fine-tuned for this purpose, making it suitable for filtering explicit or inappropriate content in various applications." 
+    ;
+
+   has part 
+         Limitation ;
+         "Specialized Task Fine-Tuning: While the model is adept at NSFW image classification, its performance may vary when applied to other tasks." 
+         "Users interested in employing this model for different tasks should explore fine-tuned versions available in the model hub for optimal results."
+    ;
+
+   has part 
+        Training Data ;
+         "The model's training data includes a proprietary dataset comprising approximately 80,000 images. This dataset encompasses a significant amount of variability and consists of two distinct classes: "normal" and "nsfw". The training process on this data aimed to equip the model with the ability to distinguish between safe and explicit content effectively."
+    ;
+
+   has part 
+        Performance Metric ;
+         0.980375 ;
+         "accuracy" 
+    ;
+
+   has part 
+        Performance Metric ;
+         0.07463177293539047 ;
+         "loss" 
+    ;
+
+   has part 
+        References ;
+         "[Hugging Face Model Hub](https://huggingface.co/models)
+         "[Vision Transformer (ViT) Paper](https://arxiv.org/abs/2010.11929)
+         "[ImageNet-21k Dataset](http://www.image-net.org/)" 
+     ;
+   has part 
+        Model Architecture ;
+         " "
+    .
+
+sentence-transformers/all-MiniLM-L6-v2
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+        overview "all-MiniLM-L6-v2" ;
+         "This is a [sentence-transformers](https://www.SBERT.net) model: It maps sentences & paragraphs to a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    ;
+   has part 
+        License Information ;
+         "apache-2.0" 
+    ;
+   has part 
+        Intended Use Case ;
+         "Our model is intended to be used as a sentence and short paragraph encoder. Given an input text, it outputs a vector which captures the semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks"
+    ;
+   has part 
+        Limitation ;
+         "By default, input text longer than 256 word pieces is truncated"   # In Modelcard its not written as Limitation but it is a Limitation so LLM didn't took it while extraction - https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/raw/main/README.md
+    ;
+   has part 
+        Training Data ;
+        "We use the concatenation from multiple datasets to fine-tune our model. The total number of sentence pairs is above 1 billion sentences. We sampled each dataset given a weighted probability which configuration is detailed in the `data_config.json` file."      # Thats what written on website but there's a table too in text format if llm take that it should give below reply but i checked it in generated text its giving both of these - https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/raw/main/README.md. 
+         "The model was fine-tuned on a 1B sentence pairs dataset from multiple sources: s2orc, flax-sentence-embeddings/stackexchange_xml, ms_marco, gooaq, yahoo_answers_topics, code_search_net, search_qa, eli5, snli, multi_nli, wikihow, natural_questions, trivia_qa, embedding-data/sentence-compression, embedding-data/flickr30k-captions, embedding-data/altlex, embedding-data/simple-wiki, embedding-data/QQP, embedding-data/SPECTER, embedding-data/PAQ_pairs, embedding-data/WikiAnswers. Total training pairs: 1,170,060,424" 
+    ;
+   has part 
+        Model Architecture ;
+         "Not specifically mentioned"
+     .
+
+dima806/fairface_age_image_detection
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+        overview "Age Group Image Classification Model" ;
+         "Detects age group with about 59% accuracy based on an image" 
+    ;
+   has part 
+        License Information ;
+         "apache-2.0" 
+    ;
+   has part 
+        Training Data ;    # it says dataset not training data in Model card so i'm not sure - https://huggingface.co/dima806/fairface_age_image_detection/raw/main/README.md
+         "nateraw/fairface" 
+    ;
+   has part 
+        Performance Metric ;
+         0.5892 ;   # above in overview it says 59% accuracybut in classification report of model it says 0.5892 not sure which one to write - https://huggingface.co/dima806/fairface_age_image_detection/raw/main/README.md
+         "accuracy" 
+    ;
+   has part 
+        Performance Metric ;
+         0.5844 ;
+         "weighted f1" 
+    ;
+   has part 
+        Performance Metric ;
+         0.5459 ;
+         "macro f1" 
+    ;
+   has part 
+        References ;
+         "https://www.kaggle.com/code/dima806/age-group-image-classification-vit" 
+     ;
+   has part 
+        Model Architecture ;
+         " "
+    .
+
+amazon/chronos-t5-small
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+        overview "Chronos-T5 (Small)" ;
+         "Chronos is a family of pretrained time series forecasting models based on language model architectures" 
+    ;
+   has part 
+        License Information ;
+         "apache-2.0" 
+    ;
+   has part 
+        Intended Use Case ;
+         "time-series-forecasting"  # on website under usage its written -  To perform inference with Chronos models, install the package in the GitHub [companion repo](https://github.com/amazon-science/chronos-forecasting) by running: then some pip and python commands. - https://huggingface.co/amazon/chronos-t5-small/raw/main/README.md
+    ;
+   has part 
+        Training Data ;
+         "Trained on a large corpus of publicly available time series data and synthetic data generated using Gaussian processes" 
+    ;
+   has part 
+        Model Architecture ;
+         "Based on T5 architecture with 46M parameters, using 4096 different tokens (compared to 32128 in original T5 models)" 
+    ;
+   has part 
+        References ;
+         "Paper: Chronos: Learning the Language of Time Series (https://arxiv.org/abs/2403.07815)\nGitHub: https://github.com/amazon-science/chronos-forecasting\nTutorial: https://github.com/amazon-science/chronos-forecasting/blob/main/notebooks/deploy-chronos-bolt-to-amazon-sagemaker.ipynb" 
+    .
+
+google-bert/bert-base-uncased
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+        overview "BERT base model (uncased)" ;
+         "BERT is a transformers model pretrained on a large corpus of English data in a self-supervised fashion. This means it was pretrained on the raw texts only, with no humans labeling them in any way (which is why it can use lots of publicly available data) with an automatic process to generate inputs and labels from those texts." 
+         "Pretrained model on English language using a masked language modeling (MLM) objective"
+    ;
+   has part 
+        License Information ;
+         "apache-2.0" 
+    ;
+   has part 
+        Intended Use Case ;
+         "Masked language modeling or next sentence prediction, primarily intended for fine-tuning on downstream tasks like sequence classification, token classification, or question answering" 
+    ;
+   has part 
+        Limitation ;
+         "The model can produce biased predictions even with fairly neutral training data." 
+    ;
+   has part 
+        Training Data ;
+         "[BookCorpus](https://yknzhu.wixsite.com/mbweb)(11,038 unpublished books) and [English Wikipedia](https://en.wikipedia.org/wiki/English_Wikipedia) (excluding lists, tables and headers)" 
+    ;
+   has part 
+        Performance Metric ; 
+         "GLUE test results: MNLI-(m/mm): 84.6/83.4, QQP: 71.2, QNLI: 90.5, SST-2: 93.5, CoLA: 52.1, STS-B: 85.8, MRPC: 88.9, RTE: 66.4, Average: 79.6" 
+    ;
+   has part 
+        Citation ;
+         "@article{DBLP:journals/corr/abs-1810-04805,
+          author    = {Jacob Devlin and
+               Ming{-}Wei Chang and
+               Kenton Lee and
+               Kristina Toutanova},
+          title     = {{BERT:} Pre-training of Deep Bidirectional Transformers for Language
+               Understanding},
+          journal   = {CoRR},
+          volume    = {abs/1810.04805},
+          year      = {2018},
+          url       = {http://arxiv.org/abs/1810.04805},
+          archivePrefix = {arXiv},
+          eprint    = {1810.04805},
+          timestamp = {Tue, 30 Oct 2018 20:39:56 +0100},
+          biburl    = {https://dblp.org/rec/journals/corr/abs-1810-04805.bib},
+          bibsource = {dblp computer science bibliography, https://dblp.org}
+}"
+     ;
+   has part 
+        Model Architecture ;
+         " "
+    . 
+
+timm/mobilenetv3_small_100.lamb_in1k
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+        overview "mobilenetv3_small_100.lamb_in1k" ;
+         "A MobileNet-v3 image classification model trained on ImageNet-1k in timm using LAMB optimizer recipe similar to ResNet Strikes Back; RMSProp (TF 1.0 behaviour) optimizer, EMA weight averaging;  Step (exponential decay w/ staircase) LR schedule with warmup " 
+    ;
+   has part 
+        License Information ;
+         "apache-2.0" 
+    ;
+   has part 
+        Intended Use Case ;
+         "Image classification / feature backbone"  # Specified under Model Type in Model Card
+    ;
+   has part 
+        Training Data ;
+         "imagenet-1k" 
+    ;
+   has part 
+        Model Parameter ;
+         "Params: 2.5M, GMACs: 0.1, Activations: 1.4M, Image size: 224x224" 
+    ;
+   has part 
+        Model Architecture ;
+         "Not mentioned" 
+    ;
+   has part 
+        References ;
+         "Paper: Searching for MobileNetV3 (https://arxiv.org/abs/1905.02244)\nOriginal: https://github.com/huggingface/pytorch-image-models\nCitation: @misc{rw2019timm, author = {Ross Wightman}, title = {PyTorch Image Models}, year = {2019}, publisher = {GitHub}, doi = {10.5281/zenodo.4414861}, howpublished = {\url{https://github.com/huggingface/pytorch-image-models}}}" 
+    ;
+   has part 
+        Citation ;
+        "@misc{rw2019timm,
+        author = {Ross Wightman},
+        title = {PyTorch Image Models},
+        year = {2019},
+        publisher = {GitHub},
+        journal = {GitHub repository},
+        doi = {10.5281/zenodo.4414861},
+        howpublished = {\url{https://github.com/huggingface/pytorch-image-models}}
+        }"
+     ;
+   has part 
+        Citation ;
+        "@inproceedings{howard2019searching,
+        title={Searching for mobilenetv3},
+        author={Howard, Andrew and Sandler, Mark and Chu, Grace and Chen, Liang-Chieh and Chen, Bo and Tan, Mingxing and Wang, Weijun and Zhu, Yukun and Pang, Ruoming and Vasudevan, Vijay and others},
+        booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+        pages={1314--1324},
+        year={2019}}"
+
+openai/clip-vit-large-patch14
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+        overview "CLIP" ;
+         "The CLIP model was developed by researchers at OpenAI to learn about what contributes to robustness in computer vision tasks. The model was also developed to test the ability of models to generalize to arbitrary image classification tasks in a zero-shot manner. It was not developed for general model deployment - to deploy models like CLIP, researchers will first need to carefully study their capabilities in relation to the specific context they’re being deployed within." 
+    ;
+   has part 
+        Intended Use Case ;
+         "The model is intended as a research output for research communities. We hope that this model will enable researchers to better understand and explore zero-shot, arbitrary image classification. We also hope it can be used for interdisciplinary studies of the potential impact of such models - the CLIP paper includes a discussion of potential downstream impacts to provide an example for this sort of analysis."
+         "The primary intended users of these models are AI researchers."
+         "We primarily imagine the model will be used by researchers to better understand robustness, generalization, and other capabilities, biases, and constraints of computer vision models."
+         "Any deployed use case of the model - whether commercial or not - is currently out of scope. Non-deployed use cases such as image search in a constrained environment, are also not recommended unless there is thorough in-domain testing of the model with a specific, fixed class taxonomy. This is because our safety assessment demonstrated a high need for task specific testing especially given the variability of CLIP’s performance with different class taxonomies. This makes untested and unconstrained deployment of the model in any use case currently potentially harmful. Certain use cases which would fall under the domain of surveillance and facial recognition are always out-of-scope regardless of performance of the model. This is because the use of artificial intelligence for tasks such as these can be premature currently given the lack of testing norms and checks to ensure its fair use. Since the model has not been purposefully trained in or evaluated on any languages other than English, its use should be limited to English language use cases."
+    ;
+   has part 
+        Limitation ;
+         "CLIP and our analysis of it have a number of limitations. CLIP currently struggles with respect to certain tasks such as fine grained classification and counting objects. CLIP also poses issues with regards to fairness and bias which we discuss in the paper and briefly in the next section. Additionally, our approach to testing CLIP also has an important limitation- in many cases we have used linear probes to evaluate the performance of CLIP and there is evidence suggesting that linear probes can underestimate model performance." 
+    ;
+   has part 
+        Training Data ;
+        "The model was trained on publicly available image-caption data. This was done through a combination of crawling a handful of websites and using commonly-used pre-existing image datasets such as [YFCC100M](http://projects.dfki.uni-kl.de/yfcc100m/). A large portion of the data comes from our crawling of the internet. This means that the data is more representative of people and societies most connected to the internet which tend to skew towards more developed nations, and younger, male users."    ;
+   has part 
+        Performance Metric ;
+         "Evaluated on wide range of benchmarks: Food101, CIFAR10/100, Birdsnap, SUN397, Stanford Cars, FGVC Aircraft, VOC2007, DTD, Oxford-IIIT Pets, Caltech101, Flowers102, MNIST, SVHN, IIIT5K, Hateful Memes, SST-2, UCF101, Kinetics700, Country211, CLEVR Counting, KITTI Distance, STL-10, RareAct, Flickr30, MSCOCO, ImageNet variants, ObjectNet, Youtube-BB, ImageNet-Vid" 
+    ;
+   has part 
+        Model Architecture ;
+         "ViT-L/14 Transformer image encoder and masked self-attention Transformer text encoder trained with contrastive loss" 
+    ;
+   has part 
+        References ;
+         "Blog: https://openai.com/blog/clip/"
+         "Paper: https://arxiv.org/abs/2103.00020"
+         "Feedback: https://forms.gle/Uv7afRH5dvY34ZEs9" 
+    .
+
+openai/clip-vit-base-patch32
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+        overview "CLIP (ViT-B/32)" ;
+         "The CLIP model was developed by researchers at OpenAI to learn about what contributes to robustness in computer vision tasks. The model was also developed to test the ability of models to generalize to arbitrary image classification tasks in a zero-shot manner. It was not developed for general model deployment - to deploy models like CLIP, researchers will first need to carefully study their capabilities in relation to the specific context they’re being deployed within." 
+    ;
+   has part 
+        Intended Use Case ;
+         "The model is intended as a research output for research communities. We hope that this model will enable researchers to better understand and explore zero-shot, arbitrary image classification. We also hope it can be used for interdisciplinary studies of the potential impact of such models - the CLIP paper includes a discussion of potential downstream impacts to provide an example for this sort of analysis."
+         "The primary intended users of these models are AI researchers."
+         "We primarily imagine the model will be used by researchers to better understand robustness, generalization, and other capabilities, biases, and constraints of computer vision models."
+         "Any deployed use case of the model - whether commercial or not - is currently out of scope. Non-deployed use cases such as image search in a constrained environment, are also not recommended unless there is thorough in-domain testing of the model with a specific, fixed class taxonomy. This is because our safety assessment demonstrated a high need for task specific testing especially given the variability of CLIP’s performance with different class taxonomies. This makes untested and unconstrained deployment of the model in any use case currently potentially harmful. Certain use cases which would fall under the domain of surveillance and facial recognition are always out-of-scope regardless of performance of the model. This is because the use of artificial intelligence for tasks such as these can be premature currently given the lack of testing norms and checks to ensure its fair use. Since the model has not been purposefully trained in or evaluated on any languages other than English, its use should be limited to English language use cases."
+    ;
+   has part 
+        Limitation ;
+        "CLIP and our analysis of it have a number of limitations. CLIP currently struggles with respect to certain tasks such as fine grained classification and counting objects. CLIP also poses issues with regards to fairness and bias which we discuss in the paper and briefly in the next section. Additionally, our approach to testing CLIP also has an important limitation- in many cases we have used linear probes to evaluate the performance of CLIP and there is evidence suggesting that linear probes can underestimate model performance."
+     ;
+   has part 
+        Training Data ;
+        "The model was trained on publicly available image-caption data. This was done through a combination of crawling a handful of websites and using commonly-used pre-existing image datasets such as [YFCC100M](http://projects.dfki.uni-kl.de/yfcc100m/). A large portion of the data comes from our crawling of the internet. This means that the data is more representative of people and societies most connected to the internet which tend to skew towards more developed nations, and younger, male users."    ;
+   has part 
+        Performance Metric ;
+         "Evaluated on wide range of benchmarks: Food101, CIFAR10/100, Birdsnap, SUN397, Stanford Cars, FGVC Aircraft, VOC2007, DTD, Oxford-IIIT Pets, Caltech101, Flowers102, MNIST, SVHN, IIIT5K, Hateful Memes, SST-2, UCF101, Kinetics700, Country211, CLEVR Counting, KITTI Distance, STL-10, RareAct, Flickr30, MSCOCO, ImageNet variants" 
+    ;
+   has part 
+        Model Architecture ;
+         "ViT-B/32 Transformer image encoder and masked self-attention Transformer text encoder trained with contrastive loss" 
+    ;
+   has part 
+        References ;
+         "Blog: https://openai.com/blog/clip/"
+         "Paper: https://arxiv.org/abs/2103.00020"
+         "Feedback: https://forms.gle/Uv7afRH5dvY34ZEs9" 
+    .
+
+Bingsu/adetailer
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+        overview "YOLOv8 Detection Model" ;
+         "No Detail or YOLOv8 Detection Model" 
+    ;
+   has part 
+        License Information ;
+         "apache-2.0" 
+    ;
+   has part 
+        Intended Use Case ;
+         "Object detection and segmentation for faces, hands, persons, and clothing" 
+    ;
+   has part 
+        Training Data ;
+         "wider_face, skytnt/anime-segmentation, Anime Face CreateML, xml2txt, AN, wider face, AnHDet, hand-detection-fuao9, coco2017 (only person), AniSeg, deepfashion2" 
+    ;
+   has part 
+        Limitation ;
+         "Segmentation models classified as unsafe due to `getattr` in pickle files" 
+    ;
+   has part 
+        Model Parameter ;
+         "Usage: from huggingface_hub import hf_hub_download; from ultralytics import YOLO; path = hf_hub_download('Bingsu/adetailer', 'face_yolov8n.pt'); model = YOLO(path)" 
+    ;
+   has part 
+        Performance Metric ;
+         0.660 ;
+         "face_yolov8n.pt mAP 50" 
+    ;
+   has part 
+        Performance Metric ;
+         0.366 ;
+         "face_yolov8n.pt mAP 50-95" 
+    ;
+   has part 
+        Performance Metric ;
+         0.767 ;
+         "hand_yolov8n.pt mAP 50" 
+    ;
+   has part 
+        Performance Metric ;
+         0.505 ;
+         "hand_yolov8n.pt mAP 50-95" 
+    ;
+   has part 
+        Performance Metric ;
+         0.782 ;
+         "person_yolov8n-seg.pt bbox mAP 50" 
+    ;
+   has part 
+        Performance Metric ;
+         0.555 ;
+         "person_yolov8n-seg.pt bbox mAP 50-95" 
+    ;
+   has part 
+        Performance Metric ;
+         0.761 ;
+         "person_yolov8n-seg.pt mask mAP 50" 
+    ;
+   has part 
+        Performance Metric ;
+         0.460 ;
+         "person_yolov8n-seg.pt mask mAP 50-95" 
+    ;
+   has part 
+        Performance Metric ;
+         0.849 ;
+         "deepfashion2_yolov8s-seg.pt bbox mAP 50" 
+    ;
+   has part 
+        Performance Metric ;
+         0.763 ;
+         "deepfashion2_yolov8s-seg.pt bbox mAP 50-95" 
+    ;
+   has part 
+        Performance Metric ;
+         0.840 ;
+         "deepfashion2_yolov8s-seg.pt mask mAP 50" 
+    ;
+   has part 
+        Performance Metric ;
+         0.675 ;
+         "deepfashion2_yolov8s-seg.pt mask mAP 50-95"
+     ;
+   has part 
+        Model Architecture ;
+         "Not specified"
+    .
+
+sentence-transformers/all-mpnet-base-v2
+
+ Model Card ;
+   has part 
+        Model Detail Section ;
+        overview "all-mpnet-base-v2" ;
+         "This is a [sentence-transformers](https://www.SBERT.net) model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search." 
+    ;
+   has part 
+        License Information ;
+         "apache-2.0" 
+    ;
+   has part 
+        Intended Use Case ;
+         "Our model is intented to be used as a sentence and short paragraph encoder. Given an input text, it ouptuts a vector which captures the semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks."
+    ;
+   has part 
+        Limitation ;
+         "By default, input text longer than 384 word pieces is truncated"    # this is mentioned in intended use so i'm not sure if i should add this - https://huggingface.co/sentence-transformers/all-mpnet-base-v2/raw/main/README.md
+    ;
+   has part 
+        Training Data ;
+         "We use the concatenation from multiple datasets to fine-tune our model. The total number of sentence pairs is above 1 billion sentences."
+         "We sampled each dataset given a weighted probability which configuration is detailed in the `data_config.json` file."
+         "Trained on 1B+ sentence pairs from: s2orc, flax-sentence-embeddings/stackexchange_xml, ms_marco, gooaq, yahoo_answers_topics, code_search_net, search_qa, eli5, snli, multi_nli, wikihow, natural_questions, trivia_qa, embedding-data/sentence-compression, embedding-data/flickr30k-captions, embedding-data/altlex, embedding-data/simple-wiki, embedding-data/QQP, embedding-data/SPECTER, embedding-data/PAQ_pairs, embedding-data/WikiAnswers" 
+    ;
+   has part 
+        Model Parameter ;    # in Model card its Hyper parameter not model parameter - https://huggingface.co/sentence-transformers/all-mpnet-base-v2/raw/main/README.md
+         "We trained ou model on a TPU v3-8. We train the model during 100k steps using a batch size of 1024 (128 per TPU core). We use a learning rate warm up of 500. The sequence length was limited to 128 tokens. We used the AdamW optimizer with a 2e-5 learning rate. The full training script is accessible in this current repository: `train_script.py`." 
+    ;
+   has part 
+        References ;
+         "Base model: https://huggingface.co/microsoft/mpnet-base\nProject: https://discuss.huggingface.co/t/train-the-best-sentence-embedding-model-ever-with-1b-training-pairs/7354" 
+    ;
+   has part 
+        Model Architecture ;
+         " Not mentioned"
+     .
+
+
+Prompt: Using the attached Model Card Ontology (MCRO) file ({mcro_file.uri}), analyze this Hugging Face model card text and return only RDF triples in JSON format. Follow these strict rules:
+
+ Rules for Mapping
+1. Only use terms defined in the MCRO ontology.
+2. Always map metadata fields to appropriate MCRO concepts **by their CURIEs**, such as:
+   - license → mcro:LicenseInformationSection
+   - dataset → mcro:DatasetInformationSection
+   - model architecture → mcro:ModelArchitectureInformationSection
+   - citation → mcro:CitationInformationSection
+   - intended use case → mcro:UseCaseInformationSection
+   - Model detail → mcro:ModelDetailSection
+   - limitations → mcro:limitationsInformationSection
+   - accuracy → mcro:AccuracyInformationSection
+   - loss → mcro:LossInformationSection
+   - metrics → mcro:MetricsInformationSection
+   - training data → mcro:TrainingDataInformationSection
+   - reference → mcro:ReferenceInformationSection
+    - model card → mcro:ModelCard
+    - model → mcro:Model
+
+3. Use proper relationships:
+   - `rdf:type` for types
+   - `prov:hasTextValue` for textual values (like "mit", "CNN", "ImageNet")
+   - Appropriate `mcro:hasX` properties for linking model to its sections
+4. Never assign `rdf:type` to abstract IAO classes like `obo:IAO_*`.
+5. Never directly type instances with `obo:MCRO_0000004`, `obo:MCRO_0000016`, etc. — always use CURIEs like `mcro:CitationInformationSection`, `mcro:LicenseInformationSection`.
+6. Only the root model instance (e.g., `mcro:{clean_identifier(model_id)}`) should be assigned `rdf:type mcro:Model`.
+   - Do NOT assign `rdf:type mcro:Model` to supporting entities like `mcro:{clean_identifier(model_id)}-ModelDetail`, `-ModelDetailSection`, or other sections.
+   - Instead, assign their appropriate type such as `mcro:ModelArchitectureInformationSection`, `mcro:UseCaseInformationSection`, etc.
+7. If multiple text values exist for the same section (e.g., model architecture), merge them into a single prov:hasTextValue string, separated by semicolons or commas.
+8. All section instance identifiers must follow CamelCase formatting (e.g., mcro:{id}-LimitationsInformationSection).
+9. If dataset names (e.g., ‘ImageNet’, ‘NSFW’) are mentioned, include a mcro:DatasetInformationSection instance and link it using mcro:hasDataset
+10. If a section exists but no clear text is available, still include a prov:hasTextValue with a placeholder like ‘Not specified’ or ‘See model page’
+11. When using prov:hasTextValue, prepend short descriptors (e.g., ‘Sample count: 80,000 images’, ‘Categories: nsfw, normal’) to make values clearer.
+12. If training data is already described in the TrainingDataSection, avoid repeating the same detail in ModelDetailSection; instead, summarize it briefly or refer to the other section.
+13. Use mcro:hasDataset only for named benchmark datasets (e.g., ImageNet, COCO). Use mcro:hasTrainingData for descriptions of data collection, preprocessing, or labeling.
+
+Sample Output Format:
+[
+  {{
+    "s": "mcro:{clean_identifier(model_id)}",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  }},
+  {{
+    "s": "mcro:{clean_identifier(model_id)}",
+    "p": "mcro:hasLicense",
+    "o": "mcro:{clean_identifier(model_id)}-License"
+  }},
+  {{
+    "s": "mcro:{clean_identifier(model_id)}-License",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  }},
+  {{
+    "s": "mcro:{clean_identifier(model_id)}-License",
+    "p": "prov:hasTextValue",
+    "o": "mit"
+  }}
+]
+Important: Return ONLY the JSON array. No explanation. No markdown.
+
+Input Text:
+{model_card_text}

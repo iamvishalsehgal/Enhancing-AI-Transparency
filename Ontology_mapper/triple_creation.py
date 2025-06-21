@@ -51,6 +51,16 @@ def get_mapped_triples(model_card_text, mcro_file, model_id):
    - model architecture → mcro:ModelArchitectureInformationSection
    - citation → mcro:CitationInformationSection
    - intended use case → mcro:UseCaseInformationSection
+   - Model detail → mcro:ModelDetailSection
+   - limitations → mcro:limitationsInformationSection
+   - accuracy → mcro:AccuracyInformationSection
+   - loss → mcro:LossInformationSection
+   - metrics → mcro:MetricsInformationSection
+   - training data → mcro:TrainingDataInformationSection
+   - reference → mcro:ReferenceInformationSection
+    - model card → mcro:ModelCard
+    - model → mcro:Model
+
 3. Use proper relationships:
    - `rdf:type` for types
    - `prov:hasTextValue` for textual values (like "mit", "CNN", "ImageNet")
@@ -60,6 +70,13 @@ def get_mapped_triples(model_card_text, mcro_file, model_id):
 6. Only the root model instance (e.g., `mcro:{clean_identifier(model_id)}`) should be assigned `rdf:type mcro:Model`.
    - Do NOT assign `rdf:type mcro:Model` to supporting entities like `mcro:{clean_identifier(model_id)}-ModelDetail`, `-ModelDetailSection`, or other sections.
    - Instead, assign their appropriate type such as `mcro:ModelArchitectureInformationSection`, `mcro:UseCaseInformationSection`, etc.
+7. If multiple text values exist for the same section (e.g., model architecture), merge them into a single prov:hasTextValue string, separated by semicolons or commas.
+8. All section instance identifiers must follow CamelCase formatting (e.g., mcro:{id}-LimitationsInformationSection).
+9. If dataset names (e.g., ‘ImageNet’, ‘NSFW’) are mentioned, include a mcro:DatasetInformationSection instance and link it using mcro:hasDataset
+10. If a section exists but no clear text is available, still include a prov:hasTextValue with a placeholder like ‘Not specified’ or ‘See model page’
+11. When using prov:hasTextValue, prepend short descriptors (e.g., ‘Sample count: 80,000 images’, ‘Categories: nsfw, normal’) to make values clearer.
+12. If training data is already described in the TrainingDataSection, avoid repeating the same detail in ModelDetailSection; instead, summarize it briefly or refer to the other section.
+13. Use mcro:hasDataset only for named benchmark datasets (e.g., ImageNet, COCO). Use mcro:hasTrainingData for descriptions of data collection, preprocessing, or labeling.
 
 Sample Output Format:
 [
@@ -93,7 +110,7 @@ Input Text:
     try:
         response = gemini_model.generate_content(
             contents=[prompt, mcro_file],
-            request_options={"timeout": 60}
+            request_options={"timeout": 200}
         )
 
         json_str = response.text.strip()
@@ -180,7 +197,7 @@ if __name__ == "__main__":
     json_path = os.path.join(output_dir, "triples.json")
     ttl_path = os.path.join(output_dir, "triples.ttl")
     
-    all_triples = process_huggingface_models(limit=1000)
+    all_triples = process_huggingface_models(limit=10)
 
     with open(json_path, "w") as f:
         json.dump(all_triples, f, indent=2)

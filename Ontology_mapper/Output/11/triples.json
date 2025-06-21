@@ -1,0 +1,1577 @@
+[
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:Falconsainsfwimagedetection-ModelDetailSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:Falconsainsfwimagedetection-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasLimitations",
+    "o": "mcro:Falconsainsfwimagedetection-LimitationsInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:Falconsainsfwimagedetection-TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasReference",
+    "o": "mcro:Falconsainsfwimagedetection-ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelDetailSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelDetailSection",
+    "p": "prov:hasTextValue",
+    "o": "Model Description: The Fine-Tuned Vision Transformer (ViT) is a variant of the transformer encoder architecture, similar to BERT, that has been adapted for image classification tasks. This specific model, named \"google/vit-base-patch16-224-in21k,\" is pre-trained on a substantial collection of images in a supervised manner, leveraging the ImageNet-21k dataset. The images in the pre-training dataset are resized to a resolution of 224x224 pixels, making it suitable for a wide range of image recognition tasks.;Hyperparameter Settings: The model was fine-tuned with a judiciously chosen batch size of 16. To facilitate this fine-tuning process, a learning rate of 5e-5 was employed.;Training Process: This training phase was executed using a proprietary dataset containing an extensive collection of 80,000 images, each characterized by a substantial degree of variability. The dataset was thoughtfully curated to include two distinct classes, namely \"normal\" and \"nsfw.\" This diversity allowed the model to grasp nuanced visual patterns, equipping it with the competence to accurately differentiate between safe and explicit content."
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-UseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Intended Uses: NSFW Image Classification - The primary intended use of this model is for the classification of NSFW (Not Safe for Work) images. It has been fine-tuned for this purpose, making it suitable for filtering explicit or inappropriate content in various applications."
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-LimitationsInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:LimitationsInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-LimitationsInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Limitations: Specialized Task Fine-Tuning - While the model is adept at NSFW image classification, its performance may vary when applied to other tasks.; Users interested in employing this model for different tasks should explore fine-tuned versions available in the model hub for optimal results."
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-TrainingDataInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-TrainingDataInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Training Data: The model's training data includes a proprietary dataset comprising approximately 80,000 images. This dataset encompasses a significant amount of variability and consists of two distinct classes: \"normal\" and \"nsfw.\" The training process on this data aimed to equip the model with the ability to distinguish between safe and explicit content effectively."
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ReferenceInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ReferenceInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "References: Hugging Face Model Hub - [https://huggingface.co/models]; Vision Transformer (ViT) Paper - [https://arxiv.org/abs/2010.11929]; ImageNet-21k Dataset - [http://www.image-net.org/]"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasDataset",
+    "o": "mcro:Falconsainsfwimagedetection-DatasetInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-DatasetInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-DatasetInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Datasets: ImageNet-21k, proprietary dataset"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasMetrics",
+    "o": "mcro:Falconsainsfwimagedetection-MetricsInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-MetricsInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:MetricsInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-MetricsInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Training Stats: eval_loss: 0.07463177293539047, eval_accuracy: 0.980375"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:Falconsainsfwimagedetection-ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelArchitectureInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:Falconsainsfwimagedetection-ModelArchitectureInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Model architecture: Vision Transformer (ViT)"
+  },
+  {
+    "s": "mcro:allMiniLML6v2",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:allMiniLML6v2",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:allMiniLML6v2-ModelDetailSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelDetailSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelDetailSection",
+    "p": "prov:hasTextValue",
+    "o": "Model detail: This is a sentence-transformers model: It maps sentences & paragraphs to a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelDetailSection",
+    "p": "mcro:hasIntendedUseCase",
+    "o": "mcro:allMiniLML6v2-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-UseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Intended use case: Our model is intended to be used as a sentence and short paragraph encoder. Given an input text, it outputs a vector which captures the semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks. By default, input text longer than 256 word pieces is truncated."
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelDetailSection",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:allMiniLML6v2-TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-TrainingDataInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-TrainingDataInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Training data: We use the concatenation from multiple datasets to fine-tune our model. The total number of sentence pairs is above 1 billion sentences. We sampled each dataset given a weighted probability which configuration is detailed in the `data_config.json` file."
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelDetailSection",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:allMiniLML6v2-ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelArchitectureInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:allMiniLML6v2-ModelArchitectureInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Model architecture: We used the pretrained [`nreimers/MiniLM-L6-H384-uncased`](https://huggingface.co/nreimers/MiniLM-L6-H384-uncased) model and fine-tuned in on a 1B sentence pairs dataset. We use a contrastive learning objective: given a sentence from the pair, the model should predict which out of a set of randomly sampled other sentences, was actually paired with it in our dataset."
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "mcro:hasAccuracy",
+    "o": "mcro:dima806fairfaceageimagedetection-AccuracyInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "mcro:hasReference",
+    "o": "mcro:dima806fairfaceageimagedetection-ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection",
+    "p": "mcro:hasMetrics",
+    "o": "mcro:dima806fairfaceageimagedetection-MetricsInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-AccuracyInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:AccuracyInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-AccuracyInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Accuracy: Detects age group with about 59% accuracy based on an image."
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-ReferenceInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-ReferenceInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Reference: See https://www.kaggle.com/code/dima806/age-group-image-classification-vit for details."
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-MetricsInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:MetricsInformationSection"
+  },
+  {
+    "s": "mcro:dima806fairfaceageimagedetection-MetricsInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Classification report: precision, recall, f1-score, support for age groups 0-2, 3-9, 10-19, 20-29, 30-39, 40-49, 50-59, 60-69, more than 70. accuracy: 0.5892, macro avg: precision 0.5971, recall 0.5303, f1-score 0.5459, weighted avg: precision 0.5863, recall 0.5892, f1-score 0.5844"
+  },
+  {
+    "s": "mcro:bertbaseuncased",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:bertbaseuncased",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:bertbaseuncased-ModelDetailSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-ModelDetailSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-ModelDetailSection",
+    "p": "prov:hasTextValue",
+    "o": "Model detail: BERT is a transformers model pretrained on a large corpus of English data in a self-supervised fashion;This model is uncased: it does not make a difference between english and English"
+  },
+  {
+    "s": "mcro:bertbaseuncased-ModelDetailSection",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:bertbaseuncased-ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-ModelArchitectureInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-ModelArchitectureInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Model architecture: transformers"
+  },
+  {
+    "s": "mcro:bertbaseuncased-ModelDetailSection",
+    "p": "mcro:hasCitation",
+    "o": "mcro:bertbaseuncased-CitationInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-CitationInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-CitationInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Citation: this paper(https://arxiv.org/abs/1810.04805); this repository(https://github.com/google-research/bert)"
+  },
+  {
+    "s": "mcro:bertbaseuncased",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:bertbaseuncased-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-UseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Intended use case: masked language modeling; next sentence prediction; fine-tuned on a downstream task; sequence classification, token classification or question answering"
+  },
+  {
+    "s": "mcro:bertbaseuncased",
+    "p": "mcro:hasLimitations",
+    "o": "mcro:bertbaseuncased-LimitationsInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-LimitationsInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:LimitationInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-LimitationsInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Limitations: this model can have biased predictions; This bias will also affect all fine-tuned versions of this model."
+  },
+  {
+    "s": "mcro:bertbaseuncased",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:bertbaseuncased-TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-TrainingDataInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-TrainingDataInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Training data: BookCorpus; English Wikipedia"
+  },
+  {
+    "s": "mcro:bertbaseuncased",
+    "p": "mcro:hasReference",
+    "o": "mcro:bertbaseuncased-ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-ReferenceInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:bertbaseuncased-ReferenceInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Reference: See model page"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:mobilenetv3small100lambin1k-ModelDetailSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetailSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetailSection",
+    "p": "prov:hasTextValue",
+    "o": "Model type: Image classification / feature backbone; Model Stats: Params (M): 2.5, GMACs: 0.1, Activations (M): 1.4, Image size: 224 x 224; Dataset: ImageNet-1k"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelDetailSection",
+    "p": "mcro:hasCitation",
+    "o": "mcro:mobilenetv3small100lambin1k-CitationInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-CitationInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-CitationInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Papers: Searching for MobileNetV3: https://arxiv.org/abs/1905.02244; Original: https://github.com/huggingface/pytorch-image-models"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:mobilenetv3small100lambin1k-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-UseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Intended use case: Image Classification, Feature Map Extraction, Image Embeddings"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasReference",
+    "o": "mcro:mobilenetv3small100lambin1k-ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ReferenceInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ReferenceInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Reference: Explore the dataset and runtime metrics of this model in timm [model results](https://github.com/huggingface/pytorch-image-models/tree/main/results)."
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasCitation",
+    "o": "mcro:mobilenetv3small100lambin1k-CitationInformationSection2"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-CitationInformationSection2",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-CitationInformationSection2",
+    "p": "prov:hasTextValue",
+    "o": "Citation: @misc{rw2019timm, author = {Ross Wightman}, title = {PyTorch Image Models}, year = {2019}, publisher = {GitHub}, journal = {GitHub repository}, doi = {10.5281/zenodo.4414861}, howpublished = {\\url{https://github.com/huggingface/pytorch-image-models}} }; @inproceedings{howard2019searching, title={Searching for mobilenetv3}, author={Howard, Andrew and Sandler, Mark and Chu, Grace and Chen, Liang-Chieh and Chen, Bo and Tan, Mingxing and Wang, Weijun and Zhu, Yukun and Pang, Ruoming and Vasudevan, Vijay and others}, booktitle={Proceedings of the IEEE/CVF international conference on computer vision}, pages={1314--1324}, year={2019} }"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:mobilenetv3small100lambin1k-TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-TrainingDataInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-TrainingDataInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Training data: Trained on ImageNet-1k in `timm` using recipe template described below.; Recipe details: A LAMB optimizer recipe that is similar to [ResNet Strikes Back](https://arxiv.org/abs/2110.00476) `A2` but 50% longer with EMA weight averaging, no CutMix; RMSProp (TF 1.0 behaviour) optimizer, EMA weight averaging; Step (exponential decay w/ staircase) LR schedule with warmup"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:mobilenetv3small100lambin1k-ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelArchitectureInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-ModelArchitectureInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Model architecture: MobileNet-v3 image classification model"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k",
+    "p": "mcro:hasDataset",
+    "o": "mcro:mobilenetv3small100lambin1k-DatasetInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-DatasetInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:mobilenetv3small100lambin1k-DatasetInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: ImageNet-1k"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:clip-ModelDetailSection"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:clip-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:clip-TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasLimitation",
+    "o": "mcro:clip-LimitationsInformationSection"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasReference",
+    "o": "mcro:clip-ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:clip",
+    "p": "mcro:hasPerformanceMetric",
+    "o": "mcro:clip-PerformanceMetricInformationSection"
+  },
+  {
+    "s": "mcro:clip-ModelDetailSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:clip-ModelDetailSection",
+    "p": "prov:hasTextValue",
+    "o": "Model detail: The CLIP model was developed by researchers at OpenAI to learn about what contributes to robustness in computer vision tasks. The model was also developed to test the ability of models to generalize to arbitrary image classification tasks in a zero-shot manner. It was not developed for general model deployment - to deploy models like CLIP, researchers will first need to carefully study their capabilities in relation to the specific context they\u2019re being deployed within."
+  },
+  {
+    "s": "mcro:clip-CitationInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:clip-CitationInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Citation text: Not specified"
+  },
+  {
+    "s": "mcro:clip-LicenseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:LicenseInformationSection"
+  },
+  {
+    "s": "mcro:clip-LicenseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "License: Not specified"
+  },
+  {
+    "s": "mcro:clip-ModelArchitectureInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:clip-ModelArchitectureInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Model architecture: The base model uses a ViT-L/14 Transformer architecture as an image encoder and uses a masked self-attention Transformer as a text encoder. These encoders are trained to maximize the similarity of (image, text) pairs via a contrastive loss;The original implementation had two variants: one using a ResNet image encoder and the other using a Vision Transformer. This repository has the variant with the Vision Transformer."
+  },
+  {
+    "s": "mcro:clip-VersionInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:VersionInformationSection"
+  },
+  {
+    "s": "mcro:clip-VersionInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Version: Not specified"
+  },
+  {
+    "s": "mcro:clip-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:clip-UseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Intended use case: The model is intended as a research output for research communities. We hope that this model will enable researchers to better understand and explore zero-shot, arbitrary image classification. We also hope it can be used for interdisciplinary studies of the potential impact of such models - the CLIP paper includes a discussion of potential downstream impacts to provide an example for this sort of analysis."
+  },
+  {
+    "s": "mcro:clip-PrimaryIntendedUseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:PrimaryIntendedUseCaseInformationSection"
+  },
+  {
+    "s": "mcro:clip-PrimaryIntendedUseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Primary intended use: Not specified"
+  },
+  {
+    "s": "mcro:clip-OutofScopeUseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:OutofScopeUseCaseInformationSection"
+  },
+  {
+    "s": "mcro:clip-OutofScopeUseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Out-of-scope use cases: Any deployed use case of the model - whether commercial or not - is currently out of scope. Non-deployed use cases such as image search in a constrained environment, are also not recommended unless there is thorough in-domain testing of the model with a specific, fixed class taxonomy. This is because our safety assessment demonstrated a high need for task specific testing especially given the variability of CLIP\u2019s performance with different class taxonomies. This makes untested and unconstrained deployment of the model in any use case currently potentially harmful. Certain use cases which would fall under the domain of surveillance and facial recognition are always out-of-scope regardless of performance of the model. This is because the use of artificial intelligence for tasks such as these can be premature currently given the lack of testing norms and checks to ensure its fair use. Since the model has not been purposefully trained in or evaluated on any languages other than English, its use should be limited to English language use cases."
+  },
+  {
+    "s": "mcro:clip-UserInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UserInformationSection"
+  },
+  {
+    "s": "mcro:clip-UserInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "User Information: Not specified"
+  },
+  {
+    "s": "mcro:clip-PrimaryIntendedUserInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:PrimaryIntendedUserInformationSection"
+  },
+  {
+    "s": "mcro:clip-PrimaryIntendedUserInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Primary Intended User: The primary intended users of these models are AI researchers. We primarily imagine the model will be used by researchers to better understand robustness, generalization, and other capabilities, biases, and constraints of computer vision models."
+  },
+  {
+    "s": "mcro:clip-TrainingDataInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:clip-TrainingDataInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Training data: The model was trained on publicly available image-caption data. This was done through a combination of crawling a handful of websites and using commonly-used pre-existing image datasets such as [YFCC100M](http://projects.dfki.uni-kl.de/yfcc100m/). A large portion of the data comes from our crawling of the internet. This means that the data is more representative of people and societies most connected to the internet which tend to skew towards more developed nations, and younger, male users."
+  },
+  {
+    "s": "mcro:clip-EvaluationDataInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:EvaluationDataInformationSection"
+  },
+  {
+    "s": "mcro:clip-EvaluationDataInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Evaluation Data: Not specified"
+  },
+  {
+    "s": "mcro:clip-DatasetInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:clip-DatasetInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Datasets: YFCC100M"
+  },
+  {
+    "s": "mcro:clip-LimitationsInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:LimitationInformationSection"
+  },
+  {
+    "s": "mcro:clip-LimitationsInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Limitations: CLIP and our analysis of it have a number of limitations. CLIP currently struggles with respect to certain tasks such as fine grained classification and counting objects. CLIP also poses issues with regards to fairness and bias which we discuss in the paper and briefly in the next section. Additionally, our approach to testing CLIP also has an important limitation- in many cases we have used linear probes to evaluate the performance of CLIP and there is evidence suggesting that linear probes can underestimate model performance."
+  },
+  {
+    "s": "mcro:clip-TradeoffInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:TradeoffInformationSection"
+  },
+  {
+    "s": "mcro:clip-TradeoffInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Trade-off information: Not specified"
+  },
+  {
+    "s": "mcro:clip-EthicalConsiderationSection",
+    "p": "rdf:type",
+    "o": "mcro:EthicalConsiderationSection"
+  },
+  {
+    "s": "mcro:clip-EthicalConsiderationSection",
+    "p": "prov:hasTextValue",
+    "o": "Ethical consideration: Not specified"
+  },
+  {
+    "s": "mcro:clip-RiskInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:RiskInformationSection"
+  },
+  {
+    "s": "mcro:clip-RiskInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Risks: Not specified"
+  },
+  {
+    "s": "mcro:clip-MitigationStrategySection",
+    "p": "rdf:type",
+    "o": "mcro:MitigationStrategySection"
+  },
+  {
+    "s": "mcro:clip-MitigationStrategySection",
+    "p": "prov:hasTextValue",
+    "o": "Mitigation strategy: Not specified"
+  },
+  {
+    "s": "mcro:clip-ConsiderationInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ConsiderationInformationSection"
+  },
+  {
+    "s": "mcro:clip-ConsiderationInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Considerations: Not specified"
+  },
+  {
+    "s": "mcro:clip-QuantativeAnalysisSection",
+    "p": "rdf:type",
+    "o": "mcro:QuantativeAnalysisSection"
+  },
+  {
+    "s": "mcro:clip-QuantativeAnalysisSection",
+    "p": "prov:hasTextValue",
+    "o": "Quantitative Analysis: We have evaluated the performance of CLIP on a wide range of benchmarks across a variety of computer vision datasets such as OCR to texture recognition to fine-grained classification. The paper describes model performance on the following datasets: - Food101 - CIFAR10   - CIFAR100   - Birdsnap - SUN397 - Stanford Cars - FGVC Aircraft - VOC2007 - DTD - Oxford-IIIT Pet dataset - Caltech101 - Flowers102 - MNIST   - SVHN  - IIIT5K   - Hateful Memes   - SST-2 - UCF101 - Kinetics700 - Country211 - CLEVR Counting - KITTI Distance - STL-10 - RareAct - Flickr30 - MSCOCO - ImageNet - ImageNet-A - ImageNet-R - ImageNet Sketch - ObjectNet (ImageNet Overlap) - Youtube-BB - ImageNet-Vid"
+  },
+  {
+    "s": "mcro:clip-AccuracyInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:AccuracyInformationSection"
+  },
+  {
+    "s": "mcro:clip-AccuracyInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Accuracy: Not specified"
+  },
+  {
+    "s": "mcro:clip-AreaUnderTheCurveInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:AreaUnderTheCurveInformationSection"
+  },
+  {
+    "s": "mcro:clip-AreaUnderTheCurveInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Area Under the Curve: Not specified"
+  },
+  {
+    "s": "mcro:clip-F1ScoreInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:F1ScoreInformationSection"
+  },
+  {
+    "s": "mcro:clip-F1ScoreInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "F1-Score Information: Not specified"
+  },
+  {
+    "s": "mcro:clip-FalseDiscoveryRateInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:FalseDiscoveryRateInformationSection"
+  },
+  {
+    "s": "mcro:clip-FalseDiscoveryRateInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "False Discovery Rate: Not specified"
+  },
+  {
+    "s": "mcro:clip-FalseOmmissionRateSectionInformation",
+    "p": "rdf:type",
+    "o": "mcro:FalseOmmissionRateSectionInformation"
+  },
+  {
+    "s": "mcro:clip-FalseOmmissionRateSectionInformation",
+    "p": "prov:hasTextValue",
+    "o": "False Ommission Rate Information: Not specified"
+  },
+  {
+    "s": "mcro:clip-FalsePositiveRateInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:FalsePositiveRateInformationSection"
+  },
+  {
+    "s": "mcro:clip-FalsePositiveRateInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "False Positive Rate Information: Not specified"
+  },
+  {
+    "s": "mcro:clip-PercisionRecallCurveInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:PercisionRecallCurveInformationSection"
+  },
+  {
+    "s": "mcro:clip-PercisionRecallCurveInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Percision-Recall Curve Information: Not specified"
+  },
+  {
+    "s": "mcro:clip-LossInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:LossInformationSection"
+  },
+  {
+    "s": "mcro:clip-LossInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Loss: Not specified"
+  },
+  {
+    "s": "mcro:clip-PerformanceMetricInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:PerformanceMetricInformationSection"
+  },
+  {
+    "s": "mcro:clip-PerformanceMetricInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Performance Metric Information: See Quantative Analysis Section"
+  },
+  {
+    "s": "mcro:clip-ReferenceInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ReferenceInformationSection"
+  },
+  {
+    "s": "mcro:clip-ReferenceInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Reference: - [Blog Post](https://openai.com/blog/clip/) - [CLIP Paper](https://arxiv.org/abs/2103.00020)"
+  },
+  {
+    "s": "mcro:clipModel",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:clipModel",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:clipModel-ModelDetailSection"
+  },
+  {
+    "s": "mcro:clipModel-ModelDetailSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:clipModel-ModelDetailSection",
+    "p": "prov:hasTextValue",
+    "o": "Model detail: The CLIP model was developed by researchers at OpenAI to learn about what contributes to robustness in computer vision tasks. The model was also developed to test the ability of models to generalize to arbitrary image classification tasks in a zero-shot manner. It was not developed for general model deployment - to deploy models like CLIP, researchers will first need to carefully study their capabilities in relation to the specific context they\u2019re being deployed within."
+  },
+  {
+    "s": "mcro:clipModel-ModelDetailSection",
+    "p": "mcro:hasCitation",
+    "o": "mcro:clipModel-CitationSection"
+  },
+  {
+    "s": "mcro:clipModel-CitationSection",
+    "p": "rdf:type",
+    "o": "mcro:CitationInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-CitationSection",
+    "p": "prov:hasTextValue",
+    "o": "Citation: Blog Post - https://openai.com/blog/clip/; CLIP Paper - https://arxiv.org/abs/2103.00020"
+  },
+  {
+    "s": "mcro:clipModel-ModelDetailSection",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:clipModel-ArchitectureSection"
+  },
+  {
+    "s": "mcro:clipModel-ArchitectureSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-ArchitectureSection",
+    "p": "prov:hasTextValue",
+    "o": "Model architecture: ViT-B/32 Transformer architecture as an image encoder and uses a masked self-attention Transformer as a text encoder; These encoders are trained to maximize the similarity of (image, text) pairs via a contrastive loss; The original implementation had two variants: one using a ResNet image encoder and the other using a Vision Transformer. This repository has the variant with the Vision Transformer."
+  },
+  {
+    "s": "mcro:clipModel",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:clipModel-UseCaseSection"
+  },
+  {
+    "s": "mcro:clipModel-UseCaseSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-UseCaseSection",
+    "p": "prov:hasTextValue",
+    "o": "Intended Use: The model is intended as a research output for research communities. We hope that this model will enable researchers to better understand and explore zero-shot, arbitrary image classification. We also hope it can be used for interdisciplinary studies of the potential impact of such models - the CLIP paper includes a discussion of potential downstream impacts to provide an example for this sort of analysis."
+  },
+  {
+    "s": "mcro:clipModel-UseCaseSection",
+    "p": "mcro:hasPrimaryIntendedUse",
+    "o": "mcro:clipModel-PrimaryIntendedUseSection"
+  },
+  {
+    "s": "mcro:clipModel-PrimaryIntendedUseSection",
+    "p": "rdf:type",
+    "o": "mcro:PrimaryIntendedUseCaseInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-PrimaryIntendedUseSection",
+    "p": "prov:hasTextValue",
+    "o": "Primary intended uses: The primary intended users of these models are AI researchers; We primarily imagine the model will be used by researchers to better understand robustness, generalization, and other capabilities, biases, and constraints of computer vision models."
+  },
+  {
+    "s": "mcro:clipModel-UseCaseSection",
+    "p": "mcro:hasOutOfScopeUseCase",
+    "o": "mcro:clipModel-OutOfScopeUseCaseSection"
+  },
+  {
+    "s": "mcro:clipModel-OutOfScopeUseCaseSection",
+    "p": "rdf:type",
+    "o": "mcro:OutofScopeUseCaseSectionInformation"
+  },
+  {
+    "s": "mcro:clipModel-OutOfScopeUseCaseSection",
+    "p": "prov:hasTextValue",
+    "o": "Out-of-Scope Use Cases: Any deployed use case of the model - whether commercial or not - is currently out of scope. Non-deployed use cases such as image search in a constrained environment, are also not recommended unless there is thorough in-domain testing of the model with a specific, fixed class taxonomy. This is because our safety assessment demonstrated a high need for task specific testing especially given the variability of CLIP\u2019s performance with different class taxonomies. This makes untested and unconstrained deployment of the model in any use case currently potentially harmful. Certain use cases which would fall under the domain of surveillance and facial recognition are always out-of-scope regardless of performance of the model. This is because the use of artificial intelligence for tasks such as these can be premature currently given the lack of testing norms and checks to ensure its fair use. Since the model has not been purposefully trained in or evaluated on any languages other than English, its use should be limited to English language use cases."
+  },
+  {
+    "s": "mcro:clipModel",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:clipModel-TrainingDataSection"
+  },
+  {
+    "s": "mcro:clipModel-TrainingDataSection",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-TrainingDataSection",
+    "p": "prov:hasTextValue",
+    "o": "Training data: The model was trained on publicly available image-caption data. This was done through a combination of crawling a handful of websites and using commonly-used pre-existing image datasets such as [YFCC100M](http://projects.dfki.uni-kl.de/yfcc100m/). A large portion of the data comes from our crawling of the internet. This means that the data is more representative of people and societies most connected to the internet which tend to skew towards more developed nations, and younger, male users."
+  },
+  {
+    "s": "mcro:clipModel",
+    "p": "mcro:hasLimitation",
+    "o": "mcro:clipModel-LimitationsSection"
+  },
+  {
+    "s": "mcro:clipModel-LimitationsSection",
+    "p": "rdf:type",
+    "o": "mcro:LimitationInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-LimitationsSection",
+    "p": "prov:hasTextValue",
+    "o": "Limitations: CLIP currently struggles with respect to certain tasks such as fine grained classification and counting objects. CLIP also poses issues with regards to fairness and bias which we discuss in the paper and briefly in the next section. Additionally, our approach to testing CLIP also has an important limitation- in many cases we have used linear probes to evaluate the performance of CLIP and there is evidence suggesting that linear probes can underestimate model performance."
+  },
+  {
+    "s": "mcro:clipModel",
+    "p": "mcro:hasDataset",
+    "o": "mcro:clipModel-DatasetInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-DatasetInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-DatasetInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Datasets: Food101, CIFAR10, CIFAR100, Birdsnap, SUN397, Stanford Cars, FGVC Aircraft, VOC2007, DTD, Oxford-IIIT Pet dataset, Caltech101, Flowers102, MNIST, SVHN, IIIT5K, Hateful Memes, SST-2, UCF101, Kinetics700, Country211, CLEVR Counting, KITTI Distance, STL-10, RareAct, Flickr30, MSCOCO, ImageNet, ImageNet-A, ImageNet-R, ImageNet Sketch, ObjectNet (ImageNet Overlap), Youtube-BB, ImageNet-Vid, Fairface"
+  },
+  {
+    "s": "mcro:clipModel",
+    "p": "mcro:hasMetrics",
+    "o": "mcro:clipModel-MetricsInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-MetricsInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:MetricsInformationSection"
+  },
+  {
+    "s": "mcro:clipModel-MetricsInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Performance Metrics: accuracy >96% across all races for gender classification with \u2018Middle Eastern\u2019 having the highest accuracy (98.4%) and \u2018White\u2019 having the lowest (96.5%). Additionally, CLIP averaged ~93% for racial classification and ~63% for age classification."
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel",
+    "p": "mcro:hasDataset",
+    "o": "mcro:YOLOv8DetectionModel-DatasetInformationSection"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel",
+    "p": "mcro:hasMetrics",
+    "o": "mcro:YOLOv8DetectionModel-MetricsInformationSection"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:YOLOv8DetectionModel-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel",
+    "p": "mcro:hasLimitations",
+    "o": "mcro:YOLOv8DetectionModel-LimitationsInformationSection"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel-DatasetInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel-DatasetInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Face Datasets: Anime Face CreateML, xml2txt, AN, wider face; Hand Datasets: AnHDet, hand-detection-fuao9; Person Datasets: coco2017, AniSeg, skytnt/anime-segmentation; deepfashion2 Dataset: deepfashion2"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel-MetricsInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:MetricsInformationSection"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel-MetricsInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Model Performance: face_yolov8n.pt: mAP 50 = 0.660, mAP 50-95 = 0.366; face_yolov8n_v2.pt: mAP 50 = 0.669, mAP 50-95 = 0.372; face_yolov8s.pt: mAP 50 = 0.713, mAP 50-95 = 0.404; face_yolov8m.pt: mAP 50 = 0.737, mAP 50-95 = 0.424; face_yolov9c.pt: mAP 50 = 0.748, mAP 50-95 = 0.433; hand_yolov8n.pt: mAP 50 = 0.767, mAP 50-95 = 0.505; hand_yolov8s.pt: mAP 50 = 0.794, mAP 50-95 = 0.527; hand_yolov9c.pt: mAP 50 = 0.810, mAP 50-95 = 0.550; person_yolov8n-seg.pt: mAP 50 (bbox) = 0.782, mAP 50 (mask) = 0.761, mAP 50-95 (bbox) = 0.555, mAP 50-95 (mask) = 0.460; person_yolov8s-seg.pt: mAP 50 (bbox) = 0.824, mAP 50 (mask) = 0.809, mAP 50-95 (bbox) = 0.605, mAP 50-95 (mask) = 0.508; person_yolov8m-seg.pt: mAP 50 (bbox) = 0.849, mAP 50 (mask) = 0.831, mAP 50-95 (bbox) = 0.636, mAP 50-95 (mask) = 0.533; deepfashion2_yolov8s-seg.pt: mAP 50 (bbox) = 0.849, mAP 50 (mask) = 0.840, mAP 50-95 (bbox) = 0.763, mAP 50-95 (mask) = 0.675"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel-UseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Usage: See model page"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel-LimitationsInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:LimitationInformationSection"
+  },
+  {
+    "s": "mcro:YOLOv8DetectionModel-LimitationsInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Unsafe files: Since `getattr` is classified as a dangerous pickle function, any segmentation model that uses it is classified as unsafe. All models were created and saved using the official ultralytics library, so it's okay to use files downloaded from a trusted source. See also: https://huggingface.co/docs/hub/security-pickle"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "rdf:type",
+    "o": "mcro:Model"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasModelDetail",
+    "o": "mcro:allmpnetbasev2-ModelDetailSection"
+  },
+  {
+    "s": "mcro:allmpnetbasev2-ModelDetailSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelDetailSection"
+  },
+  {
+    "s": "mcro:allmpnetbasev2-ModelDetailSection",
+    "p": "prov:hasTextValue",
+    "o": "Model detail: This is a [sentence-transformers](https://www.SBERT.net) model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasUseCase",
+    "o": "mcro:allmpnetbasev2-UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:allmpnetbasev2-UseCaseInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:UseCaseInformationSection"
+  },
+  {
+    "s": "mcro:allmpnetbasev2-UseCaseInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Intended use case: Our model is intented to be used as a sentence and short paragraph encoder. Given an input text, it ouptuts a vector which captures \nthe semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks.\n\nBy default, input text longer than 384 word pieces is truncated."
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasTrainingData",
+    "o": "mcro:allmpnetbasev2-TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:allmpnetbasev2-TrainingDataInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:TrainingDataInformationSection"
+  },
+  {
+    "s": "mcro:allmpnetbasev2-TrainingDataInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Training data: We use the concatenation from multiple datasets to fine-tune our model. The total number of sentence pairs is above 1 billion sentences.\nWe sampled each dataset given a weighted probability which configuration is detailed in the `data_config.json` file.;Dataset: [Reddit comments (2015-2018)], Number of training tuples: 726,484,430;Dataset: [S2ORC] Citation pairs (Abstracts), Number of training tuples: 116,288,806;Dataset: [WikiAnswers] Duplicate question pairs, Number of training tuples: 77,427,422;Dataset: [PAQ] (Question, Answer) pairs, Number of training tuples: 64,371,441;Dataset: [S2ORC] Citation pairs (Titles), Number of training tuples: 52,603,982;Dataset: [S2ORC] (Title, Abstract), Number of training tuples: 41,769,185;Dataset: [Stack Exchange] (Title, Body) pairs, Number of training tuples: 25,316,456;Dataset: [Stack Exchange] (Title+Body, Answer) pairs, Number of training tuples: 21,396,559;Dataset: [Stack Exchange] (Title, Answer) pairs, Number of training tuples: 21,396,559;Dataset: [MS MARCO] triplets, Number of training tuples: 9,144,553;Dataset: [GOOAQ: Open Question Answering with Diverse Answer Types], Number of training tuples: 3,012,496;Dataset: [Yahoo Answers] (Title, Answer), Number of training tuples: 1,198,260;Dataset: [Code Search], Number of training tuples: 1,151,414;Dataset: [COCO] Image captions, Number of training tuples: 828,395;Dataset: [SPECTER] citation triplets, Number of training tuples: 684,100;Dataset: [Yahoo Answers] (Question, Answer), Number of training tuples: 681,164;Dataset: [Yahoo Answers] (Title, Question), Number of training tuples: 659,896;Dataset: [SearchQA], Number of training tuples: 582,261;Dataset: [Eli5], Number of training tuples: 325,475;Dataset: [Flickr 30k], Number of training tuples: 317,695;Dataset: [Stack Exchange] Duplicate questions (titles), Number of training tuples: 304,525;Dataset: AllNLI ([SNLI] and [MultiNLI], Number of training tuples: 277,230;Dataset: [Stack Exchange] Duplicate questions (bodies), Number of training tuples: 250,519;Dataset: [Stack Exchange] Duplicate questions (titles+bodies), Number of training tuples: 250,460;Dataset: [Sentence Compression], Number of training tuples: 180,000;Dataset: [Wikihow], Number of training tuples: 128,542;Dataset: [Altlex], Number of training tuples: 112,696;Dataset: [Quora Question Triplets], Number of training tuples: 103,663;Dataset: [Simple Wikipedia], Number of training tuples: 102,225;Dataset: [Natural Questions (NQ)], Number of training tuples: 100,231;Dataset: [SQuAD2.0], Number of training tuples: 87,599;Dataset: [TriviaQA], Number of training tuples: 73,346;Total tuples: 1,170,060,424"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasModelArchitecture",
+    "o": "mcro:allmpnetbasev2-ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:allmpnetbasev2-ModelArchitectureInformationSection",
+    "p": "rdf:type",
+    "o": "mcro:ModelArchitectureInformationSection"
+  },
+  {
+    "s": "mcro:allmpnetbasev2-ModelArchitectureInformationSection",
+    "p": "prov:hasTextValue",
+    "o": "Model architecture: We used the pretrained [`microsoft/mpnet-base`](https://huggingface.co/microsoft/mpnet-base) model and fine-tuned in on a 1B sentence pairs dataset."
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:RedditCommentsDataset"
+  },
+  {
+    "s": "mcro:RedditCommentsDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:RedditCommentsDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Reddit comments (2015-2018)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:S2ORCCitationPairsAbstractsDataset"
+  },
+  {
+    "s": "mcro:S2ORCCitationPairsAbstractsDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:S2ORCCitationPairsAbstractsDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: S2ORC Citation pairs (Abstracts)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:WikiAnswersDataset"
+  },
+  {
+    "s": "mcro:WikiAnswersDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:WikiAnswersDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: WikiAnswers Duplicate question pairs"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:PAQDataset"
+  },
+  {
+    "s": "mcro:PAQDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:PAQDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: PAQ (Question, Answer) pairs"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:S2ORCCitationPairsTitlesDataset"
+  },
+  {
+    "s": "mcro:S2ORCCitationPairsTitlesDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:S2ORCCitationPairsTitlesDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: S2ORC Citation pairs (Titles)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:S2ORCTitleAbstractDataset"
+  },
+  {
+    "s": "mcro:S2ORCTitleAbstractDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:S2ORCTitleAbstractDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: S2ORC (Title, Abstract)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:StackExchangeTitleBodyPairsDataset"
+  },
+  {
+    "s": "mcro:StackExchangeTitleBodyPairsDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:StackExchangeTitleBodyPairsDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Stack Exchange (Title, Body) pairs"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:StackExchangeTitleBodyAnswerPairsDataset"
+  },
+  {
+    "s": "mcro:StackExchangeTitleBodyAnswerPairsDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:StackExchangeTitleBodyAnswerPairsDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Stack Exchange (Title+Body, Answer) pairs"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:StackExchangeTitleAnswerPairsDataset"
+  },
+  {
+    "s": "mcro:StackExchangeTitleAnswerPairsDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:StackExchangeTitleAnswerPairsDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Stack Exchange (Title, Answer) pairs"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:MSMARCOTripletsDataset"
+  },
+  {
+    "s": "mcro:MSMARCOTripletsDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:MSMARCOTripletsDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: MS MARCO triplets"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:GOOAQDataset"
+  },
+  {
+    "s": "mcro:GOOAQDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:GOOAQDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: GOOAQ: Open Question Answering with Diverse Answer Types"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:YahooAnswersTitleAnswerDataset"
+  },
+  {
+    "s": "mcro:YahooAnswersTitleAnswerDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:YahooAnswersTitleAnswerDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Yahoo Answers (Title, Answer)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:CodeSearchDataset"
+  },
+  {
+    "s": "mcro:CodeSearchDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:CodeSearchDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Code Search"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:COCOImageCaptionsDataset"
+  },
+  {
+    "s": "mcro:COCOImageCaptionsDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:COCOImageCaptionsDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: COCO Image captions"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:SPECTERCitationTripletsDataset"
+  },
+  {
+    "s": "mcro:SPECTERCitationTripletsDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:SPECTERCitationTripletsDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: SPECTER citation triplets"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:YahooAnswersQuestionAnswerDataset"
+  },
+  {
+    "s": "mcro:YahooAnswersQuestionAnswerDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:YahooAnswersQuestionAnswerDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Yahoo Answers (Question, Answer)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:YahooAnswersTitleQuestionDataset"
+  },
+  {
+    "s": "mcro:YahooAnswersTitleQuestionDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:YahooAnswersTitleQuestionDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Yahoo Answers (Title, Question)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:SearchQADataset"
+  },
+  {
+    "s": "mcro:SearchQADataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:SearchQADataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: SearchQA"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:Eli5Dataset"
+  },
+  {
+    "s": "mcro:Eli5Dataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:Eli5Dataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Eli5"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:Flickr30kDataset"
+  },
+  {
+    "s": "mcro:Flickr30kDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:Flickr30kDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Flickr 30k"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:StackExchangeDuplicateQuestionsTitlesDataset"
+  },
+  {
+    "s": "mcro:StackExchangeDuplicateQuestionsTitlesDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:StackExchangeDuplicateQuestionsTitlesDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Stack Exchange Duplicate questions (titles)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:AllNLIDataset"
+  },
+  {
+    "s": "mcro:AllNLIDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:AllNLIDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: AllNLI ([SNLI] and [MultiNLI])"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:StackExchangeDuplicateQuestionsBodiesDataset"
+  },
+  {
+    "s": "mcro:StackExchangeDuplicateQuestionsBodiesDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:StackExchangeDuplicateQuestionsBodiesDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Stack Exchange Duplicate questions (bodies)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:StackExchangeDuplicateQuestionsTitlesBodiesDataset"
+  },
+  {
+    "s": "mcro:StackExchangeDuplicateQuestionsTitlesBodiesDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:StackExchangeDuplicateQuestionsTitlesBodiesDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Stack Exchange Duplicate questions (titles+bodies)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:SentenceCompressionDataset"
+  },
+  {
+    "s": "mcro:SentenceCompressionDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:SentenceCompressionDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Sentence Compression"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:WikihowDataset"
+  },
+  {
+    "s": "mcro:WikihowDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:WikihowDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Wikihow"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:AltlexDataset"
+  },
+  {
+    "s": "mcro:AltlexDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:AltlexDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Altlex"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:QuoraQuestionTripletsDataset"
+  },
+  {
+    "s": "mcro:QuoraQuestionTripletsDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:QuoraQuestionTripletsDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Quora Question Triplets"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:SimpleWikipediaDataset"
+  },
+  {
+    "s": "mcro:SimpleWikipediaDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:SimpleWikipediaDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Simple Wikipedia"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:NaturalQuestionsNQDataset"
+  },
+  {
+    "s": "mcro:NaturalQuestionsNQDataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:NaturalQuestionsNQDataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: Natural Questions (NQ)"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:SQuAD20Dataset"
+  },
+  {
+    "s": "mcro:SQuAD20Dataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:SQuAD20Dataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: SQuAD2.0"
+  },
+  {
+    "s": "mcro:allmpnetbasev2",
+    "p": "mcro:hasDataset",
+    "o": "mcro:TriviaQADataset"
+  },
+  {
+    "s": "mcro:TriviaQADataset",
+    "p": "rdf:type",
+    "o": "mcro:DatasetInformationSection"
+  },
+  {
+    "s": "mcro:TriviaQADataset",
+    "p": "prov:hasTextValue",
+    "o": "Dataset name: TriviaQA"
+  }
+]
