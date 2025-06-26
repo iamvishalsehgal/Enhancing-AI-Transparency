@@ -32,9 +32,9 @@ vector_index = Neo4jVector.from_existing_graph(
     url=os.getenv("NEO4J_URI"),
     username=os.getenv("NEO4J_USER"),
     password=os.getenv("NEO4J_PASSWORD"),
-    node_label="Node",
-    text_node_properties=["properties"],
-    embedding_node_property="embedding"
+    node_label="*",  # Target all node labels in the graph
+    text_node_properties=["*"],  # Use all node properties for embedding
+    embedding_node_property="embedding"  # Store the embedding in this property
 )
 
 def retrieve_context(query):
