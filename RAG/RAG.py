@@ -70,4 +70,4 @@ for s, p, o in relationships:
 with open(OUTPUT_CYPHER_FILE, "w", encoding="utf-8") as f:
     f.write("\n".join(cypher_lines))
 
-print(f"✅ Cypher script saved to {OUTPUT_CYPHER_FILE}")
+print(f" Cypher script saved to {OUTPUT_CYPHER_FILE}")
